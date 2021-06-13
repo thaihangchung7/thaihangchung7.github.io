@@ -1,0 +1,32 @@
+ <!doctype html>
+ <html>
+   <head>
+     <meta charset="utf-8">
+     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+     <script src="https://unpkg.com/jquery.terminal@2.x.x/js/jquery.terminal.min.js"></script>
+     <link rel="stylesheet" href="https://unpkg.com/jquery.terminal@2.x.x/css/jquery.terminal.min.css"/>
+     {% feed_meta %}
+     {% seo %}
+   </head>
+   <body>
+     <script>
+     $('body').terminal({
+         ls: function() {
+                this.echo("about     cv     notes");
+	 },
+	 help: function() {
+	 	this.echo("cd - change directory\nls - list directories\ngui - graphical user interface");
+	 },
+	 pwd: function() {
+		this.echo("Placeholder for pwd");
+	 }
+	 
+
+     }, {
+         greetings: "Welcome to my Website! I'm Thai.\nJust like a regular terminal type 'ls' to list the available directories.\nType 'help' to see all available commands."
+     });
+      </script>
+ 
+  </body>
+</html>
+
