@@ -2,3 +2,7 @@
   link: /
 - name: About
   link: /about.html
+- name: CV/Resume
+  link: /cv.html
+- name: Notes
+  link: /notes.html
