@@ -3,3 +3,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
+
+collections:
+  notes:
+   output: true

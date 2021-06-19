@@ -1,7 +1,7 @@
 ---
 layout: notes
-author: thai
 title: DUNE & Neutrinos
+category: DUNE
 ---
 
 Some of the notes and talking points for my presentation on DUNE.
@@ -45,3 +45,11 @@ The probability of Oscillation is given by:
 $$P_{Oscillation} (\nu_{\mu} \rightarrow \nu_{e}) = \left |  \left \langle \nu_{e} | \nu_{\mu} (t) \right \rangle\right |^{2} = \sin^{2} 2\theta_{12} \sin^{2} ( 1.27 \Delta m^{2}_{21} \frac{L}{E})$$
 
 where $$\theta$$ is the magnitude of oscillation, $$\Delta m^{2}$$ is the period, $$L$$ is the distance from the source to the detector and $$E$$ is the neutrino energy.
+
+## DUNE DAQ
+
+The heart of of the DUNE data aquisition infastructure is the Warm Interface Board (WIB), which is responsible for controlling and configuring the front end electronics (namely the FEMB, mo re on that in a bit) and transfers massive amounts of data (over 40Gb/s!) via optical links to the data aquisition system. Eventually, the WIBs will be installed in a Warm Interface Electronics Crate (WIEC), each crate containing four WIBs.
+
+Designed around a Xilinx Zynq Ultrascale+ FPGA, this allows for programmable logic gates and processing systems at a lower level than a CPU which allows for rapid prototyping.
+
+Connected to the WIB are front end electronics, otherwise knownas Front End MotherBoards (FEMB), that are dunked in Liquid Ar gon (LAr). Whenever an ionized electron from an interaction is produced the signal is passed through LAr Application Specific Integrated Circuits (ASICs) low noise amplifiers eventually making its way though another set of Analog to Digital Converter ( ADC) ASICs.
