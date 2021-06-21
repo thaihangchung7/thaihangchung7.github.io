@@ -12,7 +12,7 @@ The point is, instead of opting for a Zoomer laptop, I've managed to snagged a T
 
 ## Welcome to the Rice Fields
 
-![Riced Arch](/assets/ricedarch.png)
+<img src="/assets/ricedarch.png" width=640 height=360 class="center">
 
 Dotfiles are on [Github](https://github.com/thaihangchung7/profiles). Here is a list to the package I've installed:
 - [i3-gaps](https://github.com/Airblader/i3)

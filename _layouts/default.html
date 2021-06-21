@@ -1,14 +1,24 @@
 <!doctype html>
 <html>
+<style>
+h1 {text-align: center}
+h4 {text-align: center}
+</style>
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
     {% feed_meta %}
     {% seo %}
+  
   </head>
   <body>
-    {% include navigation.html %}
+  
+    <h4> {% include navigation.html %} </h4>
+
+    <p>
     {{ content }}
+    </p>
+  
   </body>
 </html>
