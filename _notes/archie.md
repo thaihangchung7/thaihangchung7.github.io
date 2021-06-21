@@ -8,7 +8,7 @@ title: Btw I use Arch
 
 I didn't run the numbers but I think an overwhelming majority of Linux-ers use a Thinkpad as their primary driver. Maybe it's because both Linux and Thinkpads (at least before the era of dongles) share a lot of themes such as modularity, usability, and reliability. The hardware is not that big of a deal though, I'm pretty sure Linus still codes the Linux Kernel on 2Gb RAM netbooks.  
 
-The point is, instead of opting for a Zoomer laptop, I've managed to snagged a Thinkpad T480 for a good deal. I'm obligated to install a veteran distro, in this case [ArchLinux](https://archlinux.org/) (also because Linux is [well supported](https://support.lenovo.com/us/en/solutions/pd031426-linux-for-personal-systems) on Thinkpads). 
+The point is, instead of opting for a Zoomer laptop, I've managed to snagged a Thinkpad T480 for a good deal. For the same reasons mentioned above, I think I'm obligated to install a "hackerman" DIY distro, in this case [ArchLinux](https://archlinux.org/) (also because Linux is [well supported](https://support.lenovo.com/us/en/solutions/pd031426-linux-for-personal-systems) on Thinkpads). 
 
 ## Welcome to the Rice Fields
 
