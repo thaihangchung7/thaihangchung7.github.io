@@ -1,4 +1,5 @@
 ---
+layout: notes
 title: Web Development
 category: webdev
 ---
