@@ -20,7 +20,7 @@ Dotfiles are on [Github](https://github.com/thaihangchung7/profiles). Installed 
 - [feh](https://feh.finalrewind.org/) 
 - [alacritty](https://github.com/alacritty/alacritty)
 - [deepin-screenshot](https://archlinux.org/packages/community/x86_64/deepin-screenshot/)
-
+- [redshift](https://github.com/jonls/redshift#faq)
 
 TODO: \\
 add pic of t480\\
