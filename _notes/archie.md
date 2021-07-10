@@ -22,6 +22,11 @@ Dotfiles are on [Github](https://github.com/thaihangchung7/profiles). Installed 
 - [deepin-screenshot](https://archlinux.org/packages/community/x86_64/deepin-screenshot/)
 - [redshift](https://github.com/jonls/redshift#faq)
 
+For neovim:
+- [ncm2](https://github.com/ncm2/ncm2)
+- [vim-airline](https://github.com/vim-airline/vim-airline)
+
+
+
 TODO: \\
 add pic of t480\\
-perhaps a nice photo of riced desktop???
