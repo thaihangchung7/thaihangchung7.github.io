@@ -48,8 +48,14 @@ where $$\theta$$ is the magnitude of oscillation, $$\Delta m^{2}$$ is the period
 
 ## DUNE DAQ
 
-The heart of of the DUNE data aquisition infastructure is the Warm Interface Board (WIB), which is responsible for controlling and configuring the front end electronics (namely the FEMB, mo re on that in a bit) and transfers massive amounts of data (over 40Gb/s!) via optical links to the data aquisition system. Eventually, the WIBs will be installed in a Warm Interface Electronics Crate (WIEC), each crate containing four WIBs.
+### The WIB
+The heart of of the DUNE data acquisition infastructure is the Warm Interface Board (WIB), which is responsible for controlling and configuring the front end electronics (namely the FEMB, mo re on that in a bit) and transfers massive amounts of data (over 40Gb/s!) via optical links to the data acquisition system. Eventually, the WIBs will be installed in a Warm Interface Electronics Crate (WIEC), each crate containing four WIBs.
 
 Designed around a Xilinx Zynq Ultrascale+ FPGA, this allows for programmable logic gates and processing systems at a lower level than a CPU which allows for rapid prototyping.
 
 Connected to the WIB are front end electronics, otherwise knownas Front End MotherBoards (FEMB), that are dunked in Liquid Ar gon (LAr). Whenever an ionized electron from an interaction is produced the signal is passed through LAr Application Specific Integrated Circuits (ASICs) low noise amplifiers eventually making its way though another set of Analog to Digital Converter ( ADC) ASICs.
+
+### The FELIX Board
+Originally developed for the LHC ATLAS experiment, the FPGA based FELIX Board is a "Front Link eXchange" readout data acquisition board. Installed on a Wupper compatitable motherboard, the board communicates to the CPU via a PCI-E 16x slot. Repurposed for DUNE, the board will operate in FULL mode, and must deal with an input rate of 96Gb/s coming from the anode wires in the far detector.
+
+The FELIX board can be configured to support two modes, GBT or FULL. These two modes were in effort to provide high speed radiation hard data transmission. The GBT transmission protocol GBT multiplexes lower bandwidth data (or E-links) from front end electronics into one high bandwidth optical radiation hard link at a rate of about 5 Gb/s. In the context of DUNE, the FELIX board operates in FULL mode. There is no such thing as E-link, and provide a unidirectional data stream (to-host) from the front end electronics at a rate of 9Gb/s per link.

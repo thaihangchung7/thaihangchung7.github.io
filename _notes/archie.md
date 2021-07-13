@@ -29,4 +29,4 @@ For neovim:
 
 
 TODO: \\
-add pic of t480\\
+add pic of t480
