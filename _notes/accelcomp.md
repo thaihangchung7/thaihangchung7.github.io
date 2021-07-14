@@ -39,7 +39,7 @@ or its alias:
 However, you need to use ```from njit import numba``` for the latter.
 
 ### Object Mode
-If Numba comes across Python code it cannot understand, it falls back to "Object Mode". For instance, as of Numba 0.51.2, dictionaries are not supported. If you try to compile a function with a dictionary with ```@jit```, you may be surprise to see that Numba compiles the function since it uses Object mode to enable other Numba functionality.
+If Numba comes across Python code it cannot understand, it falls back to "Object Mode". For instance, as of Numba 0.51.2, dictionaries are not supported. If you try to compile a function with a dictionary with ```@jit```, you may be surprised to see that Numba was still able to compile the function since it uses Object mode to enable other Numba functionality.
 
 But given what was just said, in many cases, you can tell Numba provide information when type interface fails by pass the ``` nopython=True ```. In this case, you will come across the error:
 
@@ -57,11 +57,11 @@ The first time you throw ```@jit``` on top of you function, you will find that y
 
 Since Numba is a JIT compiler, when you run the function, Numba will compile the code using LLVM for the first run, introducing some overhead. Once the code is cached and ran a second time, it will result in an optimized run time. 
 
-No support for pandas libraries.
+There is partial support for the Pandas library.
 
 ## Python Benchmarking
 
 ### Python magic ``` %timeit ```
-When benchmarking Numba code, it would be best to use ``` %time it ``` which runs a function or loop multiple times to accurately get an estimate of run time. The output is the mean and standard deviation of multiple runs. Hence, accomadating for the compilation time of the first execution. 
+When benchmarking Numba code, it would be best to use ``` %timeit ``` which runs a function or loop multiple times to accurately get an estimate of run time. The output is the mean and standard deviation of multiple runs. Hence, accomadating for the compilation time of the first execution. 
 
 
