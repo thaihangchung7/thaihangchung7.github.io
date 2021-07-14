@@ -1,3 +1,29 @@
+a {
+  position: relative;
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #0f2845;
+
+}
+
+a::after {
+  border-radius: 1em;
+  border-top: .1em solid #0f2845;
+  content: "";
+  position: absolute;
+    right: 100%;
+    bottom: .14em;
+    left: 0;
+  transition: right .4s cubic-bezier(0,.5,0,1);
+}
+
+a:hover::after {
+  right: 0;
+}
+
 .current {
   color: black;
 }

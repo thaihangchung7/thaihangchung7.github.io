@@ -10,8 +10,8 @@ TODO
 
 I usually go by ``` thaihangchung7 ```. You can find me at:
 
-+ Gmail (primary/personal) ``` gmail.com ```
++ Gmail (primary/personal): ``` gmail.com ```
 
-+ U Florida (soon to be deprecated) ``` ufl.edu ```
++ U Florida (soon to be deprecated): ``` ufl.edu ```
 
 + [Github](https://github.com/thaihangchung7) 
