@@ -47,9 +47,9 @@ But given what was just said, in many cases, you can tell Numba provide informat
 
 
 ### Numba ```@vectorize```
-A common used tool in ```numpy```'s library are ```ufunc```s
+To optimize a ```ufunc``` with Numba, decorate the function with ```@vectorize```. This will instruct Numba to parallelize the function that is decorated. Some arguments will need to be passed in order to process the function on the GPU. 
 
-To optimize a ```ufunc``` with Numba, decorate the function with ```@vectorize```. Another added benefit to using Numba is that it will figure out broadcasting rules for different arrays with compatible dimensions.
+When working with Numpy arrays, another benefit to using Numba is that it will figure out broadcasting rules for different arrays with compatible dimensions.
 
 
 ### What's the catch?
@@ -57,11 +57,11 @@ The first time you throw ```@jit``` on top of you function, you will find that y
 
 Since Numba is a JIT compiler, when you run the function, Numba will compile the code using LLVM for the first run, introducing some overhead. Once the code is cached and ran a second time, it will result in an optimized run time. 
 
-There is partial support for the Pandas library.
+Also, there is all of Python is not supported. For instance there is partial support for the Pandas library.
 
 ## Python Benchmarking
 
 ### Python magic ``` %timeit ```
-When benchmarking Numba code, it would be best to use ``` %timeit ``` which runs a function or loop multiple times to accurately get an estimate of run time. The output is the mean and standard deviation of multiple runs. Hence, accomadating for the compilation time of the first execution. 
+When benchmarking Numba code, it would be best to use ``` %timeit ``` which runs a function or loop multiple times to accurately get an estimate of run time. The output is the mean and standard deviation of multiple runs. Hence, accomodating for the compilation time of the first execution. 
 
 
