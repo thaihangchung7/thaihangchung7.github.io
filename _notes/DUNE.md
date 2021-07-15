@@ -56,6 +56,10 @@ Designed around a Xilinx Zynq Ultrascale+ FPGA, this allows for programmable log
 Connected to the WIB are front end electronics, otherwise knownas Front End MotherBoards (FEMB), that are dunked in Liquid Ar gon (LAr). Whenever an ionized electron from an interaction is produced the signal is passed through LAr Application Specific Integrated Circuits (ASICs) low noise amplifiers eventually making its way though another set of Analog to Digital Converter ( ADC) ASICs.
 
 ### The FELIX Board
-Originally developed for the LHC ATLAS experiment, the FPGA based FELIX Board is a "Front Link eXchange" readout data acquisition board. Installed on a Wupper compatitable motherboard, the board communicates to the CPU via a PCI-E 16x slot. Repurposed for DUNE, the board will operate in FULL mode, and must deal with an input rate of 96Gb/s coming from the anode wires in the far detector.
+Originally developed for the LHC ATLAS experiment, the FPGA based FELIX Board is a "Front Link eXchange" readout data acquisition board. 
 
-The FELIX board can be configured to support two modes, GBT or FULL. These two modes were in effort to provide high speed radiation hard data transmission. The GBT transmission protocol GBT multiplexes lower bandwidth data (or E-links) from front end electronics into one high bandwidth optical radiation hard link at a rate of about 5 Gb/s. In the context of DUNE, the FELIX board operates in FULL mode. There is no such thing as E-link, and provide a unidirectional data stream (to-host) from the front end electronics at a rate of 9Gb/s per link.
+Installed on a Wupper compatitable motherboard (Wupper is PCIe firmware designed to interface the Xilinx PCIe Gen3 hardblock via Direct Access Memory), the board communicates to the CPU via a PCI-E 16x slot.
+
+The cmem_rcc driver allocates large buffers of contiguous memory.
+
+The FELIX board can be configured to support two modes, GBT or FULL. 
