@@ -28,7 +28,7 @@ body {
 }
 
 .fullname {
-  max-width: 260px;
+  max-width: 255px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: none;
@@ -41,7 +41,11 @@ body {
 }
 
 .current {
-  color: black;
+  border: 2px inset #0f2845 ;
+  border-radius: 2.5px;
+  padding-top: 3px;
+  padding-left: 3px;
+  padding-right: 3px;
 }
 
 .center {
