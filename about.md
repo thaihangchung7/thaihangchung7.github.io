@@ -4,7 +4,7 @@ title: About/Contact
 ---
 # About Me
 
-TODO
+I am a Physics Student.
 
 # Contact Info
 
