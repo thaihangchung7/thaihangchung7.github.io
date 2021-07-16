@@ -51,15 +51,21 @@ where $$\theta$$ is the magnitude of oscillation, $$\Delta m^{2}$$ is the period
 ### The WIB
 The heart of of the DUNE data acquisition infastructure is the Warm Interface Board (WIB), which is responsible for controlling and configuring the front end electronics (namely the FEMB, mo re on that in a bit) and transfers massive amounts of data (over 40Gb/s!) via optical links to the data acquisition system. Eventually, the WIBs will be installed in a Warm Interface Electronics Crate (WIEC), each crate containing four WIBs.
 
-Designed around a Xilinx Zynq Ultrascale+ FPGA, this allows for programmable logic gates and processing systems at a lower level than a CPU which allows for rapid prototyping.
+Designed around a Xilinx Zynq Ultrascale+ FPGA, this provides programmable logic gates and processing systems at a lower level than a CPU which allows for rapid prototyping.
 
-Connected to the WIB are front end electronics, otherwise knownas Front End MotherBoards (FEMB), that are dunked in Liquid Ar gon (LAr). Whenever an ionized electron from an interaction is produced the signal is passed through LAr Application Specific Integrated Circuits (ASICs) low noise amplifiers eventually making its way though another set of Analog to Digital Converter ( ADC) ASICs.
+Connected to the WIB are front end electronics, otherwise known as Front End MotherBoards (FEMB), that are dunked in Liquid Argon (LAr). Whenever an ionized electron from an interaction is produced the signal is passed through LAr Application Specific Integrated Circuits (ASICs) low noise amplifiers eventually making its way though another set of Analog to Digital Converter ( ADC) ASICs.
 
 ### The FELIX Board
-Originally developed for the LHC ATLAS experiment, the FPGA based FELIX Board is a "Front Link eXchange" readout data acquisition board. 
+Originally developed for the LHC ATLAS experiment, the FPGA based FELIX Board is a "Front Link eXchange" readout data acquisition board. Installed on a Wupper compatitable motherboard, the board communicates to the host computer via a PCI-E 16x slot.
 
-Installed on a Wupper compatitable motherboard (Wupper is PCIe firmware designed to interface the Xilinx PCIe Gen3 hardblock via Direct Access Memory), the board communicates to the CPU via a PCI-E 16x slot.
+The FELIX board can be configured to support two modes, GBT (Gigabit Transceiver) or FULL (full bandwidth). In the context of DUNE, the FELIX board will be operating in FULL mode which supports a line transmission rate of 9.6GB/s. 
 
-The cmem_rcc driver allocates large buffers of contiguous memory.
+Using cmem_rcc, a driver from the ATLAS TDAQ project, allows the software to allocate buffers of contiguous memory. Low-level tools, namely ```fdaq```, receives data from FELIX and allows you to set the DMA memory buffer size on the host server. In FULL mode, it is only possible to run ```fdaq``` for a couple seconds before it exceeds the maximum rate at which you can write to disc (or crash the host). For reference, a typical SSD's write to disc limit is about 300MB/s.
 
-The FELIX board can be configured to support two modes, GBT or FULL. 
+
+### For Reference
+
+[ABC's of DUNE](https://abc.dunescience.org/)
+
+TTC: Timing Trigger Control
+
