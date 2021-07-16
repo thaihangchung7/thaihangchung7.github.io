@@ -16,7 +16,7 @@ Numba's motto is to keep things simple. You shouldn't have to spend hours optimi
  - Uses lots of numpy
  - loops
 
-***Prescription drug ad disclaimer: Numba can speed these up [but keep Numba's limitations in mind (see "What's the catch" section for more details")]***  
+***Prescription drug ad disclaimer: Numba can speed these up [but keep Numba's limitations in mind (see "What's the catch" section for more details)]***  
 
 ### The @jit decorator
 Let's see what's going on under the hood...
@@ -30,11 +30,16 @@ You can instruct Numba to compile your function independent of the Python interp
 
 You can tell Numba to execute No Python mode in two ways:
 
-``` @jit (nopython=True) ```
+```python
+@jit (nopython=True) 
+```
 
 or its alias:
 
-``` @njit ```
+```python 
+@njit 
+
+```
 
 However, you need to use ```from njit import numba``` for the latter.
 
@@ -43,7 +48,11 @@ If Numba comes across Python code it cannot understand, it falls back to "Object
 
 But given what was just said, in many cases, you can tell Numba provide information when type interface fails by pass the ``` nopython=True ```. In this case, you will come across the error:
 
-``` - argument 0: cannot determine Numba type of <class 'dict'> ```
+``` python
+
+- argument 0: cannot determine Numba type of <class 'dict'> 
+
+```
 
 
 ### Numba ```@vectorize```
