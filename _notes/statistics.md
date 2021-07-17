@@ -5,6 +5,16 @@ title: Statistics
 
 A collection of notes while I brush up on statistics.
 
+Table of Contents
+=================
+
+   * [Binomial Distribution](#binomial-distribution)
+   * [Poisson Distribution](#poisson-distribution)
+   * [Gaussian Distribution](#gaussian-distribution)
+   * [Methods of Counting](#methods-of-counting)
+      * [The Birthday problem](#the-birthday-problem)
+
+
 ## Binomial Distribution
 For a binomial distribution with parameters $$n$$ and $$p$$ the discrete probability distribution of the number of occurences $$k$$ in an sequence of $$n$$ independent experiments is given by: 
 

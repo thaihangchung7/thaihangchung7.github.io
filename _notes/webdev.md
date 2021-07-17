@@ -14,5 +14,6 @@ I've always been pretty bad at keeping organized notes, and as a result, never l
 
 + Theme 
   - [Paper on Readability](https://www.cs.cmu.edu/~jbigham/pubs/pdfs/2017/colors.pdf)
-+ Jupyter Notebooks on static website
++ Tools 
+  - [Markdown TOC generator](https://github.com/ekalinin/github-markdown-toc)
   - [Embed Interactive Jupyter Notebook](https://elc.github.io/posts/embed-interactive-notebooks/)

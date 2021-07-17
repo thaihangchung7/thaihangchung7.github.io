@@ -1,10 +1,19 @@
 ---
 layout: notes
-title: DUNE & Neutrinos
+title: DUNE 
 category: DUNE
 ---
 
-Some of the notes and talking points for my presentation on DUNE.
+Table of Contents
+=================
+
+   * [Introduction to DUNE](#introduction-to-dune)
+   * [Physics of DUNE (Far Detector at least)](#physics-of-dune-far-detector-at-least)
+      * [Neutrino Oscillations](#neutrino-oscillations)
+   * [DUNE DAQ](#dune-daq)
+      * [The WIB](#the-wib)
+      * [The FELIX Board](#the-felix-board)
+      * [For Reference](#for-reference)
 
 ## Introduction to DUNE
 
@@ -37,7 +46,7 @@ U_{e1} & U_{e2} & U_{e3}
 \nu_{3}
 \end{pmatrix}$$
 
-## Neutrino Oscillations
+### Neutrino Oscillations
 Consider two weak flavor eigenstates, defined as $$\nu_{1}$$ and $$\nu_{2}$$ with masses $$m_{1}$$ and $$m_{2}$$. 
 
 

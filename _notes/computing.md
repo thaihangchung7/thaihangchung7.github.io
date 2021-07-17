@@ -1,9 +1,20 @@
 ---
 layout: notes
-title: Accelerated Computing 
+title: Computing 
 ---
 
-A collection of notes for efficient computing.
+Table of Contents
+=================
+
+   * [Numba](#numba)
+      * [When and where should you use Numba?](#when-and-where-should-you-use-numba)
+      * [The @jit decorator](#the-jit-decorator)
+      * [No Python Mode](#no-python-mode)
+      * [Object Mode](#object-mode)
+      * [Numba @vectorize](#numba-vectorize)
+      * [What's the catch?](#whats-the-catch)
+   * [Python Benchmarking](#python-benchmarking)
+      * [Python magic %timeit](#python-magic-timeit)
 
 ## Numba
 Numba is an Python Just In Time compiler that essentially translates Python functions into fast machine code using LLVM. With the relatively recent boom of data-driven programming, Numba's library is gaining more attention from its developers and [community](https://github.com/numba/numba). (Sponsored by NVidia, Anaconda, Inc., DARPA, Intel...)

@@ -14,7 +14,7 @@ a::after {
   content: "";
   position: absolute;
     right: 100%;
-    bottom: .14em;
+    bottom: 2px;
     left: 0;
   transition: right .4s cubic-bezier(0,.5,0,1);
 }
