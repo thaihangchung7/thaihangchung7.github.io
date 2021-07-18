@@ -33,6 +33,9 @@ Numba's motto is to keep things simple. You shouldn't have to spend hours optimi
 Let's see what's going on under the hood...
 
 <img src="/assets/jitcompile.PNG" width=640 height=360 class="center">
+<div style="text-align:center">
+<a href="https://julialang.org/benchmarks/">julia language benmarks</a>
+</div> 
 
 When you add the ``` @jit ``` decorator, Numba analyzes the Python bytecode and translates it to Numba IR (think of this as Numba's own bytecode) which is "lowered" to a low-level, machine specific language using the LLVM compiler (think Assembly). Then by passing ```cache=True```, this is also True by default, you can instruct Numba to write the resulting compilation into a cache, which avoids compilation time on the next run. 
 
