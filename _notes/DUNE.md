@@ -47,6 +47,18 @@ U_{e1} & U_{e2} & U_{e3}
 \end{pmatrix}$$
 
 ### Neutrino Oscillations
+The harmonic oscillator introduced in first sememster quantum mechanics is a good analog for neutrino oscillations. Neutrinos interact via the Weak force and travel as a mixture of electron, muon and tau states.
+
+Shown below are the decay of charged current bosons into neutrinos:
+
+$$
+W^{+}\rightarrow l^{+}+ \nu_{l} 
+$$
+
+Where $$l = e, \mu, \nu$$, the flavors of a neutrino.
+
+
+
 Consider two weak flavor eigenstates, defined as $$\nu_{1}$$ and $$\nu_{2}$$ with masses $$m_{1}$$ and $$m_{2}$$. 
 
 
@@ -65,7 +77,7 @@ Here is a feynman diagram of an absurd interaction that is proposed in one of th
 ## DUNE Data Aquisition
 
 ### The WIB
-The heart of of the DUNE data acquisition infastructure is the Warm Interface Board (WIB), which is responsible for controlling and configuring the front end electronics (namely the FEMB, mo re on that in a bit) and transfers massive amounts of data (over 40Gb/s!) via optical links to the data acquisition system. Eventually, the WIBs will be installed in a Warm Interface Electronics Crate (WIEC), each crate containing four WIBs.
+The heart of of the DUNE data acquisition infastructure is the Warm Interface Board (WIB), which is responsible for controlling and configuring the front end electronics (namely the FEMB, more on that in a bit) and transfers massive amounts of data (over 40Gb/s!) via optical links to the data acquisition system. Eventually, the WIBs will be installed in a Warm Interface Electronics Crate (WIEC), each crate containing four WIBs.
 
 Designed around a Xilinx Zynq Ultrascale+ FPGA, this provides programmable logic gates and processing systems at a lower level than a CPU which allows for rapid prototyping.
 
@@ -74,7 +86,9 @@ Connected to the WIB are front end electronics, otherwise known as Front End Mot
 The data collected is sent to the FELIX board which communicates with the host server via PCIe.  
 
 ### The FELIX Board
-Originally developed for the LHC ATLAS experiment, the FPGA based FELIX Board is a "Front Link eXchange" readout data acquisition board. Installed on a Wupper compatitable motherboard, the board communicates to the host computer via a PCI-E 16x slot.
+Originally developed for the LHC ATLAS experiment, the FPGA based FELIX Board is a "FrontEnd Link eXchange" readout data acquisition board. Installed on a Wupper compatitable motherboard, the board communicates to the host computer via a PCI-E 16x slot.
+
+In the context of ProtoDUNE, each FELIX board is linked to one APA streaming 10x 1GB/s readouts
 
 The FELIX board can be configured to support two modes, GBT (Gigabit Transceiver) or FULL (full bandwidth). In the context of DUNE, the FELIX board will be operating in FULL mode which supports a line transmission rate of 9.6GB/s. 
 
@@ -83,7 +97,9 @@ Using cmem_rcc, a driver from the ATLAS TDAQ project, allows the software to all
 
 ### For Reference
 
-[ABC's of DUNE](https://abc.dunescience.org/)
+[ABC's of DUNE](https://abc.dunescience.org/) - DUNE List of Acronyms
+
+[Introduction to Neutrino Physics](https://cds.cern.ch/record/677618/files/p115.pdf)
 
 TTC: Timing Trigger Control
 
