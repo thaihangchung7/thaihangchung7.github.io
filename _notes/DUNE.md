@@ -17,13 +17,15 @@ Table of Contents
 
 ## Introduction to DUNE
 
-The Deep Underground Neutrino observatory (DUNE) comes packaged with a couple of facilities. The main ones being: FermiLab (FNAL), the Sanford Underground Research Facility (SURF), and the Long Baseline Neutrino Facility (LBNL). 
+<img src="/assets/DUNEwTPC.png" class="center">
+
+The Deep Underground Neutrino Experiment (DUNE) is comprised of multiple facilities. The main ones being: FermiLab (FNAL), the Sanford Underground Research Facility (SURF), and the Long Baseline Neutrino Facility (LBNL). 
 
 The experiment begins at PIP-II, Fermilab's linear accelerator. A mega-watt (up to 1.2 MW) class proton beam is produced, moving the protons through a series of boosters at 8 GeV where they reach the main injector at 120 GeV, eventually accelerated close to c. 
 
 The main injector ring smashes the protons into a fixed 1.5m target, producing Pions and Kaons. Focusing horns along the injector can be switched to focus the opposite charge of said particles to produce a beam of antineutrinos, thereby allowing physicists to study both modes.
 
-Over at SURF, four kilotons of liquid argon fudicialfiducial  tanks chilled to about 300 degrees below 0F listens for particle interactions, 1.5km (a little less then 5,000 ft) below the surface.  
+Over at SURF, four fudicialfiducial tanks (a total of about 17,000 tons of LAr) chilled to about 300 degrees below 0F listen for particle interactions, 1.5km (a little less then 5,000 ft) below the surface.  
 
 ## Physics of DUNE (Far Detector at least)
 Experimental measurements were made by the Super Kamiokande Observatory (Super-K) in 1998 and the Sudbury Neutrino Observatory (SNO) in 2001. The 2015 Nobel Prize for "the discovery of neutrino oscillations, which shows that neutrinos have mass" was awarded to Takaaki Kajita and Arthur B. McDonald. The theoretical prediction was provided by Bruno Pontecorvo way back in 1957.
@@ -76,8 +78,18 @@ Here is a feynman diagram of an absurd interaction that is proposed in one of th
 
 ## DUNE Data Aquisition
 
-### The WIB
-The heart of of the DUNE data acquisition infastructure is the Warm Interface Board (WIB), which is responsible for controlling and configuring the front end electronics (namely the FEMB, more on that in a bit) and transfers massive amounts of data (over 40Gb/s!) via optical links to the data acquisition system. Eventually, the WIBs will be installed in a Warm Interface Electronics Crate (WIEC), each crate containing four WIBs.
+### Single-Phase Time Projection Chamber Technology
+
+<img src="/assets/protoDUNE_trackreconstruction.png" class="center"> 
+<img src="/assets/protoDUNE_SPTPC.png" class="center"> 
+
+
+### The WIB/WIEC
+The heart of of the DUNE data acquisition infastructure is the Warm Interface Board (WIB), which acts as an interface from the front end electronics (FEMB) to the DAQ with shielding and real-time diagnostics. The WIB multiplexes data from  4 FEMBs with a payload of 3.6 GB/s per FEMB. 
+
+The WIB communicates with the DAQ system via optical links. The WIBs are installed in a Warm Interface Electronics Crate (WIEC), each crate containing four WIBs. The ICEBERG teststand located at FermiLabs is currently using this setup.
+
+<img src="/assets/WIEC.png" class="center">
 
 Designed around a Xilinx Zynq Ultrascale+ FPGA, this provides programmable logic gates and processing systems at a lower level than a CPU which allows for rapid prototyping.
 
@@ -86,13 +98,16 @@ Connected to the WIB are front end electronics, otherwise known as Front End Mot
 The data collected is sent to the FELIX board which communicates with the host server via PCIe.  
 
 ### The FELIX Board
+
+<img src="/assets/BNL712.png" class="center">
+
 Originally developed for the LHC ATLAS experiment, the FPGA based FELIX Board is a "FrontEnd Link eXchange" readout data acquisition board. Installed on a Wupper compatitable motherboard, the board communicates to the host computer via a PCI-E 16x slot.
 
-In the context of ProtoDUNE, each FELIX board is linked to one APA streaming 10x 1GB/s readouts
+In the context of ProtoDUNE, each FELIX board is linked to one APA streaming 10x 1GB/s readouts. To put it simply the FELIX board acts as a data funnel.
 
-The FELIX board can be configured to support two modes, GBT (Gigabit Transceiver) or FULL (full bandwidth). In the context of DUNE, the FELIX board will be operating in FULL mode which supports a line transmission rate of 9.6GB/s. 
+The FELIX board can be configured to support two modes, GBT (Gigabit Transceiver) or FULL (full bandwidth). In the context of DUNE, the FELIX board will be operating in FULL mode which supports a line transmission rate of 9.6GB/s. Support for 48 channel optical links are supplied by the four MiniPOD Tx/Rx Transceiver pairs located on either side of the FPGA.
 
-Using cmem_rcc, a driver from the ATLAS TDAQ project, allows the software to allocate buffers of contiguous memory. Low-level tools, namely ```fdaq```, receives data from FELIX and allows you to set the DMA memory buffer size on the host server. For certain test stands, like the one at UF, it is only possible to run ```fdaq``` in FULL mode for a couple seconds before it exceeds the maximum rate at which you can write to disc (or crash the host). For reference, a typical SSD's write to disc limit is about 300MB/s.
+Using cmem_rcc, a driver from the ATLAS TDAQ project, allows the software to allocate buffers of contiguous memory. Low-level tools, namely ```fdaq```, receives data from FELIX and allows you to set the DMA memory buffer size on the host server. For certain test stands, like the one at UF, it is only possible to run ```fdaq``` in FULL mode for a couple seconds before it exceeds the maximum rate at which you can write to disc (or crash the host). For some perspective, a typical SSD's write to disc limit is about 300MB/s.
 
 
 ### For Reference
