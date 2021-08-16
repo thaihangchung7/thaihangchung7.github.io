@@ -6,14 +6,18 @@ category: DUNE
 
 Table of Contents
 =================
-
+   
    * [Introduction to DUNE](#introduction-to-dune)
    * [Physics of DUNE (Far Detector at least)](#physics-of-dune-far-detector-at-least)
       * [Neutrino Oscillations](#neutrino-oscillations)
-   * [DUNE DAQ](#dune-daq)
-      * [The WIB](#the-wib)
+      * [Proton Decay](#proton-decay)
+   * [DUNE Data Aquisition](#dune-data-aquisition)
+      * [Single-Phase Time Projection Chamber Technology](#single-phase-time-projection-chamber-technology)
+      * [The WIB/WIEC](#the-wibwiec)
       * [The FELIX Board](#the-felix-board)
+      * [Timing the Data](#timing-the-data)
       * [For Reference](#for-reference)
+      * [TODO](#todo)
 
 ## Introduction to DUNE
 
