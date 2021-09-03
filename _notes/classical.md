@@ -125,15 +125,50 @@ If $$ \vec{F}^{(e)} = 0 $$, then $$ \vec{p} $$ is conserved.
 **Weak Law of Action and Reaction**: If the internal forces between two particls are equal and opposite.
 
 ### Angular Momentum of a System of Particles
-$$ \sum_{i} (\vec{r_{i}} \times \dot{\vec{p_{i}}}) = \sum_{i} \frac{d}{dt} (\vec{r_{i}} \times \vec{p}_{i} = \vec{\dot{L}} = \sum_{i} \vec{r}_{i} \times \vec{F}^{(e)}_{i} + \sum_{i,j}^{i\neq j} \times \vec{F}_{i,j} $$
+$$ \sum_{i} (\vec{r_{i}} \times \dot{\vec{p_{i}}}) = \sum_{i} \frac{d}{dt} (\vec{r_{i}} \times \vec{p}_{i} ) = \vec{\dot{L}} = \sum_{i} \vec{r}_{i} \times \vec{F}^{(e)}_{i} + \sum_{i,j}^{i\neq j} \times \vec{F}_{i,j} $$
 
 For the last term on the right:
 
 $$ r_{i} \times \vec{F}_{j,i} + r_{j}  \times \vec{F}_{i,j} = (\vec{r}_{i} - \vec{r}_{j}) \times \vec{F}_{j,i} $$
 
 
+# D'Alembert's Principle
+
+A infinitesimal virtual displacement is denoted by $$ \delta \vec{r_{i}} $$. This is also referred to as a "variation" (arises from calculus of variations). As opposed to a physical displacement, a _virtual_ displacement is anaglous to a blind person infinitesimally probing their surroundings where as a seeing person physically takes an infinitesimal step.
+
+To put it another way $$ d\vec{r} $$ typically involves times, and $$ \delta \vec{r} $$ is time independent. If it isn't obvious yet,If it isn't obvious yet, I am **very** uncomfortable with virutal displacement.
+
+
+For a system in equilibrium ($$ F_{i} = 0 $$):
+
+$$ \sum_{i} \vec{F_{i}} \dot{} \delta \vec{r_{i}} = 0 $$
+
+### A word on generalized coordinates and constraints
+
+We _transform_ our system of old coordinates and put in terms of generalized coordinates to parametrize our system:
+
+$$ \vec{r} = \vec{r}_1 ( q_{1}, q_{2}, q_{m}, t) $$
+
+where $$ m = 3N - k $$ degrees of freedom ($$ k $$ is the number of constraints ).  
+
+Differentiating...
+
+$$ \delta \vec{r}_{i} = \sum_{j=1}^{m} \frac{\partial \vec{r}_{i} }{\partial q_{j}} dq_{j} + \frac{\partial \vec{r}_{i}}{\partial t} dt $$
+
+The principle of virtual work for a system is defined as:
+
+$$ \delta W = \sum_{i=1}^{N} \vec{F_{i}^{a}} \delta \vec{r_{i}} = 0 $$  
+
+The coefficients of $$ \delta \vec{r}_{i} $$ can no longer be set to zero i.e. $$ \vec{F}^{a}_{i} \neq 0 $$ since $$ \delta \vec{r}_{i} $$ are bound by constraints. However, this is not ideal. 
+
+We want our equations of motion to be generalized and dynamic with coefficients equal to zero. To do this we transform the equation to involve the virtual displacements with $$ q_{i} $$, which are independent. 
+
+
 # References
 
 + Classical Mechanics by Goldstein, Poole & Safko
 
++ Mechanics by Landau & Lifshitz 
+
++ [David Tong's Notes on Classical Mechanics](http://www.damtp.cam.ac.uk/user/tong/dynamics.html)
 
