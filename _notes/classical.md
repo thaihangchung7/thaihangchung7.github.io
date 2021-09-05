@@ -132,7 +132,7 @@ For the last term on the right:
 $$ r_{i} \times \vec{F}_{j,i} + r_{j}  \times \vec{F}_{i,j} = (\vec{r}_{i} - \vec{r}_{j}) \times \vec{F}_{j,i} $$
 
 
-# D'Alembert's Principle
+# Path to Lagrange
 
 A infinitesimal virtual displacement is denoted by $$ \delta \vec{r_{i}} $$. This is also referred to as a "variation" (arises from calculus of variations). As opposed to a physical displacement, a _virtual_ displacement is anaglous to a blind person infinitesimally probing their surroundings where as a seeing person physically takes an infinitesimal step.
 
@@ -161,7 +161,20 @@ $$ \delta W = \sum_{i=1}^{N} \vec{F_{i}^{a}} \delta \vec{r_{i}} = 0 $$
 
 The coefficients of $$ \delta \vec{r}_{i} $$ can no longer be set to zero i.e. $$ \vec{F}^{a}_{i} \neq 0 $$ since $$ \delta \vec{r}_{i} $$ are bound by constraints. However, this is not ideal. 
 
-We want our equations of motion to be generalized and dynamic with coefficients equal to zero. To do this we transform the equation to involve the virtual displacements with $$ q_{i} $$, which are independent. 
+# D'Alembert's Principle
+
+Note that the principle of virtual work $$ \delta W $$ does not contain $$ f_{i} $$, however, it only deals with statics even though it uses virtual displacements $$ q_{i} $$. To extend this to the general motion of the system, we can start from an equation of motion $$ F = \dot{P} $$ and use some definitions, namely $$ \vec{F_{i}} + \vec{F_{i}^{a}} + f_{i} $$.
+
+$$ \sum_{i} (\vec{F_{i}^{a}} - \dot{\vec{p_{i}}} ) \dot{} \delta \vec{r_{i}} + \sum \vec{f_{i}} \dot{} \delta \vec{r_{i}} = 0 $$
+
+"Restricting ourselves to systems for which the virtual work of the forces of constraint vanishes":
+
+$$ \sum_{i} (\vec{F_{i}^{a}} - \dot{\vec{p_{i}}} ) \dot{} \delta \vec{r_{i}} = 0 $$
+
+We've arrived at **D'Alembert's principle**.
+
+
+
 
 
 # References
