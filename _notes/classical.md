@@ -173,7 +173,17 @@ $$ \sum_{i} (\vec{F_{i}^{a}} - \dot{\vec{p_{i}}} ) \dot{} \delta \vec{r_{i}} = 0
 
 We've arrived at **D'Alembert's principle**.
 
+However, we must generalize this equation further. The goal is to come up with an equation uses generalized coordinates $$( q $$ and $$ \dot{q})$$ for virtual displacements. This will allow us to set the coefficient of $$ \delta q_{i} $$ equal to zero since vitual displacements of generalized coordinates are dependent of each other.
 
+After using the following definitions:
+
+$$ \delta \vec{r_{i}} = \sum_{j} \frac{\partial \vec{r_{i}} }{\partial q_{j}} \delta q_{j} $$
+
+$$ Q_{j} = \sum_{i} \vec{F_{i}} \dot{} \frac{\partial \vec{r_{i}}}{\partial q_{j}} $$ 
+
+and after some derivation...
+
+$$ \frac{d}{dt} (\frac{\partial T}{\partial \dot{q_{j}}}) - \frac{\partial T}{\partial q_{i}} = Q_{j} $$
 
 
 
@@ -185,3 +195,4 @@ We've arrived at **D'Alembert's principle**.
 
 + [David Tong's Notes on Classical Mechanics](http://www.damtp.cam.ac.uk/user/tong/dynamics.html)
 
++ [Caltech Notes](https://sites.astro.caltech.edu/~golwala/ph106ab/ph106ab_notes.pdf)
