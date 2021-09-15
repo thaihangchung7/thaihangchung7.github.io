@@ -185,6 +185,106 @@ and after some derivation...
 
 $$ \frac{d}{dt} (\frac{\partial T}{\partial \dot{q_{j}}}) - \frac{\partial T}{\partial q_{i}} = Q_{j} $$
 
+## Generalizing to Lagrange
+
+For a conservative system:
+
+$$ F_{i} = - \nabla_{i} V $$
+
+Recall that this rises from the fact that in order for $$ W = 0 $$:
+
+$$ W = \int \int \nabla \times \vec{F_{i}^{a}} = 0 $$
+
+this result is true if and only if $$ F_{i} = - \nabla_{i} V $$ so that:
+
+$$ W = \int \int \nabla \times \nabla V = 0 $$ 
+
+Rewriting generalized force:
+
+$$ Q_{j} = \sum_{i} \vec{F_{i}} \dot{} \frac{\partial \vec{r_{i}}}{\partial q_{j}} = - \sum_{i} \nabla_{i} V \dot{} \frac{\partial \vec{r_{i}}}{\partial q_{j} } $$
+
+$$ = - \sum_{i} \frac{\partial V}{\partial \vec{r_{i}}} \frac{\partial \vec{r_{i}}}{\partial q_{j}}$$ 
+
+$$ Q_{j} = - \frac{\partial V}{\partial q_{i}} $$ 
+
+Substituting $$ Q_{j} $$ into D'Alembert's generalized principle, we have
+
+$$ \frac{d}{dt} ( \frac{\partial L}{\partial \dot{q_{j}}} ) - \frac{\partial L}{\partial q_{j}} = 0 $$
+
+We've arrived at **Lagrange's Equation** where $$ L = T - V $$ defines the **Lagrangian**. 
+
+"There is no unique choice of Lagrangian such that the Euler-Lagrange equations lead to the equation of motion in the given generalized coordinates."
+
+If $$ L (q , \dot{q}, t )$$ is an approximate Lagrangian. $$ F(q,t) $$ is any differentiable function, then:
+
+$$ L'(q,\dot{q}, t) = L (q, \dot{q}, t) + \frac{dF}{dt} $$
+
+Keep in mind that it is often possible to find alternative Lagrangians. 
+
+# Velocity-Dependent Potentials and the Dissipation Function
+
+Let us "redefine" the Lagrangian:
+
+$$ L = T - U $$ 
+
+where $$ U $$ is called a "generalized potential" or a __"velocity-dependent potential"__. 
+
+Consider an electric charge, $$ q $$, with mass $$ m $$, moving at velocity, $$ \vec{v} $$. The charge is placed in an $$ \vec{E} $$ and $$ \vec{B} $$ field, which both depend on time and position. The chage experiences the Lorentz force:
+
+$$ \vec{F_{Lorentz}} = q [\vec{E} + (\vec{v} \times \vec{B})] $$  
+
+The goal here is to turn $$ F_{Lorentz} $$ into some potential $$ U $$ for the Lagrangian.
+
+Using some of Maxwell's EM equations, namely:
+
+$$ \nabla \dot{} \vec{B} = 0$$ 
+
+$$ \nabla \times \vec{E} = \frac{\partial \vec{B}}{\partial t}$$
+
+We define the scalar and vector potentials:
+
+$$ \vec{E} = - \nabla \phi - \frac{\partial \vec{A}}{\partial t} $$ ; $$\phi (t,x,y,z) $$
+
+$$ \vec{B} = \nabla \times \vec{A} $$ ; $$ \vec{A} (t,x,y,z) $$
+
+Insert $$\vec{E}$$ and $$\vec{B}$$ into $$\vec{F}_{Lorentz} $$:
+
+$$ \vec{F}_{Lorentz} = q [ -\nabla \phi - \frac{\partial \vec{A}}{\partial t} + \vec{v} \times \nabla \times \vec{A} ] $$
+
+To deal with the vector triple product, here are some helpful definitions and hints:
+
+Restricting our triple product to the $$ x $$ component since the $$ y $$ and $$ z $$ computations will be the same.
+
+Look for $$ - v_{x} \frac{\partial A_{x}}{\partial x} - v_{y} \frac{\partial A_{x}}{\partial y} - v_{z} \frac{\partial A_{x}}{\partial z} $$ 
+
+Look for the term $$ \frac{\partial A_{x}}{\partial t} - \frac{\partial A_{x}}{\partial t}$$ using:
+
+$$ \frac{\partial A_{x}}{\partial t} = v_{x} \frac{\partial A_{x}}{\partial x} + v_{y} \frac{\partial A_{y}}{\partial y} + v_{z} \frac{\partial A_{z}}{\partial z} + \frac{\partial A_{x}}{\partial t} $$ 
+
+Analytically "guessing" a solution:
+
+$$ \frac{\partial}{\partial x} (\vec{v} \dot{} A) = \frac{\partial}{\partial x} (v_{x} A_{x} + v_{y} A_{y} + v_{z} A_{z}) = A_{x} $$
+
+The vector triple product is:
+
+$$ ( v \times \nabla \times A) = \frac{\partial}{\partial x} ( v \times A ) - \frac{d}{dt} (\frac{\partial}{\partial x} (v \times A)) + \frac{\partial A_{x}}{\partial t}$$
+
+Plugging in our definitions, the $$ x $$ component of the Lorentz force will be:
+
+$$ \vec{F_{Lor,x}} = q [ - \frac{\partial \phi}{\partial x} - \frac{A_{x}}{\partial t} + \frac{\partial}{\partial x} (\vec{v} \dot{} \vec{A} ) - \frac{d}{dt} ( \frac{\partial}{\partial t} (\vec{v} \dot{} \vec{A} ) + \frac{\partial A_{x}}{\partial t}) ] $$
+
+$$ = q [- \frac{\partial}{\partial x} \big(\phi - (\vec{v} \dot{} \vec{A} )\big) - \frac{d}{dt}(\frac{\partial}{\partial x} ( \phi - (\vec{v} \dot{} \vec{A} ) ) ] $$
+
+
+$$ F_{Lor,x} = \frac{d}{dt} (\frac{\partial U}{\partial x} ) - \frac{\partial U}{\partial x} $$ 
+
+Finally, we define $$ U $$, the **generalized EM potential**  :
+
+$$ U = q \phi - q \vec{A} \dot{} \vec{v} $$
+
+such that the Lagrangian $$ L = T - U $$ is:
+
+$$ L = \frac{1}{2} m v^{2} - q \phi + q \vec{A} \dot{} \vec{v} $$
 
 
 # References
