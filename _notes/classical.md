@@ -229,7 +229,7 @@ $$ L = T - U $$
 
 where $$ U $$ is called a "generalized potential" or a __"velocity-dependent potential"__. 
 
-Consider an electric charge, $$ q $$, with mass $$ m $$, moving at velocity, $$ \vec{v} $$. The charge is placed in an $$ \vec{E} $$ and $$ \vec{B} $$ field, which both depend on time and position. The chage experiences the Lorentz force:
+Consider an electric charge, $$ q $$, with mass $$ m $$, moving at velocity, $$ \vec{v} $$. The charge is placed in an $$ \vec{E} $$ and $$ \vec{B} $$ field, which both depend on time and position. The charge experiences the Lorentz force:
 
 $$ \vec{F_{Lorentz}} = q [\vec{E} + (\vec{v} \times \vec{B})] $$  
 
