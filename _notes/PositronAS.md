@@ -92,10 +92,6 @@ The beam energy needs to be at 1.02 MeV to create $$e^{+} e^{-} $$ pairs but no 
 
 
 
-# Tao-Eldrup Model
-
--To be added?
-
 # Appendix
 
 ## Pair Production and Annihilation
@@ -115,6 +111,40 @@ $$ e^{+} + e^{-} \rightarrow \gamma + \gamma $$
 The Feynman diagram above is an example of an $$ e^{+} e^{-} $$ interaction. The order of the is $$ p = 2 $$ (count the number of verticies in the diagram).
 Thus, the associated probability is of order $$ \alpha^{p} $$ ($$ \alpha $$ is the fine structure constant).
 
+# Trapping Model and Defect Calculations
+
+## Defect Calculations from PALS Data
+
+The trapping model assumes that the positron exists in one state out of the two; the "Bulk" or Bloch state or the defect trapped state.
+
+The model is described by a set of coupled differential equations:
+
+$$ \frac{d n_{b}}{dt} = - n_{b} \lambda_{b} - n_{b} k_{t} $$
+
+$$ \frac{d n_{t}}{dt} = + n_{b} k_{t} - n_{t} \lambda_{t} $$
+
+where $$ \lambda_{b} $$ and $$ \lambda_{d} $$ are the positron annihilation rates in bulk and defect trapped states. The annihilation rates is inversely proportional to the positron lifetime, in other words, $$ \tau_{b} \equiv \lambda_{b}^{-1} $$ and $$ \tau_{d} \equiv \lambda_{d}^{-1} $$. $$ k_{t} $$ is the total transition or trapping rate from the positron bulk state to trapping state. 
+
+We can now define the fraction of positroins present within the system at time $$ t $$:
+
+$$ N(t) = n_{b} (t) + n_{t} (t) = (1 - I_{2}) e^{-\Lambda_{1} t} + I_{2} e^{-\Lambda_{2} t}$$ 
+
+Positron trapping rate, $$K_{d}$$ is calculated as
+
+$$ K_{d} = \frac{I_{2}}{I_{1}} ( \frac{1}{\tau_{b}} - \frac{1}{\tau_{d}} ) $$
+
+where $$ \tau_{b} $$ and $$ \tau_{d} $$ are the bulk and defect lifetimes, respectively. $$ I_{2} $$ and $$ I_{1} $$ are the measured intensities.
+
+The trapping rate ($$K_{d}$$) can be used to calculate defect densities ($$ \rho_{d} $$) using:
+
+$$ \rho_{d} = \frac{K_{d}}{\eta_{0}}$$
+
+where $$\eta_{0}$$ is the trapping coefficient, that can be determined theoretically or experimentally and is specific to each defect type.
+## Tao-Eldrup Model
+
+-To be added
+
+
 ## Band Gaps
 
 - To be added
@@ -125,4 +155,6 @@ Thus, the associated probability is of order $$ \alpha^{p} $$ ($$ \alpha $$ is t
 
 # References
 
-[1] F.A.Selim, Positron annihilation spectroscopy of defects in nuclear and irradiated materials- a review
+[1] [F.A.Selim, Positron annihilation spectroscopy of defects in nuclear and irradiated materials- a review](https://www.sciencedirect.com/science/article/pii/S1044580321000826#bb0215)
+
+[2] [R. W Siegel Positron Annihilation Spectroscopy](https://www.annualreviews.org/doi/pdf/10.1146/annurev.ms.10.080180.002141) 
