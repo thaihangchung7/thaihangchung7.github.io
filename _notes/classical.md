@@ -17,10 +17,7 @@ $$ \vec{a} = \frac{d^2 \vec{r}}{dt^2 } $$
 
 $$ \vec{F} = \frac{d\vec{p}}{dt} $$
 
-
-## Theorem: Conservation for the linear momentum of a particle
-
-If the total force $$ \vec{F} = 0 $$, then $$ \dot{p} = 0 $$ and the linear momentum $$ p $$ is conserved. 
+**(Theorem) Conservation for the linear momentum of a particle**: If the total force $$ \vec{F} = 0 $$, then $$ \dot{p} = 0 $$ and the linear momentum $$ p $$ is conserved. 
 
 ### Angular Momentum and Torque
 
@@ -47,9 +44,7 @@ $$ \vec{N} = \frac{d}{dt} (\vec{r} \times m \vec{v}) = \frac{d \vec{L}}{dt} \equ
 
 In other words, the moment of force about point $$ O $$. 
 
-## Theorem: Angular Momentum of a particle
-
-If the total torque, $$ \vec{N} = 0 $$, then $$ \dot{L} = 0 $$, and angular momentum $$ \vec{L} $$ is conserved.
+**(Theorem) Angular Momentum of a particle**: If the total torque, $$ \vec{N} = 0 $$, then $$ \dot{L} = 0 $$, and angular momentum $$ \vec{L} $$ is conserved.
 
 ### Work
 
@@ -70,9 +65,7 @@ Let $$ T = \frac{mv^2}{2} $$ then we have:
 
 $$ W_{1,2} = T_{2} - T_{1} $$
 
-## Theorem: Conservative Theorem for a particle
-
-If the forces acting on a particle are conservative, then the total energy of the particle, $$ T + V $$ is conserved.
+**(Theorem) Conservative Theorem for a particle**: If the forces acting on a particle are conservative, then the total energy of the particle, $$ T + V $$ is conserved.
 
 ### Conservative Systems
 
@@ -106,7 +99,7 @@ $$\sum_{j} \vec{F}_{ji} + \vec{F}^{(e)}_{i} = \dot{p}_i  $$
 
 We define a vector $$ \vec{R} $$ that points from some origin as an average of the radii vectors of particles, $$O$$ to the center of mass/gravity of a particle system:
 
-$$ \vec{R} = \frac{\sum m_{i}\vec{r_i}}{ \sum m_i} = \frac{\sum m_{i}\vec{r_i}}{M}$$
+$$ \vec{R} = \frac{\sum m_{i}\vec{r_i}}{ \sum m_{i}} = \frac{\sum m_{i}\vec{r_{i}}}{M}$$
 
 Rewriting the 2nd law for a system of particles in terms of $$ \vec{r} $$:
 
@@ -116,9 +109,7 @@ We find that the total linear momentum of a system is:
 
 $$ \vec{P} = \sum m_{i} \frac{d \vec{r}_{i}}{dt} = M \frac{d \vec{R}}{dt} $$
 
-## Theorem: Conservation of Linear Momentum of a System of Particles:
-
-If $$ \vec{F}^{(e)} = 0 $$, then $$ \vec{p} $$ is conserved. 
+**(Theorem) Conservation of Linear Momentum of a System of Particles**: If $$ \vec{F}^{(e)} = 0 $$, then $$ \vec{p} $$ is conserved. 
 
 **Strong Law of Action and Reaction**: If the internal forces between two particles, in addition to being equal and opposite, _AND also_ lie along the line joining the particles.
 
