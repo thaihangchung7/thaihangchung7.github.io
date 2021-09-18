@@ -23,7 +23,7 @@ for an _inertial_ or _Galilean_ system.
 ## Theorem: Conservation for the linear momentum of a particle
 
 If the total force $$ \vec{F} = 0 $$, then $$ \dot{p} = 0 $$ and the linear momentum $$ p $$ is conserved. 
-=======
+
 **(Theorem) Conservation for the linear momentum of a particle**: If the total force $$ \vec{F} = 0 $$, then $$ \dot{p} = 0 $$ and the linear momentum $$ p $$ is conserved. 
 
 ### Angular Momentum and Torque
@@ -76,13 +76,27 @@ $$ W_{1,2} = T_{2} - T_{1} $$
 
 ### Conservative Systems
 
+The work done on a particle when it travels some distance $$ds$$ is given by:
+
+$$ \vec{F} \dot ds = - \frac{\partial V}{\partial s} \dot{} ds $$
+
 A system is conservative if $$ W_{1,2} $$ is path independent. Defined as a closed contour integral:
 
 $$ \oint \vec{F} \dot{} d\vec{s} = 0 $$
 
-Gravitional forces = conservative 
+Mathematically, a force or vector field is conservative if it meets any of the following conditions:
 
-Frictional forces = non-conservative
+1) $$ \nabla \times \vec{F} = \vec{0} $$
+
+2) $$ W \equiv \oint_{C} \vec{F} \dot{} d\vec{r} = 0 $$
+
+3) $$ \vec{F} = - \nabla \Phi $$; 
+
+where $$ \Phi $$ is a potential 
+
+Conservative forces: Gravity, Particle in an $$ \vec{E} $$ field 
+
+Non-Conservative forces: Friction, Particle in a $$ \vec{B} $$ field,
 
 ### Potential Energy
 
@@ -104,9 +118,11 @@ Newton's 2nd Law for the i-th particle:
 
 $$\sum_{j} \vec{F}_{ji} + \vec{F}^{(e)}_{i} = \dot{p}_i  $$ 
 
+where $$ \vec{F_{ji}} $$ refer to the interforces between the particles and $$ \vec{F}_{i}^{(e)} $$ refers to the external force acting on the system.   
+
 We define a vector $$ \vec{R} $$ that points from some origin as an average of the radii vectors of particles, $$O$$ to the center of mass/gravity of a particle system:
 
-$$ \vec{R} = \frac{\sum m_{i}\vec{r_i}}{ \sum m_{i}} = \frac{\sum m_{i}\vec{r_{i}}}{M}$$
+$$ \vec{R} = \frac{\sum m_{i}\vec{r_{i}}}{ \sum m_{i}} = \frac{\sum m_{i}\vec{r_{i}}}{M}$$
 
 Rewriting the 2nd law for a system of particles in terms of $$ \vec{r} $$:
 
@@ -123,12 +139,21 @@ $$ \vec{P} = \sum m_{i} \frac{d \vec{r}_{i}}{dt} = M \frac{d \vec{R}}{dt} $$
 **Weak Law of Action and Reaction**: If the internal forces between two particls are equal and opposite.
 
 ### Angular Momentum of a System of Particles
-$$ \sum_{i} (\vec{r_{i}} \times \dot{\vec{p_{i}}}) = \sum_{i} \frac{d}{dt} (\vec{r_{i}} \times \vec{p}_{i} ) = \vec{\dot{L}} = \sum_{i} \vec{r}_{i} \times \vec{F}^{(e)}_{i} + \sum_{i,j}^{i\neq j} \times \vec{F}_{i,j} $$
+$$ \sum_{i} (\vec{r_{i}} \times \dot{\vec{p_{i}}}) = \sum_{i} \frac{d}{dt} (\vec{r_{i}} \times \vec{p}_{i} ) = \vec{\dot{L}} = \sum_{i} \vec{r}_{i} \times \vec{F}^{(e)}_{i} + \sum_{i,j}^{i\neq j} r_{i} \times \vec{F}_{i,j} $$
 
 For the last term on the right:
 
 $$ r_{i} \times \vec{F}_{j,i} + r_{j}  \times \vec{F}_{i,j} = (\vec{r}_{i} - \vec{r}_{j}) \times \vec{F}_{j,i} $$
 
+Due to the equality of actiona and reaction, $$ r_{i} - r_{j} $$ is identical to $$ r_{ij} $$. We can rewrite the equation above:
+
+$$ r_{ij} \times \vec{F_{ji}} $$
+
+Applying the strong law of action and reaction, the cross products of vectors that lie on the line joining the particles vanish, leaving only the external forces. Hence:
+
+$$ \frac{d \vec{L}}{dt} = \vec{N}^{e} $$
+
+in other words, the time derivative of the total angular momentum is equal to the moment of the external force about a given point.
 
 # Path to Lagrange
 
@@ -153,7 +178,7 @@ Differentiating...
 
 $$ \delta \vec{r}_{i} = \sum_{j=1}^{m} \frac{\partial \vec{r}_{i} }{\partial q_{j}} dq_{j} + \frac{\partial \vec{r}_{i}}{\partial t} dt $$
 
-The principle of virtual work for a system is defined as:
+The **principle of virtual work** for a system is defined as:
 
 $$ \delta W = \sum_{i=1}^{N} \vec{F_{i}^{a}} \delta \vec{r_{i}} = 0 $$  
 
@@ -161,7 +186,7 @@ The coefficients of $$ \delta \vec{r}_{i} $$ can no longer be set to zero i.e. $
 
 # D'Alembert's Principle
 
-Note that the principle of virtual work $$ \delta W $$ does not contain $$ f_{i} $$, however, it only deals with statics even though it uses virtual displacements $$ q_{i} $$. To extend this to the general motion of the system, we can start from an equation of motion $$ F = \dot{P} $$ and use some definitions, namely $$ \vec{F_{i}} + \vec{F_{i}^{a}} + f_{i} $$.
+Note that the principle of virtual work $$ \delta W $$ does not contain $$ f_{i} $$, however, it only deals with statics even though it uses virtual displacements $$ q_{i} $$. To extend this to the general motion of the system, we can start from an equation of motion $$ F = \dot{P} $$ and use some definitions, namely $$ \vec{F_{i}} = \vec{F_{i}^{a}} + f_{i} $$.
 
 $$ \sum_{i} (\vec{F_{i}^{a}} - \dot{\vec{p_{i}}} ) \dot{} \delta \vec{r_{i}} + \sum \vec{f_{i}} \dot{} \delta \vec{r_{i}} = 0 $$
 
