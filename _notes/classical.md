@@ -13,11 +13,13 @@ $$ F = m \frac{d\vec{v}}{dt} = m\vec{a}$$
 
 $$ \vec{a} = \frac{d^2 \vec{r}}{dt^2 } $$
 
+$$ \vec{p} = m \vec{v} $$
+
 **Generalized Form:**
 
-$$ \vec{F} = \frac{d\vec{p}}{dt} $$
+$$ \vec{F} = \frac{d\vec{p}}{dt} \equiv \dot{p} $$
 
-
+for an _inertial_ or _Galilean_ system.
 ## Theorem: Conservation for the linear momentum of a particle
 
 If the total force $$ \vec{F} = 0 $$, then $$ \dot{p} = 0 $$ and the linear momentum $$ p $$ is conserved. 
@@ -28,7 +30,7 @@ Angular momentum is defined as:
 
 $$  \vec{L} =  \vec{r} \times \vec{p} $$
 
-As a result, torque is defined as: 
+As a result, torque (or moment of force) is defined as: 
 
 $$ \vec{N} = \vec{r} \times \vec{F} $$
 
@@ -136,7 +138,7 @@ $$ r_{i} \times \vec{F}_{j,i} + r_{j}  \times \vec{F}_{i,j} = (\vec{r}_{i} - \ve
 
 A infinitesimal virtual displacement is denoted by $$ \delta \vec{r_{i}} $$. This is also referred to as a "variation" (arises from calculus of variations). As opposed to a physical displacement, a _virtual_ displacement is anaglous to a blind person infinitesimally probing their surroundings where as a seeing person physically takes an infinitesimal step.
 
-To put it another way $$ d\vec{r} $$ typically involves times, and $$ \delta \vec{r} $$ is time independent. If it isn't obvious yet,If it isn't obvious yet, I am **very** uncomfortable with virutal displacement.
+To put it another way $$ d\vec{r} $$ typically involves times, and $$ \delta \vec{r} $$ is time independent. If it isn't obvious yet, I am **very** uncomfortable with virutal displacement.
 
 
 For a system in equilibrium ($$ F_{i} = 0 $$):

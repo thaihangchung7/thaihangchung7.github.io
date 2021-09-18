@@ -4,7 +4,7 @@ title: Electromagnetism
 category: notes 
 ---
 
-Important concepts in Electricity and Magnetism. 
+Important concepts in Electricity and Magnetism (and a meager attempt at interpreting Jackson's book). 
 
 # Polarization of a Dielectric Medium 
 
@@ -61,6 +61,27 @@ Suppose that $$ \vec{E} $$ is a harmonic field given by:
 $$ \vec{E} = \vec{E}_{0} e^{-i \omega t}$$ 
 
 $$ \vec{r} = \vec{r}_{0} e^{-i \omega t}$$ 
+
+The derivatives for the differential equation:
+
+$$ \frac{d\vec{r}}{dt} = - i \omega r_{0} e^{-i \omega t} = - i \omega \vec{r} $$ 
+
+$$ \frac{d^{2} \vec{r}}{dt^{2}} = - \omega^{2} r_{0} e^{- i \omega t} = - \omega^{2} \vec{r} $$ 
+
+Solving...
+
+$$ - K_{s} \vec{r} - m \gamma (- i \omega \vec{r} ) - e \vec{E} = m ( - \omega^{2} \vec{r} ) $$
+
+$$ \vec{r} = \frac{e \vec{E}}{- m \omega^{2} - i m \omega \gamma + K_{s}} $$
+
+Substituting this into the Polarization equation yields:
+
+$$ \vec{P} = \bigg( \frac{Ne^{2}}{-m \omega^{2} - i m \omega \gamma + K_{s}} \bigg) \vec{E} $$
+
+
+
+
+
 
 
 
