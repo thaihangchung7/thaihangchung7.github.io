@@ -166,13 +166,33 @@ For a system in equilibrium ($$ F_{i} = 0 $$):
 
 $$ \sum_{i} \vec{F_{i}} \dot{} \delta \vec{r_{i}} = 0 $$
 
-### A word on generalized coordinates and constraints
+### A word on constraints and generalized coordinates
+
+Constraints are classified in various ways. Constraints that are **holonomic** take the form:
+
+$$ f(\vec{r_{1}}, \vec{r_{2}}, ... , t) = 0 $$ 
+
+i.e. a holonomic constraint depends on coordinates $$ x_{j} $$ and maybe $$ t $$. It does not depend on any higher-order derivatives with respect to $$ t $$ such as velocity. 
+
+The simplest examples of holonomic constraint is a rigid body or a particle constrained to move along any curve.  
+
+On the other hand, **non-holonomic** constraints are expressed as:
+
+$$ f(\vec{r_{1}}, \vec{r_{2}}, ... , t) < 0 $$ 
+
+The walls of a gas container is an example of non-holonomic constraint.
+
+Constraints can be further classified by their dependence on time.
+
+If constraints contain time as an explicit variable, then these contraints are known as **rheonomous**. 
+
+Otherwise, if the contraint is time-independent, then they are known as **scleronomous**. The equation of constraints can be described by generalized coordinates. 
 
 We _transform_ our system of old coordinates and put in terms of generalized coordinates to parametrize our system:
 
 $$ \vec{r} = \vec{r}_1 ( q_{1}, q_{2}, q_{m}, t) $$
 
-where $$ m = 3N - k $$ degrees of freedom ($$ k $$ is the number of constraints ).  
+where we have $$m$$ independent coordinates; $$ m = 3N - k $$ with $$ 3N $$ degrees of freedom $$ k $$ number of constraints.  
 
 Differentiating...
 
