@@ -92,7 +92,7 @@ Mathematically, a force or vector field is conservative if it meets any of the f
 
 3) $$ \vec{F} = - \nabla \Phi $$; 
 
-where $$ \Phi $$ is a potential 
+where $$ \Phi $$ is some potential. 
 
 Conservative forces: Gravity, Particle in an $$ \vec{E} $$ field 
 
@@ -136,7 +136,7 @@ $$ \vec{P} = \sum m_{i} \frac{d \vec{r}_{i}}{dt} = M \frac{d \vec{R}}{dt} $$
 
 **Strong Law of Action and Reaction**: If the internal forces between two particles, in addition to being equal and opposite, _AND also_ lie along the line joining the particles.
 
-**Weak Law of Action and Reaction**: If the internal forces between two particls are equal and opposite.
+**Weak Law of Action and Reaction**: If the internal forces between two particles are equal and opposite.
 
 ### Angular Momentum of a System of Particles
 $$ \sum_{i} (\vec{r_{i}} \times \dot{\vec{p_{i}}}) = \sum_{i} \frac{d}{dt} (\vec{r_{i}} \times \vec{p}_{i} ) = \vec{\dot{L}} = \sum_{i} \vec{r}_{i} \times \vec{F}^{(e)}_{i} + \sum_{i,j}^{i\neq j} r_{i} \times \vec{F}_{i,j} $$
@@ -178,7 +178,7 @@ Differentiating...
 
 $$ \delta \vec{r}_{i} = \sum_{j=1}^{m} \frac{\partial \vec{r}_{i} }{\partial q_{j}} dq_{j} + \frac{\partial \vec{r}_{i}}{\partial t} dt $$
 
-The **principle of virtual work** for a system is defined as:
+The **principle of virtual work** for a system in static equilibrium is defined as:
 
 $$ \delta W = \sum_{i=1}^{N} \vec{F_{i}^{a}} \delta \vec{r_{i}} = 0 $$  
 
@@ -190,9 +190,9 @@ Note that the principle of virtual work $$ \delta W $$ does not contain $$ f_{i}
 
 $$ \sum_{i} (\vec{F_{i}^{a}} - \dot{\vec{p_{i}}} ) \dot{} \delta \vec{r_{i}} + \sum \vec{f_{i}} \dot{} \delta \vec{r_{i}} = 0 $$
 
-"Restricting ourselves to systems for which the virtual work of the forces of constraint vanishes":
+"Restricting ourselves to systems for which the virtual work of the forces of constraint vanishes". For systems in dynamic equilibrium:
 
-$$ \sum_{i} (\vec{F_{i}^{a}} - \dot{\vec{p_{i}}} ) \dot{} \delta \vec{r_{i}} = 0 $$
+$$ \delta W = \sum_{i} (\vec{F_{i}^{a}} - \dot{\vec{p_{i}}} ) \dot{} \delta \vec{r_{i}} = 0 $$
 
 We've arrived at **D'Alembert's principle**.
 
@@ -200,7 +200,11 @@ However, we must generalize this equation further. The goal is to come up with a
 
 After using the following definitions:
 
+Virtual Displacement:
+
 $$ \delta \vec{r_{i}} = \sum_{j} \frac{\partial \vec{r_{i}} }{\partial q_{j}} \delta q_{j} $$
+
+and **Generalized Force**:
 
 $$ Q_{j} = \sum_{i} \vec{F_{i}} \dot{} \frac{\partial \vec{r_{i}}}{\partial q_{j}} $$ 
 
