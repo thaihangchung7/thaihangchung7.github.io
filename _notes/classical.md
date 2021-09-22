@@ -6,6 +6,26 @@ category: notes
 
 Important Theorems and Equations for Classical Mechanics
 
+Table of Contents
+=================
+
+* [Survey of the Elementary Principles](#survey-of-the-elementary-principles)
+* [Theorem: Conservation for the linear momentum of a particle](#theorem-conservation-for-the-linear-momentum-of-a-particle)
+* [Angular Momentum and Torque](#angular-momentum-and-torque)
+* [Work](#work)
+* [Kinetic Energy](#kinetic-energy)
+* [Conservative Systems](#conservative-systems)
+* [Potential Energy](#potential-energy)
+* [System with Multiple Particles](#system-with-multiple-particles)
+* [Angular Momentum of a System of Particles](#angular-momentum-of-a-system-of-particles)
+* [Path to Lagrange](#path-to-lagrange)
+  * [A word on constraints and generalized coordinates](#a-word-on-constraints-and-generalized-coordinates)
+* [D'Alembert's Principle](#dalemberts-principle)
+* [Generalizing to Lagrange](#generalizing-to-lagrange)
+* [Velocity-Dependent Potentials and the Dissipation Function](#velocity-dependent-potentials-and-the-dissipation-function)
+* [References](#references)
+
+
 # Survey of the Elementary Principles
 Recall:
 
