@@ -181,8 +181,12 @@ in other words, the time derivative of the total angular momentum is equal to th
 
 A infinitesimal virtual displacement is denoted by $$ \delta \vec{r_{i}} $$. This is also referred to as a "variation" (arises from calculus of variations). As opposed to a physical displacement, a _virtual_ displacement is anaglous to a blind person infinitesimally probing their surroundings where as a seeing person physically takes an infinitesimal step.
 
+<<<<<<< HEAD
 To put it another way $$ d\vec{r} $$ typically involves time, and $$ \delta \vec{r} $$ is time independent. If it isn't obvious yet, I am **very** uncomfortable with virutal displacement.
 
+=======
+To put it another way $$ d\vec{r} $$ typically involves times, and $$ \delta \vec{r} $$ is time independent.
+>>>>>>> ae3d99924e57f2af236bb498f7f3270156e45df6
 
 For a system in equilibrium ($$ F_{i} = 0 $$):
 
