@@ -98,7 +98,7 @@ $$ W_{1,2} = T_{2} - T_{1} $$
 
 The work done on a particle when it travels some distance $$ds$$ is given by:
 
-$$ \vec{F} \dot ds = - \frac{\partial V}{\partial s} \dot{} ds $$
+$$ \vec{F} \dot{} ds = - \frac{\partial V}{\partial s} \dot{} ds $$
 
 A system is conservative if $$ W_{1,2} $$ is path independent. Defined as a closed contour integral:
 
@@ -118,7 +118,7 @@ Conservative forces: Gravity, Particle in an $$ \vec{E} $$ field
 
 Non-Conservative forces: Friction, Particle in a $$ \vec{B} $$ field,
 
-### Potential Energy
+### Conservation of Energy and Conservative Forces 
 
 Potential Energy is defined as:
 
@@ -131,6 +131,8 @@ $$ W_{1,2} = V_{1} - V_{2} $$
 Combining $$ W_{1,2} $$ in terms of kinetic energy and $$ W_{1,2} $$ in terms of potential energy, we get:
 
 $$ V_{1} + T_{1} = V_{2} + T_{2} $$
+
+In other words, the system's total energy is conserved if the force can be written as $$ \vec{F} = - \nabla V (\vec{r}) $$ or $$ \vec{F} = - \frac{\partial V}{ \partial s} $$
 
 # System with Multiple Particles
 
@@ -179,7 +181,7 @@ in other words, the time derivative of the total angular momentum is equal to th
 
 A infinitesimal virtual displacement is denoted by $$ \delta \vec{r_{i}} $$. This is also referred to as a "variation" (arises from calculus of variations). As opposed to a physical displacement, a _virtual_ displacement is anaglous to a blind person infinitesimally probing their surroundings where as a seeing person physically takes an infinitesimal step.
 
-To put it another way $$ d\vec{r} $$ typically involves times, and $$ \delta \vec{r} $$ is time independent. If it isn't obvious yet, I am **very** uncomfortable with virutal displacement.
+To put it another way $$ d\vec{r} $$ typically involves time, and $$ \delta \vec{r} $$ is time independent. If it isn't obvious yet, I am **very** uncomfortable with virutal displacement.
 
 
 For a system in equilibrium ($$ F_{i} = 0 $$):
