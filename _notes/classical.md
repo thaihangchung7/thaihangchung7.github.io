@@ -10,7 +10,6 @@ Table of Contents
 =================
 
 * [Survey of the Elementary Principles](#survey-of-the-elementary-principles)
-* [Theorem: Conservation for the linear momentum of a particle](#theorem-conservation-for-the-linear-momentum-of-a-particle)
 * [Angular Momentum and Torque](#angular-momentum-and-torque)
 * [Work](#work)
 * [Kinetic Energy](#kinetic-energy)
@@ -18,7 +17,7 @@ Table of Contents
 * [Potential Energy](#potential-energy)
 * [System with Multiple Particles](#system-with-multiple-particles)
 * [Angular Momentum of a System of Particles](#angular-momentum-of-a-system-of-particles)
-* [Path to Lagrange](#path-to-lagrange)
+* [Generalizing Coordinates](#generalizing-coordinates)
   * [A word on constraints and generalized coordinates](#a-word-on-constraints-and-generalized-coordinates)
 * [D'Alembert's Principle](#dalemberts-principle)
 * [Generalizing to Lagrange](#generalizing-to-lagrange)
@@ -40,7 +39,8 @@ $$ \vec{p} = m \vec{v} $$
 $$ \vec{F} = \frac{d\vec{p}}{dt} \equiv \dot{p} $$
 
 for an _inertial_ or _Galilean_ system.
-## Theorem: Conservation for the linear momentum of a particle
+
+**(Theorem) Conservation for the linear momentum of a particle**
 
 If the total force $$ \vec{F} = 0 $$, then $$ \dot{p} = 0 $$ and the linear momentum $$ p $$ is conserved. 
 
@@ -177,7 +177,7 @@ $$ \frac{d \vec{L}}{dt} = \vec{N}^{e} $$
 
 in other words, the time derivative of the total angular momentum is equal to the moment of the external force about a given point.
 
-# Path to Lagrange
+# Generalizing Coordinates
 
 A infinitesimal virtual displacement is denoted by $$ \delta \vec{r_{i}} $$. This is also referred to as a "variation" (arises from calculus of variations). As opposed to a physical displacement, a _virtual_ displacement is anaglous to a blind person infinitesimally probing their surroundings where as a seeing person physically takes an infinitesimal step.
 
@@ -353,6 +353,39 @@ $$ U = q \phi - q \vec{A} \dot{} \vec{v} $$
 such that the Lagrangian $$ L = T - U $$ is:
 
 $$ L = \frac{1}{2} m v^{2} - q \phi + q \vec{A} \dot{} \vec{v} $$
+
+
+# Applications of the Lagrangian Formulation
+
+When generalizing Cartesian coordinates, we make use of the transformation equations:
+
+$$ r_{i} = r_{1}(q_{1},...,q_{3N-k},t) $$
+
+$$ r_{i} = r_{N}(q_{1},...,q_{3N-k},t) $$
+
+$$ r_{i} = r_{i}(q_{1},...,q_{n},t) $$
+
+T in general is defined as:
+
+$$ T = \sum_{i} \frac{1}{2} m_{i} v_{i}^{2} = \sum_{i} \frac{1}{2} m_{i} \bigg( \sum_{j} \frac{\partial r_{i}}{\partial q_{j}} \dot{q_{j}} + \frac{\partial r_{i}}{\partial t} \bigg)^{2}  $$
+
+Carrying out the expansion on the squared term we end up with:
+
+$$ T_{0} = \sum_{i} \frac{1}{2} m_{i} \bigg(\frac{\partial r_{i}}{\partial q_{j}} \dot{q}_{j} \bigg)^{2} + \sum_{i} m_{i} \bigg( \frac{\partial r_{i}}{\partial q_{j}} \dot{} \frac{\partial r_{i}}{\partial t} \bigg) \dot{q}_{j} + \frac{1}{2} \sum_{i} m_{i} \bigg( \frac{\partial r_{i}}{\partial t} \bigg)^{2}  $$
+
+
+We define a couple terms...
+
+$$ M_{0} = \frac{1}{2} \sum_{i} \bigg( \frac{\partial r_{i}}{\partial t} \bigg)^{2} $$
+
+$$ M_{j} = \sum_{i} m_{i} \bigg( \frac{\partial r_{i}}{\partial q_{j}} \dot{} \frac{\partial r_{i}}{\partial q_{t}} \bigg) $$
+
+$$ M_{jk} = \sum_{i} \frac{1}{2} m_{i} \bigg(\frac{\partial r_{i}}{\partial q_{j}} \frac{\partial r_{i}}{\partial q_{k}} \bigg) $$
+
+So,
+
+$$ T_{0} = M_{0} + M_{j} \dot{q}_{j} + M_{jk} \dot{q}_{j} \dot{q}_{k} $$
+
 
 
 # References
