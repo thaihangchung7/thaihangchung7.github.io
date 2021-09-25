@@ -125,7 +125,7 @@ $$ \frac{d n_{t}}{dt} = + n_{b} k_{t} - n_{t} \lambda_{t} $$
 
 where $$ \lambda_{b} $$ and $$ \lambda_{d} $$ are the positron annihilation rates in bulk and defect trapped states. The annihilation rates is inversely proportional to the positron lifetime, in other words, $$ \tau_{b} \equiv \lambda_{b}^{-1} $$ and $$ \tau_{d} \equiv \lambda_{d}^{-1} $$. $$ k_{t} $$ is the total transition or trapping rate from the positron bulk state to trapping state. 
 
-We can now define the fraction of positroins present within the system at time $$ t $$:
+We can now define the fraction of positrons present within the system at time $$ t $$:
 
 $$ N(t) = n_{b} (t) + n_{t} (t) = (1 - I_{2}) e^{-\Lambda_{1} t} + I_{2} e^{-\Lambda_{2} t}$$ 
 
