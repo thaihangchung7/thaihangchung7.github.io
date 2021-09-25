@@ -6,6 +6,19 @@ category: notes
 
 Important concepts in Electricity and Magnetism (and a meager attempt at interpreting Jackson's book). 
 
+## Deriving Current Density $$ J $$ 
+
+Consider a conductive cylinder with some cross-sectional area $$ A $$. Let $$ dx $$ be an infinitesimal section of the cylinder. The number of electrons passing through the cylinder is:
+$$ n_{e^{-}} = - e N A dx $$ 
+
+Taking the time-derivative yields the current:
+
+$$ I = \frac{d Q}{dt} = - e N A \frac{dx}{dt} $$ 
+
+Dividing through by $$ A $$ gives current density, $$ J $$:
+
+$$ \frac{I}{A} = J = - e N v $$
+
 # Polarization of a Dielectric Medium 
 
 Consider a simple dielectric, a non-conducting (no free-charges) material whose properties are isotropic. The application of an $$ \vec{E} $$ field produces an induced dipole, a slight shift in the electron cloud relative to the nucleus.
@@ -78,6 +91,30 @@ Substituting this into the Polarization equation yields:
 
 $$ \vec{P} = \bigg( \frac{Ne^{2}}{-m \omega^{2} - i m \omega \gamma + K_{s}} \bigg) \vec{E} $$
 
+## Relationship between $$ n $$ and $$ \epsilon_{r} $$
+
+The index of refraction can be represented as the ratio between the speed of light in vacuum versus in a medium:
+
+$$ n = \frac{c}{v} $$ 
+
+Recall the speed of light (in vacuum) can be written as:
+
+$$ c = \frac{1}{\sqrt{\mu_{0} \epsilon_{0}}} $$
+
+whereas in a medium:
+
+$$ v = \frac{1}{\sqrt{\mu_{0} \epsilon }} $$
+
+Combining the two definitions above:
+
+$$ n = \frac{\sqrt{\mu_{0} \epsilon}}{\sqrt{\mu_{0} \epsilon_{0}}} $$
+
+$$ n = \sqrt{\frac{\epsilon}{\epsilon_{0}}} = \sqrt{\epsilon_{r}} $$
+
+Where $$ \epsilon_{r} $$ is the **relative permittivity**.
+
+
+# Lasers (pew pew)
 
 
 
