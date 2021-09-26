@@ -4,7 +4,7 @@ title: Electromagnetism
 category: notes 
 ---
 
-Important concepts in Electricity and Magnetism (and a meager attempt at interpreting Jackson's book). 
+Important concepts and applications in Electromagnetism (and a meager attempt at interpreting Jackson's book). 
 
 ## Deriving Current Density $$ J $$ 
 
@@ -116,10 +116,51 @@ Where $$ \epsilon_{r} $$ is the **relative permittivity**.
 
 # Lasers (pew pew)
 
+## Photon Absorption and Emission
+Due to quantum mechanics, electrons are found in discrete energy levels, or "positions" in orbitals. Atoms exchange energy via absorption, spontaneous emission, and stimulated emission. To paraphrase Einstein: A boson can stimulate or induce another boson into the same quantum state causing an even like atomic transition. 
+
++ Absorption: Just as it sounds, a photon is absorbed, bumping an electron into a higher energy state.
+
++ Spontaneous Emission: An excited electron is inherently unstable in its higher energy state and will drop to a lower energy state, spontaneously releasing a photon. 
+
++ Stimulated Emission: One incoming photon with a specfic frequency interacts with an excited electron dropping it to a lower energy state. Subsequently, two photons with identical properties are released. Such properties include phase, frequency, polarization. The emitted photons are _coherent_ and _monochromatic_.   
+
+Max Planck's radiation law states that when a oscillator changes from energy state $$ E_{2} $$ to a lower energy state $$ E_{1} $$, a photon with energy $$ \Delta E = E_{2} - E_{1} = h \nu $$ is emitted.
+
+## Boltmann Distribution
+
+The Boltzmann Distribution is given by:
+
+$$ P_{i} = P_{0} e^{- \Delta E / k_{B} T } $$
 
 
+Where $$ P_{0} $$ is the ground state probability, $$ \Delta E = E_{i} - E_{0} $$, $$ k_{B} $$ is the Boltzmann constant, and $$ T $$ is temperature.
 
+In thermal equilibrium, the Boltzmann distribution states that when there are more atoms in the ground state than the excited state, the probability of absorption is much higher than emission. If there are more excited states then the process of stimulated emission is more likely, and under the right conditions, a single input photon can result in a cascade of photons, "amplifying" the input photon.
 
+## Principle Components
+
+A laser requires three major components:
+
+1) Gain meduim (gas,solid,liquid dye or semiconductor)
+
+2) Pump source (electric discharge, flashlamp, laser diode)
+
+3) Feedback system (crystal oscillator)
+
+Lasing mediums contain at least three energy levels, $$ E_{1} $$, $$ E_{2} $$, and $$ E_{3} $$. Each level are purposed as follows:
+
++ $$ E_{1} $$: A ground state
+
++ $$ E_{2} $$: An metastable (intermediate) state, with a relatively long lifetime $$t_{s}$$
+
++ $$ E_{3} $$: A high energy pump state
+
+## Three Level Laser System
+
+All atoms of the laser material are initially in their ground state, $$ E_{1} $$. The pump radiation exictes the ground state atoms to a short lived pump state with energy $$ E_{3} $$. Atoms undergo a radiationless transition to a metastable state with energy $$ E_{2} $$.
+
+To obtain population inversion, $$ t_{s} > t_{3} $$, where $$ t_{3} $$ is the lifetime of the high energy pump state.
 
 
 
