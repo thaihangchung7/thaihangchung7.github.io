@@ -127,7 +127,7 @@ Due to quantum mechanics, electrons are found in discrete energy levels, or "pos
 
 Max Planck's radiation law states that when a oscillator changes from energy state $$ E_{2} $$ to a lower energy state $$ E_{1} $$, a photon with energy $$ \Delta E = E_{2} - E_{1} = h \nu $$ is emitted.
 
-## Boltmann Distribution
+## Boltzmann Distribution
 
 The Boltzmann Distribution is given by:
 

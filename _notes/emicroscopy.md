@@ -55,11 +55,11 @@ Electrons are capable of removing tightly bound inner shell electrons by transfe
 
 <img src="/assets/elastic.png" class="center"> 
 
-Elastic scattering refers to the electorn interaction with a nucleus of an atom where no energy is transferred. An electron traveling into an electron cloud of an atom experiences the Coulombic Force: 
+Elastic scattering refers to the electron interaction with a nucleus (and electrons) of an atom where no energy is transferred (although the it's direction might change). An electron traveling into an electron cloud of an atom experiences the Coulombic Force: 
 
 $$ F_{C} = \frac{Q_{1} Q_{2}}{4 \pi \epsilon_{o} r^{2}} $$
 
-The electron's path is deflected towards the core as a result of Coulomb interaction. The scattering angle of is proportional to $$ F_{C} $$ and inversely proportional to the distance to the nucleus, $$ r $$. In other words, low scattering angles is a result of Coulomb interactions with the electron cloud, whereas, high scattering angle or **back scattered electrons (BSE)** come from Coulomb interactions with the nucleus. 
+The electron's path is deflected towards the core as a result of Coulomb interaction. The scattering angle of is proportional to $$ F_{C} $$ and inversely proportional to the distance to the nucleus, $$ r $$. In other words, low scattering angles is a result of Coulomb interactions with the electron cloud, whereas, high scattering angle or **back scattered electrons (BSE)** come from Coulomb interactions with the nucleus. This is also known as **Rutherford scattering**. 
 
 ### Mass contrast Direct Beam
 
@@ -71,7 +71,21 @@ Inelastic scattering occurs when an electron transfers energy when interacting w
 
 Electrons that have been ejected are called _secondary electrons_ and have low energies ranging from $$ 5 - 50 $$ eV. These electrons carry information on the surface topography.
 
+## Phonon Scattering
 
+Phonons are quanta of elastic waves, in other words, atomic vibrations in a solid. A primary electron can lose energy by exciting a phonon and effectively heating the solid slightly. Although a primary electron can lose a negligible amount of energy (as in about 1 MeV) by exciting a phonon, heating the solid slightly,  
+
+## Plasmon Scattering
+
+## Secondary Electrons
+
+## Back Scattered Electrons
+
+## Cathodoluminescence
+
+## Auger Electrons
+
+## Bremsstrahlung
 
 # References
 
