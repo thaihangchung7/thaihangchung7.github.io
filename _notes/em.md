@@ -19,6 +19,14 @@ Dividing through by $$ A $$ gives current density, $$ J $$:
 
 $$ \frac{I}{A} = J = - e N v $$
 
+### In a Metal
+
+Using out definition of $$ J $$ from above, we put the equation of motion of an electron in a metal in terms of velocity, $$ \vec{v} $$ and plug in $$ \vec{v} $$ in terms of $$ J $$.
+
+$$ m \frac{d^{2}\vec{r}}{dt^{2}} = - e \vec{E} - \gamma m \frac{d\vec{r}}{dt} $$
+
+
+
 # Polarization of a Dielectric Medium 
 
 Consider a simple dielectric, a non-conducting (no free-charges) material whose properties are isotropic. The application of an $$ \vec{E} $$ field produces an induced dipole, a slight shift in the electron cloud relative to the nucleus.

@@ -51,6 +51,8 @@ Electrons are capable of removing tightly bound inner shell electrons by transfe
 
 + Visible Light
 
+## Mean Free Path
+
 ## Elastic Scattering
 
 <img src="/assets/elastic.png" class="center"> 
@@ -73,13 +75,21 @@ Electrons that have been ejected are called _secondary electrons_ and have low e
 
 ## Phonon Scattering
 
-Phonons are quanta of elastic waves, in other words, atomic vibrations in a solid. A primary electron can lose energy by exciting a phonon and effectively heating the solid slightly. Although a primary electron can lose a negligible amount of energy (as in about 1 MeV) by exciting a phonon, heating the solid slightly,  
+Phonons are quanta of elastic waves, in other words, atomic vibrations in a solid. A primary electron can lose energy by exciting a phonon and effectively heating the solid slightly. Although a primary electron can lose a negligible amount of energy (as in about 1 MeV) by exciting a phonon, there are two ways phonons contribute to scattering effects. 
+
++ All electrons that remain in the sample are likely to excite a phonon eventually. This is how the electron beam heats up the sample solid. 
+
++ When phonon scattering occurs, the scattered electron is generally deflected at a large angle (~ 10 degrees)   
 
 ## Plasmon Scattering
+
+"A plasmon is a wave in the 'sea' of electrons in the conduction band of a metal."
 
 ## Secondary Electrons
 
 ## Back Scattered Electrons
+
+## Characteristic X-Rays
 
 ## Cathodoluminescence
 
