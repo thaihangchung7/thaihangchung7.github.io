@@ -386,6 +386,125 @@ So,
 
 $$ T_{0} = M_{0} + M_{j} \dot{q}_{j} + M_{jk} \dot{q}_{j} \dot{q}_{k} $$
 
+# Variational Principles and Lagrange's Equations
+
+## Hamilton's Principle
+
+D'Alembert's Principle takes the form of a "_differential principle_" since it take the instantaneous state of the system and a small virtual displacement about the instantaneous state into consideration.
+
+In the context of **monogenic systems**, we introduce the _integral principle_. 
+
+Hamilton's principle is stated as:
+
+"The motion of the system from time $$ t_{1} $$ to time $$ t_{2} $$ is such that the line inegral (called the action or the action integral) is
+
+$$ I = \int_{t_{1}}^{t_{2}} L dt $$
+
+where $$ L $$ is the Lagrangian and has a stationary value for the actual path of motion."
+
+A good way to think the integral is the "cost" or "effort" to perform the action.
+
+For systems with constraints that are holonomic, Hamilton's principle below is nessessary and sufficient for Lagrange's equation.
+
+$$ \delta I = \delta \int_{t_{1}}^{t_{2}} L dt = 0  $$
+
+This integral represents the stability of a complex system. The variation of the line integral is $$ 0 $$. In other words, small deviation won't change the final result.
+
+## Calculus of Variation Techniques
+
+Consider a function $$ f(y, \dot{y},x) $$ defined on a path $$ y = y(x) $$ between two values $$ x_{1} $$ and $$ x_{2} $$, where 
+
+$$ \dot{y} = \frac{dy}{dx} $$
+
+The goal here is to find a particular path $$ y(x) $$ such that the line integral
+
+$$ J = \int_{x_{1}}^{x_{2}} f(y, \dot{y},x) dx  $$
+
+has a stationary alue relative to paths differing infinitesimally from the correct function $$ y(x) $$. Namely, find $$ y(x) $$ such that 
+
+$$ \delta J[ y ] = 0 $$ 
+
+A quick aside on notion, $$J$$ is a "_functional_" and $$ f(x) $$ is a "_function_". So, $$ J[y] $$ is a "function of a function".
+
+Since $$ J $$ must have a stationary value for the correct path relative to <u>any</u> neighboring path, the variation must be zero relative to some particular set of neighboring paths labeled by an infinitesimal parameter $$ \alpha $$.
+
+The set of paths are $$ y(x,\alpha)$$ 
+
+$$ y(x,\alpha) = y(x,0) + \alpha \eta (x) $$ 
+
+and we take the optimal path defined as:
+
+$$ J [y(x,0)] \leq J[y(x,0) + \alpha \eta(x)] $$
+
+Here, $$ y(x,0) $$ represent the correct path and $$\alpha$$ can be thought of as a scaling factor. $$ \eta (x) $$, also known as the auxillary path, is any function selected that vanishes at $$ x = x_{1} $$ and $$ x = x_{2} $$. 
+
+Note that $$ J $$ is also a function of $$ \alpha $$, and we want to optimize $$ \alpha $$ and thus we make use of a transformation from $$ J[y] \rightarrow J(\alpha) $$. 
+
+$$ J(\alpha) = \int_{x_{1}}^{x_{2}} f ( y (x,\alpha), \dot{y} (x, \alpha), x) dx $$ 
+
+This begins to look like an extremum problem if we apply variations (our buddy $$ \delta $$) to $$ J(\alpha) $$ 
+
+$$ \delta J(\alpha) = 0$$
+
+$$ \delta J(\alpha) = \delta \int_{x_{1}}^{x^{2}} f (y(x,\alpha), \dot{y}(x,\alpha), x) dx = 0 $$  
+
+$$ J(\alpha) - J(\alpha = 0) = 0 $$ 
+
+The condition for obtaining a stationary point is:
+
+$$ \bigg( \frac{d J}{ d \alpha } \bigg)_{\alpha = 0} = 0 $$
+
+where the derivative must be taken at the equilibrium.
+
+We decompose the total derivative of our functional $$ f $$ as we take the derivative with respect to $$ \alpha $$:
+
+$$ \bigg( \frac{d J}{d \alpha} \bigg)_{\alpha = 0} = \frac{d}{dt} \int_{x_{1}}^{x_{2}} f ( y, \dot{y}, x) dx  $$
+ 
+$$  = \int_{x_{1}}^{x_{2}} \bigg( \frac{\partial f}{\partial y} \frac{\partial y}{\partial \alpha} + \frac{\partial f}{\partial \dot{y}} \frac{\partial \dot{y}}{\partial \alpha} + \frac{\partial f}{\partial x} \frac{\partial x}{\partial \alpha} \bigg) dx$$
+
+Note that the last term in the integral, $$\frac{\partial x}{\partial \alpha} =0$$, since $$x$$ does not depend on $$\alpha$$.  
+
+We trade the second term in the integral with a term defined below:
+
+$$ \frac{d}{dx} \big( \frac{\partial f}{\partial \dot{y}} \frac{\partial y}{\partial \alpha} \big) = \frac{d}{dx} \bigg( \frac{\partial f}{\partial y} \bigg) \frac{y}{\partial \alpha} + \frac{\partial f}{\partial y} \frac{d}{dx} \bigg( \frac{\partial y}{\partial \alpha} \bigg) $$ 
+
+
+$$ \frac{\partial f}{\partial y} \frac{d}{dx} \bigg( \frac{\partial y}{\partial \alpha} \bigg) =  \frac{d}{dx} \big( \frac{\partial f}{\partial \dot{y}} \frac{\partial y}{\partial \alpha} \big) - \frac{d}{dx} \bigg( \frac{\partial f}{\partial y} \bigg) \frac{y}{\partial \alpha} $$ 
+
+
+
+
+Making use of the **Leibniz integral rule**: $$ \frac{d}{dx} \bigg( \int_{a}^{b} f(x,t) dt \bigg) = \int_{a}^{b} \frac{\partial}{\partial x} f(x,t) dt$$
+
+$$ \frac{dJ}{d\alpha} = \int_{x_{1}}^{x_{2}} \frac{\partial f}{\partial y} \frac{\partial y}{\partial \alpha} + \frac{\partial f}{\partial \dot{y}} \frac{\partial \dot{y}}{\partial \alpha} dx $$  
+
+$$ = \int_{x_{1}}^{x_{2}} \frac{\partial f}{\partial y} \frac{\partial y}{\partial \alpha} - \frac{d}{dx} \bigg( \frac{\partial f}{\partial \dot{y}} \bigg) \frac{\partial y}{\partial \alpha} dx $$ 
+
+Pulling out the common factor, $$ \frac{\partial y}{\partial \alpha} $$.
+
+$$ \int_{x_{1}}^{x_{2}} \bigg[ \frac{\partial f}{\partial y} - \frac{d}{dx} \bigg( \frac{\partial f}{\partial \dot{y}} \bigg) \bigg] \bigg(\frac{\partial y}{\partial \alpha}\bigg)_{\alpha = 0}dx $$
+
+## The "Fundamental Lemma" of Calculus of Variations
+
+If
+
+$$ \int_{x_{1}}^{x_{2}} M(x) \eta(x) dx = 0 $$
+
+for any arbitrary function $$ \eta(x) $$ continuous through $$ \frac{\partial^{2} y (x)}{\partial x^{2}}$$, then $$M(x) = 0$$, $$M(x)$$ must identically vanish in the interval $$(x_{1},x_{2} )$$. 
+
+With $$ M(x) = \frac{\partial f}{\partial y} - \frac{d}{dx} \big(\frac{\partial f}{\partial \dot{y}} \big) $$ and $$ \eta(x) = \big(\frac{\partial y}{\partial \alpha} \big)_{\alpha = 0} $$,
+
+Then by the Fundamental Lemma, we have found $$M(x) $$ to be the **Euler-Lagrange equation**:
+
+$$ \frac{\partial f}{\partial y} - \frac{d}{dx} \big(\frac{\partial f}{\partial \dot{y}} \big) = 0 $$ 
+
+Following from the discussion about our varied functional $$J$$, $$ J $$ can have a stationary value only if $$M(x) = 0 $$.
+
+The assertion that $$J$$ is stationary for the correct path can be written as:
+
+
+$$ \delta J =  \int_{x_{1}}^{x_{2}} \bigg[ \frac{\partial f}{\partial y} - \frac{d}{dx} \bigg( \frac{\partial f}{\partial \dot{y}} \bigg) \bigg] \delta y dx= 0 $$
+
 
 
 # References
