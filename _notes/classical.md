@@ -505,7 +505,89 @@ The assertion that $$J$$ is stationary for the correct path can be written as:
 
 $$ \delta J =  \int_{x_{1}}^{x_{2}} \bigg[ \frac{\partial f}{\partial y} - \frac{d}{dx} \bigg( \frac{\partial f}{\partial \dot{y}} \bigg) \bigg] \delta y dx= 0 $$
 
+## Deriving Lagrange's Equation from Hamilton's Principle
 
+For $$ J[f] $$, we try to find an $$ x_{0} $$ which would give us an extremum:
+
+$$ J[f] = \int_{x_{1}}^{x_{2}} L (x, f(x), f'(x)) dx $$
+
+Define an arbitrary varied function and its derivative:
+
+$$ f \rightarrow f + \delta f = f + \alpha \eta $$
+
+$$ f' \rightarrow f' + \delta f' $$ 
+
+$$ J[f + \delta f] = \int_{x_{1}}^{x_{2}} L (x, f + \delta f, f' + \delta f') dx$$ 
+
+We can make use of the Taylor expansion (up to first order):
+
+$$ J[f + \delta f] \approx \int_{x_{1}}^{x_{2}} \bigg( L + \frac{\partial L}{\partial f} \delta f + \frac{\partial L}{\partial f'} \delta f' \bigg) dx $$
+
+Since we are trying to find $$ \delta J $$ such that: 
+
+$$\delta J = J[f + \delta f] - J[f] \rightarrow 0 $$ 
+
+Subtracting the two integrals:
+
+$$ \delta J = \int_{x_{1}}^{x_{2}} \bigg( L + \frac{\partial L}{\partial f} \delta f + \frac{\partial L}{\partial f'} \delta f' - L \bigg) dx $$
+
+
+$$ \delta J = \int_{x_{1}}^{x_{2}} \bigg( \frac{\partial L}{\partial f} \delta f + \frac{\partial L}{\partial f'} \delta f'  \bigg) dx = 0  $$
+
+$$ \delta J = \int_{x_{1}}^{x^{2}} \delta L dx $$ 
+
+Now we take a closer look at the $$ \delta L $$ term:
+
+$$ \delta L = \sum_{i} \{ \frac{\partial L}{\partial f} \delta f + \frac{\partial L}{\partial \rho '} \delta \rho '\} $$ 
+
+Introducing $$ \delta \rho ' $$ as:
+
+$$ \delta \rho ' = \frac{d}{dx} \delta f $$ 
+
+so that 
+
+$$ \delta L = \sum_{i} \{ \frac{\partial L}{\partial f} \delta f + \frac{\partial L}{\partial \rho '} \frac{d}{dx} \delta f \} $$ 
+
+We expand the last term to make use of some more terms. 
+
+$$ \frac{d}{dx} \bigg( \frac{\partial L}{\partial f_{i}'} \delta f_{i} \bigg) = \frac{d}{dx} \bigg( \frac{\partial L}{\partial f_{i}'} \bigg) \delta f_{i} + \bigg( \frac{\partial L}{\partial f_{i}'} \bigg) \frac{d}{dx} \delta f_{i} $$  
+
+$$ \frac{d}{dx} \bigg( \frac{\partial L}{\partial f_{i}'} \delta f_{i} \bigg) - \frac{d}{dx} \bigg( \frac{\partial L}{\partial f_{i}'} \bigg) \delta f_{i} = \bigg( \frac{\partial L}{\partial f_{i}'} \bigg) \frac{d}{dx} \delta f_{i} $$ 
+
+Back to our $$ \delta J $$ integral:
+
+$$ \delta J = \int_{x_{1}}^{x_{2}} \sum_{i} \{ \frac{\partial L}{\partial f_{i}} \delta f_{i} - \frac{d}{dx} \bigg(\frac{\partial L}{\partial f_{i}}\bigg) \delta f_{i} + \frac{d}{dx} \bigg( \frac{\partial L}{\partial f_{i}'} \delta f_{i}  \bigg)\}$$ 
+
+We can simply this integral a bit. Taking a look at our last term:
+
+
+$$ \sum_{i} \int_{x_{1}}^{x_{2}} \frac{d}{dx} \bigg( \frac{\partial L}{\partial f_{i}'} \delta f_{i}  \bigg) dx$$
+
+$$ = \sum_{i} \int_{x_{1}}^{x_{2}} d \bigg( \frac{\partial L}{\partial f_{i}'} \delta f_{i}  \bigg) $$
+
+$$ = \sum_{i} \frac{\partial L}{\partial f_{i}} \delta \rho_{i} \biggr|_{x_{1}}^{x_{2}} = 0 $$ 
+
+Since there is no variation of the trajectory at the endpoint, this last term is $$ 0 $$. 
+
+Back to $$ \delta J $$ again, we pull out a common factor $$ \delta f_{i} $$:
+
+$$ \delta J = \int_{x_{1}}^{x_{2}} \sum_{i} \{ \frac{\partial L}{\partial f_{i}} - \frac{d}{dx} \bigg( \frac{\partial L}{\partial f_{i}} \bigg) \}\delta f_{i} dx$$  
+
+Now we apply the fundamental lemma to the following terms:
+
+$$ M(x) =  \frac{\partial L}{\partial f_{i}} - \frac{d}{dx} \bigg( \frac{\partial L}{\partial f_{i}} \bigg) $$  
+
+$$ \eta (x) = \delta f_{i}$$
+
+$$ M(x) $$ looks familiar... and with a change of variables:
+
+$$ x \rightarrow t $$ 
+
+$$ f_{i} \rightarrow q_{i} $$ 
+
+we arrive at Lagrange's equation, $$ \frac{\partial L}{\partial q_{i}} - \frac{d}{dt} \bigg( \frac{\partial L}{\partial \dot{q_{i}}} \bigg) = 0 $$  
+
+which follows from Hamilton's principle for monogenic systems with holonomic constraints. 
 
 # References
 
