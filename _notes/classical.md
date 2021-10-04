@@ -396,17 +396,17 @@ In the context of **monogenic systems**, we introduce the _integral principle_.
 
 Hamilton's principle is stated as:
 
-"The motion of the system from time $$ t_{1} $$ to time $$ t_{2} $$ is such that the line inegral (called the action or the action integral) is
+"The motion of the system from time $$ t_{1} $$ to time $$ t_{2} $$ is such that the line inegral (called the action or the action integral, sometimes denoted $$ S $$) is
 
-$$ I = \int_{t_{1}}^{t_{2}} L dt $$
+$$ I = \int_{t_{1}}^{t_{2}} L (q(t), \dot{q}(t), t) dt $$
 
-where $$ L $$ is the Lagrangian and has a stationary value for the actual path of motion."
+where $$ L $$ is the Lagrangian and has a stationary value for the actual path of motion." The system's true evolution is described by $$ N $$ generalized coordinates $$ \vec{q} = (q_{1}, ... , q_{N})$$ between two specific states $$ q(t_{1}) $$ and $$ q(t_{2}) $$. $$ t_{1} $$ and $$ t_{2} $$ are stationary points where the variation is $$ 0 $$ of the action functional.
 
 A good way to think the integral is the "cost" or "effort" to perform the action.
 
 For systems with constraints that are holonomic, Hamilton's principle below is nessessary and sufficient for Lagrange's equation.
 
-$$ \delta I = \delta \int_{t_{1}}^{t_{2}} L dt = 0  $$
+$$ \delta I = \delta \int_{t_{1}}^{t_{2}} L (q(t), \dot{q}(t), t) dt = 0  $$
 
 This integral represents the stability of a complex system. The variation of the line integral is $$ 0 $$. In other words, small deviation won't change the final result.
 
@@ -588,6 +588,49 @@ $$ f_{i} \rightarrow q_{i} $$
 we arrive at Lagrange's equation, $$ \frac{\partial L}{\partial q_{i}} - \frac{d}{dt} \bigg( \frac{\partial L}{\partial \dot{q_{i}}} \bigg) = 0 $$  
 
 which follows from Hamilton's principle for monogenic systems with holonomic constraints. 
+
+## Hamilton's Principle with Constraints
+
+Hamilton's principle for multiple degrees of freedom is given by:
+
+$$ \delta J = \int_{t_{1}}^{t_{2}} \sum_{i} \bigg( \frac{\partial L}{\partial q_{i}} - \frac{d}{dt} \frac{\partial L}{\partial \dot{q}_{i} }\bigg) \delta q_{i} dt = 0 $$
+
+For a system with two degrees of freedom or 2 generalized coordinates ($$ N = 2 $$; $$q_{1}$$ & $$q_{2}$$):
+
+
+$$ \delta J = \int_{t_{1}}^{t_{2}} \biggr[ \bigg( \frac{\partial L}{\partial q_{1}} - \frac{d}{dt} \frac{\partial L}{\partial \dot{q}_{1} }\bigg) \delta q_{1} + \bigg( \frac{\partial L}{\partial q_{2}} - \frac{d}{dt} \frac{\partial L}{\partial \dot{q}_{2} }\bigg) \delta q_{2} \biggr] dt = 0 $$  
+
+and
+
+$$ f(q_{1}, q_{2}, t) = 0 $$
+
+where $$ f $$ is a fixed function (**NOT** related to $$ f_{i} $$ in variations). Since this function is _fixed_, there are no variations, $$\delta f = 0 $$.
+
+Decomposing $$ \delta f $$ and solving for $$q_{2}$$...
+
+$$ \delta f = \frac{\partial f}{\partial q_{1}} \delta q_{1} + \frac{\partial f}{\partial q_{2}} \delta q_{2} = 0 $$ 
+
+$$ \delta q_{2} = - \frac{\partial f/ \partial q_{1}}{\partial f / \partial q_{2}} \delta q_{1} $$ 
+
+we replace $$ \delta q_{2} $$ in $$ \delta J = 0$$ 
+
+$$ \biggr[ \bigg( \frac{\partial L}{\partial q_{1}} - \frac{d}{dt} \frac{\partial L}{\partial \dot{q}_{1} }\bigg) \delta q_{1} = -  \bigg( \frac{\partial L}{\partial q_{2}} - \frac{d}{dt} \frac{\partial L}{\partial \dot{q}_{2} }\bigg) \frac{\partial f/ \partial q_{1}}{\partial f / \partial q_{2}} \delta q_{1}  \biggr] = - \lambda(t) $$  
+
+After some algebra, we end up with three equations with three unknowns:
+
+(1) $$ \frac{\partial L}{\partial q_{1}} - \frac{d}{dt} \bigg( \frac{\partial L}{\partial \dot{q}_{1}} \bigg) + \lambda(t) \frac{\partial f}{\partial q_{1} } = 0 $$  
+
+
+(2)  $$ \frac{\partial L}{\partial q_{2}} - \frac{d}{dt} \bigg( \frac{\partial L}{\partial \dot{q}_{2}} \bigg) + \lambda(t) \frac{\partial f}{\partial q_{2} } = 0 $$  
+
+(3) $$ f ( q_{1}, q_{2}, t ) = 0 $$
+
+We introduce the **Lagrange Multipler**, $$ \lambda (t) $$. This method is used to eliminate extra virtual displacements. To accomodate this, the Lagrange's equation can be extended to:
+
+$$ \frac{\partial L}{\partial q_{i}} - \frac{d}{dt} \frac{\partial L}{\partial \dot{q}_{i}} + \sum_{\alpha = 1}^{m} \lambda_{\alpha} \frac{\partial f_{\alpha}}{\partial q_{i}} = 0 $$
+
+For $$ i = 1,...,m $$, $$ f_{\alpha} (q_{i} ,t ) = 0 $$, and $$ n = 3N-(k-m) $$.
+
 
 # References
 
