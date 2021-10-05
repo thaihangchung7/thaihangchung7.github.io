@@ -8,9 +8,15 @@ category: webdev
 
 Previous website had so much bloat and was a MESS. I've switched to using this statically generated site, using Jekyll.
 
-I've always been pretty bad at keeping organized notes, and as a result, never look back at them. Markdown is a great way to write up notes and with a little html snippet, you have LaTeX support. So, I hope to make this website a quick and easy way to write them up and access them. 
+I've always been pretty bad at keeping organized notes, and as a result, never look back at them. Online notes have many advantages:
 
-## Motivations 
+- Word searchable
+- Version controlled
+- Accessible
+- LaTeX support with an html snippet
+
+
+## Motivations and Tools 
 
 + Theme 
   - [Paper on Readability](https://www.cs.cmu.edu/~jbigham/pubs/pdfs/2017/colors.pdf)
@@ -20,6 +26,8 @@ I've always been pretty bad at keeping organized notes, and as a result, never l
   - #6A6917
   - #5A3F2E
   - #A68E34
++ [Write down what you've done](https://terrytao.wordpress.com/career-advice/write-down-what-youve-done/)
+
 + Tools 
   - [Markdown TOC generator](https://github.com/ekalinin/github-markdown-toc)
   - [Embed Interactive Jupyter Notebook](https://elc.github.io/posts/embed-interactive-notebooks/)
