@@ -61,7 +61,14 @@ The positron lifetime is given by:
 
   $$ \lambda = \frac{1}{\tau} = \pi r_{o} c^{2} \int |\psi (r) |^{2} n(r) \gamma dr  $$
   
-  where $$r_{o}$$ is the electron radius, $$c$$ is the speed of light, $$ r $$ is the position vector, $$ \psi (r^{2}) $$ <span style="color: red"> check? </span> is the positron probability density, $$ n(r) $$ is the electron density, and $$ \gamma $$ is an enchancement factor related to the coulombic interactions between positrons and electrons in a local electron density. 
+  where $$r_{o}$$ is the electron radius, $$c$$ is the speed of light, $$ r $$ is the position vector, $$ \| \psi (r) \|^{2}$$ is the positron probability density, $$ n(r) $$ is the electron density, and $$ \gamma $$ is an enchancement factor related to the coulombic interactions between positrons and electrons in a local electron density. 
+
+  Positron lifetime is a function of electron density at the annihilation site. The equation below describes the measured lifetime spectrum as the sum of components correspoding to each annihilation site: 
+
+  $$ N(t) = \sum_{i = 1}^{k+1} \frac{I_{i}}{\tau_{i}} e^{- t/ \tau_{i}}$$
+
+where $$ tau $$ is the lifetime and $$ I $$ is the intensity of the $$i$$-th component in the spectrum. 
+
 
 # Doppler Broadening Techniques
 

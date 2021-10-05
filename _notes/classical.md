@@ -631,6 +631,48 @@ $$ \frac{\partial L}{\partial q_{i}} - \frac{d}{dt} \frac{\partial L}{\partial \
 
 For $$ i = 1,...,m $$, $$ f_{\alpha} (q_{i} ,t ) = 0 $$, and $$ n = 3N-(k-m) $$.
 
+# Conservation Theorems
+
+A system with $$n$$ degrees of freedom will have $$n$$ differential equations that are second order in time. The solutions to these equations will require two integrations, $$2n$$ constants of integration. The initial values or coordinates $$nq_{j}$$ and $$n\dot{q}_{j}$$ will determine the value of these constants. 
+
+Many problems that take the form:
+
+$$ f( q_{1}, q_{2},...,\dot{q}_{1},\dot{q}_{2},...,t) = constant $$ 
+
+are first order differential equations, where their first integrals can be obtained immediately, which can give us physical information about our system. 
+
+Recall the particle in an electromagnetic field described by a velocity dependent potential[*](#velocity-dependent-potentials-and-the-dissipation-function).
+
+The Lagrangian that describes the system is:
+
+$$ L = \frac{1}{2} \sum_{i} m_{i} \vec{\dot{r}^{2}_{i}}  - \sum_{i} q_{i} \phi (\vec{r}_{i} )+ \sum_{i} q_{i} \vec{A}(\vec{r}_{i}) \dot{} \vec{\dot{r}}_{i} $$ 
+
+Note that $$q_{i}$$ in this Lagrangian denotes EM charge, _not_ generalized coordinates!  
+
+Consider just the $$ x $$ component of the Lagrangian ($$ y $$ and $$ z $$ will follow the same treatment):
+
+$$ \frac{\partial L}{\partial \dot{x}_{i}} \equiv \frac{\partial T}{\partial \dot{x}} - \frac{\partial V}{\partial \dot{x}} $$ 
+
+Velocity is dependent on position, $$ x $$, not velocity, $$ \dot{x} $$! Therefore, $$ \frac{\partial V}{\partial \dot{x}} = 0$$. 
+
+$$ \frac{\partial L}{\partial \dot{x}_{i}} = \frac{\partial T}{\partial \dot{x}} = m \dot{x} = p_{ix} $$
+
+We come to the conclusion that:
+
+$$ \frac{\partial L}{\partial \dot{q}_{j}} = p_{j}$$. 
+
+This term has a number of names, **generalized momentum**, **canonical momentum**, **conjugate momentum**. All these names refer to the same type of momentum.
+So with $$\frac{d}{dt} \frac{\partial L}{\partial \dot{q}} = 0$$...
+
+It turns out that $$ p_{j} = constant $$.
+
+It should also be noted that $$ p_{j} $$ does not nessessarily have dimensions of linear momentum. Furthermore, with a velocity dependent potential, the geneneralized potential will not be identical with _mechanical potential_.
+
+Another thing to notice is that the Lagrangian does not contain a given coordinate $$ q_{j} $$, although it may have the corresponding $$ \dot{q} $$. These coordinates are known as **cyclical** and are _ignorable_.
+
+
+
+**(Theorem) General Conservation Theorem; Cyclic Coordinates:** The generalized momentum conjugate to a cyclic coordinate is conserved.  
 
 # References
 
