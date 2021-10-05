@@ -382,7 +382,7 @@ $$ M_{j} = \sum_{i} m_{i} \bigg( \frac{\partial r_{i}}{\partial q_{j}} \dot{} \f
 
 $$ M_{jk} = \sum_{i} \frac{1}{2} m_{i} \bigg(\frac{\partial r_{i}}{\partial q_{j}} \frac{\partial r_{i}}{\partial q_{k}} \bigg) $$
 
-So,
+So, generalized kinetic energy can be simplified to:
 
 $$ T_{0} = M_{0} + M_{j} \dot{q}_{j} + M_{jk} \dot{q}_{j} \dot{q}_{k} $$
 
