@@ -30,7 +30,7 @@ PAS stands on the principle that positrons can be trapped within defects or vaca
 Below is a comparison of techniques for resolved defect size.
 <img src="/assets/defecttechniques.png" class="center">
 
-Below (Fig 1.) is a Feynman Diagram of $$ e^{+} , e^{-} $$ annihilation emitting a photon. These interactions typically radiate two (three?)(para and ortho positronium?) photons. 
+Below (Fig 1.) is a Feynmann Diagram of $$ e^{+} , e^{-} $$ annihilation emitting a photon. These interactions typically radiate two (three?)(para and ortho positronium?) photons. 
 
 Techniques have been developed to collect quantaties of interest from the annihilation site such as time, energy and angular spectra. 
 
@@ -165,3 +165,5 @@ where $$\eta_{0}$$ is the trapping coefficient, that can be determined theoretic
 [1] [F.A.Selim, Positron annihilation spectroscopy of defects in nuclear and irradiated materials- a review](https://www.sciencedirect.com/science/article/pii/S1044580321000826#bb0215)
 
 [2] [R. W Siegel Positron Annihilation Spectroscopy](https://www.annualreviews.org/doi/pdf/10.1146/annurev.ms.10.080180.002141) 
+
+[3] [P. Stepanov, New developments in positron annihilation spectroscopy techniques: from experimental setups to advanced processing software](https://petrstepanov.com/static/petr-stepanov-dissertation-bgsu-2020.pdf)
