@@ -625,7 +625,18 @@ After some algebra, we end up with three equations with three unknowns:
 
 (3) $$ f ( q_{1}, q_{2}, t ) = 0 $$
 
-We introduce the **Lagrange Multipler**, $$ \lambda (t) $$. This method is used to eliminate extra virtual displacements. To accomodate this, the Lagrange's equation can be extended to:
+
+Before we introduce the **Lagrange Multipler**, $$ \lambda (t) $$. For some context, treatment of non-holonomic systems with the variational principle is only possible if equations of constraint can be written as:
+
+$$ f_{\alpha} (q_{1},...,q_{n}; \dot{q}_{1}, ..., \dot{q}_{n})  = 0 $$
+
+when this can be done, the constraints are called "_semi-holonomic_", where $$ \alpha $$ indicates more than one such equation.
+
+For $$ m $$ equations, $$ \alpha = 1,2,...,m $$, we can write this in a restricted form:
+
+$$ \sum_{k} a_{ik} d_{qk} + a_{it} dt = 0 $$ 
+
+When coordinates are not independent, but subject to constraint relations, it becomes important whether the varied path is or isnot constructed by displacements consistent with the constraints. Virtual displacements may or may not satisfy the constraints. To alleviate this, we use the method of **Lagrange undetermined multiplers** to eliminate extra virtual displacements. Lagrange's equation can be extended to:
 
 $$ \frac{\partial L}{\partial q_{i}} - \frac{d}{dt} \frac{\partial L}{\partial \dot{q}_{i}} + \sum_{\alpha = 1}^{m} \lambda_{\alpha} \frac{\partial f_{\alpha}}{\partial q_{i}} = 0 $$
 
