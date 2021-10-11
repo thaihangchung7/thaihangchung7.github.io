@@ -10,8 +10,8 @@ Previous website had so much bloat and was a MESS. I've switched to using this s
 
 I've always been pretty bad at keeping organized notes, and as a result, never look back at them. Online notes have many advantages:
 
-- Word searchable
-- Version controlled
+- Word searchable (and equation searchable to an extent) 
+- git controlled
 - Accessible
 - LaTeX support with an html snippet
 
