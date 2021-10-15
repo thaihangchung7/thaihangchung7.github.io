@@ -642,6 +642,32 @@ $$ \frac{\partial L}{\partial q_{i}} - \frac{d}{dt} \frac{\partial L}{\partial \
 
 For $$ i = 1,...,m $$, $$ f_{\alpha} (q_{i} ,t ) = 0 $$, and $$ n = 3N-(k-m) $$.
 
+### An Example Lagrangian with Constraints
+
+Consider a particle described by the Lagrangian:
+
+$$ L = \frac{1}{2} m ( \dot{x}^{2} + \dot{y}_{2} + \dot{z}_{2}) - V(x , y , z) $$
+
+subject to the constraint:
+
+$$f(\dot{x},\dot{y},\dot{z}) = \dot{x} \dot{y} + ky = 0 $$ 
+
+where $$ k $$ is a constant.
+
+Solving the Lagrangian for $$ \frac{\partial L}{\partial q_{k}} $$ and $$ \frac{\partial L}{\partial \dot{q}_{k}}$$ yields these equations of motions:
+
+$$ m \ddot{x} + \lambda \ddot{y} + \dot{\lambda} \dot{y} = \frac{\partial V}{\partial x} = 0 $$ 
+
+$$ m \ddot{y} + \lambda \ddot{x} - k \lambda + \dot{lambda} \dot{x} + \frac{\partial V}{\partial y} = 0 $$
+
+$$ m \ddot{z} + \frac{\partial V}{\partial z} = 0 $$ 
+
+The equation of constraint then becomes:
+
+$$ \dot{y} \dot{x} + k y = 0 $$ 
+
+
+
 # Conservation Theorems
 
 A system with $$n$$ degrees of freedom will have $$n$$ differential equations that are second order in time. The solutions to these equations will require two integrations, $$2n$$ constants of integration. The initial values or coordinates $$nq_{j}$$ and $$n\dot{q}_{j}$$ will determine the value of these constants. 
