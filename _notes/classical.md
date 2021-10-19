@@ -420,7 +420,7 @@ The goal here is to find a particular path $$ y(x) $$ such that the line integra
 
 $$ J = \int_{x_{1}}^{x_{2}} f(y, \dot{y},x) dx  $$
 
-has a stationary alue relative to paths differing infinitesimally from the correct function $$ y(x) $$. Namely, find $$ y(x) $$ such that 
+has a stationary value relative to paths differing infinitesimally from the correct function $$ y(x) $$. Namely, find $$ y(x) $$ such that 
 
 $$ \delta J[ y ] = 0 $$ 
 
@@ -705,11 +705,21 @@ It turns out that $$ p_{j} = constant $$.
 
 It should also be noted that $$ p_{j} $$ does not nessessarily have dimensions of linear momentum. Furthermore, with a velocity dependent potential, the geneneralized potential will not be identical with _mechanical potential_.
 
-Another thing to notice is that the Lagrangian does not contain a given coordinate $$ q_{j} $$, although it may have the corresponding $$ \dot{q} $$. These coordinates are known as **cyclical** and are _ignorable_.
-
-
+Another thing to notice is that the Lagrangian does not contain a given coordinate $$ q_{j} $$, although it may have the corresponding $$ \dot{q} $$. These coordinates are known as **cyclic** and are _ignorable_.
 
 **(Theorem) General Conservation Theorem; Cyclic Coordinates:** The generalized momentum conjugate to a cyclic coordinate is conserved.  
+
+For instance, if a Lagrangian is independent of position coordinate, $$ x $$, then linear momentum is conserved in the $$ x $$ direction. We call the $$ x $$ coordinate a cyclic coordiate. 
+
+Stepping back to view the grand scheme of things, the conservation theorem provides a new way of thinking about conservation beyond the Newtonian framework:
+
++ Newtonian framework: With $$ F = ma $$ and $$ F_{x} = 0 $$, this implies that $$ P_{x} = constant $$and momentum is conserved.
+
++ Lagrangian framework: If $$ L(\{ q_{i} \}, \{ \dot{q}_{i} \}, t) $$ is independent of $$q_{i}$$, then the corresponding conjugate (to $$q_{i} $$) momenum is conserved. Mathematically, $$ P_{i} \equiv \frac{\partial L}{\partial \dot{q}_{i}} = constant $$ is a statement of conservation.
+
+The Lagrangian makes use of symmetry. In other words, symmetry implies conservation!
+
+
 
 # References
 
