@@ -392,7 +392,7 @@ $$ T_{0} = M_{0} + M_{j} \dot{q}_{j} + M_{jk} \dot{q}_{j} \dot{q}_{k} $$
 
 D'Alembert's Principle takes the form of a "_differential principle_" since it take the instantaneous state of the system and a small virtual displacement about the instantaneous state into consideration.
 
-In the context of **monogenic systems**, we introduce the _integral principle_. 
+In the context of **monogenic systems**, we introduce the _integral principle_. If the _generalized_ potential depends on generalized coordinates, velocity, and time, or $$ V(q, \dot{q}, t) $$, then the system is **monogenic**. Conservative systems are a  subset of monogenic systems in that the potential is only dependent on generalized coodinates. 
 
 Hamilton's principle is stated as:
 
