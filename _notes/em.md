@@ -177,3 +177,5 @@ To obtain population inversion, $$ t_{s} > t_{3} $$, where $$ t_{3} $$ is the li
 + Classical Electrodynamics, J.D. Jackson 
 
 + Introduction to Electrodynamics, D.J. Griffiths
+
++ [maxwells-equations.com/equations/wave.php](EM wave equation)
