@@ -658,7 +658,7 @@ Solving the Lagrangian for $$ \frac{\partial L}{\partial q_{k}} $$ and $$ \frac{
 
 $$ m \ddot{x} + \lambda \ddot{y} + \dot{\lambda} \dot{y} = \frac{\partial V}{\partial x} = 0 $$ 
 
-$$ m \ddot{y} + \lambda \ddot{x} - k \lambda + \dot{lambda} \dot{x} + \frac{\partial V}{\partial y} = 0 $$
+$$ m \ddot{y} + \lambda \ddot{x} - k \lambda + \dot{\lambda} \dot{x} + \frac{\partial V}{\partial y} = 0 $$
 
 $$ m \ddot{z} + \frac{\partial V}{\partial z} = 0 $$ 
 
@@ -718,6 +718,62 @@ Stepping back to view the grand scheme of things, the conservation theorem provi
 + Lagrangian framework: If $$ L(\{ q_{i} \}, \{ \dot{q}_{i} \}, t) $$ is independent of $$q_{i}$$, then the corresponding conjugate (to $$q_{i} $$) momenum is conserved. Mathematically, $$ P_{i} \equiv \frac{\partial L}{\partial \dot{q}_{i}} = constant $$ is a statement of conservation.
 
 The Lagrangian makes use of symmetry. In other words, symmetry implies conservation!
+
+# The Central Force Problem
+
+Consider a monogenic system such as the one below:
+
+<img src="/assets/twobody.png" class="center">
+
+The Lagrangian will have the form: 
+
+$$ L = T ( \dot{\vec{R}}, \dot{\vec{r}} ) - U (\vec{r},\dot{\vec{r}},... )  $$
+
+We choose the two generalized coordinates, $$ q_{i} $$:
+
+$$ \vec{R}_{CM} = \frac{m_{1} \vec{r}_{1} + m_{2} \vec{r}_{2}}{m_{1}+m_{2}} $$ 
+
+
+$$ \vec{r} = \vec{r}_{2} - \vec{r}_{1} $$ 
+
+$$ R_{CM} $$ points to the center of mass of the system and $$ \vec{r} $$ is the distance between $$ m_{1} $$ and $$ m_{2} $$. 
+
+It is also worth defining vectors _relative_ to the center of mass:
+
+$$ \vec{r}_{1}' = \vec{r}_{1} - R_{CM} $$
+
+$$ \vec{r}_{2}' = \vec{r}_{2} - R_{CM} $$
+
+Recall that the total kinetic energy, $$ T $$ can be decomposed into motion components of the center of mass,$$ T_{CM} $$, and motion relative to the center of mass, $$T_{rcm}$$.
+
+$$ T = T_{CM} + T_{rcm} $$
+
+Center of mass kinetic energy is straightforward:
+
+$$ T_{CM} = \frac{1}{2} (m_{1} + m_{2}) \dot{\vec{R}}_{CM}^{2} $$
+
+Now, before dealing with $$T_{rcm}$$, $$\vec{r}$$ should be expressed in terms of $$\vec{r}_{1}'$$ and $$ \vec{r}_{2}'$$. TO do this we take advantage of center of mass coordinates relative to the center of mass, which is just a zero vector:
+
+$$ m_{1} \vec{r}_{1}' + m_{2} \vec{r}_{2}' = \vec{0} $$
+
+Combining this with $$ \vec{r} = \vec{r}_{2} - \vec{r}_{1} $$, we obtain our coordinates relative to the center of mass in terms of $$\vec{r}$$:
+
+$$ \vec{r}_{1}' = - \frac{m_{2} \vec{r}}{m_{1} + m_{2}} $$ 
+
+$$ \vec{r}_{2}' = \frac{m_{1} \vec{r}}{ m_{1}+m_{2}} $$
+
+Now, setting up $$ T_{rcm} $$,
+
+$$T_{rcm} = \bigg[ \frac{1}{2} m_{1} \bigg( \frac{m_{2}}{ m_{1} + m_{2} } \bigg)^{2} \bigg] \dot{\vec{r}}^{2} = \frac{1}{2} \bigg( \frac{m_{1} m_{2}}{ m_{1} + m_{2}} \bigg) \dot{\vec{r}}^{2}$$
+
+Let $$ \mu = \frac{m_{1} m_{2}}{m_{1} + m_{2}}$$, the reduced mass. The term "reduced" is given because it reduces motion about the center of mass of two objects down to one. T_{rcm} then simplifies to ,
+
+$$ T_{rcm} = \frac{1}{2} \mu \dot{\vec{r}}^{2} $$
+
+The Lagrangian with all its terms is:
+
+$$ L = \frac{m_{1} + m_{2}}{2} \dot{\vec{R_{CM}^{2}}}+ \frac{1}{2} \frac{m_{1} m_{2}}{m_{1} + m_{2}} \dot{\vec{r}}^{2} - U(\vec{r}, \dot{\vec{r}}, ...) $$ 
+
 
 
 
