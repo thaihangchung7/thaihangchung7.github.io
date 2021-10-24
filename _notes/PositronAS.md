@@ -55,38 +55,61 @@ Using these both $$ \Delta E $$ and $$ \Delta \theta $$, we can find the the net
 + PALS 
   - The lifetime of the positron is measured from the moment the positron enters the medium to its annihilation. 
 
-### Expanding on Lifetime Spectroscopy
+# Positron Annihilation Lifetime Spectroscopy
 
-The positron lifetime is given by:
+In the introduction, positrons lose kinetic energy through the ionization process. A typical interaction in PALS positron production and annihilation is:
 
-  $$ \lambda = \frac{1}{\tau} = \pi r_{o} c^{2} \int |\psi (r) |^{2} n(r) \gamma dr  $$
-  
-  where $$r_{o}$$ is the electron radius, $$c$$ is the speed of light, $$ r $$ is the position vector, $$ \| \psi (r) \|^{2}$$ is the positron probability density, $$ n(r) $$ is the electron density, and $$ \gamma $$ is an enchancement factor related to the coulombic interactions between positrons and electrons in a local electron density. 
+$$ e^{+} + e^{-} \rightarrow 2\gamma $$
 
-  Positron lifetime is a function of electron density at the annihilation site. The equation below describes the measured lifetime spectrum as the sum of components correspoding to each annihilation site: 
+During measurement the lifetime of the positron is taken as the time of photon detection to the time of the "stop photon" or signal. The spectra is typically deconvoluted to into it's several exponential components, and fitted to some time constant denoted by $$ \tau_{i}$$
+
+Positron lifetime is a function of electron density at the annihilation site. The equation below describes the measured lifetime spectrum as the sum of components correspoding to each annihilation site: 
 
   $$ N(t) = \sum_{i = 1}^{k+1} \frac{I_{i}}{\tau_{i}} e^{- t/ \tau_{i}}$$
 
 where $$ tau $$ is the lifetime and $$ I $$ is the intensity of the $$i$$-th component in the spectrum. 
 
+More explicitly, the positron lifetime spectra follows an exponential decay. The theoretical contributions (representing ideal scenarios) is given by:
+
+$$ C_{theory} (t) = \Delta t \bigg[ C_{tot} \sum_{i} \frac{I_{i}}{\tau_{i}} e^{-t / \tau} \bigg] = \Delta t \bigg[ C_{tot} \sum_{i} \lambda_{i} I_{i} e^{-\lambda_{i} t + B }\bigg]$$
+
+where $$ C_{tot} = \int_{0}^{\infty} C(t) dt $$ such that $$ \sum_{i} I_{i} = 1 $$. However, in order to correct for experimental spectra, contributions from the $$e^{+}$$ source (source correction) and background signals from random start-stop coincidences need to be taken into account.
+
+The lambda term is simply the recipricol of the time constant, expanded below for completeness:
+
+$$ \lambda = \frac{1}{\tau} = \pi r_{o} c^{2} \int |\psi (r) |^{2} n(r) \gamma dr  $$
+  
+where $$r_{o}$$ is the electron radius, $$c$$ is the speed of light, $$ r $$ is the position vector, $$ \| \psi (r) \|^{2}$$ is the positron probability density, $$ n(r) $$ is the electron density, and $$ \gamma $$ is an enchancement factor related to the coulombic interactions between positrons and electrons in a local electron density. 
+
+All together, the total number of positron annihilations registered (in a multichannel analyzer) is:
+
+$$ C_{exp} (t) = \int_{-\infty}^{\infty} \big[ C_{theory} (\tau) + C_{source} (\tau)  \big] f_{res} (t - \tau) d\tau + C_{bg} $$ 
+
+where $$ C_{bg} $$ represents the background contributions and $$f_{res} $$ is the time resolution function, for cases where the "start" and "stop" photon enter simultaneously. 
+
++ Difference between fast and slow positrons?
+
++ what kind of ionization ([Thermal Ionization](https://en.wikipedia.org/wiki/Thermal_ionization))?
+
+
+
 
 # Doppler Broadening Techniques
 
-## Doppler Broadening
+## Doppler Broadening of Annihilation Radiation (DBAR) 
 
 In spectroscopy, the spectral line are broadened due to the distribution of velocities of atoms. This phenomenon is called Dopper broadening. When annihilating, the $$ e^{+} e^{-} $$ pair decays into two $$ \gamma $$-rays. The Doppler Broadening of the radiation is measured along with the Positron lifetime technique to study defects.   
 
-## Doppler Broadening Spectroscopy
 Doppler Broadening spectroscopy peaks are characterized by $$ S $$ and $$ P $$ parameters. The $$\gamma$$-ray spectrum contains the sum total of the contributions from annihilations with different electron states. The shape of the spectrum correspond to the electron momentum distribution during annihilations. Delocalized, weakly bound valence electrons contribute to low momentum distributions, whereas tightly bound core electrons contribute to high momentum distributions. 
 
-## Coincidence DBS
+## Coincidence Doppler Broadening Spectroscopy
 
 <img src="/assets/cdbs.png" style="width: 70%; height: 70%" class="center">
 
 
 In traditional DBS, the line-shape variations of the spectrum for high momentum core electrons are not easily measured. To alleviate this, a coincidence measurement of $$ \gamma $$-ray energies using two detectors improves the signal to background ratio ([up to four orders of magnitude](https://journals.aps.org/prb/pdf/10.1103/PhysRevB.61.10092)). 
 
-## S and W Parameters
+### S and W Parameters
 <img src="/assets/SWparam.png" class="center" >
 
 
