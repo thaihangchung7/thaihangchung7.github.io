@@ -591,7 +591,7 @@ which follows from Hamilton's principle for monogenic systems with holonomic con
 
 ## Hamilton's Principle with Constraints
 
-Hamilton's principle for multiple degrees of freedom is given by:
+[Previously](#the-fundamental-lemma-of-calculus-of-variations), we found that the optimal path is given by the Euler-Lagrange equation through the fundamental lemma of variational calculus. Hamilton's principle for multiple degrees of freedom is given by:
 
 $$ \delta J = \int_{t_{1}}^{t_{2}} \sum_{i} \bigg( \frac{\partial L}{\partial q_{i}} - \frac{d}{dt} \frac{\partial L}{\partial \dot{q}_{i} }\bigg) \delta q_{i} dt = 0 $$
 
