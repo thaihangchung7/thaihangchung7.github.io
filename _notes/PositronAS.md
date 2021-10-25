@@ -170,18 +170,10 @@ The trapping rate ($$K_{d}$$) can be used to calculate defect densities ($$ \rho
 $$ \rho_{d} = \frac{K_{d}}{\eta_{0}}$$
 
 where $$\eta_{0}$$ is the trapping coefficient, that can be determined theoretically or experimentally and is specific to each defect type.
+
 ## Tao-Eldrup Model
 
 -To be added
-
-
-## Band Gaps
-
-- To be added
-
-## Bremsstrahlung
-
-- To be added
 
 # References
 
