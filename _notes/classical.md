@@ -774,6 +774,49 @@ The Lagrangian with all its terms is:
 
 $$ L = \frac{m_{1} + m_{2}}{2} \dot{\vec{R_{CM}^{2}}}+ \frac{1}{2} \frac{m_{1} m_{2}}{m_{1} + m_{2}} \dot{\vec{r}}^{2} - U(\vec{r}, \dot{\vec{r}}, ...) $$ 
 
+$$ L = \frac{m_{1} + m_{2}}{2} \dot{\vec{R_{CM}^{2}}}+ \frac{1}{2} \mu \dot{\vec{r}}^{2} - U(\vec{r}, \dot{\vec{r}}, ...) $$ 
+
+Notice that the Lagrangian is independent of $$ R_{CM} $$, which means $$ \frac{\partial L}{\partial R_{CM}} = 0 $$. In other words, $$ R_{CM} $$ is cyclic/ignorable. Therefore simplifying the Lagrangian to:
+
+$$ L = \frac{1}{2} \mu \dot{\vec{r}}^{2} - U(\vec{r}, \dot{\vec{r}}, ...) $$ 
+
+This substantially simplifies the system, there are 3 degrees of freedom, described by $$ \vec{r} $$, and it turns out that this Lagrangian is the same for a point particle of mass $$ \mu $$ in a potential $$ U(r) $$!
+
+## Conservation of Angular Momentum in the Central Force Problem
+
+Let us work with the same reduced example: A particle of mass $$\mu$$ orbiting a central potential.
+
+Due to spherical symmetry, the angular momentum is given by:
+
+$$ L = \mu \vec{r} \times \vec{v} = constant$$ 
+
+$$L = constant$$ and is conservered. $$\vec{r} $$ and $$\vec{v}$$ lie on the same plane, and are perpendicular to $$L$$. This is to say that, it's essentially a 2-D problem. 
+
+_*note the change in notion, previous notes may have used $$ U(r) $$ as potential but now it's $$ V(r) $$ ._ 
+
+The Lagrangian to this system is:
+
+$$ L(\vec{r}, \theta, \dot{\vec{r}}, \dot{\theta}) = \frac{\mu}{2} (\dot{\vec{r}^{2}} + \vec{r} \dot{\theta}^{2}) - V(\vec{r} ) $$
+
+To simplify this Lagrangian a bit, we can make $$ \mu = 1 $$. We can do this without loss of generality since all equations of motion will depend on $$ \mu $$.
+
+We can say something about the momentum conjugate to $$\theta$$, that is; the Lagrangian does not depend on $$\theta$$, $$(\frac{\partial L}{\partial \theta} = 0)$$, and therefore $$\theta$$ is cyclic and $$P_{\theta}$$ is conserved. 
+
+$$P_{\theta} = \vec{r}^{2} \dot{\theta} = l = constant$$
+
+This is fantastic since one degree of freedom ($$\theta$$) has been eliminated. So with that, there are two observations to take note of.
+
++ First, the radial equation of motion:
+
+$$ \frac{d}{dt} \bigg( \frac{\partial L}{\partial \dot{\vec{r}}} \bigg)= \ddot{\vec{r}} $$
+
+where $$ \frac{\partial L}{\partial \vec{r}} = r \dot{\theta} - \frac{dV}{d\vec{r}} $$.
+
+Notice that this is the same 
+
+
+
+
 
 
 
