@@ -812,11 +812,23 @@ $$ \frac{d}{dt} \bigg( \frac{\partial L}{\partial \dot{\vec{r}}} \bigg)= \ddot{\
 
 where $$ \frac{\partial L}{\partial \vec{r}} = r \dot{\theta} - \frac{dV}{d\vec{r}} $$.
 
-Notice that this is the same 
+Notice that this is the same system of equation for a point mass in a central potential. Another example of the dynamics of a binary system reducing to a single point mass in a fixed potential!
 
++ Second, notice that the Lagrangian has no dependence on time, which implies that energy is conserved, or rather, the Hamiltonian:
 
+$$ E = H = constant = - L + \sum_{i} P_{i} \dot{q}_{i} = - \bigg( ( \dot{r}^{2} + r^{2} \dot{\theta}^{2} ) \bigg) - V(r) + \dot{r} \dot{r} + r^{2} \dot{\theta} \dot{\theta} $$ 
 
+Simplifying: 
 
+$$ constant = H = \frac{\dot{r}^{2}}{2} + \frac{r^{2} \dot{\theta}}{2} + V(r)$$ 
+
+This energy equation is almost there. As it stands, the potential is dependent on the radius $$r$$. However, $$\dot{\theta}$$ still needs to be dealt with. We take advantage of an earlier definition, namely, the conserved momentum conjugate to $$\theta$$, $$\vec{r}^{2} \dot{\theta} = l$$ and substitute it into $$\dot{\theta}$$. 
+
+$$ H = \frac{1}{2} (\dot{r}^{2} + \frac{l^{2}}{r^{2}} ) + V(r) $$  
+
+Remember that $$H$$ is still constant, we can solve for $$ \dot{r} $$:
+
+$$ \bigg( \frac{dr}{dt} \bigg)^{2} = 2 ( E - V(r) ) \frac{l^{2}}{r^{2}} $$
 
 
 
