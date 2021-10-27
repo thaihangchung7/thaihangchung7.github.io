@@ -66,4 +66,3 @@ We arrive at the master equation:
 
 $$ \frac{d^{2} U(x)}{dx^{2}} + D \frac{d U(x)}{dx} + C U(x) = 0 $$ 
 
-
