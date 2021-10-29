@@ -102,6 +102,10 @@ In spectroscopy, the spectral line are broadened due to the distribution of velo
 
 Doppler Broadening spectroscopy peaks are characterized by $$ S $$ and $$ P $$ parameters. The $$\gamma$$-ray spectrum contains the sum total of the contributions from annihilations with different electron states. The shape of the spectrum correspond to the electron momentum distribution during annihilations. Delocalized, weakly bound valence electrons contribute to low momentum distributions, whereas tightly bound core electrons contribute to high momentum distributions. 
 
+<img src="/assets/SWparam.png" class="center" >
+
+Here in the spectrum, the $$ S $$ parameter shows the annihilation fraction with the _low momentum_ electrons and the $$ W $$ parameter is the the annihilation fraction with the _high momentum_ with the core electrons. Therefore, the $$ S $$ parameter is proportional to the defect content in the lattice since positrons are more likely to annihilate with valence electrons at the defect site. 
+
 ## Coincidence Doppler Broadening Spectroscopy
 
 <img src="/assets/cdbs.png" style="width: 70%; height: 70%" class="center">
@@ -109,10 +113,12 @@ Doppler Broadening spectroscopy peaks are characterized by $$ S $$ and $$ P $$ p
 
 In traditional DBS, the line-shape variations of the spectrum for high momentum core electrons are not easily measured. To alleviate this, a coincidence measurement of $$ \gamma $$-ray energies using two detectors improves the signal to background ratio ([up to four orders of magnitude](https://journals.aps.org/prb/pdf/10.1103/PhysRevB.61.10092)). 
 
-### S and W Parameters
-<img src="/assets/SWparam.png" class="center" >
 
+## Slow Positrons
 
+Two common mechanisms produce positrons, radioactive decay and pair production. As a result, positrons are produced with a wide energy spectrum and can only be used for bulk studies. 
+
+For the purposes of performing depth-resolved (monitoring defects as a function of depth) studies on surfaces, interfaces, thin films, and defects induced by ion irradiation, we require tunable monoenergetic slow positron beams via moderation. 
 
 # $$\gamma$$-Induced PAS 
 One technique of PAS utilizes high energy gamma rays to generate positrons via pair production within the material. The advantage being that there is no need for a positron source. Although this technique is not an alternative to standard radioactive or positron beam based apparatuses, it can extend PAS to study materials and defects, such as neutron irradiated materials and structural reactor materials. 
@@ -182,3 +188,5 @@ where $$\eta_{0}$$ is the trapping coefficient, that can be determined theoretic
 [2] [R. W Siegel Positron Annihilation Spectroscopy](https://www.annualreviews.org/doi/pdf/10.1146/annurev.ms.10.080180.002141) 
 
 [3] [P. Stepanov, New developments in positron annihilation spectroscopy techniques: from experimental setups to advanced processing software](https://petrstepanov.com/static/petr-stepanov-dissertation-bgsu-2020.pdf)
+
+[4] [Slow Positron Beam Techniques](http://www.positronannihilation.net/index_files/Positron%20Beam.pdf)
