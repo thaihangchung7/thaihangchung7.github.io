@@ -12,8 +12,8 @@ I've always been pretty bad at keeping organized notes, and as a result, never l
 
 - Word searchable (and equation searchable to an extent) 
 - git controlled
-- Accessible
-- LaTeX support with an html snippet
+- Easily accessible
+- Live LaTeX support with an html snippet
 
 
 ## Motivations and Tools 
