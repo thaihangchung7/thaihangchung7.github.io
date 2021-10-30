@@ -830,6 +830,19 @@ Remember that $$H$$ is still constant, we can solve for $$ \dot{r} $$:
 
 $$ \bigg( \frac{dr}{dt} \bigg)^{2} = 2 ( E - V(r) ) \frac{l^{2}}{r^{2}} $$
 
+### An aside on polar coordinates
+
+<img src='/assets/polar.png' class='center'> 
+
+Let vector $$\vec{r}$$ be the vector pointing from the origin to the particle.
+
+$$ \vec{r} = \hat{i} \vec{x} + \hat{j} \vec{y} $$ 
+
+Recall that $$ x = r \cos(\theta) $$ and $$ y = r \sin(\theta)$$ 
+
+$$ \vec{r} = \hat{i} \cos(\theta) + \hat{j} \sin(\theta) $$ 
+
+
 
 
 # References
