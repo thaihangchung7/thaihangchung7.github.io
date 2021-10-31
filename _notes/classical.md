@@ -842,6 +842,56 @@ Recall that $$ x = r \cos(\theta) $$ and $$ y = r \sin(\theta)$$
 
 $$ \vec{r} = \hat{i} \cos(\theta) + \hat{j} \sin(\theta) $$ 
 
+Apply a small change $$ d\vec{r} $$, *not* a rate of change $$ \frac{d\vec{r}}{dt} $$
+
+$$ d\vec{r} = \hat{i} (\cos\theta d\vec{r} - \vec{r} \sin\theta d\theta) + \hat{j} (\sin\theta d\vec{r} + \vec{r} \cos\theta d\theta ) $$
+
+after distributing and collecting $$ d\vec{r} $$ and $$d\theta$$ terms:
+
+$$ d\vec{r} = ( \hat{i} \cos\theta + \hat{j}\theta) d\vec{r} + (-\hat{i} \sin\theta + \hat{j} \cos\theta ) \vec{r} d\theta $$
+
+We can make use of some $$\hat{e}$$ unit vector definitions where:
+
+$$\hat{e}_{r} = \hat{i} cos\theta + \hat{j} \sin\theta $$ is the radial term
+
+$$\hat{e}_{\theta} = - \hat{i} \sin\theta + \hat{j} \cos\theta $$ is the angular term
+
+From here we obtain two polar equations for radial position and velocity:
+
+$$ d\vec{r} = \hat{e}_{r} d\vec{r} + \hat{e}_{\theta} \vec{r} d\theta$$
+
+$$ \frac{d \vec{r}}{dt} = \hat{e}_{r} \frac{d\vec{r}}{dt} + \hat{e}_{\theta} \vec{r} \frac{d\theta}{dt} \rightarrow \vec{v} = \hat{e}_{r} \dot{r} + \hat{e}_{\theta} \vec{r} \dot{\theta} $$ 
+
+
+## Equations of Motion and First Integrals
+
+Recall that central forces (i.e. gravity, coloumbic forces) are forces that do not depend on direction, only position, $$V(r)$$. Recently, we found that when tackling central force problems, one dimension is eliminated since angular momentum is conserved, or $$ L = constant $$.
+
+Reconsider the Lagrangian (but this time, we just call the reduced mass $$\mu=m$$ for generality:
+
+$$ L(\vec{r}, \theta, \dot{\vec{r}}, \dot{\theta}) = \frac{m}{2} (\dot{\vec{r}^{2}} + \vec{r} \dot{\theta}^{2}) - V(\vec{r} ) $$
+
+Applying the Euler-Lagrange equation to the two generalized coordinates, $$ r $$ and $$ \theta $$, along with the equation derived from $$\theta$$ being cyclic (also a first integral), gives us some equations of motion:
+
+$$ \frac{\partial L}{\partial r} - \frac{d}{dt} \bigg( \frac{\partial L}{\partial \dot{r}} \bigg) = 0 $$ 
+
+$$ \frac{\partial L}{\partial \theta} - \frac{d}{dt} \bigg( \frac{\partial L}{\partial \dot{\theta}} \bigg) = 0 $$ 
+
+
+Recognizing that $$ \frac{\partial L}{\partial \dot{\theta}} $$ is some form of generalized momentum, we can take the time derivative, which gives us another equation of motion:
+
+$$ \dot{p}_{\theta} = \frac{d}{dt} \frac{\partial L}{\partial \dot{\theta}}= \frac{d}{dt} (m r^{2} \dot{\theta} ) = l $$
+
+where $$ l $$ is the constant magnitude of angular momentum.
+
+[insert picture of angle sweep here]
+
+Recall $$ ds = r d\theta $$. 
+
+$$ r \dot{} ds = r ( r d\theta ) = r^{2} d\theta $$
+
+
+
 
 
 
