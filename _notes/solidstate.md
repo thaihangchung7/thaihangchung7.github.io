@@ -66,3 +66,19 @@ We arrive at the master equation:
 
 $$ \frac{d^{2} U(x)}{dx^{2}} + D \frac{d U(x)}{dx} + C U(x) = 0 $$ 
 
+The general solution to this equation is:
+
+$$ U(x) = e^{- \frac{D}{2} x} \bigg[ Ae^{i \eta x} + Be^{-i \eta x} \bigg] $$ 
+
+where $$ \eta = \sqrt{ C - \frac{D^{2}}{4}} $$ 
+
+
+The solutions for regions $$I$$ and $$II$$ are as follows:
+
+### Region $$I$$
+
+$$ U(x) = (A e^{i \alpha x} + B e^{- i \alpha x}) e^{-ikx}$$
+
+
+
+
