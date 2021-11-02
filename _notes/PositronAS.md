@@ -116,7 +116,7 @@ In traditional DBS, the line-shape variations of the spectrum for high momentum 
 
 ## Slow Positrons
 
-Two common mechanisms produce positrons, radioactive decay and pair production. As a result, positrons are produced with a wide energy spectrum and can only be used for bulk studies. 
+Two common mechanisms produce positrons, radioactive decay and pair production. As a result, positrons are produced with a wide energy spectrum and are not "fine tuned". Such positrons can only be used for bulk studies. 
 
 For the purposes of performing depth-resolved (monitoring defects as a function of depth) studies on surfaces, interfaces, thin films, and defects induced by ion irradiation, we require tunable monoenergetic slow positron beams via moderation. 
 
