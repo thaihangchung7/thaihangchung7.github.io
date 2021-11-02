@@ -890,8 +890,70 @@ Recall $$ ds = r d\theta $$.
 
 $$ r \dot{} ds = r ( r d\theta ) = r^{2} d\theta $$
 
+## Lagrange - Runge - Lenz Vector ("LRL Vector") 
 
+Spoiler alert: $$ \vec{A} $$ is the LRL vector.
+<img src='/assets/LRLvector.png' class='center'>
 
+The LRL vector is used to describe shapes of orbits in two body central force problems. In the figure above, the LRL vector is described by $$ \vec{p} $$, $$ L $$, constant $$ mk $$, and $$e$$. Respectively, the linear momentum, angular momentum, magnitude factor, and eccentricity. Vector $$ \vec{A} $$ always points in the same direction with the same magnitude $$ mke $$.
+
+Another thing to note is that $$ \vec{A} $$ is a *conserved* vector. 
+
+### Deriving the LRL vector
+
+Consider a central force described by: $$ f(r) = - \frac{k}{r^{2}} $$
+
+Vectorially, for a general central force, Newton's second law can be written as:
+
+$$ \dot{\vec{p}} = f(r) \frac{\vec{r}}{r} $$
+
+with $$ \vec{p} = m \dot{\vec{r}} $$.
+
+Evaluating the cross product of $$ \dot{\vec{p}} $$ with angular momentum $$\vec{L}$$ (recall $$\vec{L} = \vec{r} \times \vec{p} $$ )...
+
+$$ \dot{\vec{p}} \times \vec{L} = \dot{\vec{p}} \times (\vec{r} \times \vec{p} ) = f(r) \frac{\vec{r}}{r} \times ( \vec{r} \times \vec{p} ) = \frac{m f(r)}{r} \vec{r} \times ( r \times \dot{\vec{r}} ) $$ 
+
+To deal with the triple product, we take advantage of umm... an "approximation" namely:
+
+$$ \vec{a} \times ( \vec{b} \times \vec{c} ) = \vec{b} ( \vec{a} \dot{} \vec{c} ) - \vec{c} ( \vec{a} \dot{} \vec{b} ) $$ 
+
+<span style='color:red'> It should be noted that this approach to triple cross products only works with vectors. This would be castostrophic if applied to operators! </span>
+
+$$ \dot{\vec{p}} \times \vec{L} = m \frac{f(r)}{r} \bigg[ \vec{r} ( \vec{r} \dot{} \dot{\vec{r}} ) - \dot{\vec{r}} ( \vec{r} \dot{} \vec{r} ) \bigg] $$ 
+
+At this point, it might seem like we are losing vector information somehow. However, note that the velocity vector has two components ( $$ v_{\bot} $$ and $$ v_{\parallel} $$) and it turns out that we only keep the parallel components of the vector.  
+
+$$ \frac{d}{dt} \bigg[ \vec{p} \times \vec{L} \bigg] = \dot{\vec{p}} \times \vec{L} + \vec{p} \times \dot{\vec{L}} $$  
+
+$$ = m \frac{f(\vec{r}}{r} \bigg[ \vec{r} ( \vec{r} \dot{} \dot{\vec{r}} ) - \dot{\vec{r}} \dot{} r^{2} \bigg] $$
+
+Using $$ \vec{r} \dot{} \dot{\vec{r}} = \frac{1}{2} \frac{d}{dt} ( \vec{r} \dot{} \vec{r} ) = r \dot{r} $$, the equation is further simplified to:
+
+$$ \frac{d}{dt} \big[ \vec{p} \times \vec{L} \big] = -m f(r) r^{2} \bigg[ \frac{d}{dt} \bigg( \frac{\vec{r}}{r}  \bigg) \bigg]$$
+
+$$ \frac{d}{dt} \big[ \vec{p} \times \vec{L} \big] = \frac{d}{dt} \bigg( \frac{mkr}{r}\bigg)$$
+
+Notice that the right hand side of the equation does not have time , $$t$$, as an explicit variable. This states that for the Kepler problem, there exists a *conserved vector*, that we'll call $$ \vec{A} $$. Otherwise known as the **Lagrange-Runge-Lenz Vector**:  
+
+$$ \vec{A} = \vec{p} \times \vec{L} - mk \frac{\vec{r}}{r} $$ 
+
+### Extracting some properties of the LRL vector
+
+Let's evaluate $$ \vec{A} \dot{} \vec{L} $$. $$ L $$ is perpendicular to $$ \vec{p} \times \vec{L} $$ and $$ r $$ is perpendicular to $$ \vec{L} = \vec{r} \times \vec{p} $$. What this means is that $$\vec{A}$$ is always *in the plane* of the orbit. Mathematically: 
+
+$$ \vec{A} \dot{} \vec{L} = ( \vec{p} \times \vec{L} - mk \frac{\vec{r}}{r} ) \dot{} \vec{L} = (\vec{p} \times \vec{L} ) \dot{}  \vec{L} - \frac{mk}{r} \vec{r} \dot{} \vec{L} = 0 $$ 
+
+Let $$ \theta $$ be the angle between $$ \vec{r} $$ and the fixed direction of $$ \vec{A} $$, the dot product between them comes out to be:
+
+$$ \vec{A} \times \vec{r} = Ar \cos(\theta) = \vec{r} \dot{} (\vec{p} \times \vec{L} ) - mkr $$ 
+
+Taking a closer look at $$ \vec{r} \dot{} (\vec{p} \times \vec{L} ) $$, we can obtain a simplified form by cycling the product:
+
+$$  \vec{r} \dot{} (\vec{p} \times \vec{L} ) = - \vec{p} ( \vec{L} \times \vec{r} ) = \vec{L} \dot{} (\vec{r} \times \vec{p} ) = \vec{L} \dot{} \vec{L} = l^{2} $$ 
+
+Showing that the dot product between the two vectors is:
+
+$$ Ar \cos(\theta) = l^{2} - mkr $$
 
 
 

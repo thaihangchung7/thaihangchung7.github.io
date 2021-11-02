@@ -87,13 +87,6 @@ $$ C_{exp} (t) = \int_{-\infty}^{\infty} \big[ C_{theory} (\tau) + C_{source} (\
 
 where $$ C_{bg} $$ represents the background contributions and $$f_{res} $$ is the time resolution function, for cases where the "start" and "stop" photon enter simultaneously. 
 
-+ Difference between fast and slow positrons?
-
-+ what kind of ionization ([Thermal Ionization](https://en.wikipedia.org/wiki/Thermal_ionization))?
-
-
-
-
 # Doppler Broadening Techniques
 
 ## Doppler Broadening of Annihilation Radiation (DBAR) 
@@ -118,7 +111,10 @@ In traditional DBS, the line-shape variations of the spectrum for high momentum 
 
 Two common mechanisms produce positrons, radioactive decay and pair production. As a result, positrons are produced with a wide energy spectrum and are not "fine tuned". Such positrons can only be used for bulk studies. 
 
-For the purposes of performing depth-resolved (monitoring defects as a function of depth) studies on surfaces, interfaces, thin films, and defects induced by ion irradiation, we require tunable monoenergetic slow positron beams via moderation. 
+For the purposes of performing depth-resolved (monitoring defects as a function of depth) studies on surfaces, interfaces, thin films, and defects induced by ion irradiation, we require tunable monoenergetic slow positron beams via moderation. (see [Positron Source Moderation](#positron-source-moderation) section)
+
+### (Makhovian) Implantation Profile
+
 
 # $$\gamma$$-Induced PAS 
 One technique of PAS utilizes high energy gamma rays to generate positrons via pair production within the material. The advantage being that there is no need for a positron source. Although this technique is not an alternative to standard radioactive or positron beam based apparatuses, it can extend PAS to study materials and defects, such as neutron irradiated materials and structural reactor materials. 
@@ -176,6 +172,21 @@ The trapping rate ($$K_{d}$$) can be used to calculate defect densities ($$ \rho
 $$ \rho_{d} = \frac{K_{d}}{\eta_{0}}$$
 
 where $$\eta_{0}$$ is the trapping coefficient, that can be determined theoretically or experimentally and is specific to each defect type.
+
+## Positron Source Moderation
+
+<img src='/assets/Moderation.png' class='center'> The figure above shows the positron emission spectrum of an $$ ^{22}Na $$ source. $$ dN_{+}/dE $$ is the number of positrons per energy channel. The energy distribution is centered at $$3eV$$ after moderation in tungsten. 
+
+A thin moderator foil with a high atomic number is placed on top of the source capsule. High atomic numbers are favorable since it is proportional to the ratio of the mean diffusion length to the thermalization distance (the larger, the better). Typically, the foil (maybe tungsten) is about a few $$\mu m$$ thick, much smaller than the mean penetration depth, such that only a small fraction of positrons thermalize and diffuses in the foil.  
+
+<img src='/assets/moderationtrans.png' class='center'>
+This figure shows the fraction of positrons that leave the moderation foil. "If the surface is reached during diffusion, the positrons are spontaneously emitted from the moderator foil with a kinetic energy equal to the thermally bordened work function, $$ \Phi_{+} $$." 
+
+Although the fraction of slow positrons is much smaller than fast positrons, a guidance system further down the beam line is used to separate the unmoderated positrons.
+
+
+
+
 
 ## Tao-Eldrup Model
 
