@@ -955,6 +955,74 @@ Showing that the dot product between the two vectors is:
 
 $$ Ar \cos(\theta) = l^{2} - mkr $$
 
+## Scattering in a Central Force Problem (Rutherford Scattering)
+
+<img src='/assets/scattering.png' class='center'> 
+Figure 3.19 in Goldstein: "Scattering of an incident beam of particles by a center of force"
+
+Some things to note from the figure above: 
+
++ Scattering is symmetric about the center
++ The closer the approach to the target, the larger the scattering angle
++ $$ R \equiv$$ Radius of sphere ("Detector") $$=1$$ 
++ $$ s \equiv$$ Impact parameter
++ $$ \Theta \equiv$$ Scattering angle
+
+First we introduce some differential angle $$ d \Omega $$:  
+
+$$ d\Omega = 2\pi h d\Theta $$ 
+
+Let $$ h $$ be the distance between the axis and height of the sphere's radius that points from the central force. $$ h $$ can be defined as:
+
+$$ h = R \sin(\Theta) $$ 
+
+Applying $$ R = 1 $$, $$ h $$ simplifies to $$ h = \sin(\theta) $$ 
+
+$$ d\Omega = 2\pi \sin(\Theta) d\Theta $$ 
+
+Introducing some more variables: 
+
++ $$ r_{0} \equiv$$ distance from the central force to $$s$$ along the along the axis 
++ $$ r \equiv$$ distance from the central force to the top of the impact parameter $$s$$
+
+Vectorially, $$ \vec{r} = \vec{s} + \vec{r}_{0} $$.
+
+Using the definition of angular momentum:
+
+$$ \vec{L} = \vec{r} \times \vec{p}_{0} = ( \vec{r}_{0} + \vec{s} ) \times \vec{p}_{0} = \vec{r}_{0} \times \vec{p}_{0}  + \vec{s} \times \vec{p}_{0} $$ 
+
+Since $$ \vec{r}_{0} \parallel \vec{p}_{0}$$ the cross product between them is $$0$$ so we are left with:
+
+$$ \vec{L} = \vec{s} \times \vec{p}_{0} $$ 
+
+Now recall that in central force problems we can do away with vector information without loss of generality, the magnitude of angular momentum is:
+
+$$ | \vec{L} | = l = s p_{0} = s v_{0} m $$ 
+
+Using conservation of energy where $$ E = \frac{1}{2} m v^{2}_{0} $$, solve for $$v_{0}$$ and substitute into $$l$$ equation:
+
+$$ l = s \sqrt{2Em} $$ 
+
+This shows that the scattering angle is determined by impact parameter and energy! 
+
+### Scattering cross section
+
+The scattering cross section for a given angle is defined as:
+
+$$ \sigma (\vec{\Omega}) d \Omega = \frac{dN_{s}}{I} $$ 
+
+In English, the *total* scattering cross section is the ratio between the number of particles scattered into solid angle $$d\Omega$$ per unit time ($$dN_{s}$$) versus incident intensity $$ I $$. 
+
+Using the previously defined solid angle, we can substitute a few term:
+
+$$ I \sigma (\Theta) 2 \pi \sin(\Theta) |d \Theta | = dN_{s} $$ 
+
+Note the absolute value sign on $$ d \Theta$$. This is to account for that that the angle can be negative, but of course, the number of particles cannot be negative. It should also be stated that $$ dN_{s} ( \Theta, \Theta + d\Theta) $$. 
+
+
+
+
+
 
 
 # References
