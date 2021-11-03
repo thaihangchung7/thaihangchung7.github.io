@@ -1017,9 +1017,57 @@ Using the previously defined solid angle, we can substitute a few term:
 
 $$ I \sigma (\Theta) 2 \pi \sin(\Theta) |d \Theta | = dN_{s} $$ 
 
-Note the absolute value sign on $$ d \Theta$$. This is to account for that that the angle can be negative, but of course, the number of particles cannot be negative. It should also be stated that $$ dN_{s} ( \Theta, \Theta + d\Theta) $$. 
+Note the absolute value sign on $$ d \Theta$$. Negative angles are possible, but of course, the number of particles cannot be negative. It should also be stated that $$ dN_{s} ( \Theta, \Theta + d\Theta) $$. 
 
+At the incident end, the impact parameter $$s$$ traces out a ring $$ds$$. The number of incident particles can be written as:
 
+$$ dN_{i} = I (area\; of\;ring)$$
+
+$$ = I 2 \pi s |ds| $$  
+
+Demanding the conservation of particles, the number of incident partcles must equal the number of scattered particles, $$dN_{i} = dN_{s}$$. Combining the two equations yields:
+
+$$ I 2\pi s |ds| =  I \sigma (\Theta) 2 \pi \sin(\Theta) |d \Theta | $$ 
+
+After some cancellation an solving for the scattering cross section, $$\sigma(\Theta)$$:
+
+$$ \sigma(\Theta) = \frac{s}{\sin(\Theta)} \big| \frac{ds}{d\Theta} \big| $$ 
+
+This equation determines the probability of scattering at a certain angle.
+
+Taking a closer look at the $$ \frac{ds}{d\Theta} $$ term, we can evaluate this using the orbital equation.
+
+Using the figure above, the bounds of $$ \vec{r} $$ and $$ \Psi $$ are:
+
++ $$ - \vec{\infty} < \vec{r} < \vec{r}_{m} $$
+
++ $$ 0 < \Psi < \Psi_{m} $$
+
+Using these bounds we can define the scattering angle, $$ \Theta $$ and the angle used in Kepler's problem $$ \theta$$ 
+
+$$ \Theta = \pi - 2\Psi_{m} $$ 
+
+$$ \theta = \pi - \Psi $$
+
+Remembering that $$ E $$ is conservered:
+
+$$ E = \frac{1}{2} m \dot{r}^{2} + \frac{1}{2} \frac{l^{2}}{mr^{2}} + V(r) $$
+
+$$ \dot{r} = \bigg[ \frac{2}{m} (E - V(r) ) - \frac{1}{2} \frac{l^{2}}{mr^{2}} \bigg]^{1/2} = \frac{dr}{dt} $$ 
+
+Using the definition of anglular momentum in a central force: 
+
+$$ l = mr^{2} \dot{\theta} = m r^{2} \frac{d\theta}{dt}$$
+
+$$ dt = \frac{m r^{2}}{l} d\theta $$ 
+
+The integral with respect to $$ dt $$ is transformed in terms of $$ d\theta $$:
+
+$$ \int^{\theta}_{\theta_{0}} d\theta = \int^{r}_{-\infty} \frac{dr}{r^{2} \big[ \frac{2mE}{l^{2}} - \frac{2mV}{l^{2} }  \big]^{1/2} } $$ 
+
+(Recognize that this was the solution to Kepler's problem!)
+
+Using the definition of angle $$\theta$$ we can play around with the bounds of the radius integral:
 
 
 
