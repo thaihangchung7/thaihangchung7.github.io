@@ -1067,7 +1067,24 @@ $$ \int^{\theta}_{\theta_{0}} d\theta = \int^{r}_{-\infty} \frac{dr}{r^{2} \big[
 
 (Recognize that this was the solution to Kepler's problem!)
 
-Using the definition of angle $$\theta$$ we can play around with the bounds of the radius integral:
+Recall that $$\theta = \pi - \Psi $$, we can write this equation in terms of $$\Psi$$, that is, $$ -\Psi = \theta - \pi $$. Using that, we can work on the integration bounds on the orbital equation:
+
+$$ \theta - \theta_{0} = \int^{r}_{-\infty} ...$$
+
+$$ \theta - \pi = \int^{r}_{-\infty} ...$$
+
+$$ \theta = \pi + \int^{r}_{-\infty} ... $$
+
+$$ - \Psi = \int^{\infty}_{-\infty} ...$$  
+
+$$ \Psi = \int^{-\infty}_{r} ...$$ 
+
+All together, the modified orbital equation for scattering is:
+
+
+$$ \Psi = \int^{-\infty}_{r} = \int^{r}_{-\infty} \frac{dr}{r^{2} \big[ \frac{2mE}{l^{2}} - \frac{2mV}{l^{2} }  \big]^{1/2} } $$ 
+
+ 
 
 
 
