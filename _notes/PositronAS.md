@@ -91,9 +91,14 @@ where $$ C_{bg} $$ represents the background contributions and $$f_{res} $$ is t
 
 ## Doppler Broadening of Annihilation Radiation (DBAR) 
 
-In spectroscopy, the spectral line are broadened due to the distribution of velocities of atoms. This phenomenon is called Dopper broadening. When annihilating, the $$ e^{+} e^{-} $$ pair decays into two $$ \gamma $$-rays. The Doppler Broadening of the radiation is measured along with the Positron lifetime technique to study defects.   
+In spectroscopy, the spectral line are broadened due to the distribution of velocities of atoms. This phenomenon is called Dopper broadening. When annihilating, the $$ e^{+} e^{-} $$ pair decays into two $$ \gamma $$-rays, with shifts in the photon energy $$ mc^{2} = 511 keV $$. Using energy and momentum conservation:
 
-Doppler Broadening spectroscopy peaks are characterized by $$ S $$ and $$ P $$ parameters. The $$\gamma$$-ray spectrum contains the sum total of the contributions from annihilations with different electron states. The shape of the spectrum correspond to the electron momentum distribution during annihilations. Delocalized, weakly bound valence electrons contribute to low momentum distributions, whereas tightly bound core electrons contribute to high momentum distributions. 
+$$ E_{2} = c p_{2} \approx mc^{2} - \frac{E_{b}}{2} + \frac{cp_{z}}{2} $$ 
+
+
+
+Doppler Broadening spectroscopy peaks are characterized by $$ S $$ and $$ W $$ parameters. The $$\gamma$$-ray spectrum contains the sum total of the contributions from annihilations with different electron states. The shape of the spectrum correspond to the electron momentum distribution during annihilations. Delocalized, weakly bound valence electrons contribute to low momentum distributions, whereas tightly bound core electrons contribute to high momentum distributions. 
+
 
 <img src="/assets/SWparam.png" class="center" >
 
@@ -106,6 +111,11 @@ Here in the spectrum, the $$ S $$ parameter shows the annihilation fraction with
 
 In traditional DBS, the line-shape variations of the spectrum for high momentum core electrons are not easily measured. To alleviate this, a coincidence measurement of $$ \gamma $$-ray energies using two detectors improves the signal to background ratio ([up to four orders of magnitude](https://journals.aps.org/prb/pdf/10.1103/PhysRevB.61.10092)). 
 
+In modern detectors, the two photons radiated are detected within a 100ns time window. The two dimensional spectrum is transformed to a one dimension. From here, the $$z$$ component of the $$e^{+}$$ $$e^{-}$$ annihilation pair is calculated as the difference in energy of the two photons. We can express the spherically symmetric CDB spectrum as:
+
+$$ C(\Delta) \propto \int n(\vec{p}) \delta(\Delta - cp_{z}) d^{3} p $$
+
+where $$ \Delta = E_{1} - E_{2} = c p_{z}$$, with $$ p_{z}$$ being the momentum $$z$$ component. 
 
 ## Slow Positrons
 
