@@ -588,6 +588,49 @@ $$ f_{i} \rightarrow q_{i} $$
 we arrive at Lagrange's equation, $$ \frac{\partial L}{\partial q_{i}} - \frac{d}{dt} \bigg( \frac{\partial L}{\partial \dot{q_{i}}} \bigg) = 0 $$  
 
 which follows from Hamilton's principle for monogenic systems with holonomic constraints. 
+### Famous Example (Brachistochrone Problem)
+
+Suppose the goal is to find the minimal time taken for a particle to travel from $$ 1 \rightarrow 2 $$. Under the influence of gravity, on a path joining points $$ 1 $$ and $$ 2 $$.
+
+Given $$ \vec{v} $$, it can be said that $$ \vec{v} dt = ds $$. To state the problem mathematically, we want to find the minimum of the integral:
+
+$$ t_{1,2} = \int^{2}_{1} \frac{ds}{\vec{v}} $$ 
+
+The differential distance travelled is given by:
+
+$$ ds = \sqrt{ dx^{2} + dy^{2}} $$ 
+
+Now before substituting $$ ds $$ in, it should be in terms of $$ y $$ so that a variation can be applied to the integrand.
+
+$$ ds = \sqrt{1 + \frac{dy}{dx}^{2}} dx $$
+
+The time integral is now:
+
+$$ t_{1,2} = \int^{2}_{1} \frac{\sqrt{1 + \frac{dy}{dx}^{2}} dx}{\sqrt{2gy}} $$ 
+
+such that the varied function is:
+
+$$ f = \frac{\sqrt{1 + \frac{dy}{dx}^{2}} dx}{\sqrt{2gy}}$$ 
+
+Typically, we can just throw this into the Euler-Lagrange equation but there is a shortcut we can take. Observe that the function is independent of $$ x $$, so $$ \frac{\partial f}{\partial x} = 0$$. From here, we can apply the **Beltrami Identity**:
+
+$$ f - \frac{\partial f}{\partial \dot{y}} \dot{y} = C $$ 
+
+which yields:
+
+$$ \frac{1}{\sqrt{2gy} \sqrt{1+\dot{y}^{2}} } $$
+
+This form can be reduced down to a recognizable form (a separable differential equation):
+
+$$ \frac{dy}{dx} = \sqrt{\frac{k^2}{y} - 1} $$
+
+
+
+
+
+
+
+
 
 ## Hamilton's Principle with Constraints
 
