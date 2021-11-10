@@ -1078,7 +1078,9 @@ $$ \sigma(\Theta) = \frac{s}{\sin(\Theta)} \big| \frac{ds}{d\Theta} \big| $$
 
 This equation determines the probability of scattering at a certain angle.
 
-Taking a closer look at the $$ \frac{ds}{d\Theta} $$ term, we can evaluate this using the orbital equation.
+### The $$\frac{ds}{d\Theta}$$ term
+
+Unfortunately, an equation for $$ s(\Theta,E)$$ does not exist at this point so, taking a closer look at the $$ \frac{ds}{d\Theta} $$ term, we can evaluate this using the orbital equation.
 
 Using the figure above, the bounds of $$ \vec{r} $$ and $$ \Psi $$ are:
 
@@ -1118,18 +1120,115 @@ $$ \theta - \pi = \int^{r}_{-\infty} ...$$
 
 $$ \theta = \pi + \int^{r}_{-\infty} ... $$
 
-$$ - \Psi = \int^{\infty}_{-\infty} ...$$  
+$$ - \Psi = \int^{-\infty}_{r} ...$$  
 
 $$ \Psi = \int^{-\infty}_{r} ...$$ 
 
-All together, the modified orbital equation for scattering is:
+$$ - \Psi = \int^{-\infty}_{r} = \int^{-\infty}_{r} \frac{dr}{r^{2} \big[ \frac{2mE}{l^{2}} - \frac{2mV}{l^{2} - \frac{1}{r^{2}}}  \big]^{1/2} } $$ 
+
+This gives us an equation for the maximum angle of $$\Psi$$:
+
+$$\Psi_{m} = \int^{-\infty}_{r} \frac{dr}{r^{2} \big[ \frac{2mE}{l^{2}} - \frac{2mV}{l^{2}} - \frac{1}{r^{2}}  \big]^{1/2} } $$ 
+
+This can still be further worked on by $$\Theta$$ in terms of $$s$$. 
+
+<img src='/assets/ruthscatang.png' class='center'> 
+$$ \Psi $$ is defined as the angle between the incoming asymptote and the periapsis direction. $$\Psi can be obtained from the orbital equation by setting $$r_{0}$$ when $$\theta_{0} = \pi$$. 
+
+Since the orbit must be symmetric about the direction of the periapsis, the scattering anlge is defined:
+
+$$ \Theta = \pi - 2 \Psi_{m} $$
+
+Replacing $$\Psi_{m}$$ with its definition gives:
+
+$$ \Theta = \pi - 2 \int^{-\infty}_{r} \frac{dr}{r^{2} \big[ \frac{2mE}{l^{2}} - \frac{2mV}{l^{2} } - \frac{1}{r^{2}}  \big]^{1/2} } $$ 
+
+Using the relationship that $$ r = \frac{1}{s^{2}}$$:
+
+$$ \Theta = \pi - 2 \int^{-\infty}_{r} \frac{sdr}{r \big[ r^{2} - r^{2} \frac{V}{E} - s^{2} \big]^{1/2} } $$ 
+
+Rewriting the integral by way of u-substitution ( $$ u = \frac{1}{r} $$, $$dr = -\frac{1}{u^{2}} du $$, $$r=\frac{1}{u}$$ , $$du = -\frac{1}{r^{2}}dr$$, when $$ r \rightarrow \infty = 0 $$ and $$r \rightarrow r_{m} = u_{max} $$ )
+
+$$ \Theta = \pi - 2 \int^{0}_{u_{max}} \frac{sdr}{ \big[ 1 - \frac{V}{E} - s^{2} u^{2} \big]^{1/2} } $$ 
+
+We have come to a place where we can choose the potential $$V$$ in this master equation.
+
+Consider the repulsive scattering of charged particles by a Coulomb Field. The force field of the two fixed charges $$-Ze$$ and $$-Z' e$$ can be written as:
+
+$$ f = \frac{Z Z' e^{2}}{r^{2}} $$
 
 
-$$ \Psi = \int^{-\infty}_{r} = \int^{r}_{-\infty} \frac{dr}{r^{2} \big[ \frac{2mE}{l^{2}} - \frac{2mV}{l^{2} }  \big]^{1/2} } $$ 
+where $$ k = - Z Z' e^{2} $$ so the force field takes the form of Kepler's Problem $$ f = \frac{k}{r}$$. 
 
- 
+For a repulsive interaction:
 
+$$ \frac{1}{r} = - \frac{mk}{l^{2}} \bigg[ \epsilon \cos(\theta - \theta') + 1 \bigg] $$
 
+With $$E>0$$, the orbit is hyperbolic and the eccentricity is:
+
+$$ \epsilon = \sqrt{1 + \frac{2El^{2}}{mk^{2}}}$$
+
+Plugging in the definitions of $$k$$ and $$l$$ reduces $$\epsilon$$ to:
+
+$$ \epsilon = \sqrt{ 1 + (\frac{2Es}{Z Z' e^{2}})^{2} }$$ 
+
+Replacing the term:
+
+$$ \frac{mk}{l^{2}} = \frac{1}{\alpha} = -\frac{m Z Z' e^{2}}{l^{2}}  $$
+
+The equation for $$\frac{1}{r}$$ becomes:
+
+$$ \frac{1}{r} = -\frac{m Z Z' e^{2}}{l^{2}} \bigg[ \epsilon \cos(\theta - \theta') + 1 \bigg] $$
+
+Remember that $$ \theta'$$ is the initial condition of the integration, in this case, $$ \theta' = \pi $$. So, $$ \cos(\theta-\pi) = -\cos(\theta) $$.
+
+$$ \frac{1}{r} = \frac{mk}{l^{2}} \bigg[ \epsilon \cos(\theta) - 1 \bigg] $$
+
+Refering to the diagram, at $$r_{min}$$, the periapsis, we choose $$ \cos(\theta) $$ *such that* it is maximize, in other words, when $$ \cos(\theta) = 1 $$. 
+
+Furthermore, $$ r = 0 $$ as $$ r \rightarrow - \infty $$. 
+
+$$ 0 = \frac{mk}{l^{2}} \bigg[ \epsilon - 1 \bigg] $$
+
+In the direction of the incoming asymptote, $$\Psi_{m}$$:
+
+$$ \cos(\Psi_{m}) = \frac{1}{\epsilon}$$
+
+Making use of $$ \Theta = \pi = 2 \Psi_{m} $$ we can derive some trigonometric terms for scattering.
+
+$$ \Psi_{m} = \frac{\pi}{2} - \frac{\Theta}{2} \rightarrow \cos(\frac{\pi}{2} - \frac{\Theta}{2}) = \sin(\frac{\Theta}{2})$$ 
+
+so the trigonometric relationship to the eccentricity can be written as:
+
+$$ \epsilon = \frac{1}{\cos(\Psi_{m})} = \frac{1}{\sin(\frac{\Theta}{2})} $$ 
+
+Using the $$\sin$$ term, square both sides, introduce $$ 1 $$ by adding and subtracting it. 
+
+$$ \epsilon^{2} = \frac{1}{\sin(\frac{\Theta}{2})} + 1 - 1 $$ 
+
+$$ \epsilon^{2} - 1= \frac{1}{\sin(\frac{\Theta}{2})} - \frac{\sin(\frac{\Theta}{2})}{\sin(\frac{\Theta}{2})} $$ 
+
+$$ \epsilon^{2} - 1 = \cot^{2}(\frac{\Theta}{2}) $$ 
+
+Reintroducing the definition of eccentricity gives a relationship:
+
+$$ \cot(\frac{\Theta}{2}) = \frac{2 s E}{Z Z' e^{2}} $$ 
+
+Now, we have an equation that expresses the impact parameter $$s$$ as a function of the scattering angle $$\Theta$$ and energy $$E$$:
+
+$$ s = \frac{Z Z' e^{2}}{\sin(\Theta)} \cot \big(\frac{\Theta}{2}\big) $$  
+
+Now that an equation for $$s(\Theta,E)$$ has been obtained, the derivative in the scattering cross section equation can finally be evaluated!
+
+$$ \sigma(\Theta) = \frac{s}{\sin(\Theta)} \big| \frac{ds}{d\Theta} \big| $$ 
+
+$$ \sigma(\Theta) = \frac{s}{\sin(\Theta)} \big[ \frac{Z Z'}{2E} \frac{1}{2} \cot^(\frac{\Theta}{2}) \big] \big[ \frac{Z Z' e^{2}}{2 E} \frac{1}{2} \csc^{2}(\frac{\Theta}{2}) \big] = \frac{1}{2} (\frac{Z Z' e^{2}}{2E})^{2} \frac{\cos(\frac{\Theta}{2}{2})}{\sin(\frac{\Theta}{2})} \frac{\csc^{2}(\frac{\Theta}{2})}{2\sin(\frac{\Theta}{2})\cos(\frac{\Theta}{2})}$$ 
+
+The equation for **Rutherford Scattering** is:
+
+$$ \sigma(\Theta) = \frac{1}{4} \bigg(\frac{Z Z' e^{2}}{2 E} \bigg)^{2} \csc^{4}\bigg(\frac{\Theta}{2} \bigg) $$  
+
+# Rigid Body Motion
 
 
 
