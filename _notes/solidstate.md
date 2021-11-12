@@ -6,9 +6,7 @@ category: notes
 
 Background required for research, mostly solid state physics (maybe a wee bit of particle physics)
 
-# Solid State Physics
-
-## Electrons in a Crystal
+# Electrons in a Periodic Potential 
 
 Using X-ray diffraction and electron microscopy atoms, we know that electrons are arranged uniformly in a lattice due to a periodic potential. In a one dimensional model, there are two models to consider:
 
@@ -184,5 +182,75 @@ where
 
 $$ P = \frac{2 m V_{0} b a}{\hbar^{2}}$$
 
-This equation determines the allowed solutions in a periodic potential. 
+This is also called the **Penny constant**, which determines the allowed solutions in a periodic potential. Recall that $$a$$ is the spereation distance between atoms in a lattice.
 
+<img src="/assets/kronigpenney.png" class="center">
+
+From here, some cases can be applied to investigate the behavior of the system.
+
+### Cases for $$P$$ 
+
+When $$P \rightarrow $$ large, the height of the curve grows larger with steeper slopes, the bands become narrow. In the limit that $$P \rightarrow \infty$$, they shrink to the quantized infinite square well energy ($$ E = \frac{n^{2}\hbar^{2}}{2ma^{2}} $$), since $$ P \propto V_{0}$$. Of course, the opposite applies. When $$ P \rightarrow $$ small, this results in wider bands. 
+
+When $$P=0$$, $$ \cos(\alpha a) = \cos(ka) $$. Then, $$\alpha=k$$, this is the situation of the free electron with $$ E = \frac{\hbar^{2}k^{2}}{2m} $$.
+
+## Brillion Zones
+
+<img src="/assets/BZ.png" class="center">
+
+The $$E(k)$$ curve can be segmented into regions called **Brillouin Zones**. 
+
+For the case of a one dimensional lattice, the *first Brillouin zone* exists from $$ - \frac{\pi}{a} \leq k \leq \frac{\pi}{a} $$. This region is also known as the **n-band**.
+
+The *second Brillouin zone* exists from $$ - \frac{2\pi}{a} \leq k \leq -\frac{\pi}{a} \cup \frac{\pi}{a} \leq k \leq \frac{2\pi}{a} $$, or the **m-band**. 
+
+
+
+
+# Band Theory of Solids
+
+## In Semiconductor Crystals
+
+**Band Gaps** or energy gaps (usually denoted $$E_{g}$$) are the regions where no electronic states can exist as a result of Bloch's theorem and allowed solutions/energies in a periodic potential.
+
+Above $$E_{g}$$ is the **conduction band**, and below is the **valence band**. Both of these bands exist near the **Fermi level** ($$E_{f}$$ or $$ \mu$$) , is the top most energy of the occupied states
+
+## Dispersion Relation E(k) 
+
+$$ E = \frac{\hbar^{2}}{2m} k^{2} $$
+
+## Effective Mass
+
+Suppose an electron is subject to a force exerted by an $$\vec{E}$$ field. The group velocity is:
+
+$$ v_{g} = \frac{d\omega}{dk}$$
+
+Recalling some wave theory terms; the center frequency is $$ \omega = 2\pi\nu $$, the wavevector is $$ k = \frac{2\pi}{\lambda} $$, and $$ E=h \lambda $$, the group velocity can be rewritten as:
+
+$$ v_{g} =  \frac{d (2\pi\nu)}{dk} = \frac{2\pi(E/h)}{dk} = \frac{1}{\hbar} \frac{dE}{dk} $$ 
+
+Following, the acceleration is simply the time derivative of $$v_{g}$$ (don't forget that this is an implicit derivative!!!):
+
+$$ a = \frac{d v_{g}}{dt} = \frac{1}{\hbar^{2}} \frac{d^{2} E}{dk^{2}} \frac{dk}{dt}$$
+
+We want to expand on the $$ \frac{dk}{dt} $$ term into something more useful. Beginning with the wave momentum or the deBrogile momentum: 
+
+$$ p = \hbar k $$ 
+
+$$ \frac{dp}{dt} = \hbar \frac{dk}{dt} $$ 
+
+$$ \frac{1}{\hbar} \frac{dp}{dt} = \frac{dk}{dt} $$  
+
+Coming back to the acceleration equation:
+
+$$ a = \frac{1}{\hbar^{2}} \frac{d^{2}E}{dk^{2}} \frac{dp}{dt} $$ 
+
+$$ = \frac{1}{\hbar^{2}} \frac{d^{2} E}{dk^{2}} \frac{d(m\vec{v})}{dt} $$ 
+
+$$ = \frac{1}{\hbar^{2}} \frac{d^{2} E}{dk^{2}} F $$  
+
+Following from the familiar $$ F=ma $$, the effective mass can be expressed as:
+
+$$ m^{*} = \hbar^{2} \bigg(\frac{d^{2}E}{dk^{2}} \bigg)^{-1} $$ 
+
+One thing to point out in this equation is that $$m^{*}$$ is inversly proportional to the the $$E(k)$$ curve! 
