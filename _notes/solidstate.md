@@ -213,7 +213,25 @@ The *second Brillouin zone* exists from $$ - \frac{2\pi}{a} \leq k \leq -\frac{\
 
 **Band Gaps** or energy gaps (usually denoted $$E_{g}$$) are the regions where no electronic states can exist as a result of Bloch's theorem and allowed solutions/energies in a periodic potential.
 
-Above $$E_{g}$$ is the **conduction band**, and below is the **valence band**. Both of these bands exist near the **Fermi level** ($$E_{f}$$ or $$ \mu$$) , is the top most energy of the occupied states
+<img src="/assets/bandgap.png" class="center">
+Above is the band diagram of silicon. Notice the band gap energy of about $$ 1eV $$ 
+
+Flat band diagrams provide a better way of visualizing band gaps.
+
+<img src="/assets/flatband.png" class="center">
+Here is a flat band diagram of a p-n junction. 
+
+Above $$E_{g}$$ is the **conduction band**, and below is the **valence band**. Both of these bands exist near the Fermi level ($$E_{f}$$ or $$ \mu$$) , is the top most energy of the occupied states
+
+For reference, below is a table of Energy/Band gaps of common materials:
+
+$$
+\begin{array} {|r|r|}\hline 
+Si & 1.17 eV \\ \hline 
+Ge & 0.74 eV \\ \hline 
+Sn & 0.08 eV \\ \hline 
+C & 5.48 eV \\ \hline  \end{array}
+$$
 
 ## Dispersion Relation E(k) 
 
@@ -254,3 +272,65 @@ Following from the familiar $$ F=ma $$, the effective mass can be expressed as:
 $$ m^{*} = \hbar^{2} \bigg(\frac{d^{2}E}{dk^{2}} \bigg)^{-1} $$ 
 
 One thing to point out in this equation is that $$m^{*}$$ is inversly proportional to the the $$E(k)$$ curve! 
+
+## Electron Mobility
+
+There are a few ways to describe electron mobility, all of these decribe how an electron moves through a medium:
+
++ Hole mobility: When electrons make the jump to say, the conduction band, a hole is left behind. Neighboring electrons are attracted and fill the empty spot. The hole appears in a new location, giving it a sense of "mobility". 
+
++ Carrier mobility: This term refers to *both* electron and hole mobility.
+
+Electron mobility can be defined in terms of drift velocity:
+
+$$ v_{d} = -\mu_{e} E$$ 
+
+where $$\mu_{e}$$ is the electron mobility, $$ v_{d} $$ is the drift velocity, and $$E$$ is the magnitude of the electric field applied across the material. Hole mobility is similary defined:
+
+$$ v_{d} = \mu_{h} E$$ 
+
+It is also useful to describe **conductivity** as it is proportional to the product of mobility and carrier concentration. Usually denoted $$\sigma$$, conductivity can be expressed in terms of mobility as:
+
+$$ \sigma = N \mu e $$ 
+
+
+
+### Fermi Energy/Level
+
+A good way to think about the Fermi level is to put it in terms of population. Electrons are classified as fermions and follow Fermi-Dirac statistics. The distribution is given by:
+
+$$ \frac{1}{1 + e^{(E-u)/k_{b}T}} $$ 
+
+where $$ u $$ is the Fermi level, $$k_{b}$$ is the Boltzmann constant, and $$ T $$ is the temperature. When the system is at the Fermi level, the ratio $$ \frac{E}{u} = 1 $$ and $$k_{B}T$$ = 1. So, the population $$n$$ is $$ 1/2 $$. 
+
+The distribution describes how parameters such as temperature $$T$$ and purity can increase the Fermi level, and by extension, increase conductivity. Suppose the system's Fermi energy sits in the middle of the valence and conduction band. Increase the temperature brings the Fermi level closer to the conduction band, allowing the electrons to make an easy jump to the conduction band. 
+
+Introducing impurities, or doping the material with atoms that have excess electrons can also increase the Fermi energy. 
+
+### p-Type and n-Type Semiconductor Doping
+
+Consider an electrically neutral silicon semiconductor.
+
+**Intrinsic semiconductors** are , well, naturally semiconducting. This means that the number of excited electrons and holes are equal, $$p=n$$. Applying an external voltage to the material will make some electrons jump the band gap, supporting charge flow. For example, pure silicon is a group $$IV$$ intrinsic semiconductor. The figure below on the left shows the four valence electrons with covalent bonds around each silicon atom.
+
+<img src="/assets/pntype.png" class="center">
+
+However, as stated earlier, doping semiconductors can dramatically affect the conductivity of the material, making these materials into **extrinsic semiconductors**. Suppose a group $$V$$ atom was introduced into the silicon lattice as shown in the center figure. There will be an free electron (conduction electron) making this impurity a **donor**. Moreover, since a *negatively* charged electron was introduced, this make the doped material an **n-type semiconductor**. 
+
+On the other hand, doping the silicon semiconductor with a group $$III$$ atom makes the hole a majority carrier and the electrons a minority carrier. The holes accept the free elecron, so the impurity in this case is called an **acceptor**. Holes are "positively" charged which making this a **p-type semiconductor**.  
+
+
+
+## Direct and Indirect Band Gaps
+
+There are two classifications of band gaps; direct and indirect. **Direct band gaps** indicate that momemtum is conserved. In detail, the crystal momentum of electrons and holes are the same in both the conduction and valence band. The band diagram below is of Gallium Arsenide, a direct band gap semiconductor. This is a useful property since the electron can directly emit a photon!
+
+<img src="/assets/dbg.png" class="center"> 
+Notice that the *minimal energy state* of the conduction band and the *maximal energy state* of the valence band line up. If plotted in an $$E(k)$$ diagram, such as the one for silicon, one would say that these min/max energy states are characterized by a certain crystal momentum (k-vector).
+
+
+Referring to the band diagram of of [Silicon](#in-semiconductor-crystals), an indirect band gap semiconductor. **Indirect band gaps** indiate that some energy was lost in order for momentum to be conserved. The electron must travel pass through an intermediate state in order such that momentum is transferred through the crystal lattice. Graphically, the min-max energies of the Silicon band diagram do not line up. 
+
+
+
+(In band digrams, parabolas indicate free electrons?)
