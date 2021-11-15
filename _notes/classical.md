@@ -1230,6 +1230,70 @@ $$ \sigma(\Theta) = \frac{1}{4} \bigg(\frac{Z Z' e^{2}}{2 E} \bigg)^{2} \csc^{4}
 
 # Rigid Body Motion
 
+A rigid body is defined as a system of mass points remaining at a constant distance of each other under the influence of holonomic constraints. The first question to ask is: How many independent coordinates are needed to describe the motion of a rigid body?
+
+[insert a nice photo of a rigid body here?]
+
+There are two coordinate systems to pay attention to: the standard $$x,y,z$$ frame and the frame relative to the center of mass $$x',y',z'$$.
+
+Vector $$\vec{R}$$ points from the origin to the center of mass and is described by the three coordinates:
+
+$$ \vec{R} = \hat{i} x + \hat{j} y + \hat{k} z $$ 
+
+along with 3 angles that determine the orientation.
+
+The general mathematical procedure is to establish the system of reference:
+
+1) Establish the system of reference: 
+
+$$ (x,y,z) + $$ basis $$ (\hat{i}, \hat{j}, \hat{k})$$ 
+
+2) Establish the basis that is fixed to the rotating body:
+
+$$ (x',y',z') + $$ basis $$ (\hat{i}', \hat{j}',\hat{k}'$$ 
+
+The velocity and acceleration of $$\vec{R}$$ can be written as 
+
+$$\frac{d\vec{R}}{dt} = \vec{V} $$
+
+$$\vec{A} = \frac{d\vec{R}^{2}}{dt^{2}} $$
+
+Turning the focus to rotation about the center of mass:
+
+We choose some point $$p$$ with $$\vec{r}$$ pointing to it:
+
+$$ \vec{r}' = \hat{i} x' + \hat{j} y' + \hat{k} z' $$
+
+The question is: how do we get point $$p$$ in the $$(x,y,z)$$ frame? If we know a vector, then we can determine its projections. In other words, taking $$x'$$ as an example, it is simply a projection of $$\vec{r}'$$ onto $$\hat{i}$$!
+
+$$ x' = \vec{r}' \dot{} \hat{i}' = (x' \hat{i}' + y' \hat{j}' + z' \hat{k}') \dot{} \hat{i}' $$ 
+
+$$ = x' (\hat{i}' \dot{} \hat{i}) + y (\hat{j}' \dot{} \hat{i}) + z' (\hat{k}' \dot{} \hat{i})$$ 
+
+In terms of cosines: 
+
+$$ = x' \cos(\theta_{11}) + y' (\cos(\theta_{21}) + z' \cos(\theta_{31})$$ 
+
+The same can be done for $$\vec{r}'$$ dotted into $$\hat{j}$$ and $$\hat{k}$$:
+
+$$ \vec{r}' \dot{} \hat{j} \rightarrow \cos(\theta_{12}), \cos(\theta_{22}) , \cos(\theta_{32})$$
+
+$$ \vec{r}' \dot{} \hat{k} \rightarrow \cos(\theta_{13}), \cos(\theta_{23}) , \cos(\theta_{33})$$
+
+Using this information, we can rewrite $$\vec{r}$$:
+
+$$ \vec{r} = \vec{r}' =  \hat{i} x + \hat{j} y + \hat{k} z = (\vec{r}' \dot{} \hat{i}) \dot{} \hat{i} + (\vec{r}' \dot{} \hat{j}) \dot{} \hat{j} + (\vec{r}' \dot{} \hat{k}) \hat{k}$$  
+
+Essentially, the $$x'$$ frame is projected onto $$x$$ with the following relation:
+
+$$x' = x \cos(\theta_{11}) + y \cos(\theta_{21}) + z \cos(\theta_{31}) $$
+
+In total there are 12 parameters to keep track of, 3 translation and 9 angles. 
+
+## Orthogonal Transformation
+
+
+
 
 
 # References
