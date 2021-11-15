@@ -9,7 +9,8 @@ The focus of these notes is to provide a comprehensive summary on positron annih
 # What and Why of Positrons?
 
 ## Introduction
-A non-destructive technique called Positron Annihilation Lifetime Spectroscopy (PALS or interchangably PAS) can provide information regarding a solid material:
+
+A non-destructive technique called Positron Annihilation Spectroscopy (PAS) can provide information regarding a solid material:
 
 + Variations in density
 + Defects
@@ -21,11 +22,11 @@ A non-destructive technique called Positron Annihilation Lifetime Spectroscopy (
 
 In the context of Fundamental Understanding of Transport Under Reactor Extremes (FUTURE), a LANL research center, the application is to better understand materials properties when exposed to radiation damage, corrosive enviroments, high stresses and high temperatures which plays a role in nuclear energy research.  
 
-Solids such as metals and semiconductors contain free electrons which annihilate with positrons. This interaction produces gamma rays which can be detected to measure the positron lifetime from its emmision to detection. Below is a figure describing positron annihilation spectroscopy:
+The principle behind PAS hinges on the fact that solids such as metals and semiconductors contain free electrons that can annihilate with positrons. This interaction produces gamma rays which can be detected to measure the positron lifetime from its emmision to detection. Below is a figure describing positron annihilation spectroscopy:
 
 <img src="/assets/pastheory.png" class="center">
 
-PAS stands on the principle that positrons can be trapped within defects or vacancies. With a diffusion length of 100nm, the positron then loses its kinetic energy as it travels through the lattice through a process called [thermalization](https://en.wikipedia.org/wiki/Thermalisation). As a result of the repulsive forces from neighboring positively charged nuclei, the positron is trapped in a region of lesser local electron density or where an atom is missing from the lattice. 
+Moreover, positrons can be trapped within defects or vacancies. With a diffusion length of 100nm, the positron then loses its kinetic energy as it travels through the lattice through a process called [thermalization](https://en.wikipedia.org/wiki/Thermalisation). As a result of the repulsive forces from neighboring positively charged nuclei, the positron is trapped in a region of lesser local electron density or where an atom is missing from the lattice. 
 
 Below is a comparison of techniques for resolved defect size.
 <img src="/assets/defecttechniques.png" class="center">
@@ -88,6 +89,8 @@ $$ C_{exp} (t) = \int_{-\infty}^{\infty} \big[ C_{theory} (\tau) + C_{source} (\
 where $$ C_{bg} $$ represents the background contributions and $$f_{res} $$ is the time resolution function, for cases where the "start" and "stop" photon enter simultaneously. 
 
 # Doppler Broadening Techniques
+
+[See page on DB Spectra software]()
 
 ## Doppler Broadening of Annihilation Radiation (DBAR) 
 
