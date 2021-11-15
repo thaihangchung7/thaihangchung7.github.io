@@ -34,7 +34,7 @@ Over at SURF, four fiducial tanks (a total of about 17,000 tons of LAr) chilled 
 A near detector is located 574 meters from the target, 60 meters below the surface. Although it can append to the physics program of DUNE (boosted dark matter, sterile neutrinos, millicharged particles), it's mainly there to control for any biases in the energy scale or resolution, essentially to monitor the neutrino beam.
 
 ## Physics of DUNE (Far Detector at least)
-Experimental measurements were made by the Super Kamiokande Observatory (Super-K) in 1998 and the Sudbury Neutrino Observatory (SNO) in 2001. The 2015 Nobel Prize for "the discovery of neutrino oscillations, which shows that neutrinos have mass" was awarded to Takaaki Kajita and Arthur B. McDonald. The theoretical prediction was provided by Bruno Pontecorvo way back in 1957.
+Experimental measurements were made by the Super Kamiokande Observatory (Super-K) in 1998 and the Sudbury Neutrino Observatory (SNO) in 2001. The 2015 Nobel Prize for "the discovery of neutrino oscillations, which shows that neutrinos have mass" (or at least a upper limit was placed) was awarded to Takaaki Kajita and Arthur B. McDonald. The theoretical prediction was provided by Bruno Pontecorvo way back in 1957.
 
 Recall that neutrinos only interact via the standard model charged current and neutral current weak interactions. Charged current refers to an interaction where a charged weak force carrier \\((W^+ \\) or \\(W^-)\\) are exchanged. Whereas neutral current refers to interactions with a neutrally charged weak force carrier $$(Z^{0})$$.
 
