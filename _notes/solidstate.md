@@ -324,7 +324,7 @@ On the other hand, doping the silicon semiconductor with a group $$III$$ atom ma
 There are two classifications of band gaps; direct and indirect. **Direct band gaps** indicate that momemtum is conserved. In detail, the crystal momentum of electrons and holes are the same in both the conduction and valence band. The band diagram below is of Gallium Arsenide, a direct band gap semiconductor. This is a useful property since the electron can directly emit a photon!
 
 <img src="/assets/dbg.png" class="center"> 
-Notice that the *minimal energy state* of the conduction band and the *maximal energy state* of the valence band line up. If plotted in an $$E(k)$$ diagram, such as the one for silicon, one would say that these min/max energy states are characterized by a certain crystal momentum (k-vector).
+Notice that the *minimal energy state* of the conduction band and the *maximum energy state* of the valence band line up. If plotted in an $$E(k)$$ diagram, such as the one for silicon, one would say that these min/max energy states are characterized by a certain crystal momentum (k-vector).
 
 
 Referring to the band diagram of of [Silicon](#in-semiconductor-crystals), an indirect band gap semiconductor. **Indirect band gaps** indiate that some energy was lost in order for momentum to be conserved. The electron must travel pass through an intermediate state in order such that momentum is transferred through the crystal lattice. Graphically, the min-max energies of the Silicon band diagram do not line up. 
