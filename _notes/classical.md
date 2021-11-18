@@ -1234,7 +1234,7 @@ A rigid body is defined as a system of mass points remaining at a constant dista
 
 [insert a nice photo of a rigid body here?]
 
-There are two coordinate systems to pay attention to: the standard $$x,y,z$$ frame and the frame relative to the center of mass $$x',y',z'$$.
+There are two coordinate systems to pay attention to: the standard $$x,y,z$$ frame and the frame relative to the center of mass $$x',y',z'$$. The goal is to establish a flow of information from $$\{ x, y, z\}$$ to $$\{x',y',z'\}$$.
 
 Vector $$\vec{R}$$ points from the origin to the center of mass and is described by the three coordinates:
 
@@ -1289,6 +1289,65 @@ Essentially, the $$x'$$ frame is projected onto $$x$$ with the following relatio
 $$x' = x \cos(\theta_{11}) + y \cos(\theta_{21}) + z \cos(\theta_{31}) $$
 
 In total there are 12 parameters to keep track of, 3 translation and 9 angles. 
+
+To stay consistent with column vector notation, we change the notion of the $$x,y,z$$ coordinates to:
+
+$$ x \rightarrow x_{1}$$
+
+$$ y \rightarrow x_{2}$$
+
+$$ z \rightarrow x_{3}$$
+
+where the column vector notation is:
+
+$$ \vec{x} = 
+\begin{bmatrix}
+x_{1}\\
+x_{2}\\
+x_{3}
+\end{bmatrix}
+$$ 
+
+From here, the transformation matrix established. Starting from a system of equations with elements $$a_{ij}$$:
+
+$$ x_{1} = a_{11} x_{1}' + a_{12} x_{2}' + a_{13} x_{3}' $$
+
+$$ x_{2} = a_{21} x_{1}' + a_{22} x_{2}' + a_{23} x_{3}' $$
+
+$$ x_{3} = a_{31} x_{1}' + a_{32} x_{2}' + a_{33} x_{3}' $$
+
+The corresponding matrix is:
+
+$$\vec{A} = 
+\begin{bmatrix}
+a_{11} & a_{12} & a_{13} \\
+a_{21} & a_{22} & a_{23} \\
+a_{31} & a_{32} & a_{33} 
+\end{bmatrix}
+$$ 
+
+so the transformation equation is given by:
+
+$$ \vec{r}' = \vec{A} \vec{r} $$ 
+
+where a can be considered a matrix that "operates" on $$\vec{r}$$.
+
+**Kronecker Delta**
+
+A common convention of concisely writing summations of orthogonality conditions:
+
+$$a_{ij} a_{ik} = 1$$ if $$j=k$$
+
+$$a_{ij} a_{ik} = 0$$ if $$j \neq k$$
+
+More compactly, 
+
+$$ a_{ij} a_{ik} = \delta_{jk} $$ with $$j,k = 1,2,3$$ 
+
+
+
+
+
 
 ## Orthogonal Transformation
 
