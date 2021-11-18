@@ -26,7 +26,7 @@ As stated before, we solve the equation for two regions, $$ I $$ and $$ II $$.
 
 In region $$I$$, the potential is $$ V(x) = 0 $$:
 
-$$ \frac{d^{2} \psi}{d x^{2}} +  \frac{2m}{\hbar} E \psi  = 0 $$
+$$ \frac{d^{2} \psi}{d x^{2}} +  \frac{2m}{\hbar^{2}} E \psi  = 0 $$
 
 The solved energy comes out to be:
 
@@ -35,8 +35,6 @@ $$ \frac{2m}{\hbar^{2}} E = \alpha^{2} \rightarrow E = \frac{\hbar^{2}}{2m} \alp
 In region $$II$$, $$V(x) = V_{0} $$: 
 
 $$ \frac{d^{2} \psi}{d x^{2}} + \frac{2m}{\hbar^{2}} (E - V_{0}) \psi = 0 $$
-
-*there appears to be a negative sign absorbed in here... not sure into what though.
 
 Let $$ \gamma^{2} = \frac{2m}{\hbar^{2}} (V_{0} - E) $$ 
 
