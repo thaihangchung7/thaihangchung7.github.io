@@ -1399,6 +1399,16 @@ Goldstein describes **Euler's theorem** as:
 
 
 
+## Finite Rotations
+
+<img src="/assets/finiterotations.png" class="center">
+
+Consider a clockwise rotation of a vector about an axis. The initial vector $$\vec{r}$$ is denoted $$\vec{OP}$$ and the final position shown as $$\vec{r}'$$ is denoted as $$\vec{OQ}$$. The axis of rotation is about unit vector $$\hat{n}$$. 
+
+$$\vec{ON}$$ is a projection of $$\vec{r}$$ onto $$\hat{n}$$ and can be written as $$\hat{n}(\hat{n} dot{} \vec{r}$$.
+
+Vector $$\vec{NP}$$ can be written as $$\vec{r} - \vec{n}(\hat{n} dot{} \vec{r})$$ with the same magnitude of $$\vec{NQ}$$ and $$\vec{r} \times \hat{n}$$.
+
 
 
 # References
