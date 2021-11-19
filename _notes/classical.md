@@ -1344,12 +1344,58 @@ More compactly,
 
 $$ a_{ij} a_{ik} = \delta_{jk} $$ with $$j,k = 1,2,3$$ 
 
+## Euler's Angle
 
+We can express successive rotations through matrix multiplication:
 
+$$\vec{A} = 
+\begin{bmatrix}
+-1 & 0 & 0 \\
+0 & -1 & 0 \\
+0 & 0 & 1
+\end{bmatrix}
 
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & -1
+\end{bmatrix}
 
+= 
 
-## Orthogonal Transformation
+\begin{bmatrix}
+-1 & 0 & 0 \\
+0 & -1 & 0 \\
+0 & 0 & -1
+\end{bmatrix}
+
+$$ 
+
+Physically, the successive multiplication of these matricies is essentially:
+
+(rotation about $$180\circ$$ about $$z$$)(reflection in the $$xy$$ plane) = inversion
+
+The **inversion matrix** is defined as:
+
+$$\vec{A} = 
+\begin{vmatrix}
+-1 & 0 & 0 \\
+0 & -1 & 0 \\
+0 & 0 & -1
+\end{vmatrix}
+= -1
+$$ 
+
+If $$\lvert A \rvert = +1$$, then it is a *proper rotation*.
+
+If $$\lvert A \rvert = -1$$, then it is an *improper rotation*, and cannot achieve continuous rotations. 
+
+## Euler's Theorem 
+
+Goldstein describes **Euler's theorem** as:
+
+"The real orthogonal matrix specifying the physical mition of a rigid body with one point fixed always has the eigenvalue +1" 
+
 
 
 
