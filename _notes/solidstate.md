@@ -241,7 +241,7 @@ Suppose an electron is subject to a force exerted by an $$\vec{E}$$ field. The g
 
 $$ v_{g} = \frac{d\omega}{dk}$$
 
-Recalling some wave theory terms; the center frequency is $$ \omega = 2\pi\nu $$, the wavevector is $$ k = \frac{2\pi}{\lambda} $$, and $$ E=h \lambda $$, the group velocity can be rewritten as:
+Recalling some wave theory terms; the center frequency is $$ \omega = 2\pi\nu $$, the wavevector is $$ k = \frac{2\pi}{\lambda} $$, and $$ E=h \nu $$, the group velocity can be rewritten as:
 
 $$ v_{g} =  \frac{d (2\pi\nu)}{dk} = \frac{2\pi(E/h)}{dk} = \frac{1}{\hbar} \frac{dE}{dk} $$ 
 
