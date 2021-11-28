@@ -332,3 +332,5 @@ Referring to the band diagram of of [Silicon](#in-semiconductor-crystals), an in
 
 
 (In band digrams, parabolas indicate free electrons?)
+
+(What does it mean if the fermi level is near the conduction or valence band?)
