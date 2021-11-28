@@ -6,6 +6,11 @@ category: notes
 
 Important Theorems and Equations for Classical Mechanics
 
+$$ \let\vec\mathbf $$ 
+$$\newcommand{\v}{\vec} $$
+$$\newcommand{\d}{\dot{}}$$ 
+$$\newcommand{\abs}{\rvert} $$
+$$\newcommand{\h}{\hat}$$ 
 Table of Contents
 =================
 
@@ -676,20 +681,106 @@ Goldstein describes **Euler's theorem** as:
 
 "The real orthogonal matrix specifying the physical mition of a rigid body with one point fixed always has the eigenvalue +1" 
 
-
-
-
 ## Finite Rotations
 
 <img src="/assets/finiterotations.png" class="center">
 
 Consider a clockwise rotation of a vector about an axis. The initial vector $$\vec{r}$$ is denoted $$\vec{OP}$$ and the final position shown as $$\vec{r}'$$ is denoted as $$\vec{OQ}$$. The axis of rotation is about unit vector $$\hat{n}$$. 
 
-$$\vec{ON}$$ is a projection of $$\vec{r}$$ onto $$\hat{n}$$ and can be written as $$\hat{n}(\hat{n} dot{} \vec{r}$$.
+From the figures above, some vector definitions can be written down. First order of business is to write down $$\v{r}'$$ in terms of $$\vec{r}, \phi, \h{n}$$.
 
-Vector $$\vec{NP}$$ can be written as $$\vec{r} - \vec{n}(\hat{n} dot{} \vec{r})$$ with the same magnitude of $$\vec{NQ}$$ and $$\vec{r} \times \hat{n}$$.
+$$\v{r}'$$ is just a some of a three easily identifiable vectors:
+
+$$\v{r}' = \v{ON} + \v{NV} + \v{VQ} $$
+
+We can redefine some of these vectors into more useful terms:
+
+$$\vec{ON}$$ is a projection of $$\vec{r}$$ onto $$\hat{n}$$ and can be written as $$\hat{n}(\hat{n} \dot{} \vec{r})$$.
+
+Vector $$\vec{NP}$$ can be written as $$\vec{r} - \vec{n}(\hat{n} \dot{} \vec{r})$$ with the same magnitude of $$\vec{NQ}$$ and $$\vec{r} \times \hat{n}$$.
+
+Notice that $$\lvert \vec{NQ} \rvert = \lvert \vec{NP} \rvert$$, which can be substituted for the definition of $$\abs \v{NV} \abs$$: 
+
+$$\abs \v{NV} \abs = \abs \v{NQ} \abs \cos\phi = \abs \v{NP} \abs \cos\phi = [\v{r} - \h{n} (\v{r} \d \h{n})] \cos\phi $$ 
+
+# Rigid Body Equations of Motion
+
+Recall that the diagonals and off diagonals of $$ \vec{I}_{jk} $$ can be obtained with:
+
+$$ \vec{I}_{jk} = \int_{V} \rho(\vec{r}) (r^{2} \delta_{jk} - x_{j} x_{k}) dV $$ 
+
+$$ \vec{I} $$ is classified as a tensor, more specifically, a tensor of the second rank.
+
+The diagonals in the matrix elements is given by:
+
+$$ \vec{I}_{xx} = \int_{V} \rho(\vec{r}) (r^{2} - x^{2}) dV $$ 
+
+## (Cartesian) Tensors
+
+In the standard three dimensional cartesian space, a **Tensor** of the $$N$$th rank may be defined as:
+
+$$\vec{T}_{ijk...}  $$ ; with $$N$$ indicies,
+
+that can transform under an orthoganal transformation of coodintes, $$ A $$ according to the following scheme:
+
+$$ \vec{T}'_{ijk} = a_{il} l a_{jm} a_{kn}...  T_{lmn}...(\vec{x}) $$ 
+
+In other words, a tensor with one component is a tensor of zero ranks, invariant under orthogonal transfomrations. 
+
+A tensor of first rank can be written as: $$ T_{i}' = a_{ij} T{j} $$ 
+
+which is equivalent to a vector.
+
+# Theory of Special Relativity
+
+Maxwell's equations for electromagnetism were inconsistent with Newtionian physics in that it uses a universal constant ,$$c$$, the speed of light, which says something about inertial frames of reference. Einstein came along and assumed Maxwell's theory was correct. 
+
+Consider two frames $$S$$ and $$S'$$, with coordinate axes aligned: 
+
+$$ S (t,x,y,z) $$ 
+$$ S' (t',x',y',z') $$ 
+
+$$S'$$ move relative to $$S$$ in the $$+x$$ direction at speed $$v$$. In Newtonian mechanics, these two frames are related by Galilean transformations:
+
+$$t=t'$$
+$$x=x'$$
+$$y=y'$$
+$$z=z'$$
+
+These transformations follow Newton's second law, $$\v{F} = \frac{d}{dt} \v{p} $$, where the applied force and momentum are invariant, $$\v{F} = \v{F}' $$, $$t = t'$$, and $$ \v{p} = \v{p}'$$. 
+
+Let $$u$$ and $$u'$$ be the velocity of a particle as measured in two frames moving with relative velocity $$\v{v}$$ then:
+
+$$\v{u}' = $$\v{u} - \v{v} $$
+
+## Postulates of Special Relativity
+
++ 1) The laws of physics are the same to all inertial oversvers.
++ 2) The speed of light is the same to all inertial observers.
+
+A formulation of physics that explicitly includes these postulates is said to be **covariant**. Since $$c$$ is the same in all frames of reference, $$c$$ can be used as a conversion factor between them.
+
+To satisfy the postulates , we intoduce a geometric framework called **spacetime**.
+
+$$(\Delta s)^{2} = c^{2} (dt)^{2} - (x)^{2}$$
+
+where the interval is defined between points $$\v{A}$$ and $$\v{B}$$ $$dt$$ and $$dt$$ is the time interval and $$x$$, the space interval. 
+
+The relative signs chosen for space and time is such that real bodes moving at velocities less than the speed of light have $$(ds)^{2} > 0$$, *which makes $$ds$$ real for bodies moving slower than the speed of light.* In other words, the interval can be described by:
+
+$$ (ds)^{2} > 0 $$, timelike interval
+$$ (ds)^{2} < 0 $$, spacelike
+$$ (ds)^{2} = 0 $$, lightlike or null
+
+For moving bodies, 
+
+$$ v > c $$, are called tachyons
+$$ v < c $$, are called tardyons
 
 
+$$(ds)^{2} = (cdt)^{2} - (dx^{2} + dy^{2} + dz^{2}) $$
+
+Intervals defined by this equation exist in **Minkowski space** 
 
 # References
 
