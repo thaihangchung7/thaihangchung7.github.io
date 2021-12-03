@@ -747,7 +747,7 @@ $$x=x'$$
 $$y=y'$$
 $$z=z'$$
 
-These transformations follow Newton's second law, $$\v{F} = \frac{d}{dt} \v{p} $$, where the applied force and momentum are invariant, $$\v{F} = \v{F}' $$, $$t = t'$$, and $$ \v{p} = \v{p}'$$. 
+These transformations follow Newton's second law, $$\v{F} = \frac{d\v{p}}{dt} $$, where the applied force and momentum are invariant, $$\v{F} = \v{F}' $$, $$t = t'$$, and $$ \v{p} = \v{p}'$$. 
 
 Let $$u$$ and $$u'$$ be the velocity of a particle as measured in two frames moving with relative velocity $$\v{v}$$ then:
 
@@ -764,7 +764,7 @@ To satisfy the postulates , we intoduce a geometric framework called **spacetime
 
 $$(\Delta s)^{2} = c^{2} (dt)^{2} - (x)^{2}$$
 
-where the interval is defined between points $$\v{A}$$ and $$\v{B}$$ $$dt$$ and $$dt$$ is the time interval and $$x$$, the space interval. 
+where the interval is defined between points $$\v{A}$$ and $$\v{B}$$ is the time interval and $$x$$, the space interval. 
 
 The relative signs chosen for space and time is such that real bodes moving at velocities less than the speed of light have $$(ds)^{2} > 0$$, *which makes $$ds$$ real for bodies moving slower than the speed of light.* In other words, the interval can be described by:
 
