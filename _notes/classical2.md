@@ -721,11 +721,11 @@ $$ \vec{I}_{xx} = \int_{V} \rho(\vec{r}) (r^{2} - x^{2}) dV $$
 
 In the standard three dimensional cartesian space, a **Tensor** of the $$N$$th rank may be defined as:
 
-$$\vec{T}_{ijk...}  $$ ; with $$N$$ indicies,
+$$\vec{T}_{ijk...}  $$ ; with $$ 3^{N}$$ components and $$N$$ indicies,
 
 that can transform under an orthoganal transformation of coodintes, $$ A $$ according to the following scheme:
 
-$$ \vec{T}'_{ijk} = a_{il} l a_{jm} a_{kn}...  T_{lmn}...(\vec{x}) $$ 
+$$ \vec{T}'_{ijk}...(\v{x}') = a_{il}  a_{jm} a_{kn}...  T_{lmn}...(\vec{x}) $$ 
 
 In other words, a tensor with one component is a tensor of zero ranks, invariant under orthogonal transfomrations. 
 
@@ -733,6 +733,7 @@ A tensor of first rank can be written as: $$ T_{i}' = a_{ij} T{j} $$
 
 which is equivalent to a vector.
 
+<<<<<<< HEAD
 # Theory of Special Relativity
 
 Maxwell's equations for electromagnetism were inconsistent with Newtionian physics in that it uses a universal constant ,$$c$$, the speed of light, which says something about inertial frames of reference. Einstein came along and assumed Maxwell's theory was correct. 
@@ -844,6 +845,8 @@ This line $$ t = vx $$ is the line where the moving observer reads the same time
 
 
 
+=======
+>>>>>>> fec030b15843dc63788afa8f2b741e1386aba704
 # References
 
 + Classical Mechanics by Goldstein, Poole & Safko
