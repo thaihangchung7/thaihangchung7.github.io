@@ -826,9 +826,22 @@ Solving these two equations simultaneously:
 
 $$ t ( 1 + v) = \f{2}{1-v} - \f{2(1-v)}{1-v} = \f{2}{1-v} $$
 
-Solving for $$t$$:
+Solving for $$t$$, however, this is not just any $$t$$, this is the time $$t$$ at point $$b$$, thus it will be denoted as:
 
-$$ t = \f{2v}{(1-v)(1+v)} = \f{2v}{(1-v^2)} $$
+$$ t_{b} = \f{2v}{(1-v)(1+v)} = \f{2v}{(1-v^2)} $$
+
+We can solve for the point $$x_{b}$$, we can subract $$t$$ from one of the previous equations to obtain (and substituting $$t_{b}$$:
+
+$$ x_{b} = \f{2}{1-v} - t_{b} = \f{2}{1-v} - \f{2v}{1-v^{2}}$$
+
+after simplifiying:
+
+$$ x_{b} = \f{2}{1-v^{2}} $$
+
+Now, if we look at $$x_{b}$$ as a ratio of $$t_{b}$$, we find that both of them only differ by $$v$$! In other words, we have found the slope a line connecting the origin to point $$b$$, which can be expressed as $$ t=vx $$. 
+
+This line $$ t = vx $$ is the line where the moving observer reads the same time of synchonous clocks. Notice that there is a symmetry between $$x = vt$$ and $$ t = vx $$. By interchanging $$ x $$ and $$t$$, these lines are bisected by the light ray $$x = t$$.
+
 
 
 # References
