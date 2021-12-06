@@ -12,6 +12,7 @@ $$\newcommand{\d}{\dot{}}$$
 $$\newcommand{\abs}{\rvert} $$
 $$\newcommand{\h}{\hat}$$ 
 $$\newcommand{\f}{\frac}$$ 
+$$\newcommand{\~}{\widetilde}$$
 
 Table of Contents
 =================
@@ -704,6 +705,40 @@ Vector $$\vec{NP}$$ can be written as $$\vec{r} - \vec{n}(\hat{n} \dot{} \vec{r}
 Notice that $$\lvert \vec{NQ} \rvert = \lvert \vec{NP} \rvert$$, which can be substituted for the definition of $$\abs \v{NV} \abs$$: 
 
 $$\abs \v{NV} \abs = \abs \v{NQ} \abs \cos\phi = \abs \v{NP} \abs \cos\phi = [\v{r} - \h{n} (\v{r} \d \h{n})] \cos\phi $$ 
+
+## A quick review of matrix definitions and properties
+
+### Index notation for matricies
+Matricies can be expanded as a sum over their element indicies:
+
+$$ (\v{A} (\v{B} \v{C}))_{ij} = \sum_{k} a_{ik} (\v{B} \v{C})_kj = \sum_{k} a_{ik} \sum_{l} b_{kl} c_{lj} = \sum_{k} \sum_{l} a_{ik} b_{kl} c_{lj} = \sum_{l} (\v{A} \v{B})_{il} c_{lj} = ((\v{A} \v{B}) C)_{ij}  $$
+
+Also, for free, this shows that **matrix multiplication is associative**.
+
+
+### Orthogonal Matrix
+An **orthogonal matrix** is a real *square matrix* whose columns and rows are *orthonomal vectors*. By definition:
+
+$$ \v{A} \v{\~{A}} = \v{\~{A}} \v{A} = \v{1} $$
+
+Also, a matrix is orthogonal if its transpose is equal to its inverse:
+
+$$ \v{\~{A}} = \v{A}^{-1} $$
+
+### Symmmetric Matrix
+A **symmetric matrix** is simply a real *square matrix* that is equal to its transpose. Mathematically, $$ \v{A}^{T} = \v{A} $$. For example:
+
+$$\begin{bmatrix}
+1 & 1 & -1 \\
+1 & 2 & 0 \\
+-1 & 0 & 0 \\
+\end{bmatrix}
+$$ 
+
+
+
+
+
 
 # Rigid Body Equations of Motion
 
