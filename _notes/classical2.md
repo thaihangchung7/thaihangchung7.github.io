@@ -768,6 +768,48 @@ A tensor of first rank can be written as: $$ T_{i}' = a_{ij} T{j} $$
 
 which is equivalent to a vector.
 
+### Constructing a tensor from two vectors
+
+Two vectors, call them $$\v{A}$$ and $$\v{B}$$, can be used to construct a second rank tensor. $$\v{A}$$ and $$\v{B}$$ have components $$A_{i}$$, B_{i}.
+
+Let $$\v{T}$$ be a second rank tensor. Then,
+
+$$\v{T}_{ij} = \v{A}_{i} \v{B}_{j}$$ 
+
+deconstructed...
+
+$$\v{T} = \begin{bmatrix}
+
+\v{T}_{xx} & \v{T}_{xy} \\
+\v{T}_{yx} & \v{T}_{yy} 
+
+\end{bmatrix}
+
+= 
+
+\begin{bmatrix}
+
+\v{A}_{x} \v{B}_{x} & \v{A}_{x} \v{B}_{y} \\
+\v{A}_{y} \v{B}_{x} & \v{A}_{y} \v{B}_{y} 
+
+\end{bmatrix}
+$$
+
+Each component in the tensor should transform in the scheme mentioned above as:
+
+$$ \v{T}'_{xy} = \sum_{i=1}^{3} \sum_{j=1}^{3} a_{xi} a_{yj} T_{ij} = a_{xi} a_{yj} A_{i} B_{j} = a_{ai} A_{i} a_{ay} B_{j} = A'_{x} B'_{y}  $$
+
+A **unit tensor**, denoted $$\v{1}$$ has components:
+
+$$\v{1}_{ij} = \delta_{ij}$$ 
+
+where $$\delta_{ij}$$ is the kronecker delta, $$\delta_{ij} = 1$$ if $$i=j$$. 
+
+
+
+
+
+
 # References
 
 + Classical Mechanics by Goldstein, Poole & Safko
