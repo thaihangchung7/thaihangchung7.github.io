@@ -538,7 +538,7 @@ $$ (x,y,z) + $$ basis $$ (\hat{i}, \hat{j}, \hat{k})$$
 
 2) Establish the basis that is fixed to the rotating body:
 
-$$ (x',y',z') + $$ basis $$ (\hat{i}', \hat{j}',\hat{k}'$$ 
+$$ (x',y',z') + $$ basis $$ (\hat{i}', \hat{j}',\hat{k}')$$ 
 
 The velocity and acceleration of $$\vec{R}$$ can be written as 
 
@@ -682,7 +682,7 @@ If $$\lvert A \rvert = -1$$, then it is an *improper rotation*, and cannot achie
 
 Goldstein describes **Euler's theorem** as:
 
-"The real orthogonal matrix specifying the physical mition of a rigid body with one point fixed always has the eigenvalue +1" 
+"The real orthogonal matrix specifying the physical motion of a rigid body with one point fixed always has the eigenvalue +1" 
 
 ## Finite Rotations
 
