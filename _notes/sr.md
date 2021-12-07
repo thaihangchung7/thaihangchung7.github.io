@@ -39,7 +39,8 @@ $$ \v{u}' = \v{u} - \v{v} $$
 
 ## Postulates of Special Relativity
 
-+ 1) The laws of physics are the same to all inertial oversvers.
++ 1) The laws of physics are the same to all inertial observers. Moreover, if $$S$$ is an inertial reference frame and $$S'$$ is a frame that moves at constant velocity relative to $$S$$. Then $$S'$$ is also an inertial reference frame.
+
 + 2) The speed of light is the same to all inertial observers.
 
 A formulation of physics that explicitly includes these postulates is said to be **covariant**. Since $$c$$ is the same in all frames of reference, $$c$$ can be used as a conversion factor between them.
@@ -186,15 +187,18 @@ and for $$t'$$:
 
 $$t' = \f{(t-x\f{v}{c^{2}})}{\sqrt{1- \f{v^{2}}{c^{2}}}} $$ 
 
+## Time Dialation
 
+$$\tau = \gamma \tau'$$
 
+## Length Contraction
+
+$$ L = \gamma L'$$ 
+
+## Four Vectors
+
+In an inertial frame $$S$$, a **four vector** is defined as a set of four numbers $$A = (A_{1}, A_{2}, A_{3}, A_{4}) $$. A transformation between frame $$S$$ and $$S'$$ can be expressed as $$A' = \Lambda A$$, where $$\Lambda$$ is the Lorrentz transformation between $$S$$ and $$S'$$.
 
 # References
 
-+ Classical Mechanics by Goldstein, Poole & Safko
-
-+ Mechanics by Landau & Lifshitz 
-
-+ [David Tong's Notes on Classical Mechanics](http://www.damtp.cam.ac.uk/user/tong/dynamics.html)
-
-+ [Caltech Notes](https://sites.astro.caltech.edu/~golwala/ph106ab/ph106ab_notes.pdf)
+[1] [http://physics.mq.edu.au/~jcresser/Phys378/LectureNotes/VectorsTensorsSR.pdf](Special Relativity Notes from Macquarie University)
