@@ -537,7 +537,7 @@ $$ (x,y,z) + $$ basis $$ (\hat{i}, \hat{j}, \hat{k})$$
 
 2) Establish the basis that is fixed to the rotating body:
 
-$$ (x',y',z') + $$ basis $$ (\hat{i}', \hat{j}',\hat{k}'$$ 
+$$ (x',y',z') + $$ basis $$ (\hat{i}', \hat{j}',\hat{k}')$$ 
 
 The velocity and acceleration of $$\vec{R}$$ can be written as 
 
@@ -631,6 +631,39 @@ More compactly,
 
 $$ a_{ij} a_{ik} = \delta_{jk} $$ with $$j,k = 1,2,3$$ 
 
+## The Rotation Matrix
+
+Recall that a rigid body can be described by 6 degrees of freedom: 3 translational and 3 rotational. Consider rotation a vector $$ \v{b} $$ to its new position $$\v{b}'$$ by some angle $$\phi$$. 
+
+The rotation can be expressed by matricies as:
+
+
+$$
+\begin{bmatrix}
+b'_{x} \\
+b'_{y} 
+\end{bmatrix}
+
+= 
+\begin{bmatrix}
+\cos\phi & \sin\phi \\
+-\sin\phi & \cos\phi  
+\end{bmatrix}
+
+\begin{bmatrix}
+b_{x} \\
+b_{y}
+\end{bmatrix}
+
+$$
+
+Where $$A_{ij} = \begin{bmatrix}
+\cos\phi & \sin\phi \\
+-\sin\phi & \cos\phi  
+\end{bmatrix}$$ 
+is the standard rotation matrix for in 2 dimensions.
+
+
 ## Euler's Angle
 
 We can express successive rotations through matrix multiplication:
@@ -721,7 +754,9 @@ $$ \vec{I}_{xx} = \int_{V} \rho(\vec{r}) (r^{2} - x^{2}) dV $$
 
 In the standard three dimensional cartesian space, a **Tensor** of the $$N$$th rank may be defined as:
 
-$$\vec{T}_{ijk...}  $$ ; with $$ 3^{N}$$ components and $$N$$ indicies,
+$$\vec{T}_{ijk...}$$  (with $$N$$ indicies)
+
+In English, a tensor of rank $$N$$ has $$ 3^{N}$$ components and $$N$$ indicies,
 
 that can transform under an orthoganal transformation of coodintes, $$ A $$ according to the following scheme:
 
