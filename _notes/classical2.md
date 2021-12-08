@@ -13,6 +13,8 @@ $$\newcommand{\abs}{\rvert} $$
 $$\newcommand{\h}{\hat}$$ 
 $$\newcommand{\f}{\frac}$$ 
 $$\newcommand{\~}{\widetilde}$$
+$$\newcommand{\<}{\langle}$$
+$$\newcommand{\>}{\rangle}$$
 
 Table of Contents
 =================
@@ -176,7 +178,7 @@ $$ d\vec{r} = \hat{e}_{r} d\vec{r} + \hat{e}_{\theta} \vec{r} d\theta$$
 $$ \frac{d \vec{r}}{dt} = \hat{e}_{r} \frac{d\vec{r}}{dt} + \hat{e}_{\theta} \vec{r} \frac{d\theta}{dt} \rightarrow \vec{v} = \hat{e}_{r} \dot{r} + \hat{e}_{\theta} \vec{r} \dot{\theta} $$ 
 
 
-## Equations of Motion and First Integrals
+## Equations of Motion for Central Forces and First Integrals
 
 Recall that central forces (i.e. gravity, coloumbic forces) are forces that do not depend on direction, only position, $$V(r)$$. Recently, we found that when tackling central force problems, one dimension is eliminated since angular momentum is conserved, or $$ L = constant $$.
 
@@ -195,13 +197,61 @@ Recognizing that $$ \frac{\partial L}{\partial \dot{\theta}} $$ is some form of 
 
 $$ \dot{p}_{\theta} = \frac{d}{dt} \frac{\partial L}{\partial \dot{\theta}}= \frac{d}{dt} (m r^{2} \dot{\theta} ) = l $$
 
-where $$ l $$ is the constant magnitude of angular momentum.
+where $$ l $$ is the constant magnitude of angular momentum. This is pretty important since it will be used throughout the section on central forces. The **magnitude of the angular momentum** is given by:
+
+$$ l = mr^{2} \dot{\theta} $$ 
 
 [insert picture of angle sweep here]
 
 Recall $$ ds = r d\theta $$. 
 
 $$ r \dot{} ds = r ( r d\theta ) = r^{2} d\theta $$
+
+We find that this angle sweep is effectively calculating an area and divide by 2 (since the "sweep" begins as a square, and we cut it in half to form the triangle swept). 
+
+$$ \f{dA}{dt} = \f{1}{2} r^{2} \f{d\theta}{dt} = \f{1}{2} r^{2} \dot{\theta} $$ 
+
+This draws out an "Area velocity" which is in the form of **Kepler's First Law**. 
+
+### Solution to the radial Lagrangian
+
+As is standard in extracting equations of motion out of an Euler-Lagrange equation, we take two derivatives of $$L$$ and plug back in. In this case, we obtain
+
+$$ m \ddot{r} - m r \dot{\theta} = f(r) $$ 
+
+we can replace $$\theta$$ using out definition of the magnitude of angular momentum $$l = mr\dot{\theta}$$:
+
+$$m\ddot{r} - mr (\f{l}{mr^{2}} )= f(r) $$ 
+ 
+Which yields the **radial equation** to the central force problem:
+
+$$ m \ddot{r} - \f{l^{2}}{mr^{3}} = f(r) $$
+
+## Conservation of Energy in the Central Force Problem
+
+Simply flipping the sign in the Lagrangian gives us the energy of the system:
+
+$$ E = T + V = \f{1}{2} m (\dot{r}^{2} + r^{2} \dot{\theta}^{2} ) + V{r} $$ 
+
+just as we did for the radial equation, we use the definition of $$l$$, and after some algebra, the energy equation looks something like:
+
+$$ E = \f{1}{2} m \dot{r}^{2} + \f{1}{2} \f{l}{mr^{2}} + V(r) = const $$
+
+This would be can solve for the "second integral", by solving for $$\dot{r}$$ in the energy equation:
+
+$$\dot{r} = \big[ E - V(r) + \f{1}{2} \f{l^2}{mr^{2}} \big]^{1/2} \f{2}{m} = \f{dr}{dt} $$
+
+This integral can be evaluated using seperation of variables of course and we arrive at two master equations one for $$t(r)$$ and another for $$\theta(t)$$:
+
+$$ \int^{t}_{0} dt = \int^{r}_{r_{0}} \frac{dr}{ \f{2}{m} \big[ E - V(r) + \f{1}{2} \f{l^2}{mr^{2}} \big]^{1/2} } $$ 
+
+$$ \theta (t) = \f{l}{m} \int^{t}_{0} \f{dt}{r^{2}} + \theta_{0} $$ 
+
+However, we cannot go any further *for now* since the potential energy $$V(r)$$ has not been specified. 
+
+
+
+
 
 ## The Virial Theorem 
 
@@ -211,15 +261,62 @@ For a system of particles, recall that the force is defined as:
 
 $$ \dot{\vec{p}}_{i} = \vec{F}_{i} $$ 
 
-Summing over the system of particles, $$G$$, and taking the total time derivative:
+We introduce a quantity, $$G$$, since (I'm assuming) we want to form an equation about the kinetic energy of the system. Summing over the system of particles, $$G$$, and taking the total time derivative:
 
 $$ G = \sum_{i} p_{i} \dot{} r_{i} $$
 
 $$ \frac{dG}{dt} = \sum_{i} \dot{\vec{r}}_{i} \dot{} \vec{p}_{i} + \sum_{i} \dot{\vec{p}}_{i} \dot{} \vec{r}_{i} $$  
 
+Taking a closer look at one of the expansion terms:
+
+$$ \sum_{i} \dot{\vec{r}}_{i} \dot{} \vec{p}_{i} = \sum_{i} \dot{\v{r_{i}}} \d{} (m \dot{\v{r_{i}}} ) = \sum_{i} m \dot{\v{r_{i}}} \dot{\v{r_{i}}} = \sum_{i} m \v{v_{i}}^{2} $$ 
+
+Recalling the definition of kinetic energy $$ T = \f{1}{2} mv^{2} $$:
+
+$$\sum_{i} \dot{\v{r}}_{i} \dot{} \v{p}_{i} = 2T$$
+
+As for the other term, we can just use the time derivative momentum definition of force, $$ \v{F} = \dot{\v{p}} $$
+
+So rewriting $$\f{dG}{dt} $$, 
+
+$$ \f{dG}{dt} = 2T + \sum_{i} \v{F} \dot{} \v{r} $$
+
+We choose a period, $$\tau$$, to integrate over, and normalize with $$\f{1}{\tau}$$.
+
+$$ \f{1}{\tau} \int_{0}^{\tau} \f{dG}{dt} dt \equiv \< \f{dG}{dt} \>$$ 
+
+$$\< \f{dG}{dt} \> = \<2T\> + \<\sum_{i} \v{F} \dot{} \v{r} \> = \f{1}{\tau} \big[ G(\tau) - G(0) \big] $$ 
+
+For the cases where $$\tau$$ is sufficiently large or assuming the system is periodic, $$\big[ G(\tau) - G(0) \big] $$ goes to 0. 
 
 
-$$ \sum_{i} \dot{\vec{r}}_{i} \dot{} \vec{p}_{i}$$ 
+$$\<T\> = - \f{1}{2} \<\sum_{i} \v{F} \dot{} \v{r} \> $$ 
+
+# Orbital Equations
+
+Here we seek an equation of the orbit such that it depends on $$\v{r}$$ and $$\theta$$, also eliminating the need for a parameter $$t$$. 
+
+## The Differential Orbital Equation
+
+Recall from a radial and angular equations of motion were derived from the central force Lagrangian.
+
+$$m\ddot{r} - \f{l^{2}}{mr^{3}} = f(r) $$ (radial)
+
+$$l = mr^{2} \f{d\theta}{dt} $$ (angular) 
+
+At the moment both of these equations have the differential quantity $$dt$$. Recall that the aim of working with central force problems is to massage the equations to depend on $$r$$ rather than $$t$$. 
+
+We aim to get rid of $$dt$$ by first solving the angular equation for $$dt$$: 
+
+$$dt = \f{mr^{2}}{l} d\theta $$ 
+
+and plug it into the radial equation, where we also rewrite $$d\ddot{r}$$ in the form $$\f{d^{2} r}{dt^2} = \f{d}{dt} \f{dr}{dt} $$.
+
+Moreover, we introduce a term $$ u = \f{1}{r}$$. Doing all of this yields a **differential orbital equation**:
+
+$$ \f{d^{2}u}{d\theta^{2}} + u = -\f{m}{l^{2} u^{2}} f(\f{1}{u}) $$ 
+
+By simply evaluating the equation for $$f(\f{1}{u})$$, the equation can describe all sources of conservative orbits!
 
 ## Lagrange-Runge-Lenz Vector ("LRL Vector") 
 
@@ -664,6 +761,20 @@ Where $$A_{ij} = \begin{bmatrix}
 \end{bmatrix}$$ 
 is the standard rotation matrix for in 2 dimensions.
 
+### Properties of rotation matrix $$A_{a,\theta} \in \mathbb{R}^{3}$$
+
+$$a$$ is the rotation axis and $$\theta$$ is the rotation angle.
+
+The rotation matrix is orthogonal, so by definition $$\v{A}^{T} \v{A} = \v{1} $$, or:
+
+$$\v{A}_{a,\theta}^{T} = \v{A}_{a,\theta}^{-1} $$
+
+$$det(\v{A_{a,\theta}}) = 1$$ 
+
+$$\v{A}_{a,(\theta + r)} = \v{A}_{a,\theta} \dot{} \v{A}_{a,r} $$ 
+
+$$ \v{A}_{a,0} = \v{I} $$
+
 
 ## Euler's Angle
 
@@ -715,7 +826,22 @@ If $$\lvert A \rvert = -1$$, then it is an *improper rotation*, and cannot achie
 
 Goldstein describes **Euler's theorem** as:
 
+"A general displacement of a rigid body with one point fixed is a rotation about an axis"
+
+In the context of matricies, Euler's theorem can be restated as:
+
 "The real orthogonal matrix specifying the physical motion of a rigid body with one point fixed always has the eigenvalue +1" 
+
+For example, a matrix that takes the form:
+
+$$\begin{bmatrix}
+\cos\phi & \sin\phi & 0 \\
+-\sin\phi & \cos\phi & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+$$ 
+
+This matrix represents a rotation about the $$z$$ axis.
 
 ## Finite Rotations
 
