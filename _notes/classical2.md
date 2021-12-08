@@ -12,6 +12,7 @@ $$\newcommand{\d}{\dot{}}$$
 $$\newcommand{\abs}{\rvert} $$
 $$\newcommand{\h}{\hat}$$ 
 $$\newcommand{\f}{\frac}$$ 
+$$\newcommand{\~}{\widetilde}$$
 
 Table of Contents
 =================
@@ -714,7 +715,7 @@ If $$\lvert A \rvert = -1$$, then it is an *improper rotation*, and cannot achie
 
 Goldstein describes **Euler's theorem** as:
 
-"The real orthogonal matrix specifying the physical mition of a rigid body with one point fixed always has the eigenvalue +1" 
+"The real orthogonal matrix specifying the physical motion of a rigid body with one point fixed always has the eigenvalue +1" 
 
 ## Finite Rotations
 
@@ -737,6 +738,40 @@ Vector $$\vec{NP}$$ can be written as $$\vec{r} - \vec{n}(\hat{n} \dot{} \vec{r}
 Notice that $$\lvert \vec{NQ} \rvert = \lvert \vec{NP} \rvert$$, which can be substituted for the definition of $$\abs \v{NV} \abs$$: 
 
 $$\abs \v{NV} \abs = \abs \v{NQ} \abs \cos\phi = \abs \v{NP} \abs \cos\phi = [\v{r} - \h{n} (\v{r} \d \h{n})] \cos\phi $$ 
+
+## A quick review of matrix definitions and properties
+
+### Index notation for matricies
+Matricies can be expanded as a sum over their element indicies:
+
+$$ (\v{A} (\v{B} \v{C}))_{ij} = \sum_{k} a_{ik} (\v{B} \v{C})_kj = \sum_{k} a_{ik} \sum_{l} b_{kl} c_{lj} = \sum_{k} \sum_{l} a_{ik} b_{kl} c_{lj} = \sum_{l} (\v{A} \v{B})_{il} c_{lj} = ((\v{A} \v{B}) C)_{ij}  $$
+
+Also, for free, this shows that **matrix multiplication is associative**.
+
+
+### Orthogonal Matrix
+An **orthogonal matrix** is a real *square matrix* whose columns and rows are *orthonomal vectors*. By definition:
+
+$$ \v{A} \v{\~{A}} = \v{\~{A}} \v{A} = \v{1} $$
+
+Also, a matrix is orthogonal if its transpose is equal to its inverse:
+
+$$ \v{\~{A}} = \v{A}^{-1} $$
+
+### Symmmetric Matrix
+A **symmetric matrix** is simply a real *square matrix* that is equal to its transpose. Mathematically, $$ \v{A}^{T} = \v{A} $$. For example:
+
+$$\begin{bmatrix}
+1 & 1 & -1 \\
+1 & 2 & 0 \\
+-1 & 0 & 0 \\
+\end{bmatrix}
+$$ 
+
+
+
+
+
 
 # Rigid Body Equations of Motion
 
@@ -767,6 +802,48 @@ In other words, a tensor with one component is a tensor of zero ranks, invariant
 A tensor of first rank can be written as: $$ T_{i}' = a_{ij} T{j} $$ 
 
 which is equivalent to a vector.
+
+### Constructing a tensor from two vectors
+
+Two vectors, call them $$\v{A}$$ and $$\v{B}$$, can be used to construct a second rank tensor. $$\v{A}$$ and $$\v{B}$$ have components $$A_{i}$$, B_{i}.
+
+Let $$\v{T}$$ be a second rank tensor. Then,
+
+$$\v{T}_{ij} = \v{A}_{i} \v{B}_{j}$$ 
+
+deconstructed...
+
+$$\v{T} = \begin{bmatrix}
+
+\v{T}_{xx} & \v{T}_{xy} \\
+\v{T}_{yx} & \v{T}_{yy} 
+
+\end{bmatrix}
+
+= 
+
+\begin{bmatrix}
+
+\v{A}_{x} \v{B}_{x} & \v{A}_{x} \v{B}_{y} \\
+\v{A}_{y} \v{B}_{x} & \v{A}_{y} \v{B}_{y} 
+
+\end{bmatrix}
+$$
+
+Each component in the tensor should transform in the scheme mentioned above as:
+
+$$ \v{T}'_{xy} = \sum_{i=1}^{3} \sum_{j=1}^{3} a_{xi} a_{yj} T_{ij} = a_{xi} a_{yj} A_{i} B_{j} = a_{ai} A_{i} a_{ay} B_{j} = A'_{x} B'_{y}  $$
+
+A **unit tensor**, denoted $$\v{1}$$ has components:
+
+$$\v{1}_{ij} = \delta_{ij}$$ 
+
+where $$\delta_{ij}$$ is the kronecker delta, $$\delta_{ij} = 1$$ if $$i=j$$. 
+
+
+
+
+
 
 # References
 
