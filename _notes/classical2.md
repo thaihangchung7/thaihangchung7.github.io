@@ -386,7 +386,7 @@ $$ Ar \cos(\theta) = l^{2} - mkr $$
 ## Scattering in a Central Force Problem (Rutherford Scattering)
 
 <img src='/assets/scattering.png' class='center'> 
-Figure 3.19 in Goldstein: "Scattering of an incident beam of particles by a center of force"
+<center>Figure 3.19 in Goldstein: "Scattering of an incident beam of particles by a center of force"</center>
 
 Some things to note from the figure above: 
 
@@ -518,7 +518,7 @@ $$\Psi_{m} = \int^{-\infty}_{r} \frac{dr}{r^{2} \big[ \frac{2mE}{l^{2}} - \frac{
 This can still be further worked on by $$\Theta$$ in terms of $$s$$. 
 
 <img src='/assets/ruthscatang.png' class='center'> 
-$$ \Psi $$ is defined as the angle between the incoming asymptote and the periapsis direction. $$\Psi can be obtained from the orbital equation by setting $$r_{0}$$ when $$\theta_{0} = \pi$$. 
+$$ \Psi $$ is defined as the angle between the incoming asymptote and the periapsis direction. $$\Psi $$ can be obtained from the orbital equation by setting $$r_{0}$$ when $$\theta_{0} = \pi$$. 
 
 Since the orbit must be symmetric about the direction of the periapsis, the scattering anlge is defined:
 
