@@ -197,9 +197,46 @@ This figure shows the fraction of positrons that leave the moderation foil. "If 
 
 Although the fraction of slow positrons is much smaller than fast positrons, a guidance system further down the beam line is used to separate the unmoderated positrons.
 
+# Pulse Positron Beamline
+
+## Beam Bunching
+
+The buncher is comprised of three stages, the prebuncher, the chopper, and the main buncher. Cylindrical electrodes inside the buncher hold a static potentials and are connected to a grounding bar through $$0.1 \mu F$$ capacitors, doing so minimizes heating of the beam and amplitude of the RF pickup on the electrodes.
+
+The prebuncher and chopper RF electrodes are driven at potentials of $$\|V \| < \pm 30 V $$ with an arbitrary wave generator (AWG), and operate at about $$ 40 MHz$$. Channel 1 of the AWG is amplified 
+
+## Target Chamber
+
+For implantation energies between $$ 10 $$ keV - $$ 30 $$ keV, an Fe target will backscatter about $$15\%$$ of the incident positrons. The fraction of backscattered positrons will increase with atomic number $$Z$$, for example Au$$^{35-37}$$ will backscatter about $$40\%$$ of the incident positrons.
+
+# HPGe Doppler Broadening Spectrometer Experimental Setup
+
+## HPGe Detector Apparatus
+
+Two coaxial high purity germanium detectors manufactured by Mirion Technologies (formerly Canberra) are used to detect gamma radiation. Contained in metal casing, the semiconductor is made of an $$0.5 mm$$ thick n-type diffused lithium contact and the p-type contact is $$0.3\mu m$$ thick well. To prevent impurities from forming, the germanium detectors are attached to 8-liter Dewar flasks filled with liquid nitrogen. During high voltage operations, the liquid nitrogen prevents excessive thermally generated leakage current. 
+
+- Lower discriminator level must be in between the [Compton edge](https://en.wikipedia.org/wiki/Compton_edge) and annihilation peak
+
+- The upper discriminator level is set to be symmetrical to the lower level with respect to the photopeak.
+
+- After setting the discriminator levels, acquire individual energy spectra from every analyzer in PHA mode
+
+### Lynx Multichannel Analyzers (MCA)
+
+Produced by Canberra, the (each?) digital MCA supports a maximum of 32678 analyzer bins. Two power supplies are built into the MCAs, the low energy power supply proivdes a range between $$-200V$$ to $$+200V$$. A high voltage power supply provides $$200V$$ to $$5000V$$ with $$\pm$$ polarity. The MCAs were built to support different experimental setups such as x-ray and alpha spectroscopies, however, for the purposes of doppler broadening spectroscopies, the two acquisition modes are listed below:
+
++ Pulse Height Analysis (PHA): This mode is used for single detector acquisition and builds a cumalative spectrum of counts binned over time. 
+
++ Time-Stamped List Mode (TLIST): This is used for coincidence experiments for two-dimensional energy spectrum. Based on the MCA's timing resolution (with a maximum of $$100ns$$), each coicidence event is stored with a corresponding energy and timestamp.  
+
+### Detector deadtime
 
 
+HPGe detectors have a relatively poor timing resolution compared to other detectors, for reference, $$BaF2_{2}$$ scintillation detectors have a timing resolution of $$20\mu s$$.
 
+## Coincidence Mode vs Single Detector Setup
+
+To monitor coincidence count rate, the two single channel analyzers are connected to an ORTEC 414A Fast Coincidence unit, with an coincidence window set to the maximum, $$110ns$$ or the maximum timing resolution of the Lynx MCAs. With a BNC splitter, the unit is connected to a signal counter displaying coincidence events.
 
 ## Tao-Eldrup Model
 
