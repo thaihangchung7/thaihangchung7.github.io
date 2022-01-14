@@ -213,7 +213,12 @@ For implantation energies between $$ 10 $$ keV - $$ 30 $$ keV, an Fe target will
 
 ## HPGe Detector Apparatus
 
-Two coaxial high purity germanium detectors manufactured by Mirion Technologies (formerly Canberra) are used to detect gamma radiation. Contained in metal casing, the semiconductor is made of an $$0.5 mm$$ thick n-type diffused lithium contact and the p-type contact is $$0.3\mu m$$ thick well. To prevent impurities from forming, the germanium detectors are attached to 8-liter Dewar flasks filled with liquid nitrogen. During high voltage operations, the liquid nitrogen prevents excessive thermally generated leakage current. 
+Two standard coaxial high purity germanium detectors manufactured by Mirion Technologies (formerly Canberra) are used to detect gamma radiation. Contained in metal casing, the semiconductor is made of an $$0.5 mm$$ thick n-type diffused lithium contact and the p-type contact is $$0.3\mu m$$ thick well. 
+
+"The germanium has a net impurity of about $$10^{10}$$ atoms/cc so that with moderate reverse bias, the entire volume between electrodes is depleted, and the electric field extends across this active region".
+
+
+To prevent impurities from forming, the germanium detectors are attached to 8-liter Dewar flasks filled with liquid nitrogen. During high voltage operations, the liquid nitrogen prevents excessive thermally generated leakage current. 
 
 - Lower discriminator level must be in between the [Compton edge](https://en.wikipedia.org/wiki/Compton_edge) and annihilation peak
 
