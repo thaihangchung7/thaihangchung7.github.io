@@ -4,6 +4,33 @@ title: DB Spectra Analysis
 category: notes 
 ---
 
+Some notes regarding the setup and operation of Doppler Broadening Spectroscopy software
+
+# ProSpect
+
+ProSpect is the data acquisition software used to collect the energy spectra via the Lynx Multi Channel Analyzers (MCA) for doppler broadening experiments. 
+
+## Establishing a Connection to the Lynx MCAs
+
+1) Click on 'Connect to Device' on the bottom bar
+
+2) In the window that pops up, select or type the local IP address of **ONE** MCA device. Then, check the 'Take Over' box and click connect.  
+
+*Note*: This field may be autofilled with both the IP address and a port number or a name following the address, however, the IP address should be sufficent to connect the devices. 
+
+3) Repeat step two to connect the second MCA device.
+
+4) Click on the 'Datasources' tab at the bottom of the window. Both HPGe Detectors should be labeled along with their IP addresses with empty spectrum graphs. A blue background (of the window (not an actual spectrum) should indicates that both analyzers are connected. 
+
+5) If there is an error (indicated by an orange background), SHIFT + doubleclick on the yellow circle at the top left will prompt you to clear the device fault. Select 'Yes' and check if the error persists.
+
+## Ramping Voltage
+
+The detector preamplifiers need to operate at $$4400 V$$ the software will *automatically* ramp the voltage, the reading voltage should reach ~$$4000 V$$, this is when the detectors reach operational status.
+
+
+
+## SW-Calculator
 - Need to install Root
 
 - '''source ./thisroot.sh'''
@@ -12,8 +39,9 @@ category: notes
 
 - make install?
 
+## Obtaining Doppler Broadening Spectrum from PHA 
 
-
+See python script for plotting from CSV file (link repo here) 
 
 # References
 
