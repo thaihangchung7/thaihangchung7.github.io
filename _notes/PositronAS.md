@@ -104,8 +104,16 @@ Doppler Broadening spectroscopy peaks are characterized by $$ S $$ and $$ W $$ p
 
 
 <img src="/assets/SWparam.png" class="center" >
+The typical values for defect parameters are: 
+
+A: $$ 511.8 \text{keV} \geq A \geq 510.2 \text{keV} $$ 
+
+C: $$509.3 \text{keV} \geq C \geq 507.8 \text{keV} \cup 514.8\text{keV} \geq C \geq 512.7 \text{keV}$$ 
+
 
 Here in the spectrum, the $$ S $$ parameter shows the annihilation fraction with the _low momentum_ electrons and the $$ W $$ parameter is the the annihilation fraction with the _high momentum_ with the core electrons. Therefore, the $$ S $$ parameter is proportional to the defect content in the lattice since positrons are more likely to annihilate with valence electrons at the defect site. 
+
+
 
 ## Coincidence Doppler Broadening Spectroscopy
 
