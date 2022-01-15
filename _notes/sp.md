@@ -54,6 +54,40 @@ Inverting the conditions for a voltage sensitive configuration, the input resist
 
 Last but not least are *charge sensitive amplifiers* which integrates charge on a feedback capacitor and can be used to control gain and input resistances. These find uses in energy spectroscopy where charge and time of an event is of interest.
 
+### Constant Fraction Discriminators
+
+An alternative and more efficient method of dealing with amplitude variations is constant fraction triggering. The idea is to find the maximum of the pulse using the point at which the slope is $$0$$. The pulse is divided into the components, delay time ($$t_{d}$$) and rise time ($$t_{r}$$) and a comparator is used to determine which voltage is let through.
+
+Consider a pulse with linear leading edge with conditions regarding the rise time $$t_{r}$$. For $$t \leq t_{r}$$,
+
+\begin{equation}
+    V(t) = \frac{t}{t_{r}},  
+\end{equation}
+
+The signal at the comparator input is
+
+\begin{equation}
+    V(t) = \frac{t-t_{d}}{t_{r}} V_{0}
+\end{equation}
+
+It can be shown that when the signal crosses the threshold $$t>t_{r}$$, where $$V(t) = V_{0}$$, the time at which the comparator gives an output signal is
+
+\begin{equation}
+    t = f_{a} t_{r} + t_{d}
+\end{equation}
+
+provided that $$t_{d} > t_{r}$$. From here the constant fraction $$f_{a}$$ independent of the peak amplitude is obtained. Note that $$f_{a}$$ is the attenuation factor of a the input signal, $$\textit{not}$$ a frequency.
+
+Moreover, reducing the delay time such that $$t_{d} < (1-f_{a}) t_{r}$$, produces an equation that is independent of both the amplitude and rise time,
+
+\begin{equation}
+    t = \frac{t_{d}}{1-f}
+\end{equation}
+
+where $$t_{d} = t_{r} (1-f_{a})$$. Relating this back to the trigger voltage, the maximum threshold signal $$V_{T} = f_{a} V_{0}$$ In other words, signal that passes through and attenuated by the factor $$f_{a}$$ of the original amplitude.
+
+Simply put, constant fraction discriminators elimate timing jitter. An incoming pulse is split into two pulses $$A$$ and $$B$$. Suppose there are resistances in the two wires, making pulse $$A$$ larger than pulse $$B$$. Pulse $$A$$'s wire is extended so that it lags behind pulse $$B$$, meanwhile, pulse $$B$$ is inverted, giving a positive pulse. When these two pulses are added together, a bipolar pulse is created such that there is a zero crossing. This zero crossing point is independent of the pulse amplitude and (timing jitter)?
+
 ### The NIM Standard
 The Nuclear Instrumentation Module (NIM) standard refers to the set of application specific electronic modules (Figure \ref{nimmodules}) that sit in standardized bins (Figure \ref{nimbin}). Each of these modules can be purposed with implementing basic logic operations, take the role of an amplifier or discriminator, and any of the other signal processing components. The back of each module are standardized by the Department of Energy \cite{wikipedia_2021}. The advantage is in the idea a modular system where electronic instrumentation can be interchange for rapid prototyping or updating the electronic design.
 
