@@ -29,19 +29,26 @@ ProSpect is the data acquisition software used to collect the energy spectra via
 The detector preamplifiers need to operate at $$4400 V$$ the software will *automatically* ramp the voltage, the reading voltage should reach ~$$4000 V$$, this is when the detectors reach operational status.
 
 
-
 ## SW-Calculator
-- Need to install Root
+1) Install ROOT (preferably compile from source, this may take a while)
 
-- '''source ./thisroot.sh'''
+2) ```source ./thisroot.sh```
 
-- run make in sw-calculator directory
+3) clone repository from github and compile using the commands below: [Petr's sw-calculator](https://github.com/petrstepanov/sw-calculator)
 
-- make install?
+```git clone https://github.com/petrstepanov/sw-calculator```
 
-## Obtaining Doppler Broadening Spectrum from PHA 
+```cd sw-calculator```
+
+```cmake ./```
+
+```make install``` (may need to sudo this)
+
+### Obtaining Doppler Broadening Spectrum from PHA 
 
 See python script for plotting from CSV file (link repo here) 
+
+
 
 # References
 
