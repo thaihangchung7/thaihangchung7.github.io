@@ -68,7 +68,7 @@ See python script for plotting from CSV file (link repo here)
 
 7) If you are unfamiliar, Select "Dynamically Allocated"
 
-8) Allocate as much disk space as you need. I usually keep the default 10GB setting and resize the partition if I ever need more. 
+8) Allocate as much disk space as you need. For the purposes of DBS analysis, I recommend 30GB setting (ROOT will be taking most of this space) and resize the partition if I ever need more. 
 
 <img src="/assets/virtboxdrive.png" class="center">
 
@@ -106,7 +106,12 @@ Canonical has made it the installation pretty straightforward to install Ubuntu.
 
 3) Once the installation is complete you need to remove the disk image that was mounted for the installation. On the top left, select "Devices > Optical Drive > IDE (whatever goes here) > Remove disk from virtual drive". The installation will prompt you with a restart. 
 
-4) Now time to compile ROOT. 
+4) Since this is a completely new installation of Ubuntu, run the following block to get started with pulling and building from repositories:
+
+```sudo apt install git cmake```
+
+
+5) Now time to compile ROOT. 
  
  
 
