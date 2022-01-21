@@ -30,7 +30,7 @@ The detector preamplifiers need to operate at $$4400 V$$ the software will *auto
 
 
 # SW-Calculator
-1) Install ROOT via your package manager: [https://root.cern/install/#linux-package-managers](https://root.cern/install/#linux-package-managers) (preferably compile from source, this may take a while)
+1) Install ROOT via your package manager, that is, if it is supported: [https://root.cern/install/#linux-package-managers](https://root.cern/install/#linux-package-managers) (preferably compile from source, this may take a while)
 
 2) Use ```source ./thisroot.sh```, the shell script can found in the ```bin``` directory of your ROOT installation.
 
@@ -68,7 +68,7 @@ See python script for plotting from CSV file (link repo here)
 
 7) If you are unfamiliar, Select "Dynamically Allocated"
 
-8) Allocate as much disk space as you need. For the purposes of DBS analysis, I recommend 30GB setting (ROOT will be taking most of this space) and resize the partition if I ever need more. 
+8) Allocate as much disk space as you need. For the purposes of DBS analysis, I recommend **30GB** setting (ROOT will be taking most of this space) and resize the partition if I ever need more. 
 
 <img src="/assets/virtboxdrive.png" class="center">
 
@@ -110,17 +110,51 @@ Canonical has made it the installation pretty straightforward to install Ubuntu.
 
 ```sudo apt install git cmake```
 
+4a) (Optional but good practice) feel free to throw in a 
+
+```sudo apt update```
+
+to keep the OS on the most stable release.
 
 5) Now time to compile ROOT. 
  
- 
+# Compiling ROOT
 
-# References
+Before installing ROOT, make sure you have the required dependencies:
 
-[1] [F.A.Selim, Positron annihilation spectroscopy of defects in nuclear and irradiated materials- a review](https://www.sciencedirect.com/science/article/pii/S1044580321000826#bb0215)
+In one line for a debian based distributions:
 
-[2] [R. W Siegel Positron Annihilation Spectroscopy](https://www.annualreviews.org/doi/pdf/10.1146/annurev.ms.10.080180.002141) 
+```sudo apt-get install dpkg-dev cmake g++ gcc binutils libx11-dev libxpm-dev \
+libxft-dev libxext-dev python libssl-dev```
 
-[3] [P. Stepanov, New developments in positron annihilation spectroscopy techniques: from experimental setups to advanced processing software](https://petrstepanov.com/static/petr-stepanov-dissertation-bgsu-2020.pdf)
+## Standard Ubuntu Install
 
-[4] [Slow Positron Beam Techniques](http://www.positronannihilation.net/index_files/Positron%20Beam.pdf)
+If there is no need for ROOT debug tools or extra header files, then ROOT _can_ be installed with commands below:
+
+```wget https://root.cern/download/root_v6.24.02.Linux-ubuntu20-x86_64-gcc9.3.tar.gz```
+
+```tar -xzvf root_v6.24.02.Linux-ubuntu20-x86_64-gcc9.3.tar.gz```
+
+```source root/bin/thisroot.sh```
+
+## Compiling from Source
+
+For the purposes of tweaking lab software, you may want to compile ROOT from source. 
+
+1) Clone github repository: [git clone --branch latest-stable https://github.com/root-project/root.git root_src](git clone --branch latest-stable https://github.com/root-project/root.git root_src)
+
+2) Prepare and install and build directory and make sure you are in the root_build directory: 
+
+```mkdir root_build root_install && cd root_build```
+
+3) Specify directories for cmake to store compile file:
+
+```cmake -DCMAKE_INSTALL_PREFIX=../root_install ../root_src```
+
+4) Start the build. You can specify the amount of cores to designate to the build with the -j(core#s) tag, the more cores, the faster the compile time. In the example below -j4 assigns for processor cores. (grab some lunch/put on a show/do laundry, this will take a while)
+
+```cmake --build . -- install -j4```
+
+5) Hopefully everything has been smooth sailing. Source the ROOT binary, you can add this to your ~/.profile if you want it on startup. 
+
+```source ../root_install/bin/thisroot.sh```
