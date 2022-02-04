@@ -38,7 +38,6 @@ Now let's take the discrete $$k$$ to infinity and replace k with a continuous pa
 
 $$P(x) = G(x, \sigma = \sqrt\lambda ) = \frac{1}{2 \pi \sigma} e^{ -( x - \lambda )^2 / 2\sigma^{2}} $$
 
-## Methods of Counting
 
 ### The Birthday problem
 Suppose you randomly select two people from a room. What is the probability that those people have the same birthday? 
@@ -47,3 +46,12 @@ A quick google search of "the birthday problem" will show that this quite a famo
 
 TODO: show that at around 23 people, the likelyhood of two people having the same birthday is 1/2
 
+# Curve Fitting Basics
+
+## Least Squares 
+
+For some experimental data $$x_{exp}$$ and $$y_{exp}$$, find a function $$y = f(x,\beta)$$ that best resembles the data. $$\beta$$ is a set of unknown parameters that is adjusted to perform said task. The method of least squares can be stated as 
+
+$$ \sum_{i} (f(x_{i},\beta) - y_{i})^{2} $$ 
+
+where $$x_{i}$$ and $$y_{i}$$ are the data points.
