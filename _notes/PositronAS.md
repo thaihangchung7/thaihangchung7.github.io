@@ -6,7 +6,7 @@ category: notes
 
 The focus of these notes is to provide a comprehensive summary on positron annihilation spectroscopy and its applications as well as concepts that are important to PAS. 
 
-# What and Why of Positrons?
+# The What and Why of Positrons?
 
 ## Introduction
 
@@ -33,6 +33,8 @@ Below is a comparison of techniques for resolved defect size.
 
 Below (Fig 1.) is a Feynmann Diagram of $$ e^{+} , e^{-} $$ annihilation emitting a photon. These interactions typically radiate two (three?)(para and ortho positronium?) photons. 
 
+<img src="/assets/e_diagram.png" class="center">
+
 Techniques have been developed to collect quantaties of interest from the annihilation site such as time, energy and angular spectra. 
 
 The energy and momentum of an annihilation are conserved. In other words, the energy of each photon should be equal to the rest mass energy of the $$ e^{+} $$ or $$ e^{-}$$ <span style="color:red"> check wording? </span>, plus or minus the energy due to Doppler Shifting, given by the equation below: 
@@ -55,6 +57,30 @@ Using these both $$ \Delta E $$ and $$ \Delta \theta $$, we can find the the net
 
 + PALS 
   - The lifetime of the positron is measured from the moment the positron enters the medium to its annihilation. 
+
+# Gamma Annihilation Spectrum
+
+In gamma radiation spectroscopy, the spectrum is a result of two back to back emissions of gamma photons for a given radioactive source. Much like optical spectroscopy, the spectrum has identifiable peaks (or lines) that can be used for determining the detector resolution and calibration.
+
+$$ 
+\begin{array}
+\hline
+{Isotope}        & {Barium-133} & {Cobalt-60} & {Sodium-22} & {Cesium-137} \\ \hline
+{Energies (keV)} & {80.997}     & {1173.228}  & {511}       & {661.657}    \\ \hline
+& {160.612}    & {1332.492}  & {1274.537}  & {} \\ \hline
+& {383.849}    & {}          & {}          & {} \\ \hline
+& 437.012                         &                                &                                &  
+\end{array}
+$$
+
+An example of a full gamma spectrum with the sources listed in the table above is shown below:
+
+<img src='/assets/fullspec.png' class='center'>
+
+Consider Na$$^{22}$$, a radioactive isotope with a half-life of 2.6 years. 
+
+
+For a Na$$_{22}$$ source, there is a characteristic $$511$$ keV peak. 
 
 # Positron Annihilation Lifetime Spectroscopy
 
@@ -220,6 +246,8 @@ For implantation energies between $$ 10 $$ keV - $$ 30 $$ keV, an Fe target will
 # HPGe Doppler Broadening Spectrometer Experimental Setup
 
 ## HPGe Detector Apparatus
+
+Germanium detectors provide the highest gamma ray energy resolution. For this particular setup  the FWHM is documented at $$\leq 1.8 keV$$  
 
 Two standard coaxial high purity germanium detectors manufactured by Mirion Technologies (formerly Canberra) are used to detect gamma radiation. Contained in metal casing, the semiconductor is made of an $$0.5 mm$$ thick n-type diffused lithium contact and the p-type contact is $$0.3\mu m$$ thick well. 
 
