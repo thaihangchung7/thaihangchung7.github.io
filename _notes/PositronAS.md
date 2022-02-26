@@ -208,17 +208,30 @@ We can now define the fraction of positrons present within the system at time $$
 
 $$ N(t) = n_{b} (t) + n_{t} (t) = (1 - I_{2}) e^{-\Lambda_{1} t} + I_{2} e^{-\Lambda_{2} t}$$ 
 
-Positron trapping rate, $$K_{d}$$ is calculated as
 
-$$ K_{d} = \frac{I_{2}}{I_{1}} ( \frac{1}{\tau_{b}} - \frac{1}{\tau_{d}} ) $$
+## Positron Lifetime Components 
 
-where $$ \tau_{b} $$ and $$ \tau_{d} $$ are the bulk and defect lifetimes, respectively. $$ I_{2} $$ and $$ I_{1} $$ are the measured intensities.
+The trapping rate can be calculated using characteristic positron lifetimes, which corresponds to certain defects. $$K_{d}$$ positron trapping rate is calculated as 
 
-The trapping rate ($$K_{d}$$) can be used to calculate defect densities ($$ \rho_{d} $$) using:
+$$ K_{d} = \frac{I_{2}}{I_{1}} \bigg( \frac{1}{\tau_{B}} - \frac{1}{\tau_{D}}\bigg) $$
+
+where $$I_{1}$$ and $$I_{2}$$ are their measured intensities. $$\tau_{B}$$ and $$\tau_{D}$$ are the bulk and defect lifetime components respectively. For a model that assumes one or more types of homogenously distributed defects present, $$\tau_{D}$$ can take values of $$D = 1, 2, 3, ...$$. With the presence of more than one defect group, $$K_{d}$$ can be expanded to include $$K_{1}$$ and $$K_{2}$$: 
+
+$$ K_{1} = \frac{I_{2} I_{3} (\lambda_{D1}) - (\lambda_{D2}) + I_{2} (\lambda_{B} - \lambda_{D1})}{1 - I_{2} - I_{3}}$$
+
+$$ K_{2} = \frac{I_{2} I_{3} (\lambda_{D2}) - (\lambda_{D1}) + I_{3} (\lambda_{B} - \lambda_{D2})}{1 - I_{2} - I_{3}}$$
+
+Recall that $$\lambda_{D1}$$ and $$\lambda_{D2}$$ are defined as the annihilation rate for defect and are the reciprocal of their respective lifetimes. In other words, $$\lambda_{D1}$$ may derive its value from $$\frac{1}{\tau_{2}}$$.
+
+
+The trapping rate $$K_{d}$$ can be used to calculate defect densities $$ \rho_{d} $$ using:
 
 $$ \rho_{d} = \frac{K_{d}}{\eta_{0}}$$
 
 where $$\eta_{0}$$ is the trapping coefficient, that can be determined theoretically or experimentally and is specific to each defect type.
+
+
+
 
 ## Positron Source Moderation
 
