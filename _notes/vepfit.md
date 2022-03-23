@@ -15,6 +15,7 @@ The data analysis software (VEPFIT) can only run on Windows 98 for now. Rather t
 # Transferring Data Between VM and Host 
 
 ## Creating the Virtual Hard Disk
+VirtualBox's guest additions add on is not supported in Windows 98, the browsers on W98 are not functional, and I haven't figured out how to transfer files via network. So creating a vhd seems to be the most hassle free way to do this.
 
 1) In VirtualBox, create a new virtual hard disk (vhd), don't make it too large, I found that 100mb works. 
 
