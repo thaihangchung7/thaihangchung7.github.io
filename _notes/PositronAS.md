@@ -94,7 +94,7 @@ Positron lifetime is a function of electron density at the annihilation site. Th
 
   $$ N(t) = \sum_{i = 1}^{k+1} \frac{I_{i}}{\tau_{i}} e^{- t/ \tau_{i}}$$
 
-where $$ tau $$ is the lifetime and $$ I $$ is the intensity of the $$i$$-th component in the spectrum. 
+where $$ \tau $$ is the lifetime and $$ I $$ is the intensity of the $$i$$-th component in the spectrum. 
 
 More explicitly, the positron lifetime spectra follows an exponential decay. The theoretical contributions (representing ideal scenarios) is given by:
 
@@ -160,8 +160,9 @@ Two common mechanisms produce positrons, radioactive decay and pair production. 
 
 For the purposes of performing depth-resolved (monitoring defects as a function of depth) studies on surfaces, interfaces, thin films, and defects induced by ion irradiation, we require tunable monoenergetic slow positron beams via moderation. (see [Positron Source Moderation](#positron-source-moderation) section)
 
-### (Makhovian) Implantation Profile
+# Positron Implantation Profile
 
+$$ P(z) = \frac{1}{\bar{x}} e^{\frac{z}{x}} $$
 
 # $$\gamma$$-Induced PAS 
 One technique of PAS utilizes high energy gamma rays to generate positrons via pair production within the material. The advantage being that there is no need for a positron source. Although this technique is not an alternative to standard radioactive or positron beam based apparatuses, it can extend PAS to study materials and defects, such as neutron irradiated materials and structural reactor materials. 
@@ -210,6 +211,22 @@ $$ N(t) = n_{b} (t) + n_{t} (t) = (1 - I_{2}) e^{-\Lambda_{1} t} + I_{2} e^{-\La
 
 
 ## Positron Lifetime Components 
+Recall that the positron lifetime for a given intensity $$I_{i}$$ can be described as an exponential decay as they annihilate within the bulk, vacancies, and defects within a material:
+
+$$ N(t) = \sum_{i = 1}^{k+1} \frac{I_{i}}{\tau_{i}} e^{- t/ \tau_{i}}$$
+
+Below is an example of the positron lifetime spectrum of $$Y_{3} Al_{5} O_{12}$$. The experimental data is fitted with three characteristic lifetime constants or $$\tau_{1}$$, $$\tau_{2}$$, and $$\tau_{3}$$. 
+
+<img src='/assets/PALSspec.png' class='center'>
+
+As defects form, regions of lesser electron density will directly increase the positron lifetime which can be used to infer the size of vacancy clusters within a material. For reference, positrons have a lifetime of about $$110ns$$ within a bulk $$Fe$$ sample. Plotting lifetime versus the number of vacancies $$N_{v}$$:
+
+<img src='/assets/nvacancy.png' class='center'>
+
+As the number of vacancy clusters grow, the lifetime will begin taper off due to saturation of positron trapping.
+
+
+
 
 The trapping rate can be calculated using characteristic positron lifetimes, which corresponds to certain defects. $$K_{d}$$ positron trapping rate is calculated as 
 
@@ -223,13 +240,21 @@ $$ K_{2} = \frac{I_{2} I_{3} (\lambda_{D2}) - (\lambda_{D1}) + I_{3} (\lambda_{B
 
 Recall that $$\lambda_{D1}$$ and $$\lambda_{D2}$$ are defined as the annihilation rate for defect and are the reciprocal of their respective lifetimes. In other words, $$\lambda_{D1}$$ may derive its value from $$\frac{1}{\tau_{2}}$$.
 
+The trapping rate can also be written in terms of diffusion length which can be obtained from doppler broadening measurements.
 
-The trapping rate $$K_{d}$$ can be used to calculate defect densities $$ \rho_{d} $$ using:
+$$K = \frac{1}{\tau_{B}} \bigg(\frac{L_{+B}^{2}}{L_{+}^{2}} - 1 \bigg)$$
 
-$$ \rho_{d} = \frac{K_{d}}{\eta_{0}}$$
+where $$L_{+B}^{2}$$ is the diffusion length of defect free bulk materials. Both $$L_{+B}^{2}$$ and $$L_{+}^{2}$$ terms are obtained from back diffusion from implanted positrons. The $$K_{d}$$ equation runs into issues when used to calculate defect densities in the cause of saturation of trapped positrons. Thus, equation $$K$$ provides an alternative approach instead of using positron lifetimes. 
 
-where $$\eta_{0}$$ is the trapping coefficient, that can be determined theoretically or experimentally and is specific to each defect type.
+One thing to note is that, equation $$K$$ is the **total** trapping rate, with contributions from both small and large defect clusters. In order to seperate $$K$$ into its individual trapping rates by using depth resolved beam intensity components $$I_{i}$$. 
 
+$$ K_{i} = I_{i} K $$
+
+Once obtained, the trapping rate $$K_{i}$$ can be used to calculate defect densities $$ \rho_{d} $$ using:
+
+$$ \rho_{d} = \frac{K_{i}}{\eta_{0}}$$
+
+where $$\eta_{0}$$ is the trapping coefficient which can be determined theoretically or experimentally and is specific to each defect type and $$i$$ can take values of $$1,2,3,...$$ which are associated to specific defect types. 
 
 
 
@@ -244,7 +269,12 @@ This figure shows the fraction of positrons that leave the moderation foil. "If 
 
 Although the fraction of slow positrons is much smaller than fast positrons, a guidance system further down the beam line is used to separate the unmoderated positrons.
 
-# Pulse Positron Beamline
+## Moderator Annealing
+
+In order to obtain an efficient slow positron yield, a thin tungsten (W) moderator foil is prepared in ultra-high vacuum environments, ideally, close to mid-$$10^{-10}$$ torr ranges. 
+
+
+# (sub 200ns?) Pulsed Positron Beamline
 
 ## Beam Bunching
 
@@ -255,6 +285,18 @@ The prebuncher and chopper RF electrodes are driven at potentials of $$\|V \| < 
 ## Target Chamber
 
 For implantation energies between $$ 10 $$ keV - $$ 30 $$ keV, an Fe target will backscatter about $$15\%$$ of the incident positrons. The fraction of backscattered positrons will increase with atomic number $$Z$$, for example Au$$^{35-37}$$ will backscatter about $$40\%$$ of the incident positrons.
+
+# Helmholtz-Zentrum Dresden-Rossendorf EBLE facility
+
+<IMG src='' >
+
+The HZDR EBLE is an electron linear accelerator for beams with high brilliance and low emittance which can also provide a variety of secondary beams, of importance to PAS is the pulsed mono-energetic positron beam. 
+
+Quick fact sheet:
++ 0.5 keV - 15 keV
++ 250 ps FWHM 
++ repetition rate 1.625 mHz - 13 mHz
++ Flux: $$10^{6} e^{+}/s$$
 
 # HPGe Doppler Broadening Spectrometer Experimental Setup
 
@@ -284,7 +326,6 @@ Produced by Canberra, the (each?) digital MCA supports a maximum of 32678 analyz
 + Time-Stamped List Mode (TLIST): This is used for coincidence experiments for two-dimensional energy spectrum. Based on the MCA's timing resolution (with a maximum of $$100ns$$), each coicidence event is stored with a corresponding energy and timestamp.  
 
 ### Detector deadtime
-
 
 HPGe detectors have a relatively poor timing resolution compared to other detectors, for reference, $$BaF2_{2}$$ scintillation detectors have a timing resolution of $$20\mu s$$.
 
