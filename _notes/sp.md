@@ -92,3 +92,48 @@ Simply put, constant fraction discriminators elimate timing jitter. An incoming 
 The Nuclear Instrumentation Module (NIM) standard refers to the set of application specific electronic modules (Figure \ref{nimmodules}) that sit in standardized bins (Figure \ref{nimbin}). Each of these modules can be purposed with implementing basic logic operations, take the role of an amplifier or discriminator, and any of the other signal processing components. The back of each module are standardized by the Department of Energy \cite{wikipedia_2021}. The advantage is in the idea a modular system where electronic instrumentation can be interchange for rapid prototyping or updating the electronic design.
 
 ### Signal Acquisition
+
+
+# Bit-Operations and Registers
+
+For reference, here a truth table containing bitwise operations for AND, OR, NAND, NOR, XOR, Conditionals,and Biconditionals.
+
+$$
+\begin{array}[]
+\hline
+P & Q & AND & OR & NAND & NOR & XOR & Conditional & Biconditional \\ \hline
+1 & 1 & 1   & 1  & 0    & 0   & 0   &             &               \\ \hline
+1 & 0 & 0   & 1  & 1    & 0   & 1   &             &               \\ \hline
+0 & 1 & 0   & 1  & 1    & 0   & 1   &             &               \\ \hline
+0 & 0 & 0   & 0  & 1    & 1   & 0   &             &               \\ \hline
+\end{array}
+$$
+
+Given $$P$$ and $$Q$$ inputs, the outputs are as follows:
+
++ AND: the output is true iff both inputs are true
++ OR: the output is true any of the two inputs are true
++ NAND/NOR: Negates AND/OR respectively
++ XOR: the output is true if exactly *one* input (but not both) is true 
+
+## Binary and Bit-wise operations
+
+In order to indicate to the compiler to evaluate a binary number, the number prefixed with $$0b$$. For instance, the number $$10$$ in 8-bit binary can be written as:
+
+$$0b00001010$$
+
+One can "flip" a bit by applying/masking the binary with another by referring to the truth table above. For instance an AND operation on an 8-bit binary would look like:
+
+$$0b00001010$$ AND $$0b00000010$$ = $$0b00000010$$ 
+
+An OR operation:
+
+$$0b00001010$$ OR $$0b00000100$$ = $$0b00001110$$
+
+The NOT operator, usually denoted by a ~ preceeding the binary number, can be applied to flip each bit to its opposite value:
+
+$$0b1010$$
+
+$$\tilde{}0b0101$$
+
+
