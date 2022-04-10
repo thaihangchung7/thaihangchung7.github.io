@@ -50,10 +50,10 @@ where $$ P_{x,y} $$ is the momentum component perpendicular to the direction of 
 Using these both $$ \Delta E $$ and $$ \Delta \theta $$, we can find the the net momentum from the annihilating pair. Below is a list of how different techniques utilize $$ \Delta E $$ and $$ \Delta \theta $$ quantities:
 
 + DBS (Doppler Broadening Spectroscopy) 
-  - An energy distribution is detected with a 511keV Doppler Broadening peak detected. This reflects the longitudinal momenta of the electrons moving in the direction of the detector.
+  - An energy distribution is detected with a 511 keV Doppler Broadening peak detected. This reflects the longitudinal momenta of the electrons moving in the direction of the detector.
 
 + ACAR (Angular Correlation Annihilation Radiation) 
-  - Momenta in the transverse direction is given by the angular distribution of 511keV.
+  - Momenta in the transverse direction is given by the angular distribution of 511 keV.
 
 + PALS 
   - The lifetime of the positron is measured from the moment the positron enters the medium to its annihilation. 
@@ -120,7 +120,7 @@ where $$ C_{bg} $$ represents the background contributions and $$f_{res} $$ is t
 
 ## Doppler Broadening of Annihilation Radiation (DBAR) 
 
-In spectroscopy, the spectral line are broadened due to the distribution of velocities of atoms. This phenomenon is called Dopper broadening. When annihilating, the $$ e^{+} e^{-} $$ pair decays into two $$ \gamma $$-rays, with shifts in the photon energy $$ mc^{2} = 511 keV $$. Using energy and momentum conservation:
+In spectroscopy, the spectral line are broadened due to the distribution of velocities of atoms. This phenomenon is called Dopper broadening. When annihilating, the $$ e^{+} e^{-} $$ pair decays into two $$ \gamma $$-rays, with shifts in the photon energy $$ mc^{2} = 511\ \text{keV} $$. Using energy and momentum conservation:
 
 $$ E_{2} = c p_{2} \approx mc^{2} - \frac{E_{b}}{2} + \frac{cp_{z}}{2} $$ 
 
@@ -132,9 +132,9 @@ Doppler Broadening spectroscopy peaks are characterized by $$ S $$ and $$ W $$ p
 <img src="/assets/SWparam.png" class="center" >
 The typical values for defect parameters are: 
 
-A: $$ 511.8 \text{keV} \geq A \geq 510.2 \text{keV} $$ 
+A: $$ 511.8\ \text{keV} \geq A \geq 510.2\ \text{keV} $$ 
 
-C: $$509.3 \text{keV} \geq C \geq 507.8 \text{keV} \cup 514.8\text{keV} \geq C \geq 512.7 \text{keV}$$ 
+C: $$509.3\ \text{keV} \geq C \geq 507.8\ \text{keV} \cup 514.8\ \text{keV} \geq C \geq 512.7\ \text{keV}$$ 
 
 
 Here in the spectrum, the $$ S $$ parameter shows the annihilation fraction with the _low momentum_ electrons and the $$ W $$ parameter is the the annihilation fraction with the _high momentum_ with the core electrons. Therefore, the $$ S $$ parameter is proportional to the defect content in the lattice since positrons are more likely to annihilate with valence electrons at the defect site. 
@@ -162,7 +162,34 @@ For the purposes of performing depth-resolved (monitoring defects as a function 
 
 # Positron Implantation Profile
 
-$$ P(z) = \frac{1}{\bar{x}} e^{\frac{z}{x}} $$
+$$ P(z) = \frac{1}{\bar{x}} e^{\frac{z}{x}} $$ <--- is this normalized?
+
+For a target density of $$\rho$$ the mean implantation depth is written as a function of the incident kinetic energy:
+
+$$ \bar{z} = \frac{A}{\rho} E^{n} $$
+
+where $$A$$ and $$n$$ are empirical parameters taken via fitting. $$A$$ is taken as units of $$\mu g/ cm^{2} * \text{keV}^{-n}$$. The $$\text{keV}^{-n}$$ factor allows for $$\bar{z}$$ units to be expressed in depth (cm). 
+
+The Makovian implantation profile of low-energy positrons is given by the probability density function:
+
+$$ P(z) = \frac{m z^{m-1}}{z_{0}^{m}} e^{-\frac{z}{z_{0}}^m}$$
+
+where $$z_{0}$$ is related to the mean implantation depth $$\bar{z}$$:
+
+$$z_{0} = \frac{\bar{z}}{\Gamma [(1/m)+1]}$$
+
+with $$\Gamma$$ denoting the gamma function.
+
+"The shape parameter, $$m$$, is believed to be a function of the atomic number, $$Z$$, and the incident positron energy (possibly beam intensity?), $$E$$."
+
+For the purposes of simplifying the Mahkov profile, choose $$m=2$$.
+
+
+
+
+<img src="/assets/positronimplant.png" class="center">
+
+
 
 # $$\gamma$$-Induced PAS 
 One technique of PAS utilizes high energy gamma rays to generate positrons via pair production within the material. The advantage being that there is no need for a positron source. Although this technique is not an alternative to standard radioactive or positron beam based apparatuses, it can extend PAS to study materials and defects, such as neutron irradiated materials and structural reactor materials. 
@@ -185,7 +212,7 @@ where $$ p $$ is the order of the process.
 Due to conservation of energy, at least two photons must be produced. Combined at the p verticies:
 
 $$ e^{+} + e^{-} \rightarrow \gamma + \gamma $$ 
-
+ 
 <img src="/assets/e_diagram.png" class="center"> 
 
 The Feynman diagram above is an example of an $$ e^{+} e^{-} $$ interaction. The order of the is $$ p = 2 $$ (count the number of verticies in the diagram).
@@ -284,7 +311,7 @@ The prebuncher and chopper RF electrodes are driven at potentials of $$\|V \| < 
 
 ## Target Chamber
 
-For implantation energies between $$ 10 $$ keV - $$ 30 $$ keV, an Fe target will backscatter about $$15\%$$ of the incident positrons. The fraction of backscattered positrons will increase with atomic number $$Z$$, for example Au$$^{35-37}$$ will backscatter about $$40\%$$ of the incident positrons.
+For implantation energies between $$ 10 $$ \text{keV} - $$ 30\ \text{keV}$, an Fe target will backscatter about $$15\%$$ of the incident positrons. The fraction of backscattered positrons will increase with atomic number $$Z$$, for example Au$$^{35-37}$$ will backscatter about $$40\%$$ of the incident positrons.
 
 # Helmholtz-Zentrum Dresden-Rossendorf EBLE facility
 
@@ -302,7 +329,7 @@ Quick fact sheet:
 
 ## HPGe Detector Apparatus
 
-Germanium detectors provide the highest gamma ray energy resolution. For this particular setup  the FWHM is documented at $$\leq 1.8 keV$$  
+Germanium detectors provide the highest gamma ray energy resolution. For this particular setup  the FWHM is documented at $$\leq 1.8\ \text{keV}$$  
 
 Two standard coaxial high purity germanium detectors manufactured by Mirion Technologies (formerly Canberra) are used to detect gamma radiation. Contained in metal casing, the semiconductor is made of an $$0.5 mm$$ thick n-type diffused lithium contact and the p-type contact is $$0.3\mu m$$ thick well. 
 
@@ -347,4 +374,4 @@ To monitor coincidence count rate, the two single channel analyzers are connecte
 
 [4] [Slow Positron Beam Techniques](http://www.positronannihilation.net/index_files/Positron%20Beam.pdf)
 
-[5] A new mechanism for void-cascade interaction from nondestructive depth-resolved atomic-scale measurements of ion irradiation–induced defects in Fe (https://www.science.org/doi/10.1126/sciadv.aba8437)
+[5] [A new mechanism for void-cascade interaction from nondestructive depth-resolved atomic-scale measurements of ion irradiation–induced defects in Fe](https://www.science.org/doi/10.1126/sciadv.aba8437)

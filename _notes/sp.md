@@ -136,4 +136,11 @@ $$0b1010$$
 
 $$\tilde{}0b0101$$
 
+## Controlling Registers
 
+Bit-wise operations will be used to control registers on a chip. Depending on the chip type, each register will be displayed as a number of bits that can be changed by applying a mask of the same number of bits to control the features of a chip. Below are examples of setting clearing a bit in a register.
+
++ Setting
+  - register-binary# $$\vert =$$ mask-binary#
++ Clearing
+  - register-binary# $$\& =$$ mask-binary#

@@ -85,17 +85,17 @@ Phonons are quanta of elastic waves, in other words, atomic vibrations in a soli
 
 "A plasmon is a wave in the 'sea' of electrons in the conduction band of a metal."
 
-## Secondary Electrons
+[//]: <> ## Secondary Electrons
 
-## Back Scattered Electrons
+[//]: <> ## Back Scattered Electrons
 
-## Characteristic X-Rays
+[//]: <> ## Characteristic X-Rays
 
-## Cathodoluminescence
+[//]: <> ## Cathodoluminescence
 
-## Auger Electrons
+[//]: <> ## Auger Electrons
 
-## Bremsstrahlung
+[//]: <> ## Bremsstrahlung
 
 # References
 
