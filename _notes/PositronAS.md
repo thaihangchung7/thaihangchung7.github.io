@@ -311,7 +311,7 @@ The prebuncher and chopper RF electrodes are driven at potentials of $$\|V \| < 
 
 ## Target Chamber
 
-For implantation energies between $$ 10 $$ \text{keV} - $$ 30\ \text{keV}$, an Fe target will backscatter about $$15\%$$ of the incident positrons. The fraction of backscattered positrons will increase with atomic number $$Z$$, for example Au$$^{35-37}$$ will backscatter about $$40\%$$ of the incident positrons.
+For implantation energies between $$ 10 $$ \text{keV} - $$ 30\ \text{keV}$$, an Fe target will backscatter about $$15\%$$ of the incident positrons. The fraction of backscattered positrons will increase with atomic number $$Z$$, for example Au$$^{35-37}$$ will backscatter about $$40\%$$ of the incident positrons.
 
 # Helmholtz-Zentrum Dresden-Rossendorf EBLE facility
 
