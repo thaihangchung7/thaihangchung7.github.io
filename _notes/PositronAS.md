@@ -189,6 +189,8 @@ For the purposes of simplifying the Mahkov profile, choose $$m=2$$.
 
 <img src="/assets/positronimplant.png" class="center">
 
+<img src="/assets/positronIronImplant.png" class="center">
+
 
 
 # $$\gamma$$-Induced PAS 
