@@ -9,6 +9,67 @@ Table of Contents
 
 # Material Irradiation
     
+## Elementary Displacement Theory
+
+Damage rate equation or the rate of displacement is given by:
+
+$$ R_{d} = N \int_{\breve{E}}^{\hat{E}} \phi(E_{i}) \sigma_{D} (E_{i}) dE_{i} $$
+
+where $$N$$ is the lattice atom density, $$\phi(E_{i})$$ is the energy dependent particle flux and typically has units of per $$\text{cm}^{2}$$ per second,
+, $$\sigma(E_{i})$$ is the energy dependent cross section of the incident particle. 
+
+From here, the displacement per atom (dpa) can be written in terms of the Damage rate,
+
+$$ dpa = \frac{R_{d} t}{N} $$
+
+The energy dependent displacement cross section can be fully defined as:
+
+$$\sigma_{D} (E_{i}) = \int_{\breve{T}}^{\hat{T}} \sigma(E_{i},T) \nu(T) dT $$
+
+where $$\sigma(E_{i}, T)$$ is the probability that a particle of energy $$E_{i}$$ will implant recoil energy $$T$$ to a struck lattice atom, and $$\nu(T)$$ is the number of displacement atoms of a collision resulting from a primary recoil atom of energy $$T$$ 
+
+The simplified displacement probability for the simple case can can be approximated as a step function,
+
+$$ P_{d} (T) = \begin{cases}
+
+0 & T < E_{d} \\
+1 & T > E_{d} 
+
+\end{cases}
+
+$$
+
+However, a more realistic model can be modeled after, 
+
+$$ P_{d} (T) \begin{cases}
+
+=0 &  T < E_{d min} \\
+=f(T) &  E_{d min} < T < E_{d max} \\
+=1 &  T <E_{d max}
+
+\end{cases}
+$$
+
+Displacement threshold energies ($$E_{d}$$) for different materials are as follows:
+
+| Element | Cu | Al | Au | Pt | Ni | Fe | Mo |
+|---------|----|----|----|----|----|----|----|
+|$$E_{d}$$ ($$eV$$) | 22 | 16 | 36 | 37 | 24 | 24 | 37 |
+
+since things need to be accounted for...
+
+### Kinchin-Pease Damage Model
+
+The following assumptions are made for the average number of displaced atoms initially created by a PKA of energy T:
+
++ The cascade is created at two body elastic collisions between atoms
++ Diplsacements occurs at $$P_{d} (T) = 1$$ for $$T \geq E_{d}$$ 
+
+In accordance to the Kinchin-Pease Model, $$\nu (T)$$ is defined as,
+
+$$ \nu (T) = \frac{T}{2 E_{d}}$$
+
+
 ## Point Defect Formation and Diffusion
 
 ### Frenkel Pairs
