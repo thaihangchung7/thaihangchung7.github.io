@@ -77,10 +77,14 @@ An example of a full gamma spectrum with the sources listed in the table above i
 
 <img src='/assets/fullspec.png' class='center'>
 
-Consider Na$$^{22}$$, a radioactive isotope with a half-life of 2.6 years. 
+## $$\text{Na}^{22} $$ as a Positron Source
+Consider Na$$^{22}$$, a radioactive isotope with a half-life of 2.6 years transmuting into $$\text{Ne}^{22}$$ via long lived $$\beta + $$ decay,
 
+$$ \text{Na}^{22}_{11} \rightarrow \text{Ne}^{22}_{10} + e^{+} + \nu_{e}$$
 
-For a Na$$_{22}$$ source, there is a characteristic $$511$$ keV peak. 
+A portion of the $$\beta^{+}_{0,1}$$ transitions are emitted at an energy of $$546.44 \text{KeV}$$ with a probability of $$90.30\%$$. The $$\beta^{+}_{0,0}$$ transitions have an energy of $$1821.02 \text{KeV}$$ with a probability of $$0.055\%$$ which leads to the ground state of neon. The $$\beta^{+}_{0,1}$$ decay results in the formation of an excited $$\text{Ne}^{22*}$$ that has a lifetime of $$3.7 \text{ps}$$ before passing to a ground state where a $$1.275 \text{MeV}$$ gamma is emitted.  
+
+The $$\beta+$$ positron emission component is a result of a quark flavor change within from a proton (udu) to a neutron (udd). The quark flavor change is mediated through a $$W+$$ boson which emits a positron and an electron neutrino. When the positron interacts with the surrounding matter results in a  characteristic $$511$$ keV peak. 
 
 # Positron Annihilation Lifetime Spectroscopy
 
