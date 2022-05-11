@@ -4,10 +4,7 @@ title: Btw I use Arch
 ---
 
 ## Archie the T480
-
-I didn't run the numbers but I think an overwhelming majority of Linux-ers use a Thinkpad as their primary driver. Maybe it's because both Linux and Thinkpads (at least before the era of dongles) share a lot of themes such as modularity, usability, and reliability. The hardware is not that big of a deal though, I'm pretty sure Linus still codes the Linux Kernel on 2Gb RAM netbooks.  
-
-The point is, instead of opting for a Zoomer laptop, I've managed to snagged a Thinkpad T480 for a good deal. For the same reasons mentioned above, I think I'm obligated to install a "hackerman" DIY distro, in this case [ArchLinux](https://archlinux.org/) (also because Linux is [well supported](https://support.lenovo.com/us/en/solutions/pd031426-linux-for-personal-systems) on Thinkpads). 
+When it comes to Linux, hardware is not that important, I'm pretty sure Linus still codes the Linux Kernel on 2Gb RAM netbooks. However, I believe an overwhelming majority of Linux-ers use a Thinkpad as their primary driver. Maybe it's because both Linux and Thinkpads (at least before they joined the "thin-n-lights") share a lot of themes such as modularity, usability, and reliability. The point is, instead of opting for a Zoomer laptop, I've managed to snagged a Thinkpad T480 for a good deal. For the same reasons mentioned above, I think I'm obligated to install a "hackerman" DIY distro, in this case [ArchLinux](https://archlinux.org/) (also because Linux is [well supported by Lenovo ](https://support.lenovo.com/us/en/solutions/pd031426-linux-for-personal-systems) and by the [Arch community](https://wiki.archlinux.org/title/Lenovo_ThinkPad_T480)). 
 
 ## Welcome to the Rice Fields
 
@@ -29,5 +26,4 @@ For Doom emacs:
 For neovim:
 - [ncm2](https://github.com/ncm2/ncm2)
 - [vim-airline](https://github.com/vim-airline/vim-airline)
-
 
