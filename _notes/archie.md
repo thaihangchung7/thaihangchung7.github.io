@@ -8,22 +8,33 @@ When it comes to Linux, hardware is not that important, I'm pretty sure Linus st
 
 ## Welcome to the Rice Fields
 
+Evolution of my ricing:
+
 <img src="/assets/ricedarch.png" width=640 height=360 class="center">
 
-Dotfiles are on [Github](https://github.com/thaihangchung7/profiles). Installed packages:
+after a few upgrades:
+
+<img src="/assets/rice2.png" width=640 height=360 class="center">
+
+Dotfiles are on [Github](https://github.com/thaihangchung7/profiles). Installed packages are as follows:
+
+### Cosmetic Packages
 - [i3-gaps](https://github.com/Airblader/i3)
+- [polybar](https://github.com/polybar/polybar)
 - [picom-ibhagwan](https://github.com/ibhagwan/picom)
 - [feh](https://feh.finalrewind.org/) 
+- [pywal](https://github.com/dylanaraps/pywal)
 - [alacritty](https://github.com/alacritty/alacritty)
-- [deepin-screenshot](https://archlinux.org/packages/community/x86_64/deepin-screenshot/)
 - [redshift](https://github.com/jonls/redshift#faq)
 
-For Doom emacs:
+### Emacs 
 - [Doom emacs](https://github.com/hlissner/doom-emacs)
 - [pdf-tools](https://github.com/politza/pdf-tools)
 - [eshell]()
 
-For neovim:
+### Neovim
 - [ncm2](https://github.com/ncm2/ncm2)
 - [vim-airline](https://github.com/vim-airline/vim-airline)
 
+### Functional Stuff
+- [deepin-screenshot](https://archlinux.org/packages/community/x86_64/deepin-screenshot/)
