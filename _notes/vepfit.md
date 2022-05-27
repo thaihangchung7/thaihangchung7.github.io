@@ -92,8 +92,17 @@ For the case of $$E(z) = 0$$, The general solution the differential equation wit
 
 $$c(z) = A e^{\gamma z} + B e^{-\gamma z} + p/\alpha$$
 
+## F and S measurements
+
+
 
 # VEPFIT wrasslin'
+
+## Data File Formats
+
+Data file formats should include the following columns:
+
+Energy (keV), Doppler Parameters (S or W), Positronium Fraction, $$\Delta S$$, $$\Delta F_{ps}$$ |
 
 ## Pre-Requisites
 
