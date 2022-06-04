@@ -289,7 +289,25 @@ $$ \rho_{d} = \frac{K_{i}}{\eta_{0}}$$
 
 where $$\eta_{0}$$ is the trapping coefficient which can be determined theoretically or experimentally and is specific to each defect type and $$i$$ can take values of $$1,2,3,...$$ which are associated to specific defect types. 
 
+## Defect Calculations Using Diffusion Length
 
+## S versus W Plots
+
+The doppler parameters $$S$$ and $$W$$ can be used to identify characteristic defect information. For one defect type, the apparent S parameter is given by,
+
+$$ S = (1-\eta)S_{b} + \eta S_{d} $$
+
+$$S_{b}$$ and $$S_{d}$$ are $$S$$ parameters for bulk and defects respectively and $$\eta$$ is a weighing factor regarding the fraction of positrons annihilating in the defect,
+
+$$\eta = \int_{0}^{\infty} n_{d} (t) dt = \frac{\kappa_{d}}{\lambda_{b} + \kappa_{d}} $$
+
+Similarly, the $$W$$ parameter can also be defined in terms of $$\eta$$, 
+
+$$ W = (1-\eta) W_{b} + \eta W_{d}$$ 
+
+As a result, a slope $$R$$ relating $$S$$ and $$W$$ can be introduced by combining and rearranging the $$S$$ and $$W$$ equations above,
+
+$$S - S_{b} = R (W - W_{b})$$
 
 ## Positron Source Moderation
 
