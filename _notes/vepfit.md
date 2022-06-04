@@ -12,7 +12,7 @@ VEPFIT is an analysis software for depth-profiling doppler broadening positron a
 
 For the transport of mono-energetic positrons in defect free solids, the implantation profile can be parameterized by the Makhovian distribution.
 
-$$ P(z) = \frac{m z^{m-1}}{z_{0}^{m}} e^{-\frac{z}{z_{0}}^m}$$.
+$$ P(z) = \frac{m z^{m-1}}{z_{0}^{m}} e^{-\frac{z}{z_{0}}^m}$$
 
 The standard values and units of the Makhovian profile are discussed in the positron annihilation [link](/notes/PositronAS.html#PositronImplantationProfile).
 
@@ -24,27 +24,27 @@ where $$c=c(z)$$ is the time averaged positron density and $$v_{d}(z)$$ is the d
 
 Both the stopping profile $$p(z*)$$ and the positron density $$c(z)$$ can be generalized by introducing a normalization term, integrating over the positron stopping rate $$I(z)$$,
 
-$$ I_{norm} = \int_{0}^{\infty} I(z*) dz* $$
+$$ I_{norm} = \int_{0}^{\infty} I(z^{*}) dz* $$
 
 Rewriting $$p(z)$$ and $$c(z)$$ in normalized form,
 
-$$p(z*) = \frac{I(z*)}{I_{norm}}$$
+$$p(z^{*}) = \frac{I(z^{*})}{I_{norm}}$$
 
-$$c*(z*) = \frac{D^{+} c(z*)}{a^{2} I_{norm}}$$
+$$c^{*}(z^{*}) = \frac{D^{+} c(z^{*})}{a^{2} I_{norm}}$$
 
 Furthermore, this introduces generalized terms for depth and drift velocity:
 
-$$ z* = \frac{z}{a}$$
+$$ z^{*} = \frac{z}{a}$$
 
 where a is the lattice parameter
 
-$$ v_{d*} = (v_{d} a / D^{+})$$ 
+$$ v_{d^{*}} = (v_{d} a / D^{+})$$ 
 
 $$\mu = e D^{+}/kT$$
 
 The new positron density equation can be written in terms of generalized parameters as
 
-$$ \frac{d^{2} c^{*}}{dz^{*2}} - \frac{d}{dz^{*}} (v_{d}^{*} c^{*}) + p(z^{*}) - \frac{a^{2}}{D^{+}}$$
+$$ \frac{d^{2} c^{*}}{dz^{*2}} - \frac{d}{dz^{*}} (v_{d}^{*} c^{*}) + p(z^{*}) - \frac{a^{2}}{D^{+}} (\kappa_{t} n_{t} + \lambda_{b}) c^{*} = 0$$
 
 integrating the differential equation yields,
 
@@ -52,7 +52,7 @@ $$ \bigg( \big( \frac{dc*}{dz*} \big)_{z*=0} - v_{d^{*}}(0) c^{*}(0) \bigg) + 1 
 
 these terms can be reduced to define the fraction of stopped positrons. For surface transmitted positrons, 
 
-$$ -F_{s} = \big( \frac{dc*}{dz*} \big)_{z*=0} - v_{d^{*}}(0) c^{*}(0)$$ 
+$$ -F_{s} = \big( \frac{dc^{*}}{dz^{*}} \big)_{z^{*}=0} - v_{d^{*}}(0) c^{*}(0)$$ 
 
 for the fraction of positrons trapped in defects
 
@@ -92,9 +92,12 @@ For the case of $$E(z) = 0$$, The general solution the differential equation wit
 
 $$c(z) = A e^{\gamma z} + B e^{-\gamma z} + p/\alpha$$
 
+where $$\gamma^{*,-} = 1/2 [-v_{d} \pm (v^{2}_{d} + 4 \gamma^{2})^{1/2}]$$. The terms $$p(z)$$, $$n_{t}(z)$$ and $$E(z)$$ assuming that they are slowly varying over $$[z,z+\Delta z]$$ and can be taken as constants
 ## F and S measurements
 
+## Diffusion Constant
 
+$$D_{+} = \frac{kT}{m^{*}} \frac{1}{\dot{n} [E_{th} (T)]}$$
 
 # VEPFIT wrasslin'
 
