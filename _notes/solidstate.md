@@ -329,8 +329,3 @@ Notice that the *minimal energy state* of the conduction band and the *maximum e
 
 Referring to the band diagram of of [Silicon](#in-semiconductor-crystals), an indirect band gap semiconductor. **Indirect band gaps** indiate that some energy was lost in order for momentum to be conserved. The electron must travel pass through an intermediate state in order such that momentum is transferred through the crystal lattice. Graphically, the min-max energies of the Silicon band diagram do not line up. 
 
-
-
-(In band digrams, parabolas indicate free electrons?)
-
-(What does it mean if the fermi level is near the conduction or valence band?)
