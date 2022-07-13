@@ -5,5 +5,13 @@ plugins:
 
 
 collections:
-  notes:
+  research:
+   output: true
+  theory:
+   output: true
+  comp:
+   output: true
+  linux:
+   output: true
+  classes:
    output: true

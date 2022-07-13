@@ -118,11 +118,40 @@ Faraday cups are charge particle detectors are typically used to tune ion beams.
 
 $$\frac{N}{t} = \frac{I}{e}$$
 
-
-
 ### Sputtering
 
 <img src="/assets/sputtering.png" class="center">
+
+# High Entropy Alloys
+
+## Thermodynamics of Mixing
+
+Recall that the change in Gibbs free energy $$\Delta G = \Delta H - T \Delta S$$ is the **maximum** amount of non-expansion work that can be extracted from a closed system. In other words, $$\Delta G$$ represents the amount of "free" or "useful" energy available to do non-$$PV$$ work at constant pressure and temperature In other words, $$\Delta G$$ represents the amount of "free" or "useful" energy available to do non-$$PV$$ work at constant pressure and temperature.
+
+Suppose two pure elements $$A$$ and $$B$$ were combined. The alloy can become a solid solution or form an intermetallic phase with the corresponding free energies:
+
+For solutions,
+$$ \Delta G_{mix} = \Delta H_{mix} - T \Delta S_{mix}$$
+
+For intermetallic phases:
+$$ \Delta G_{f} = \Delta H_{f} - T \Delta S_{f}$$
+
+where $$H_{mix}$$ and $$S_{mix}$$ are the enthalpy and entropy of mixing, and $$H_{f}$$ and $$S_{f}$$ refer to the values for the formation of an intermetallic compound with $$AB$$ stoichiometry. $$T$$ is the absolute temperature. That being said, for more complex stoichiometries such as $$AB_{2}$$ or $$A_{2} B$$, will involve additional expressions in $$\Delta G_{f}$$ for each compound.
+
+The ideal entropy of mixing is given by
+
+$$\Delta S_{mix} = - R \sum_{i} x_{i} ln x_{i}$$
+
+where $$R$$ is the gas constant and $$x_{i}$$ is the mole fraction of the $$i-th$$ element. For equiatomic alloys, where $$x_{1} = x_{2} = x_{3} = ...$$, the entropy of mixing becomes,
+
+$$\Delta S_{mix} = R ln n$$ 
+
+which simplifies $$\Delta S_{mix}$$ to constant values related to the number of elements $$n$$. For 4, 5, and 6 elements, $$ \Delta S_{mix}$$ corresponds to  $$1.39R$$, $$1.61R$$, and $$1.79R$$.
+
+In a paper by Yeh et al., they proposed that adding more elements at near equiatomic concentrations would stabilize solid solutions at the expense of intermetallic compounds. This was done by increasing the configurational entropy of mixing in alloys in solid solutions, counteracting the formation of compounds.
+
+For alloys with a high number of principle elements, such as $$n=5$$, the entropic contribution terms at melting temperatures $$T_{melt} \Delta S_{mix}$$ becomes comparable to the formation enthalpies $$\Delta H_{f}$$ of intermetallic compounds, supressing compound formation
+
 
 # References
 
@@ -131,3 +160,4 @@ $$\frac{N}{t} = \frac{I}{e}$$
 [2] [EAG RBS](https://www.eag.com/resources/tutorials/rbs-tutorial-theory/)
 
 [3] [Chem Libretexts](https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Physical_Methods_in_Chemistry_and_Nano_Science_(Barron)/01%3A_El
+

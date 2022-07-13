@@ -18,23 +18,31 @@ after a few upgrades:
 
 Dotfiles are on [Github](https://github.com/thaihangchung7/profiles). Installed packages are as follows:
 
+
+## DOOM Emacs Org-Mode
+
+Org TODO items will not show in the Org agenda. To add TODO items to org agenda, use:
+
+```C-c [ ``` org-agenda-file-to-front
+
+
 ### Cosmetic Packages
-- [i3-gaps](https://github.com/Airblader/i3)
-- [polybar](https://github.com/polybar/polybar)
-- [picom-ibhagwan](https://github.com/ibhagwan/picom)
-- [feh](https://feh.finalrewind.org/) 
-- [pywal](https://github.com/dylanaraps/pywal)
-- [alacritty](https://github.com/alacritty/alacritty)
-- [redshift](https://github.com/jonls/redshift#faq)
+- [i3-gaps](https://github.com/Airblader/i3) (Window Manager/"gap manager")
+- [polybar](https://github.com/polybar/polybar) (Status Bar)
+- [picom-ibhagwan](https://github.com/ibhagwan/picom) (Compositor)
+- [feh](https://feh.finalrewind.org/) (Wallpaper Manager)
+- [pywal](https://github.com/dylanaraps/pywal) (Color Theme Manager)
+- [alacritty](https://github.com/alacritty/alacritty) (GPU accelerated Terminal)
+- [redshift](https://github.com/jonls/redshift#faq) (Blue Light Filter)
 
 ### Emacs 
-- [Doom emacs](https://github.com/hlissner/doom-emacs)
-- [pdf-tools](https://github.com/politza/pdf-tools)
+- [Doom emacs](https://github.com/hlissner/doom-emacs) (Text Editor #2)
+- [pdf-tools](https://github.com/politza/pdf-tools) (???)
 - [eshell]()
 
 ### Neovim
-- [ncm2](https://github.com/ncm2/ncm2)
-- [vim-airline](https://github.com/vim-airline/vim-airline)
+- [ncm2](https://github.com/ncm2/ncm2) (Vim Auto complete)
+- [vim-airline](https://github.com/vim-airline/vim-airline) (Vim Status Bar)
 
 ### Functional Stuff
-- [deepin-screenshot](https://archlinux.org/packages/community/x86_64/deepin-screenshot/)
+- [deepin-screenshot](https://archlinux.org/packages/community/x86_64/deepin-screenshot/) (Snipping Tool)

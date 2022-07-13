@@ -1,6 +1,6 @@
 ---
 layout: notes
-title: Computing 
+title: Python 
 ---
 
 Table of Contents
@@ -68,10 +68,6 @@ But given what was just said, in many cases, you can tell Numba provide informat
 
 ```
 
-### Numpy ufuncs
-
-
-
 ### Numba ```@vectorize```
 To optimize a ```ufunc``` with Numba, decorate the function with ```@vectorize```. This will instruct Numba to parallelize the function that is decorated. Some arguments will need to be passed in order to process the function on the GPU. 
 
@@ -101,4 +97,18 @@ There is work to support as much of the Python language as possible but some wid
 ### Python magic ``` %timeit ```
 When benchmarking Numba code, it would be best to use ``` %timeit ``` which runs a function or loop multiple times to accurately get an estimate of run time. The output is the mean and standard deviation of multiple runs. Hence, accomodating for the compilation time of the first execution. 
 
+# NumPy
 
+## NumPy ufuncs
+
+NumPy arrays operate element-wise. NumPy ```ufuncs``` or "universal functions" operate in the same fashion. For instance, ```np.sin(a)``` applies $$sin$$ to **each** element in array ```a``` .
+
+# Solving ODE's with Runge Kutta Methods
+
+As a step up from Euler
+
+# Python Idiosynchrasies
+
+## ```if __name__ = __main__```
+
+Colloquially, when this shows up in python code, this signals to those who are reading it that this particular file is running as a script. 

@@ -5,10 +5,47 @@ title: Category
 
 <div id="menu">
 <ul>
-  {% for notes in site.notes %}
+  
+  <h2> Research </h2>
+
+  {% for item in site.research %}
     <li>
-	    <h3><a href="{{ notes.url }}">{{ notes.title }}</a></h3> 
+	    <h3><a href="{{ item.url }}">{{ item.title }}</a></h3> 
     </li> 
   {% endfor %}
+
+  <h2> Theory </h2>
+
+  {% for item in site.theory %}
+    <li>
+	    <h3><a href="{{ item.url }}">{{ item.title }}</a></h3> 
+    </li> 
+  {% endfor %}
+
+  <h2> Computing </h2>
+
+  {% for item in site.comp %}
+    <li>
+	    <h3><a href="{{ item.url }}">{{ item.title }}</a></h3> 
+    </li> 
+  {% endfor %}
+
+  <h2> Linux </h2>
+
+ {% for item in site.linux %}
+    <li>
+	    <h3><a href="{{ item.url }}">{{ item.title }}</a></h3> 
+    </li> 
+  {% endfor %}
+
+  <h2> Course Notes </h2>
+
+ {% for item in site.classes %}
+    <li>
+	    <h3><a href="{{ item.url }}">{{ item.title }}</a></h3> 
+    </li> 
+  {% endfor %}
+
+
 </ul>
 </div>
