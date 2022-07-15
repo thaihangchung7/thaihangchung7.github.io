@@ -6,6 +6,41 @@ category: notes
 
 The focus of these notes is to provide a comprehensive summary on positron annihilation spectroscopy and its applications as well as concepts that are important to PAS. 
 
+Table of Contents
+=================
+
+* [Introduction](#introduction)
+* [Gamma Annihilation Spectrum](#gamma-annihilation-spectrum)
+   * [$${Na}^{22} $$ as a Positron Source](#textna22--as-a-positron-source)
+* [Positron Annihilation Lifetime Spectroscopy](#positron-annihilation-lifetime-spectroscopy)
+* [Doppler Broadening Techniques](#doppler-broadening-techniques)
+   * [Doppler Broadening of Annihilation Radiation (DBAR)](#doppler-broadening-of-annihilation-radiation-dbar)
+   * [Coincidence Doppler Broadening Spectroscopy](#coincidence-doppler-broadening-spectroscopy)
+   * [Slow Positrons](#slow-positrons)
+* [Positron Implantation Profile](#positron-implantation-profile)
+* [$$\gamma$$-Induced PAS](#gamma-induced-pas)
+* [Appendix](#appendix)
+   * [Pair Production and Annihilation](#pair-production-and-annihilation)
+* [Trapping Model and Defect Calculations](#trapping-model-and-defect-calculations)
+   * [Defect Calculations from PALS Data](#defect-calculations-from-pals-data)
+   * [Positron Lifetime Components](#positron-lifetime-components)
+   * [Defect Calculations Using Diffusion Length](#defect-calculations-using-diffusion-length)
+   * [S versus W Plots](#s-versus-w-plots)
+   * [Positron Source Moderation](#positron-source-moderation)
+   * [Moderator Annealing](#moderator-annealing)
+* [(sub 200ns?) Pulsed Positron Beamline](#sub-200ns-pulsed-positron-beamline)
+   * [Beam Bunching](#beam-bunching)
+   * [Target Chamber](#target-chamber)
+* [Helmholtz-Zentrum Dresden-Rossendorf EBLE facility](#helmholtz-zentrum-dresden-rossendorf-eble-facility)
+* [HPGe Doppler Broadening Spectrometer Experimental Setup](#hpge-doppler-broadening-spectrometer-experimental-setup)
+   * [HPGe Detector Apparatus](#hpge-detector-apparatus)
+      * [Lynx Multichannel Analyzers (MCA)](#lynx-multichannel-analyzers-mca)
+      * [Detector deadtime](#detector-deadtime)
+   * [Coincidence Mode vs Single Detector Setup](#coincidence-mode-vs-single-detector-setup)
+   * [Tao-Eldrup Model](#tao-eldrup-model)
+* [References](#references)
+
+
 # Introduction
 
 Positron Annihilation Spectroscopy 
