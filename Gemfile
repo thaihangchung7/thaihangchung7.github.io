@@ -9,3 +9,7 @@ group :jekyll_plugins do
 end
 
 gem "webrick", "~> 1.7"
+
+gem "rouge", "~> 3.26"
+
+gem "kramdown", "~> 2.3"

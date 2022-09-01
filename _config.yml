@@ -1,3 +1,13 @@
+markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
+  hard_wrap: false
+  extensions: fenced_code_blocks
+
 plugins:
   - jekyll-feed
   - jekyll-sitemap

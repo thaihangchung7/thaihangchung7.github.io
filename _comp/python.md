@@ -16,6 +16,7 @@ Table of Contents
    * [Python Benchmarking](#python-benchmarking)
       * [Python magic %timeit](#python-magic-timeit)
 
+
 # Numba
 Numba is an Python Just In Time compiler that essentially translates Python functions into fast machine code using LLVM. With the relatively recent boom of data-driven programming, Numba's library is gaining more attention from its developers and [community](https://github.com/numba/numba). (Sponsored by NVidia, Anaconda, Inc., DARPA, Intel...)
 
@@ -45,12 +46,15 @@ You can instruct Numba to compile your function independent of the Python interp
 You can tell Numba to execute No Python mode in two ways:
 
 ```python
-@jit (nopython=True) 
+
+@jit(nopython=True) 
+
 ```
 
 or its alias:
 
 ```python 
+
 @njit 
 
 ```
@@ -101,14 +105,170 @@ When benchmarking Numba code, it would be best to use ``` %timeit ``` which runs
 
 ## NumPy ufuncs
 
-NumPy arrays operate element-wise. NumPy ```ufuncs``` or "universal functions" operate in the same fashion. For instance, ```np.sin(a)``` applies $$sin$$ to **each** element in array ```a``` .
+NumPy arrays operate element-wise. NumPy ```ufuncs``` or "universal functions" operate in the same fashion. For instance, ```np.sin(a)``` applies $$sin$$ to **each** element in array ```a``` . For example,
 
-# Solving ODE's with Runge Kutta Methods
+```python
 
-As a step up from Euler
+a = [1,2,3,4] 
+
+```
+
+```python
+
+np.sin(a) 
+
+```
+
+Output:
+
+```python
+
+array([ 0.84147098,  0.90929743,  0.14112001, -0.7568025 ])
+
+```
+
+## Slicing 
+Indexing arrays is pretty straight forward (at least for me, it's easier to think in terms of rows). However, slicing can get very interesting, very quickly. Slicing syntax is as follows:
+
+~~~python
+
+var[lower:upper:step]
+
+~~~
+
+### Omitting Indicies
+
+Consider the array, 
+
+```python
+
+var = np.array([7,8,9,10,11,12])
+
+```
+Some examples of omitting indicies in the array:
+
+**Choosing the first 3 elements**
+
+```python
+
+var[:3]
+
+```
+Output:
+
+```python
+
+array([7, 8, 9])
+
+```
+**Choosing the last two elements**
+
+```python
+
+var[-2:]
+
+```
+Output:
+
+```python
+
+array([11,12])
+
+```
+**Choosing every other element**
+
+```python
+
+var[::2]
+
+```
+Output:
+```python
+
+array([ 7,  9, 11])
+
+```
+
+### Row/Column Selection (aka the lonely colon)
+
+Consider a $$4 \times 5$$ 2-D array called ```two_d```:
+
+```python
+
+array([[ 0,  1,  2,  3,  4],
+       [ 5,  6,  7,  8,  9],
+       [10, 11, 12, 13, 14],
+       [15, 16, 17, 18, 19]])
+
+```
+
+We can choose the 3rd column by using the "lonely colon",
+
+```python
+
+choose3rdcol = two_d[:,2]
+choose3rdcol
+
+```
+Output: 
+```python
+
+array([ 2,  7, 12, 17])
+
+```
+
+Row selection works the same way,
+```python
+
+choose2ndrow = two_d[1,:]
+choose2ndrow
+
+```
+Output:
+```python
+
+array([5, 6, 7, 8, 9])
+
+```
+
+However, keep in mind that these outputs for row/column selection are **1-D arrays**. In other words, the column selected output is a row of the column elements.
 
 # Python Idiosynchrasies
 
 ## ```if __name__ = __main__```
 
 Colloquially, when this shows up in python code, this signals to those who are reading it that this particular file is running as a script. 
+
+
+## Python Lambdas'
+
+Lambdas in python are "anonymous functions", in that they do not occupy a namespace. In other words, Lambdas are equivalent to the standard input-output function, which is function *declarations*:
+
+```python
+
+def add_one(x):
+    return x + 1
+
+```
+
+The advantage of using lambda is that you can define the same function inline. Since Lambdas are not "named", they are function *expressions*:
+
+```python
+
+a = lambda x: x + 1
+
+```
+
+To evaluate the function:
+
+```python
+
+print(a(1))
+
+```
+yields:
+
+```
+2
+
+```
