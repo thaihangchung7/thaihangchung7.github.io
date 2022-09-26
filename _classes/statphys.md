@@ -234,6 +234,71 @@ $$s_{i} = -1, s_{i+1} = +1 \rightarrow - J$$
 
 $$s_{i} = -1, s_{i+1} = -1 \rightarrow - \vec{B} + J$$ 
 
+$$\bigg(  \begin{matrix}
+e^{\beta (J+B)} & e^{-\beta J} \\
+e^{-\beta J} & e^{\beta (J-B)}
+\end{matrix} \bigg)$$
+
+Given any $$N\times N$$ matrix, the traces is equal to the sum of its eigenvalues,
+
+$$ Tr(A) = \sum_{i=1}^{N} \lambda_{i} $$
+
+so the partition function can be written in terms of the two matrix eigenvalues:
+
+$$ Z = \lambda_{1}^{N} + \lambda_{2}^{N} $$
+
+The matrix eigenvalues can be solved for using the standard matrix diagonalization/characteristic equation method,
+
+$$\det(A - \lambda \mathbb{1}) = 0 $$
+
+$$(e^{\beta (J+B)} - \lambda) (e^{\beta (J-B)} - \lambda) - e^{-\beta J} e^{-\beta J} = 0 $$ 
+
+In order to solve for $$\lambda$$, recall some hyperbolic identities,
+
+$$\frac{e^{x} + e^{-x}}{2} = \cosh(x)$$
+
+$$\frac{e^{x} - e^{-x}}{2} = \sinh(x)$$
+
+After some algebra, 
+
+$$\lambda_{1,2} = -e^{\beta B} \cosh(\beta B) \pm \sqrt{ \sinh^{2}({\beta B}) + e^{-4BJ} } $$
+
+We can drop $$\lambda_{2}$$ if we make the case for $$N \rightarrow \infty$$,
+
+$$ Z = \lambda_{1}^{N} + \lambda_{2}^{N} = \lambda_{1}^{N} \bigg( 1 + \frac{\lambda_{2}^{N}}{\lambda_{1}^{N}} \bigg)$$
+
+Since $$\lambda_{1}$$ is the larger eigenvalue and will domininate when $$N$$ is taken to infinity, 
+
+$$ Z \approx \lambda_{1}^{N} $$
+
+## Mean Field Theory (MFT) Approach to 1-D Ising Model
+
+Consider the [Ising model hamiltonian again](#the-ising-model). MFT aims to decouple the spin interaction terms by introducing $$\delta_{s_{i}} \equiv s_{i} + \big< s_{i} \big> $$, in other words, fluctuations about the mean of spin $$s_{i}$$
+
+$$s_{i} =  \big< s_{i} \big> + \delta_{s_{i}} $$
+
+The spin interaction terms can be expanded to include $$\delta_{s_{i}}$$ and $$\delta_{s_{j}}$$, 
+
+$$s_{i} s_{j} = (\big< s_{i} \big> + \delta_{s_{i}}) (\big< s_{j} \big> + \delta_{s_{j}})$$
+
+$$ = \big< s_{i} \big> \big< s_{j} \big> + \big<s_{i} \big> \delta_{s_{j}} + \big< s_{j} \big> \delta_{s_{i}} + \delta_{s_{i}} \delta_{s_{j}}$$.
+
+MFT makes the assumption that fluctuations are small, where,
+
+$$\delta_{s_{i}} \delta_{s_{j}} = 0 $$
+
+By replacing the $$\delta$$'s with spin their definition, the spin interaction can be rewritten as the following approximation,
+
+$$ \big< s_{i} \big> s_{j} + \big< s_{j} \big> s_{i} - \big< s_{i} \big> \big< s_{j} \big> $$ 
+
+given that the system is translationally invariant, let $$\big< s_{i} \big> = m$$.
+
+The spin interaction term is further simplified to, 
+
+$$ s_{i} s_{j} = m (s_{j} + s_{i}) - m^{2} $$
+
+
+
 
 
 
