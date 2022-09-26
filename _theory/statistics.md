@@ -15,6 +15,29 @@ Table of Contents
       * [The Birthday problem](#the-birthday-problem)
 
 
+# Uncertainty Statistics
+
+The measured value is given by: $$x_{m} = x_{avg} \pm \Delta x_{avg}$$
+
+## Uncertainty in a Measurements
+For small data sets:
+
+$$\Delta x = \frac{x_{max}-x_{min}}{2}$$
+
+For large data sets:
+
+$$\Delta x = \sigma = \sqrt{ \frac{\sum_{i=1}^{N} (x_{i} - x_{avg})^{2}}{N} }$$
+
+## Uncertainty in the Mean
+
+For small data sets:
+
+$$\Delta x_{avg} = \frac{\Delta x}{\sqrt{N}}$$
+
+For large data sets:
+
+$$\Delta x_{avg} = \frac{\sigma}{N}$$
+
 ## Binomial Distribution
 For a binomial distribution with parameters $$n$$ and $$p$$ the discrete probability distribution of the number of occurences $$k$$ in an sequence of $$n$$ independent experiments is given by: 
 
