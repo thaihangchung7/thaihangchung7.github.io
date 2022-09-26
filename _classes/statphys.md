@@ -5,6 +5,8 @@ category: notes
 ---
 
 *"My life has consisted in learning and forgetting and learning and forgetting and learning and forgetting statistical mechanics".* - Leonard Susskind 
+
+<!--
 # Laws of Thermodynamics
 
 ## Zeroth Law
@@ -14,6 +16,7 @@ category: notes
 ## Second Law
 
 ## Third Law
+-->
 
 # A Review of Expectation Value
 
@@ -27,7 +30,9 @@ $$ \big< M \big> =  \sum_{i} p_{i} M _{i}$$
 
 The same can be done for quantities such as spin...
 
+<!--
 # Boltzmann Distribution
+-->
 
 # Ensembles
 The purpose of statistical mechanics is to calculate the macrostate properties such as temperature and pressure, without knowing the exact microstate of the system. 
@@ -181,6 +186,64 @@ $$ = \int P(\Omega) H^{2}(\Omega) d\Omega - \bigg(  \int P(\Omega) H(\Omega) d\O
 
 $$ = \frac{\partial^{2} \ln(Z) }{\partial \lambda^{2}_{1}}$$ 
 
+<!--
 ## $$\big< E \big>$$ for an Ideal Gas
+-->
+
+# The Ising Model
+
+Consider a chain of $$N$$ spins with $$S_{i} = \pm 1$$. The hamiltonian accounts for an external magnetic field $$\vec{B}$$ and a spin interaction term a magnitude $$J$$:
+
+$$ H = - \sum_{i=1}^{N} s_{i} \vec{B} - J \sum_{i = 1}^{N} s_{i} s_{i+1} $$
+
+It's difficult to see this *a priori*, but we prepare for a mathematical trick (a transfer matrix) by rewriting one of the spin terms using, 
+
+$$ \sum_{i=1}^{N} s_{i} = \frac{1}{2} \sum_{i=1}^{N} s_{i} + s_{i+1} $$ 
+
+If you stare at the equation long enough, you will understand that the factor of $$\frac{1}{2}$$ shows up to avoid double counting spins. The purpose of doing this is to rewrite the hamiltonian into a sequence of products, which will be helpful in constructing the transfer matrix. 
+
+$$ H = - \sum_{i=1}^{N} \frac{1}{2} (s_{i} + s_{i+1}) \vec{B} - J \sum_{i = 1}^{N} s_{i} s_{i+1} $$
+
+Applying the partition function for discrete systems, 
+
+$$Z = \sum_{\Omega} e^{\beta H(\Omega)}$$ 
+
+the sum over phase space $$\Omega$$ will be for each spin state for $$N$$ particles
+
+$$ Z = \sum_{s_{1}} \sum_{s_{2}} ... \sum_{s_{N}} e^{\beta  \sum_{i=1}^{N} \frac{1}{2} (s_{i} + s_{i+1}) \vec{B} + J \sum_{i = 1}^{N} s_{i} s_{i+1} } $$
+
+rewriting the sum as a product,
+
+$$ Z = \sum_{s_{1}} \sum_{s_{2}} ... \sum_{s_{N}} \prod_{i=1}^{N} e^{\beta \frac{1}{2} (s_{i} + s_{i+1}) \vec{B} + J s_{i} s_{i+1} } $$
+
+To simplify the busy equation, let $$ P_{ij} = e^{\beta \frac{1}{2} (s_{i} + s_{j}) \vec{B} + J s_{i} s_{j} }$$
+
+$$ Z = \sum_{s_{1}} \sum_{s_{2}} ... \sum_{s_{N}} P_{s1s2} P_{s2s3} P_{s3s4} ... P_{sNs1} $$
+
+for $$N$$ particles, it turns out to be the definition of trace for an $$N\times N $$ matrix, 
+
+$$ = \sum_{s_i = \pm 1} P_{s1s1}^{N} = Tr[ P^{N}]$$ 
+
+There will be 4 combinations of $$s_{i}$$, from which we can contruct a $$2\times 2 $$ matrix, 
+
+$$s_{i} = +1, s_{i+1} = +1 \rightarrow \vec{B} + J$$ 
+
+$$s_{i} = +1, s_{i+1} = -1 \rightarrow - J$$ 
+
+$$s_{i} = -1, s_{i+1} = +1 \rightarrow - J$$ 
+
+$$s_{i} = -1, s_{i+1} = -1 \rightarrow - \vec{B} + J$$ 
 
 
+
+
+
+# Some Useful Integrals
+
+Gaussian integrals are all over the place in statistical mechanics (and quantum mechanics). Here are some shortcuts:
+
+$$ \int_{-\infty}^{\infty} e^{-\alpha x^{2}} dx = \sqrt{\frac{\pi}{\alpha}}$$
+
+$$ \int_{-\infty}^{\infty} x e^{-x^{2}} dx = -\frac{1}{2} e^{-x^{2}} \bigg|_{-\infty}^{\infty} = 0 $$
+
+$$ \int_{-\infty}^{\infty} x^{2} e^{-x^{2}} dx = \frac{\sqrt{\pi}}{2}$$
