@@ -122,7 +122,7 @@ to keep the OS on the most stable release.
 
 Before installing ROOT, make sure you have the required dependencies:
 
-In one line for a debian based distributions:
+One liner for debian based distributions:
 
 ```sudo apt-get install dpkg-dev cmake g++ gcc binutils libx11-dev libxpm-dev \
 libxft-dev libxext-dev python libssl-dev```
