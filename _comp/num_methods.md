@@ -97,14 +97,12 @@ max_iter = int(lamb * np.log(sig))
 We normalize the input data in the form of a helper function using sklearn's MinMaxScaler method
 
 ```python
-
-def minmax_scaler(data):
+def normalize(data):
     scaler = MinMaxScaler()
     scaled = scaler.fit_transform(data)
     return scaled
 
-train_x_norm = minmax_scaler(train_x)
-
+norm_x = normalize(data_x)
 ```
 
 We also split the data into training and testing ($$80%$$ for training, and $$20\%$$ for testing)
@@ -123,10 +121,11 @@ Numpy's random seed is used to generate pseudo random numbers from the same seed
 
 ```python
 
-# initialising self-organising map
-num_dims = train_x_norm.shape[1] # numnber of dimensions in the input data
-np.random.seed(40)
-som = np.random.random_sample(size=(num_rows, num_cols, num_dims)) # map construction
+"""Initiating Neuron Grid with random weights"""
+
+num_dims = norm_x.shape[1] 
+np.random.seed(40) #Random seed for debugging
+weights = np.random.random_sample(size=(nx, ny, num_dims)) 
 
 ```
 
@@ -139,44 +138,54 @@ This step just takes the form of multiple for loops as the learning grid travels
 The function below defines the "Best Matching Unit" (BMU) of the the SOM. In other words, this is where the competitive learning takes place. A sample data $$t$$, the input signal, is selected and the euclidean distance is calculated between the input and each neighboring node. The if statement returns and sets the grid position of the node that had the minimum distance computed, which also defines the **winning neuron**.
 
 ```python
-def winning_neuron(data, t, som, ny, nx):
+
+def bmu(data, t, som_grid, ny, nx):
     winner = [0,0]
     shortest_distance = np.sqrt(data.shape[1]) # initialise with max distance
     input_data = data[t]
-    for row in range(num_rows):
-        for col in range(num_cols):
-            distance = e_distance(som[row][col], data[t])
-        if distance < shortest_distance: # return node with minimum distance
-            shortest_distance = distance
-            winner = [row,col]
+    for row in range(ny):
+        for col in range(nx):
+            distance = e_distance(som_grid[row][col], input_data)
+            if distance < shortest_distance: 
+                shortest_distance = distance
+                winner = [row,col]
     return winner
+
 ```
 
 The learning rate is decreased through each iteration of the training based on the learning rate ```R_l```
 
 ```python
-def decay(step, max_steps,max_learning_rate,max_m_dsitance):
-    coefficient = 1.0 - (np.float64(step)/max_steps)
-    learning_rate = coefficient*max_learning_rate
-    neighbourhood_range = ceil(coefficient * max_m_dsitance)
+
+# Learning rate decay and neighbourhood range calculation
+def decay(step, max_steps,max_learning_rate,max_distance):
+    #coefficient = 1.0 - (np.float64(step)/max_steps)
+    coefficient = sig_0 * np.exp(-np.float64(step)/max_distance)
+    #learning_rate = coefficient*max_learning_rate
+    learning_rate = R_l * np.exp(- np.float64(step)/max_learning_rate)
+    neighbourhood_range = ceil(coefficient * max_distance) #????
     return learning_rate, neighbourhood_range
 
 ```
 
+A random input is selected and weights are adjusted based the vector distances, more specifically, ```euclidean``` and ```manhattan``` distances.
 
+The Manhattan distance (more like "staircase distance"), is the distance between two points calculated as the sum of their **fixed** cartesian $$x,y$$ components. 
 
 ```python
-for step in range(max_iter):
-    if (step+1) % 1000 == 0:
-        print("Iteration: ", step+1) # print out the current iteration for every 1k
-    learning_rate, neighbourhood_range = decay(step, max_iter,R_l,sig)
 
-    t = np.random.randint(0,high=train_x_norm.shape[0]) # random index of training data
-    winner = winning_neuron(train_x_norm, t, som, ny, nx)
+for step in range(max_iter):
+    if (step+1) % 10 == 0:
+        print("Iteration: ", step+1) # print out the current iteration for every 1k
+    learning_rate, neighbourhood_range = decay(step, max_iter,R_l,sig_0)
+
+    t = np.random.randint(0,high=norm_x.shape[0]) # random index of training data
+    winner = bmu(norm_x, t, weights, ny, nx)
     for row in range(ny):
         for col in range(nx):
             if m_distance([row,col],winner) <= neighbourhood_range:
-                som[row][col] += learning_rate*(train_x_norm[t]-som[row][col]) #update neighbour's weight
+                weights[row][col] += learning_rate*(norm_x[t]- weights[row][col]) #updating weights of neighborhood nodes
+
 ```
 
 ### 4. Repeat from step 2 increasing $$s$$ while $$s<\lambda$$
