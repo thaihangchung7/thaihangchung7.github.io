@@ -69,6 +69,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  eventmachine
   jekyll
   jekyll-feed
   jekyll-seo-tag
