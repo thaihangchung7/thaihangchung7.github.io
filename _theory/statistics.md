@@ -78,3 +78,7 @@ For some experimental data $$x_{exp}$$ and $$y_{exp}$$, find a function $$y = f(
 $$ \sum_{i} (f(x_{i},\beta) - y_{i})^{2} $$ 
 
 where $$x_{i}$$ and $$y_{i}$$ are the data points.
+
+## $$\chi^{2}$$ Testing
+
+$$ \chi^{2} = \frac{\sum_{i} (y - y)^{2}}{\sigma^{2}} $$
