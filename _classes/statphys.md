@@ -295,7 +295,7 @@ given that the system is translationally invariant, let $$\big< s_{i} \big> = m$
 
 The spin interaction term is further simplified to, 
 
-$$ s_{i} s_{j} = m (s_{j} + s_{i}) - m^{2} $$
+$$ s_{i} s_{j} = m (s_{j} + s_{i}) - m^{2} = m (s_{j} + $$
 
 
 

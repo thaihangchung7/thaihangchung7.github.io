@@ -420,6 +420,74 @@ $$ \Phi(x=a) = \f{1}{4\pi\eo} \bigg[ \f{q}{ a \abs \h{n} - \f{y}{a} \h{n}' \abs 
 
 $$ \Phi(x=a) = \f{1}{4\pi\eo} \bigg[ \f{1}{ \sqrt{x^{2} + y^{2} - 2xy \cos{\gamma} }  } + \f{a/y}{ \sqrt{ x^{2} + (\f{a^{2}}{y})^{2} + 2x\f{a^{2}}{y}\cos{\gamma}} } \bigg]$$ 
 
+## Conducting Sphere in Uniform $$\v{E}$$
+
+<img src="/assets/sphere_uniE.png" class="center">
+
+Consider a conducting sphere of radius $$a$$ in a uniform electric field $$E_{0}$$ provided by placing . 
+two charges $$\pm Q$$ at infinity, located at $$z = \mp R$$.
+
+Before writing down the potential due to the configuration, it may be helpul to examine the separation vectors and apply a Taylor expansion for $$r \ll R$$.
+
+$$ \abs \v{r} - \v{R} \abs^{-1} = \f{1}{\sqrt{r^{2} + R^{2} - 2rR\cos{\theta}}} $$ 
+
+$$ = \f{1}{R \sqrt{1 + r^{2}/R^{2} - \f{2r}{R}\cos{\theta}}} $$ 
+
+Again, based on the conditions of the expansion $$ \f{r}{R} \ll 1$$, 
+
+$$ \approx \f{1}{R} \bigg(1 + \f{r}{R}\cos(\theta) \bigg) $$
+
+# Green Function Potential for a Sphere
+
+Using Green's theorem, the generalized solution for a finite volume $$V$$ with Dirichlet or Neumann boundary conditions bounded by a surface $$S$$ can be written as,
+
+$$ \Phi(\v{x}) = \f{1}{4\pi\eo} \int_{V} \rho(\v{x}') G(\v{x}, \v{x}') d^{3}x' + \f{1}{4\pi} \oint_{S} \bigg[ G(\v{x},\v{x}') \f{\pd \Phi}{\pd n'} - \Phi(\v{x}') \f{\pd G(\v{x}, \v{x}')}{\pd n'} \bigg] da'$$
+
+For a function that takes the form of $$\f{1}{\abs \v{x} - \v{x}' \abs}$$, 
+
+$$\del'^{2} G(\v{x},\v{x}') = -4\pi\delta(\v{x} - \v{x}') $$
+
+where 
+
+$$ G(\v{x},\v{x}') = \f{1}{\abs \v{x} - \v{x}' \abs} + F(\v{x},\v{x}') $$
+
+We can readily apply this to a spherical configurations using the method of images. We can define point $$P$$ with vector $$\v{x}$$ as the point at which the potential is being evaluated, and $$P'$$ with vector $$\v{x}'$$ as the unit source. Not drawn in the figure is an arbritary image charge with a $$\v{x}''$$ component to help with image-boundary conditions. Writing the appropriate Green function,
+
+$$ G(\v{x}, \v{x}') = \f{1}{\abs \v{x} - \v{x}' \abs} + \f{c}{\abs \v{x} - \v{x}'' \abs }$$ 
+
+where $$c$$ is an arbitrary constant that is representative of an image charge such that we can apply a Dirichlet boundary conditions ($$G(\v{x}, \v{x}') = 0$$ on the surface) to obtain the following Green function:
+
+$$ G(\v{x}, \v{x}')= \f{1}{\abs \v{x} - \v{x}' \abs} - \f{a}{ x' \abs \v{x} - \f{a^{2}}{x'^{2}} \v{x}' \abs}$$ 
+
+with $$c = \f{a}{x}$$ and $$\abs \v{x}'' \abs = \f{a^{2}}{x'} $$, whose form should look like the potential in an image problem. Expanding the vectors into their scalars, 
+
+$$ G(\v{x}, \v{x}') = \f{1}{( x^{2} + x'^{2} - 2xx'\cos\gamma  )^{1/2}} - \f{1}{( \f{x^{2} x'^{2}}{a^{2}} + a^{2} - 2xx'\cos\gamma )^{1/2}} $$ 
+
+# Laplace Equation in Rectangular Coordinates
+
+The Laplace equation in rectangular coordinates is written as:
+
+$$ \del^{2} \Phi = \f{\pd^{2} \Phi}{\pd x^{2}} +  \f{\pd^{2} \Phi}{\pd y^{2}} +  \f{\pd^{2} \Phi}{\pd z^{2}} = 0  $$ 
+
+The general solution to the partial differential equation can be found in terms of ordinary differential equations, where the solution is written as a product of three functions.
+
+$$ \Phi(x,y,z) = X(x) Y(y) Z(z) $$
+
+substituting $$\Phi$$ into the Laplace equation and dividing through by $$XYZ$$, 
+
+$$ \f{1}{X} \f{d^{2} X}{d x^{2}} +  \f{1}{Y} \f{d^{2} Y}{d y^{2}} +  \f{1}{Z} \f{d^{2} Z}{d z^{2}} = 0 $$ 
+
+Now that the equation is in terms of total derivatives since each function involves its respective variable, the next thing to do is to each term a constant since each term holds arbitrary values for each independent coordinate.
+
+$$ \f{1}{X} \f{d^{2} X}{d x^{2}} + \alpha^{2} = 0 $$
+
+$$ \f{1}{Y} \f{d^{2} Y}{d y^{2}} + \beta^{2} = 0 $$ 
+
+$$ \f{1}{Z} \f{d^{2} Z}{d z^{2}} - \gamma^{2} = 0 $$ 
+
+Where $$\gamma^{2} = \alpha^{2} + \beta^{2} $$ Since we know what to expect for the solutions of the differential equations, the choice of positive $$\alpha$$ and $$\beta$$ values provide a large class of solutions to the Laplace equation.
+
+$$\Phi = e^{\pm i \alpha x} e^{\pm i \beta y} e^{\pm \sqrt{\alpha^{2} + \beta^{2} } }$$  
 
 
 <!---
@@ -450,8 +518,10 @@ $$ \del^{2} \Phi_{a}(\v{x}) = - \f{1}{\eo} (1 + O(a^{2}/ R^{2})) + O(a^{2}, a^{2
 $$ \del^{2} (\f{1}{r}) = -4 \pi \delta(\v{x})$$ 
 
 $$ \del^{2} \bigg( \f{1}{\sepx} \bigg) = -4 \pi \delta( \sepx) $$ 
+-->
 
-# Equations for Section 1.8 
+
+# (Green's Functions) Equations for Section 1.8 
 
 $$ \int_{V} \del \cdot \v{A} d^{3} x = \oint_{S} \v{A} \cdot \v{n} da $$
 
@@ -467,7 +537,174 @@ $$ \int_{x} \bigg[ -4 \pi \Phi(\v{x'}) \delta(\v{x} - \v{x'}) + \f{1}{\eo R} \rh
 
 $$ \Phi(\v{x}) = \emk \int_{V} \f{\rho(\v{x'})}{R} d^{3}x' + \f{1}{4\pi} \oint_{S} \bigg[ \f{1}{R} \f{\pd \Phi}{\pd n'} \bigg( \f{1}{R} \bigg) \bigg] da' $$
 
--->
+# Spherical Symmetric Boundary-Value Problems 
+
+The Laplacian in terms of radial coordinates is written as:
+
+$$ \f{1}{r^{2}} \f{\pd}{\pd r} \bigg( r^{2} \f{\pd \Phi}{\pd r} \bigg) + \f{1}{r^{2} \sin\theta} \f{\pd }{\pd \theta} \bigg( \sin\theta \f{\pd \Phi}{\pd \theta} \bigg) + \f{1}{r^{2} \sin^{2}\theta} \f{\pd^{2} \Phi}{\pd \phi^{2}} = 0 $$
+
+where the potential is assumed to be of the form:
+
+$$ \Phi = \frac{U(r)}{r} P(\theta) Q(\phi)$$
+
+# Multipole Expansion
+
+Consider an electric dipole that consists of two equal and opposite charges seperated by some distance, $$\pm q$$ and $$d$$ respectively. 
+
+The dipole vector is defined as,
+
+$$ \v{p} = q \v{d}$$
+
+The two seperation vectors for the charges can be expanded into their scalar forms,
+
+$$ \v{r}_{+} = \v{r} - \f{d}{2} = (r^{2} + \f{d^{2}}{4} - \v{r} \cdot \v{d})^{1/2}$$ 
+
+$$ \v{r}_{-} = \v{r} + \f{d}{2} =  (r^{2} + \f{d^{2}}{4} + \v{r} \cdot \v{d})^{1/2} $$
+
+where $$\v{r} \cdot \v{d} = r d \cos(\gamma)$$.
+
+## Multipole Moments
+
+The potential in terms of multipole moments, $$q_{lm}$$, and spherical harmonics, $$Y_{lm} (\theta, \phi) $$, is 
+
+$$ \Phi(r, \theta, \phi) = \f{1}{4\pi\eo} \sum_{l=0}^{\infty} \sum_{m=-l}^{+l} \f{4\pi}{2l+1} \f{Y(\theta,\phi)}{r^{l+1}}$$
+
+We can map these this multipole potential to the Coulomb potential, 
+
+$$ \Phi(\v{r}) = \f{1}{4\pi\eo} \int \f{\rho(\v{r'})}{\abs \v{r} - \v{r'} \abs} d^{3}\v{r'}$$
+
+where the seperation term can be expanded in terms of its spherical harmonics (which are a complete orthonormal set),
+
+$$ \f{1}{\abs \v{r} - \v{r'} \abs} = 4\pi \sum_{l=0}^{\infty} \sum_{l=-m}^{+m} \f{1}{2l+1} \f{r^{l}_{>}}{r^{l+1}_{<}} Y^{*}(\theta', \phi') Y(\theta,\phi)$$
+ 
+plugging the $$ 1/ \abs \v{r} - \v{r'} \abs $$ expansion into the potential derived from Gauss' law,
+
+$$ \f{1}{\eo} \sum_{l,m} \f{1}{2l+1} \bigg[ \int Y^{*}_{lm} (\theta', \phi') r^{'l} \rho (\v{r'}) d^{3} \v{r'} \bigg] \f{Y_{lm}(\theta, \phi)}{r^{l+1}} $$
+
+where the multipole moments are contained in the term,
+
+$$q_{lm} = \int Y^{*}_{lm} (\theta', \phi') r^{'l} \rho (\v{r'}) d^{3} \v{r'} $$ 
+
+which can be evaluated from a given charge distribution $$\rho(\v{r'})$$. For example, the monopole moment, for $$l=0$$,
+
+$$q_{00} = \f{1}{\sqrt{4\pi}} \int \rho(\v{r'}) d^{3} \v{r'} = \f{q}{\sqrt{4\pi}}$$
+
+The dipole moment is the next term in the expansion, where $$l=1$$. Note that there are indicies $$m$$ that will provide the three component $$x,y,z$$ terms of the dipole,
+
+$$ q_{11} = - \sqrt{\f{3}{8\pi}} \int (x' - 'y') \rho(\v{r'}) d^{3}\v{r'} = -\sqrt{\f{3}{8\pi}} (P_{x} - 'P{y})$$
+
+$$ q_{10} = \sqrt{\f{3}{4\pi}} \int z' \rho(\v{r'}) d^{3} r' = \sqrt{\f{3}{4\pi}} P_{z} $$
+
+where the physical interpretation of the dipole moment is, 
+
+$$ \v{P} = \int \v{r'} \rho(\v{r'}) d^{3} \v{r'} $$
+
+Usually, these multipole moments can be further expanded, but generally, it is enough to stop at $$l=2$$, the quadrupole terms. 
+
+# Magnetostatics
+
+Many of the magnetostatics naturally take the form of electrostatics equations, for instance both the divergence and curl can be written as:
+
+$$ \del \cdot \v{B} = 0 $$
+
+If a moving charge density, \v{J}, is present,
+
+$$ \del \times \v{B} = \mu \v{J} $$
+
+where the current, $$I$$ is,
+
+$$ I = \int \v{J} \cdot \h{n} da$$
+
+We can convert these into integral form and arrive at Ampere's law, where $$ \del \times \v{B} $$ becomes,
+
+$$ \oint \v{B} \cdot dl = \mu_{0} \int_{S} \v{J} \cdot da = \mu_{0} I_{enc} $$
+
+This looks similar to gauss's law for an enclosed charge $$Q_{enc}$$
+
+## Straight long wire with current $$I$$ 
+
+Consider a long straight wire carry a current $$I$$. Much like a Gaussian surface, we draw an Amperian loop around the wire such that we exploit the symmetry of the wire. This allows us to move $$\v{B}$$ out of the integral since it is a constant. 
+
+$$ \oint_{C} \v{B} \times dl = B \int dl = B (2\pi r) = \mu_{0} I $$
+
+$$ \v{B} = \f{mu_{0} I }{2 \pi r} \h{\phi}$$
+
+## Magnetic potentials 
+Recall the potentials in electro statics. The curl, $$\del \times \v{E}=0$$ is related to a scalar potential $$\v{E} = -\del\Phi$$. 
+
+However, for magnetostatics, the potential takes the form of a **vector** potential, where the divergence is,
+
+$$\del \cdot \v{B} = 0$$
+
+with
+
+$$\v{B} = \del \times \v{A}$$ 
+
+# Biot-Savart Law
+
+Consider a current going through a loop with an induced magnetic field $$\v{B}$$ 
+
+$$ d\v{B} = k I \f{d\v{l} \times \v{x} }{ \abs \v{x} \abs^{3}}$$
+
+$$ \v{B} = k \int I \f{(d\v{l} \times \v{x})}{\abs \v{x} \abs^{3}} $$ 
+
+where $$k = \f{\mu_{0}}{4\pi} = 10^{-7} \f{N}{A^{2}}$$
+
+For a long straight wire, 
+
+$$ d\v{l} \times \v{x} = dl x \sin\theta $$
+
+$$ = dlx(\f{R}{x}) = dl R$$ 
+
+$$ \v{B} = \f{\mu_{0} I R}{4\pi} \int_{-\infty}^{\infty} \f{dl}{(R^{2} + l^{2})^{3/2}}  = 2/R^{2}$$
+
+$$ \v{B} = \f{\mu_{0} I}{2\pi R^{2}}$$
+
+# Lorentz Force calculations on current due to $$\v{B}$$ 
+
+$$d\v{F} = dq (\v{v} \times \v{B}) = I (d\v{l} \times \v{B}) $$
+
+There are three ways to integrate for the force, 
+
+Using a standard differential line integral,
+
+$$\v{F} = \int I (d\v{l} \times \v{B})$$
+
+Using surface current, $$\v{K}$$, in units of $$A/m$$,
+
+$$\v{F} = \int da (\v{K} \times \v{B})$$ 
+
+and using current density, $$\v{J}$$, in units of $$A/m^{2}$$
+
+For two long parallel wires, we can calculate a force per unit length, 
+
+$$ \f{d\v{F}}{dl} = \f{\mu_{0}}{2\pi} \f{I_{1} I_{2}}{d} $$
+
+The equation above should look familiar. It's essentially Coulomb's law put in terms of current.
+
+## Parallels Between $$\v{B}$$ and $$\v{E}$$ Equations
+
+The scalar potentials and associated fields for $$\v{B}$$ and $$\v{E}$$ are the same integrals over the seperation vector, $$1/(\v{x} - \v{x'})$$. The difference between the two is the "density" that the integral is calculated over. To elaborate, $$\v{B}$$ integrals will be a function of the **current** density $$\v{J}$$ whereas $$\v{E}$$ will be an integral over the the **charge** density $$\rho$$.
+
+The vector potential, $$\v{A}$$, is evaluated as
+
+$$\v{A}(\v{x}) = \f{\mu_{0}}{4\pi} \int \f{\v{J}(\v{x})}{\abs \v{x} - \v{x'} \abs^{3}}d^{3}\v{x'}$$ 
+
+and the magnetic field, $$\v{B}$$,
+
+$$\v{B}(\v{x}) = \f{\mu_{0}}{4\pi} \int \v{J}(\v{x}) \times \f{(\v{x} - \v{x'})} {\abs \v{x} - \v{x'} \abs^{3}}d^{3}\v{x'}$$ 
+
+Due to gauge invariance, the gradient to a scalar can be added to $$A$$ without changing $$B$$. Let $$\v{A'} = \v{A} + \del \Omega$$, where $$\v{A'}$$ is a modified vector potential,
+
+$$\v{B'} = \del \times \v{A'} = \del \times \v{A} + \del \times \del \Omega = \del \times \v{A} = \v{B}$$
+
+The reason why this works is because taking the curl of the gradient of the potential yields, $$\del \times \del \Omega = 0$$.
+
+(**Helmholtz Theorem**) In order to fully define any vector field, the curl, $$\del \times \v{A}$$, and the divergence, $$\del \cdot \v{A}$$, need to be fully specified.  
+
+For instance, the Coulomb gauge specifies that $$\del \cdot \v{A} = 0$$
+
+
 
 ## Deriving Current Density $$ J $$ 
 
@@ -636,61 +873,77 @@ $$ \delta(kx) = \f{1}{ \abs k \abs} \delta(x) $$
 
 + $$\int_{-\infty}^{+\infty} g(x) \delta(f(x)) dx = \sum_{i} \f{g(x)}{\abs \f{df}{dx} \abs} \bigg|_{f(x_{i})}$$
 
+---
 
-# Lasers (pew pew)
+# Equation Summary
 
-## Photon Absorption and Emission
-Due to quantum mechanics, electrons are found in discrete energy levels, or "positions" in orbitals. Atoms exchange energy via absorption, spontaneous emission, and stimulated emission. To paraphrase Einstein: A boson can stimulate or induce another boson into the same quantum state causing an even like atomic transition. 
+## Coulomb's Law
 
-+ Absorption: Just as it sounds, a photon is absorbed, bumping an electron into a higher energy state.
+$$ \v{F} = \emk \f{q_{1} q_{2}}{r^{2}} $$ 
 
-+ Spontaneous Emission: An excited electron is inherently unstable in its higher energy state and will drop to a lower energy state, spontaneously releasing a photon. 
+## Lorentz Force
 
-+ Stimulated Emission: One incoming photon with a specfic frequency interacts with an excited electron dropping it to a lower energy state. Subsequently, two photons with identical properties are released. Such properties include phase, frequency, polarization. The emitted photons are _coherent_ and _monochromatic_.   
+$$ \v{F} = q (\v{E} + \v{v} \times \v{B}) $$
 
-Max Planck's radiation law states that when a oscillator changes from energy state $$ E_{2} $$ to a lower energy state $$ E_{1} $$, a photon with energy $$ \Delta E = E_{2} - E_{1} = h \nu $$ is emitted.
+## Maxwell's Equations
 
-## Boltzmann Distribution
+$$ \del \cdot \v{E} = \f{\rho}{\eo} $$
 
-The Boltzmann Distribution is given by:
+$$ \del \times \v{B} - \f{1}{c^{2}} \f{\pd \v{E}}{\pd t} = \mu \v{J} $$
 
-$$ P_{i} = P_{0} e^{- \Delta E / k_{B} T } $$
+$$ \del \times \v{E} + \f{\pd \v{B}}{\pd t} = 0 $$ 
 
+$$ \del \cdot \v{B} = 0 $$ 
 
-Where $$ P_{0} $$ is the ground state probability, $$ \Delta E = E_{i} - E_{0} $$, $$ k_{B} $$ is the Boltzmann constant, and $$ T $$ is temperature.
+## Divergence Theorem 
 
-In thermal equilibrium, the Boltzmann distribution states that when there are more atoms in the ground state than the excited state, the probability of absorption is much higher than emission. If there are more excited states then the process of stimulated emission is more likely, and under the right conditions, a single input photon can result in a cascade of photons, "amplifying" the input photon.
+$$ \oint_{S} \v{A} \cdot \h{n} da = \int_{V} \del \cdot \v{A} d^{3} x $$
 
-## Principle Components
+## Gauss's Law & Total Charge
 
-A laser requires three major components:
+$$ \oint \v{E} \cdot \h{n} da = \f{1}{\eo} \int_{V} \rho(\v{x'}) d^{3} x $$
 
-1) Gain meduim (gas,solid,liquid dye or semiconductor)
+$$ Q_{tot} = \int \rho(\v{x'}) d^{3} \v{x'} $$ 
 
-2) Pump source (electric discharge, flashlamp, laser diode)
+## Solid angle 
 
-3) Feedback system (crystal oscillator)
+$$d\Omega = \sin(\theta) d\theta d\phi$$
 
-Lasing mediums contain at least three energy levels, $$ E_{1} $$, $$ E_{2} $$, and $$ E_{3} $$. Each level are purposed as follows:
+## Poisson & Laplace Equations
 
-+ $$ E_{1} $$: A ground state
+Charge distribution:
 
-+ $$ E_{2} $$: An metastable (intermediate) state, with a relatively long lifetime $$t_{s}$$
+$$ \del^{2} \Phi = -\f{\rho}{\eo} $$
 
-+ $$ E_{3} $$: A high energy pump state
+Conducting Boundary conditions:
 
-## Three Level Laser System
+$$ \del^{2} \Phi = 0 $$ 
 
-All atoms of the laser material are initially in their ground state, $$ E_{1} $$. The pump radiation exictes the ground state atoms to a short lived pump state with energy $$ E_{3} $$. Atoms undergo a radiationless transition to a metastable state with energy $$ E_{2} $$.
+## Scalar Potential and Voltage
 
-To obtain population inversion, $$ t_{s} > t_{3} $$, where $$ t_{3} $$ is the lifetime of the high energy pump state.
+$$\Phi(\v{x}) = \emk \int \f{\rho(\v{x'})}{\abs \v{x} - \v{x'} \abs} d^{3} x $$
 
+$$ V = \Phi_{+} - \Phi_{-} = - \int_{a}^{b} \v{E} \cdot d\v{l} $$ 
+
+## Point charge Laplacian
+
+$$ \del^{2} \bigg( \f{1}{\abs \v{x} - \v{x'} \abs} \bigg) = 4 \pi \delta ( \v{x} - \v{x'} ) $$ 
+
+## Radial Laplacian
+
+$$ \f{1}{r^{2}} \f{\pd}{\pd r} \bigg( r^{2} \f{\pd \Phi}{\pd r} \bigg) + \f{1}{r^{2} \sin\theta} \f{\pd }{\pd \theta} \bigg( \sin\theta \f{\pd \Phi}{\pd \theta} \bigg) + \f{1}{r^{2} \sin^{2}\theta} \f{\pd^{2} \Phi}{\pd \phi^{2}} = -\f{\rho}{\eo} $$
+
+## Capacitance Relationships
+
+$$ Q_{j} = \sum_{j=1}^{n} C_{ij} V_{j} $$
+
+$$ W = \f{1}{2} Q V = \f{1}{2} C V^{2} $$ 
 
 
 # References
 
 + Classical Electrodynamics, J.D. Jackson 
 
-+ Introduction to Electrodynamics, D.J. Griffiths
++ Introduction to Electrodynamics, D.J. Griffith
 
 + [maxwells-equations.com/equations/wave.php](EM wave equation)

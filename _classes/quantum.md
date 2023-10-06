@@ -17,12 +17,41 @@ $$\newcommand{\>}{\rangle}$$
 $$\newcommand{\eo}{\epsilon_{0}}$$
 $$\newcommand{\hb}{\hbar}$$
 $$\newcommand{\pd}{\partial}$$
+$$\newcommand{\h}{\hat}$$
+$$\newcommand{\ket}[1]{\lvert #1 \rangle}$$
+# Postulates
+
+## 1st Postulate
+
+The state of a quantum mechanical system is described by a wavefunction $$\Psi(\v{r},t)$$, which is mathematically interpreted as a state vector $$\ket{\Psi}$$ that belongs to a state space called the Hilbert space and is a function of position $$\v{r}$$ and time $$t$$. For an isolated system, the probability of finding the particle somewhere must be equal to one. 
+
+$$ \int_{-\infty}^{+\infty} \Psi^{*}(\v{r},t) \Psi(\v{r},t) d\tau = 1$$
+
+The term $$\Psi^{*}(\v{r},t) \Psi(\v{r},t) d\tau$$ defines the probability of finding the particle in volume $$d\tau$$ at $$\v{r}$$ and $$t$$. 
+
+## 2nd Postulate
+
+Physical observables are represented as operators in quantum mechanics. Operators have the property of being linear and Hermitian. In other words, a physical quantity $$A$$ is described by a Hermitian operator $$\h{A}$$ acting in state space $$H$$, forming a basis for $$H$$. The result of measuring $$A$$ results in  
+## 3rd Postulate
+
+$$\h{A}\Psi = a\Psi $$ 
+
+$$ \Psi = \sum_{i = 1}^{n} c_{i} \Psi_{i} $$
+
+## 4th Postulate
+
+$$ \< \h{A} \> = \int_{-\infty}^{+\infty} \Psi^{*} \h{A} \Psi d\tau$$ 
+
+## 5th Postulate
+The wavefunction or state function evolves in time according to the time independent Schrodinger equation:
+
+$$ i\hbar \f{\pd \Psi}{\pd t} = \h{H} \Psi$$
 
 # Time Independent Schrodinger Equation
 
 For a given **potential energy function** $$V(x,t)$$, the Schrodinger equation, independent of $$t$$ is written as:
 
-$$i \hb = - \f{\hb^{2}}{2m} \f{\pd^{2} \Psi}{\pd x^{2} } + V \Psi  $$
+$$i \hb \f{\pd \Psi}{\pd t} = - \f{\hb^{2}}{2m} \f{\pd^{2} \Psi}{\pd x^{2} } + V \Psi  $$
 
 
 # Infinite Square Well
@@ -106,7 +135,7 @@ Using u-subsitution, let $$u=2k_{n} x$$, where $$du = 2k_{n} dx $$,
 
 $$ \abs A \abs^{2} \bigg[ \f{x}{2} \bigg|_{0}^{a} - \int_{0}^{a} \f{\cos{u}}{2} \f{du}{2} \bigg] = 1$$ 
 
-$$ \abs A \abs^{2} \bigg[ \f{x}{a} - \f{\sin{2k_{n} x}}{4k} \bigg]_{0}^{a} = 1$$
+$$ \abs A \abs^{2} \bigg[ \f{x}{2} - \f{\sin{2k_{n} x}}{4k} \bigg]_{0}^{a} = 1$$
 
 Now it is important to recall that $$k= \f{n \pi}{a}$$. $$k$$ is restricted by $$n = 1,2,3,...$$ and for this reason, the $$\sin2kx$$ term is zero at all values of $$n$$. Now simply solving for $$A$$ will yield the magnitude of $$A$$, picking the positive solution.
 
@@ -145,7 +174,129 @@ $$ \int \psi_{m} (x)^{*} \psi_{n}(x) dx =  \f{2}{a} \int_{0}^{a} \sin{\bigg( \f{
 
 > $$\int \psi_{m} (x)^{*} \psi_{n}(x) dx = \delta_{mn} $$ 
 
+# Quantum Fluxes
+
+Many of the following derivations are rooted in the continuity equation,
+
+$$ \frac{\pd \rho_{P}}{\pd t} + \del \cdot \v{J}_{P} = 0 $$
+
+$$ \frac{\pd \rho_{M}}{\pd t} + \del \v{J}_{M} = 0 $$
+
+$$ \frac{\pd \rho_{E}}{\pd t} + \del \v{J}_{E} = 0 $$
+
+where $$P$$, $$M$$, and $$E$$ represent probability, momentum, and energy currents. 
+
+Before deriving flux quantities, it will be useful to mention the following relationships and identities:
+
+$$ \frac{\pd \psi}{\pd t} = \f{1}{i\hbar} \bigg[ -\f{\hbar^{2}}{2m} \del^{2} \psi + V \psi \bigg] $$
+
+The complex conjugate of $$\frac{\pd \psi}{\pd t}$$ is simply,
+
+$$ \frac{\pd \psi^{*}}{\pd t} = \f{1}{i\hbar} \bigg[ -\f{\hbar^{2}}{2m} \del^{2} \psi^{*} + V \psi^{*} \bigg] $$
+
+Moreover, the two operator identities that will be of use,
+
+$$ \del \cdot (\psi^{*} \del \psi) = \del \psi^{*} \cdot \del \psi - \psi^{*} \cdot \del^{2} \psi $$ 
+
+$$ \del \cdot (\psi \del\psi^{*}) = \del \psi \cdot \del \psi^{*} - \psi \cdot \del^{2}  \psi^{*}$$ 
+
+Lastly, we define the "density", $$\rho$$, with units of "amount per unit volume" as,
+
+$$ \rho = \psi^{*} \psi$$ 
+
+## Probability Flux
+
+The probability density given as,
+
+$$ \rho_{P} (\v{r}, t) = \psi^{*}(\v{r},t) \psi(\v{r},t)$$
+
+take the partial with respect to time,
+
+$$ \f{\pd \rho_{P}}{\pd t} = \bigg( \f{\pd \psi^{*}}{\pd t} \bigg) \psi + \psi^{*} \bigg( \f{\pd \psi }{\pd t} \bigg) $$
+
+we plug the expressions of $$ \f{\pd \psi}{\pd t} $$ and its complex conjugate defined above into the equation,
+
+$$ \f{\pd \rho_{P}}{\pd t} = \f{\pd \psi^{*}\psi}{\pd t} =  \f{1}{i\hbar} \bigg[ -\f{\hbar^{2}}{2m} \del^{2} \psi^{*} + V \psi^{*} \bigg] \psi +  \f{1}{i\hbar} \bigg[ -\f{\hbar^{2}}{2m} \del^{2} \psi + V \psi \bigg] \psi^{*}$$ 
+
+$$ = -\f{\hbar}{2mi} (\del^{2} \psi) \psi^{*} + V \psi \psi^{*} + \f{\hbar}{2mi} (\del^{2} \psi^{*} ) \psi - V \psi^{*} \psi $$
+
+$$ = -\f{\hbar}{2mi} \bigg( (\del^{2} \psi )\psi^{*} + (\del^{2} \psi^{*} )\psi \bigg) $$
+
+$$ \f{\pd \rho_{P}}{\pd t} = -\f{\hbar}{2mi} \del \bigg( (\del \psi )\psi^{*} + (\del \psi^{*} )\psi \bigg) $$
+
+Now that we have an expression for $$ \f{\pd \rho_{P}}{\pd t} $$, we can apply the continuity equation, which is also a statement of conservation, 
+
+$$ \f{\pd \rho_{P}}{\pd t} + \f{\hbar}{2mi} \del \bigg( (\del \psi )\psi^{*} + (\del \psi^{*} )\psi \bigg) = 0 $$
+
+Thus, the second term in the right hand side of the equation tells us that the probability current is,
+
+$$ \v{J}_{P} = \f{\hbar}{2mi} \bigg( (\del \psi )\psi^{*} + (\del \psi^{*} )\psi \bigg) $$ 
+
+## Momentum Current 
+
+In a similiar fashion, we can also derive the "momentum current", $$j_{M}$$, given a momentum density, 
+
+$$\rho_{M} (\v{r}, t) = \Re{ (\psi^{*} (\v{r},t) \h{p} \psi(\v{r},t) )}$$ 
+
+Again, we take the partial derivative with respect to time, 
+
+$$ \f{\pd \rho_{M}}{\pd t} = \bigg( \f{\pd \psi^{*}}{\pd t} \bigg) \h{p} \psi +  \psi^{*} \h{p} \bigg( \f{\pd \psi }{\pd t} \bigg) $$
+
+where the momentum operator is $$ \h{p} = -i \hbar \del $$.
+
+We substitute the definitions of $$\f{\pd \psi^{*}}{\pd t}$$ and $$ \f{\pd \psi}{\pd t} $$ from above. Keep in mind that we are only considering the real component of the entire expression (the momentum operator happens to be complex).
+
+$$ = \Re \biggl\{ \f{1}{i\hbar} \bigg[-\f{\hbar^{2}}{2m} \del^{2} \psi^{*} \h{p} \psi + V \psi^{*} \h{p} \psi \bigg] \biggr\} + \Re \biggl\{ \f{1}{i\hbar} \bigg[ -\f{\hbar^{2}}{2m} \psi^{*} \h{p} \del^{2} \psi + \psi^{*} \h{p} V \psi \bigg] \biggr\}$$
+
+substituting the definition of the momentum operator, 
+
+$$ \f{\pd \rho_{M}}{\pd t} = \Re \biggl\{  \f{\hbar^{2}}{2m} \del^{2} \psi^{*} \del \psi - i\hbar V \psi^{*} \del \psi + \f{\hbar^{2}}{2m} \psi^{*} \del(\del^{2} \psi) - i\hbar \psi^{*} \del V \psi \biggr\}  $$
+
+and grouping terms involving potential together,
+
+$$ = \Re \biggl\{  \f{\hbar^{2}}{2m} \bigg( \del^{2} \psi^{*} \del \psi + \psi^{*} \del (\del^{2} \psi ) \bigg) - \bigg( i \hbar ( V \psi^{*} \del \psi + \psi^{*} \del (V \psi) ) \bigg) \biggr\} $$
+
+Again, we apply the continuity equation,
+
+$$ \f{\pd \rho_{M}}{\pd t} + \f{\hbar^{2}}{2m} \bigg( \del^{2} \psi^{*} \del \psi + \psi^{*} \del (\del^{2} \psi ) \bigg) = V \psi^{*} \del \psi + \psi^{*} \del (V\psi) $$
+
+This introduces a source potential, 
+
+$$ - \rho_{P} \del V = V \psi^{*} \del \psi + \psi^{*} \del (V\psi) $$
+
+The continuity equation for momentum takes the form of a momentum conservation law,
+
+$$ \f{\pd \rho_{M}}{\pd t} + \f{\hbar^{2}}{2m} \del \bigg( \del \psi^{*} \del \psi + \psi^{*} (\del^{2} \psi ) \bigg) =  - \rho_{P} \del V  $$
 
 
+From here, we find that the momentum current is,
 
+$$ j_{M} = \f{\hbar^{2}}{2m} \bigg( \del \psi^{*} \del \psi + \psi^{*} \del^{2} \psi \bigg) $$ 
 
+## Energy Current
+  
+Energy desnity is given by:
+
+$$ \rho_{E} (\v{r}, t) = \Re (\psi^{*} (\v{r}, t) \h{H} \psi (\v{r}, t)) $$
+
+Much like the taking the time derivative of the energy density, $$ \rho_{E} $$, with the Hamiltonian operator gives
+
+$$ \f{\pd \rho_{M}}{\pd t} = \bigg( \f{\pd \psi^{*}}{\pd t} \bigg) \h{H} \psi +  \psi^{*} \h{H} \bigg( \f{\pd \psi }{\pd t} \bigg) $$
+
+The Hamiltonian when operating on a wavefunction is, 
+
+$$ \h{H} = i \hbar \f{\pd \psi}{\pd t} $$
+
+plugging $$ \f{\pd \psi}{\pd t} $$ and $$\f{\pd \psi^{*}}{\pd t}$$ terms,
+
+$$ = \Re \biggl\{ \f{1}{i\hbar} \bigg[-\f{\hbar^{2}}{2m} \del^{2} \psi^{*} \h{H} \psi + V \psi^{*} \h{H} \psi \bigg] \biggr\} + \Re \biggl\{ \f{1}{i\hbar} \bigg[ -\f{\hbar^{2}}{2m} \psi^{*} \h{H} \del^{2} \psi + \psi^{*} \h{H} V \psi \bigg] \biggr\}$$
+
+Applying the definition of the Hamiltonian,
+
+$$ = \Re \biggl\{ \f{1}{i\hbar} \bigg[-\f{\hbar^{2}}{2m} \del^{2} \psi^{*} i\hbar\f{\pd \psi}{\pd t}+ V \psi^{*} i\hbar \f{\pd \psi}{\pd t} \bigg] \biggr\} + \Re \biggl\{ \f{1}{i\hbar} \bigg[ -\f{\hbar^{2}}{2m} \psi^{*} i\hbar\f{\pd}{\pd t} \del^{2} \psi + \psi^{*} i\hbar \f{\pd}{\pd t} V \psi \bigg] \biggr\}$$
+
+Rearranging for terms involving potentials,
+
+$$ = -\f{\hbar^{2}}{2m} \bigg[ \psi^{*} \del^{2} \f{\pd \psi}{\pd t} - \f{\pd \psi}{\pd t} \del^{2} \psi^{*} \bigg] + \bigg[ V \psi^{*} \frac{\pd \psi}{\pd t} + \psi^{*} V \f{\pd \psi}{\pd t} \bigg] $$
+
+$$ \v{j}_{E} = \f{\hbar^{2}}{2m} \Re \biggl\{ \psi^{*} \del \bigg( \f{\pd \psi}{\pd t}\bigg) - \f{\pd \psi}{\pd t} \del \psi^{*} \biggr\} $$ 
