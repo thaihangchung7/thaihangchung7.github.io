@@ -276,7 +276,6 @@ $$ \sigma = \frac{N e^{2} \tau}{m}$$
 
 This equation for conductivity, which is now written in terms of the number of free electrons, $$N$$, and relaxation time, $$\tau$$, reveals that the conductivity is proportional to both variables. 
 
-
 ## Electron Mobility
 
 There are a few ways to describe electron mobility, all of these decribe how an electron moves through a medium:
@@ -297,6 +296,11 @@ It is also useful to describe **conductivity** as it is proportional to the prod
 
 $$ \sigma = N \mu e $$ 
 
+# Thermal Properties of Materials
+
+## Dispersion Relation E(k) 
+
+$$ E = \frac{\hbar^{2}}{2m} k^{2} $$
 
 
 
@@ -363,11 +367,10 @@ Sn & 0.08 eV \\ \hline
 C & 5.48 eV \\ \hline  \end{array}
 $$
 
-## Dispersion Relation E(k) 
-
-$$ E = \frac{\hbar^{2}}{2m} k^{2} $$
-
 ## Effective Mass
+
+In the presence of an electric field, $$\vec{E}$$, electrons in near the Fermi energy ($$E_F$$) experience a force $$F_{external} = e \vec{E}$$. Newton's second law of motion suggests that the acceleration is $$a = F_{external}/m_{e}$$. However, in condensed matter, internal forces on the electrons need to be considered due to the interations with other fermionic (or identical) particles in a periodic lattice. Usually written as a fraction of $$m_{e}$$, the, the effective mass is denoted as $$m^{*}$$ is a "quasi-mass" so-to-speak used to reconcile the electron's distinct motion (relative to vacuum motion) in a material.
+
 Consider the following parabolic $$E(k)$$ band diagram below:
 
 <img src="/assets/E-g_diagram.png" class='center'>
@@ -413,6 +416,83 @@ $$ m^{*} = \hbar^{2} \bigg(\frac{d^{2}E}{dk^{2}} \bigg)^{-1} $$
 <img src='/assets/effective_mass.png' class='center'>
 
 Looking back at the $$E(k)$$ diagram reveals that the effective mass, $$m^{*}$$ represents the curvature of the band diagram. Note that near Brillouin zone centers, $$m^{*}$$ is positive and small, increasing for larger values of $$k$$. 
+
+As stated at the beginning of this section, these internal forces can be treated as scattering within a lattice which affect the mobility of an electron. Much like the $$F=ma$$ result derived earlier, the electron's effective mass is inversely proportional to it's mobility. Written in terms of scattering time and effective mass,
+
+$$\mu = \frac{e \tau_{s}}{m^{*}}$$
+
+# Lattice Dynamics and Thermal Properties
+
+When atomic lattices are subject to vibrations (i.e. thermal energy), the coupled motion can be well represented by a quantum harmonic oscillator. To quickly recap some important features of quantum harmonic oscillator, the Schrodinger takes the form:
+
+$$ \frac{\partial^{2} \psi}{\partial x^{2}} + \frac{2M}{\hbar^{2}} \bigg( E - \frac{1}{2} \beta x^{2} \bigg) $$
+
+where the spring potential, and its constant $$\beta$$, is
+
+$$V(x) = \frac{1}{2}  \beta x^{2} $$
+
+Of course, the important solution the the Schrodinger equation yields quantized energies equally seperated by $$\hbar \omega$$, $$E_{n}$$:
+
+$$ E_{n} = \bigg( n + \frac{1}{2} \bigg) \hbar \omega$$
+
+## Phonons
+
+The coupled vibrations in a lattice can be represented by a $$1-D$$ lattice of $$N$$ atoms with interatomic spacing $$a$$. This string of atoms are subject to **longitudinal** and **transveral** modes of oscillation, displaced a distance $$u_{r}$$. Wave mechanics tells us that a traveling wave along $$x$$ is,
+
+$$u_{r} = A e^{i(kx_{r} - \omega t)}$$
+
+where $$k$$ is the wavevector and $$A$$ is the amplitude. These excitations in the lattice can be represented by a quasi-particle, a **phonon**. Due to its wave characteristics allows us to define several its quantities such as energy, momentum, and wavelength are convieniently familiar to its electromagnetic analog, the photon.
+
+- Phonon wavelength: $$\Lambda = \frac{2\pi}{k} $$
+
+- Phonon Energy: $$ E_{ph} = \hbar \omega = h \nu$$
+
+- Phonon Momentum: $$ p_{ph} = \hbar k$$ 
+
+Solving for the frequency of vibrations, $$\omega$$, one can derive the **phonon dispersion relation**:
+
+$$\omega = 2 \sqrt{\frac{\beta}{M}} \bigg| \sin{ \frac{1}{2} ka } \bigg|$$
+
+where the **lattice cut-off frequency** is:
+
+$$\omega_{max} = 2 \sqrt{\frac{\beta}{M}} $$
+
+Taking the derivative with respect to the wave vector gives the **group velocity**:
+
+$$v_{g} = \frac{d \omega}{d k} = \sqrt{ \frac{\beta}{M}} a \cos\bigg( \frac{1}{2} ka \bigg)$$ 
+
+# Heat Capacities
+
+Heat capacity is generally defined as the amount of heat a system must gain to raise its temperature by a certain interval. Dimensionally, heat capacity can be written in units of $$J g^{-1} K^{-1}$$. However, there are several other denominations of heat capacity in terms of molar mass or when a system is held at constant volume ($$C_{V}$$) and constant pressure ($$C_{P}$$).
+
+## Classical Theory of $$C_V$$
+
+Let's consider a classical atomistic system that is capable of absorbing thermal energy. Such a system can be treated as a harmonic oscillator where the average energy of each oscillator is proportional to the temperature by a factor of $$k_{B}$$,
+
+$$E = 3k_{B}T$$
+
+where the factor of 3 describes a three-dimensional oscillator. Recall from the kinetic theory of gases ($$PV=nRT$$) that in a closed volume, the kinetic energy of a particle is 
+
+$$E_{Kinetic} = \frac{3}{2} k_{B}T$$ 
+
+Similarly, the potential energy also has a similar value, so the *total energy* of the system picks up a factor of 2:
+
+$$E_{tot} = 2 \cdot \frac{3}{2} k_{B}T $$
+
+Applying this to a molar system, the total internal energy per mole is:
+
+$$ E = 3 N_{0} k_{B}T $$ 
+
+Taking the derivative with respect to temperature gives the heat capacity. Remember that this was originally derived for a system held at constant volume using the kinetic theory of gases:
+
+$$ C_{V} = \bigg( \frac{\partial E}{\partial T} \bigg)_{V} = 3 N_{0} k_{B} $$
+
+This is in agreement with experiments when a system is taken to high temperatures. In most solids, as $$T$$ grows, $$C_{V}$$ approaches the **Dulong-Petit** value:
+
+$$C_{V}= 3 R = 25 [J mol^{-1} K^{-1}]$$ 
+
+where $$ R = N_{A} K_{B} $$.
+
 
 ### p-Type and n-Type Semiconductor Doping
 
