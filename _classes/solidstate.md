@@ -453,7 +453,7 @@ Solving for the frequency of vibrations, $$\omega$$, one can derive the **phonon
 
 $$\omega = 2 \sqrt{\frac{\beta}{M}} \bigg| \sin{ \frac{1}{2} ka } \bigg|$$
 
-where the **lattice cut-off frequency** is:
+where $$\beta$$ is the familiar spring constant for a harmonic oscillator and $$M$$ is the mass. The maximum frequency, otherwise known as the **lattice cut-off frequency** is:
 
 $$\omega_{max} = 2 \sqrt{\frac{\beta}{M}} $$
 
@@ -492,6 +492,38 @@ This is in agreement with experiments when a system is taken to high temperature
 $$C_{V}= 3 R = 25 [J mol^{-1} K^{-1}]$$ 
 
 where $$ R = N_{A} K_{B} $$.
+
+## Quantum Considerations for $$C_{V}$$
+
+In this section, we consider the effects of free electron contributions to the heat capacity. It is understood that only free electrons with *kinetic energies* that lie in within $$k_{B}T$$ of the Fermi energy ($$E_{F}$$) participate in conductivity. Graphically, this is population of electrons that can be excited in sufficient numbers is represented as the shaded region in the plot below as $$dN$$:
+
+<img src="/assets/Cv_pop_density.png" class="center">
+
+The thermal energy of this population is then:
+
+$$E_{kinetic} = \frac{3}{2} k_{B}T dN$$
+
+where $$dN$$ can be rewritten as,
+
+$$E_{kinetic} = \frac{3}{2} k_{B}T  [ N(E_{F}) k_{B}T]$$
+
+The derivative with respect to $$T$$ gives:
+
+$$C_{V}^{e} = \bigg( \frac{\partial E}{\partial T} \bigg)_{V} = 3 k_{B}^{2} T N(E_{F}) $$
+
+An expression for $$N(E_{F})$$ can be obtained by combining the density of states, $$g(E_{F})$$, with the Fermi distribution $$F(E_{F})$$ for case $$E<E_{F}$$. 
+
+$$N(E_{F}) = \frac{3N^{*}}{2 E_{F}} $$
+
+where $$N^{*}$$ is the number of electrons with an energy equal to or smaller than $$E_{F}$$.
+
+As it stands, without further considerations, $$C_{V}$$ is approximately:
+
+$$C_{V}^{e} = \frac{9}{2} \frac{N^{*} k_{B}^{2} T }{ E_{F}} $$
+
+However, applying Pauli's exclusion principle modifies the expression slightly:
+
+$$C_{V}^{e} = \frac{\pi^{2}}{2} \frac{N^{*} k_{B}^{2} T }{ E_{F}} = \frac{\pi^{2}}{2} \frac{N^{*} k_{B} T }{T_{F}} $$
 
 
 ### p-Type and n-Type Semiconductor Doping
