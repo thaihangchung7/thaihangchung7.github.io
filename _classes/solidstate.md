@@ -176,21 +176,29 @@ These approximation simplify the periodic solution to:
 
 $$ \frac{P \sin(\alpha a)}{\alpha a} + \cos(\alpha a) = \cos(k a) $$ 
 
-where
+There are two important expressions to be aware of when identifying regions of Bloch-like solutions, namely:
 
-$$ P = \frac{2 m V_{0} b a}{\hbar^{2}}$$
+$$ P = \frac{ m V_{0} b a}{\hbar^{2}}$$
 
-This is also called the **Penny constant**, which determines the allowed solutions in a periodic potential. Recall that $$a$$ is the spereation distance between atoms in a lattice.
+$$ \alpha = \frac{\sqrt{2mE}}{\hbar}$$ 
+
+$$P$$ is known as the **Penny constant**, which determines the _size_ of the allowed solutions in a periodic potential. Similarly, $$\alpha$$, which is proportional to $$E$$ determines the variation of the forbidden bands. i
+
+Given that $$a$$ is the separation distance between atoms in a lattice, below is a plot of the allowed solutions to the Schrodinger equation. 
+
 
 <img src="/assets/kronigpenney.png" class="center">
+
+Notice that allowed energy solutions are represented by the shaded regions, for any value of $$\alpha a = \frac{\sqrt{2mE}}{\hbar} a$$ that lies between $$\pm 1$$. 
 
 From here, some cases can be applied to investigate the behavior of the system.
 
 ### Cases for $$P$$ 
 
-When $$P \rightarrow $$ large, the height of the curve grows larger with steeper slopes, the bands become narrow. In the limit that $$P \rightarrow \infty$$, they shrink to the quantized infinite square well energy ($$ E = \frac{n^{2}\hbar^{2}}{2ma^{2}} $$), since $$ P \propto V_{0}$$. Of course, the opposite applies. When $$ P \rightarrow $$ small, this results in wider bands. 
-
-When $$P=0$$, $$ \cos(\alpha a) = \cos(ka) $$. Then, $$\alpha=k$$, this is the situation of the free electron with $$ E = \frac{\hbar^{2}k^{2}}{2m} $$.
++ When $$P \rightarrow $$ large, the height of the curve grows larger with steeper slopes, the bands become narrow.
++ In the limit that $$P \rightarrow \infty$$, they shrink to the quantized infinite square well energy ($$ E = \frac{n^{2}\hbar^{2}}{2ma^{2}} $$), since $$ P \propto V_{0}$$. Of course, the opposite applies. 
++ When $$ P \rightarrow $$ small, this results in wider bands. 
++ When $$P=0$$, $$ \cos(\alpha a) = \cos(ka) $$. Then, $$\alpha=k$$, this is the situation of the free electron with $$ E = \frac{\hbar^{2}k^{2}}{2ma^{2}} $$.
 
 ## Brillouin Zones
 
@@ -295,6 +303,18 @@ $$ v_{d} = \mu_{h} E$$
 It is also useful to describe **conductivity** as it is proportional to the product of mobility and carrier concentration. Usually denoted $$\sigma$$, conductivity can be expressed in terms of mobility as:
 
 $$ \sigma = N \mu e $$ 
+
+In the presense of impurities or dopants, the path that an electron takes though an impure lattice increases the propability of scattering due to varying disordered potentials. As a result, this affects the total mobility of an electron, which in turn also affects the resistivity. Fortunately, these effects add linearly and are nicely summarized as **Matthiessen's Rule**. In terms of the total number of scattering events,
+
+$$ \frac{1}{\tau} = \frac{1}{\tau_{lattice}} + \frac{1}{\tau_{ionized impurity}} $$
+
+Exploited some relationships between conductivity, mobility, resistivity, and scattering time, we can interpret this linear equation in other ways,
+
+$$\sigma = nq\mu = \frac{n q^{2}}{m^{*} (1/\tau)} $$
+
+$$ \frac{1}{\mu} = \frac{1}{\mu_{lattice}} + \frac{1}{\mu_{ionized impurity}} $$
+
+$$ \rho = \rho_{lattice} + \rho_{ionized impurity} $$
 
 # Thermal Properties of Materials
 
@@ -525,12 +545,78 @@ However, applying Pauli's exclusion principle modifies the expression slightly:
 
 $$C_{V}^{e} = \frac{\pi^{2}}{2} \frac{N^{*} k_{B}^{2} T }{ E_{F}} = \frac{\pi^{2}}{2} \frac{N^{*} k_{B} T }{T_{F}} $$
 
+# Intrinsic Semiconductors
+
+
 
 ### p-Type and n-Type Semiconductor Doping
 
 Consider an electrically neutral silicon semiconductor.
 
-**Intrinsic semiconductors** are , well, naturally semiconducting. This means that the number of excited electrons and holes are equal, $$p=n$$. Applying an external voltage to the material will make some electrons jump the band gap, supporting charge flow. For example, pure silicon is a group $$IV$$ intrinsic semiconductor. The figure below on the left shows the four valence electrons with covalent bonds around each silicon atom.
+**Intrinsic semiconductors** are pure-element semiconducting materials. The number of excited electrons and holes are equal, $$p=n$$ such that the product of the electron concentration $$n$$ and the number of holes $$p$$ gives what's known as the **intrinsic carrier concentration**:
+
+$$ np=n_{i}^{2}$$ 
+
+The terms $$n$$ and $$p$$ for electron and hole concentrations can be readily derived using the density of states in a semiconductor. 
+
+The density of states for a free electron $$E(k)$$ diagram is:
+
+$$g(E) = 2 \frac{d N(E)}{dE} = \frac{1}{2\pi^{2}} \bigg( \frac{2m_{e}}{\hbar^{2}} \bigg)^{3/2} E^{1/2} $$
+
+In the case of semiconductors, a similar expression can be written for the density of states of the conduction and valence bands. 
+
+$$ g(E)_{conduction} = \frac{1}{2\pi^{2}} \bigg( \frac{2 m_{n}^{*}}{ \hbar{2}}  \bigg)^{3/2} ( E - E_{C} )^{1/2} $$
+
+$$ g(E)_{valence} = \frac{1}{2\pi^{2}} \bigg( \frac{2 m_{p}^{*}}{ \hbar{2}}  \bigg)^{3/2} ( E_{v} - E )^{1/2} $$
+
+We can integrate the density of states with the Fermi distribution by using the range of energies (from bottom to top) within the band, to obtain the concentration of $$n$$ or $$p$$. For example, in the case of the conduction band:
+
+$$ n = \int_{E_{C}^{bot}}^{E_{C}^{top}} g(E)_{CB} f(E,T) dE $$
+
+It should be mentioned that the probability of occupation of holes will be modified slightly, since it is the *absence* of electrons
+
+$$ p = \int_{E_{V}^{bot}}^{E_{V}^{top}} g(E)_{VB}[1 -  f(E,T)] dE $$
+
+
+That being said, there is one more approximation to apply to the Fermi distribution term, $$F(E,T)$$. That is, for band gap energies much greater than $$k_{B}T$$ at $$300 K$$, we can apply the Boltzmann approximation $$(E_{G} \gg k_{B}T_{300K})$$, 
+
+$$ F(E,T) = \frac{1}{\exp(\frac{E - E_{F}}{ k_{B}T }) + 1} \approx e^{\frac{E-E_{F}}{ k_{B}T }} $$ 
+
+Applying this approximiation also changes the bounds of integration to infinity. Thus, the full integration for $$n$$ and $$p$$ concentrations yields: 
+
+$$n = N_{C} e^{-\frac{E_{C} - E_{F}}{k_{B}T}} $$
+
+$$p = N_{V} e^{-\frac{E_{F} - E_{V}}{k_{B}T}} $$
+
+Graphically, this treatment of carrier concentration is plotted below with $$F(E)$$ as a function of $$E$$:
+
+<img src="/assets/np_integration.png" class="center">
+
+Two terms that can be expanded upon are $$N_{C}$$ and $$N_{V}$$, which are also known as the **effective density of states**. Written in terms of the effective masses of the charge carriers: 
+
+$$N_{C} = 2 \bigg( \frac{m_{n}^{*} k_{B}T}{2\pi \hbar^{2}} \bigg)^{3/2} $$ 
+
+$$N_{V} = 2 \bigg( \frac{m_{p}^{*} k_{B}T}{2\pi \hbar^{2}} \bigg)^{3/2} $$ 
+
+Combining all this yields an expression for the intrinsic carrier concentration:
+
+$$n_{i}^{2} = np = N_{C} N_{V} e^{-\frac{E_{g}}{k_{B}T}} $$
+
+$$n_{i} = \sqrt{ N_{V} N_{C} } e^{-\frac{E_{g}}{2k_{B}T}}$$ 
+
+In the context of intrinsic undoped semiconductors, excited electrons and holes are created in pairs, 
+
+$$n=p=n_{i}$$
+
+The intrinsic conductivity of a semiconductor can be written as the sum of the conductivities for each respective charge carrier:
+
+$$ \sigma = n q \mu_{n} + p q \mu_{p}$$
+
+$$ \sigma = n_{i} q (\mu_{n} + \mu_{p})$$ 
+
+
+
+Applying an external voltage to the material will make some electrons jump the band gap, supporting charge flow. For example, pure silicon is a group $$IV$$ intrinsic semiconductor. The figure below on the left shows the four valence electrons with covalent bonds around each silicon atom.
 
 <img src="/assets/pntype.png" class="center">
 
