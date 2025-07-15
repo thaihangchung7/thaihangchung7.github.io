@@ -931,7 +931,7 @@ which is equivalent to a vector.
 
 ### Constructing a tensor from two vectors
 
-Two vectors, call them $$\v{A}$$ and $$\v{B}$$, can be used to construct a second rank tensor. $$\v{A}$$ and $$\v{B}$$ have components $$A_{i}$$, B_{i}.
+Two vectors, call them $$\v{A}$$ and $$\v{B}$$, can be used to construct a second rank tensor. $$\v{A}$$ and $$\v{B}$$ have components $$A_{i}$$, $$B_{i}$$.
 
 Let $$\v{T}$$ be a second rank tensor. Then,
 
