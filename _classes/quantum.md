@@ -69,7 +69,7 @@ $$
 
 The time indpendent Schrodinger equation can be set up using known conditions of the system. 
 
-+ Outside the well, the probability of finding the particle equal to zero, in other words, the wavefunction is $$psi(x) = 0$$. 
++ Outside the well, the probability of finding the particle equal to zero, in other words, the wavefunction is $$\Psi(x) = 0$$. 
 
 + Inside the well, the potential is $$V=0$$
 
@@ -173,6 +173,37 @@ $$ \int \psi_{m} (x)^{*} \psi_{n}(x) dx =  \f{2}{a} \int_{0}^{a} \sin{\bigg( \f{
 > Rewritten in terms of the Kronecker Delta, 
 
 > $$\int \psi_{m} (x)^{*} \psi_{n}(x) dx = \delta_{mn} $$ 
+
+# Electron in a Vacuum
+
+Consider an electron in a vacuum, without any external influences (i.e. electromagnetic fields). The linear momentum operator is:
+
+$$ - i \hbar \nabla \psi = \v{p} \psi $$
+
+with $$\v{p}$$ being the associated eigenvalues. The wavefunction of an electron in a vacuum is:
+
+$$ \psi = e^{i(\v{k}\cdot \v{r} - \omega t)} $$
+
+Expanding $$\v{k}$$, $$\v{r}$$, and $$\nabla$$ into their linear components gives,
+
+$$ - i \hbar \bigg( \f{\pd{}}{\pd{x}} \h{i} +  \f{\pd{}}{\pd{y}} \h{j} +  \f{\pd{}}{\pd{z}} \h{k}  \bigg) e^{i (k_{x}x + k_{y} y + k_{z} z)} = \v{p} e^{i(\v{k} \cdot {r} - \omega t)} $$
+
+The momentum operator acting on $$\psi$$ demonstrates that the eigenvalue $$\v{p}$$ is,
+
+$$\v{p} = \hbar \bigg( k_{x} \h{i} + k_{y} \h{j} + k_{z} \h{k} \bigg) = \hbar \v{k} $$
+
+Using some basic equations from wave mechanics, 
+
+$$\lambda = \f{h}{p} $$
+
+$$ k = | \v{k} | = \f{2\pi}{\lambda} $$
+
+It shows that,
+
+$$ p = \hbar k = \bigg(\f{h}{2\pi} \bigg) \bigg(\f{2\pi}{\lambda} \bigg) $$
+
+
+
 
 # Quantum Fluxes
 
