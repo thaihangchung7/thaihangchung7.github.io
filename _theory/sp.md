@@ -44,7 +44,7 @@ The input signal voltage for *voltage sensitive amplifiers* is
 
 $$V_{i} = \frac{R_{i}}{R_{s} + R_{i}}V_{s}. $$  
 
-Input resistance $R_{i}$ needs to much larger than the source impedance. When acting as an integrator, the capacitance of the detector and any input capacitance must be summed over (see section on Integrating Circuits).
+Input resistance $$R_{i}$$ needs to much larger than the source impedance. When acting as an integrator, the capacitance of the detector and any input capacitance must be summed over (see section on Integrating Circuits).
 
 *Current sensitive amplifiers* are another mode of amplifier operation and and are commonly used in timing applications, where the signal is fed into a discriminator. The input current $$i_{s}$$ is given by
 
@@ -53,6 +53,9 @@ $$ i_{i} = \frac{R_{s}}{R_{s} + R_{i} i_{s}}.$$
 Inverting the conditions for a voltage sensitive configuration, the input resistance needs to be much smaller than the source impedance. 
 
 Last but not least are *charge sensitive amplifiers* which integrates charge on a feedback capacitor and can be used to control gain and input resistances. These find uses in energy spectroscopy where charge and time of an event is of interest.
+
+### Operational Amplifiers
+
 
 ### Constant Fraction Discriminators
 
