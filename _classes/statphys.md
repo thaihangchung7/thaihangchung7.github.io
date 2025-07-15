@@ -4,6 +4,22 @@ title: Statistical Mechanics
 category: notes
 ---
 
+$$ \let\vec\mathbf $$ 
+$$\newcommand{\v}{\vec} $$
+$$\newcommand{\d}{\dot{}}$$ 
+$$\newcommand{\del}{\nabla}$$
+$$\newcommand{\abs}{\rvert} $$
+$$\newcommand{\h}{\hat}$$ 
+$$\newcommand{\f}{\frac}$$ 
+$$\newcommand{\~}{\widetilde}$$
+$$\newcommand{\<}{\langle}$$
+$$\newcommand{\>}{\rangle}$$
+$$\newcommand{\eo}{\epsilon_{0}}$$
+$$\newcommand{\hb}{\hbar}$$
+$$\newcommand{\pd}{\partial}$$
+$$\newcommand{\h}{\hat}$$
+$$\newcommand{\ket}[1]{\lvert #1 \rangle}$$
+
 *"My life has consisted in learning and forgetting and learning and forgetting and learning and forgetting statistical mechanics".* - Leonard Susskind 
 
 <!--
@@ -17,6 +33,141 @@ category: notes
 
 ## Third Law
 -->
+
+# 1st Law of Thermodynamics
+
+The first law of thermodynamics is a statement concerning the internal energy of a system. For some composite system with partitioned with energies $$E_{1}$$ and $$E_{2}$$ partioned, the total internal energy ($$E$$) of the system is an *extensive* (additive) quantity:
+
+$$E = E_{1} + E_{2} $$
+
+Assuming this system is also self-contained, we expect that the energy of the system is conserved. From here, the defintion of heat can be constructed since the only way to add or remove energy, is to do so externally, in other words, perform work:
+
+$$ dE = d Q  + d W $$
+
+Note that both heat ($$Q$$) and work ($$W$$) are _path independent_ variables. 
+
+# 2nd Law of Thermodynamics
+
+Consider a box with a removable partition separating two collections of particles (red and blue). For a fixed number of particles, volume, and energy, the microstate of the system can be described as a function of the thermodynamic variables mentioned, $$\Omega(N,V,E)$$.
+
+We'll describe the partitioned configuration of the box as $$\Omega_{1}$$. Removing the partition will allow the particles to mix (assuming homogeneity), which is the configuration we'll define as $$\Omega_{2}$$.
+
+Upon removal of the partition with some shaking involved, it can be empirically demonstrated that the particles have access to more microstates,
+
+$$ \Omega_{1} < \Omega_{2} $$
+
+Using the Boltzmann defintion of entropy,
+
+$$ S_{1} < S_{2}$$
+
+The change in entropy between can be written as:
+
+$$ ds = S_{2} - S{1} > 0 $$
+
+David Chandler's statement on the second law of thermodynamics is as follows:
+
+"There is an **extensive** function of state $$S(E,\bf{X})$$, which is a **monotonically** increasing function of $$E$$ and if state $$B$$ is **adiabatically** accessible from state $$A$$, then $$S_{B} \geq S_{A}$$"
+
+In this statement $$\bf{X}$$ is an arbitrary parameter that can be assigned to macroscopic measureables such as volume. A few of the bolded terms in the statement can use some elaboration.
+
+## Properties of Entropy (S)
+
+Suppose there are two composite systems $$A$$ and $$B$$ with microstates $$\Omega_{A}$$ and $$\Omega_{B}$$. The systems are then brought together with microstate $$\Omega_{AB}$$. Combinatorically, it can be shown that,
+
+$$ \Omega_{AB} = \Omega_{A}\Omega_{B}$$ 
+
+For instance, if system $$A$$ contains 2 states and system $$B$$ contains 3, bringing the two together will form 6 possible states. Plugging this into the Boltzmann definition of entropy and performing some logarithmic arithmetic,
+
+$$ S_{AB} = k \ln(\Omega_{AB})$$
+
+$$ = k \ln(\Omega_{A} \Omega_{B})$$
+
+$$ = k \ln(\Omega_{A}) + k \ln(\Omega_{B})$$
+
+$$S_{AB} = S_{A} + S_{B}$$
+
+So the two things we can glean from this... Entropy is an additive and extensive quantity! 
+
+From Boltzmann's entropy we can see that $$S \propto ln(x)$$, which implies that $$S$$ is also a monotonically increasing function that cannot be negative.
+
+# Equilibrium and Temperature
+
+The concept of entropy is still a bit "abstract", at least in the context of experiments, much like energy. Although there is a mathematical definition of entropy, there isn't an "entropy-meter" or an instrument that directly measures microstates. However, the connection between entropy and measureable thermodynamic variables such as temperature can be derived empirically.
+
+Consider a heat conduction system with two boxes with their respective $$E$$, $$T$$, and $$S$$. The boxes are thermally connected to each other via some sort of heat pump. At equilibrium, no heat flows between the system; an observational statement. 
+
+An *internal constraint* (a quasi-static perturbation that couples to extensive variables and does not change the total state of the system) can be applied to create a *tiny* displacement from equilibrium. Variationally, the change in entropy is,
+
+$$ (\delta S)_{E,\bf{X}} \leq 0$$
+
+as required for heat to flow between the two systems. In the same context of the variational theorem, the total energy is held constant during displacment. As a consequence of the first law of thermodynamics:
+
+$$ E_{i} = E^{(1)} + E^{(2)} $$ 
+
+where $$E_{i}$$ is initial state of the total energy. Applying the perturbation gives,
+
+$$ E_{f} = (E^{(1)} + \delta E^{(1)} )+ (E^{(2)} + \delta E^{(2)} ) $$ 
+
+Again, because the perturbation is *tiny*, we can effectively say that the initial and final states are equivalent, $$E_{i} = E_{f}$$, in other words,
+
+$$E_{f} - E_{i} = 0 $$
+
+which implies that,
+
+$$ \delta E^{(1)} + \delta E^{(2)} = 0 $$ 
+
+Extending this to entropy using the same treatment, entropy can flow from state $$B$$ to $$A$$ via an internal constraint.
+
+$$ (\delta S)_{E} = S_{A} - S_{B} \leq 0 $$
+
+$$ = [ S^{(1)} (E^{(1)} + \delta E^{(1)} )+ S^{(2)}(E^{(2)} + \delta E^{(2)} ) ]_{A} - [ S^{(1)} (E^{(1)} ) + S^{2} (E^{(2)}) ]_{B} $$ 
+ 
+Let's take a closer look at terms involving $$S(E + \delta E) $$. A Taylor expansion around $$\delta E$$ yields,
+
+$$ S(E + \delta E) = S(E) + \frac{\pd S}{\pd E} \delta E $$
+
+substituting this expansion into $$ (\delta S)_{E} = S_{A} - S_{B} $$ yields,
+
+$$\delta S = \bigg( \frac{\pd S^{(1)}}{\pd E^{(1)}} \bigg) \delta E^{(1)} + \bigg( \frac{\pd S^{(2)}}{\pd E^{(2)}} \bigg) \delta E^{(2)} $$ 
+
+## Equation of State for an Ideal Gas
+
+Consider a volume with some gas and a movable piston enclosing it so that work can be done on the  volume by (de)compressing it. We begin with the definition of heat:
+
+$$ dE = d_{p.i} Q  + d_{p.i} W $$
+
+Here, the subscript $$p.i$$ denotes path independence of the variable (conventionally, this notation is dropped. As will these notes will too). The work done on the the volume by the piston is: 
+
+$$ dW = - p \cdot dV $$ 
+
+It is important to mention here that the negative sign in front of $$p$$ is *non-trivial*. In the case of compressing the system, $$dV$$ should decrease. In other words, for $$dW$$ to be positive _and_ $$p$$ to be positive, the volume $$dV$$ includes the negative. For a reversible process, the energy equation is:
+
+$$ dE = dQ_{rev} + f dX $$ 
+
+where $$f$$ is some generalized force. Plugging this into the equation for the change in entropy:
+
+$$ds = \bigg( \frac{\pd S}{\pd E} \bigg)_{X} (dQ + f\cdot dX) + \bigg( \frac{\pd S}{\pd E} \bigg)_{E} dX$$ 
+
+$$ = \bigg( \frac{\pd S}{\pd E} \bigg)_{X} dQ + \bigg[ \bigg( \frac{\pd S}{\pd E} \bigg)_{X} f + \bigg( \frac{\pd S}{\pd E} \bigg)_{E} \bigg] dX$$ 
+
+Since the process is reversible and adiabatic, $$ dS = 0$$ and $$ dQ = 0$$, which leaves:
+
+$$dS = \bigg[ \bigg( \frac{\pd S}{\pd E} \bigg)_{X} f + \bigg( \frac{\pd S}{\pd E} \bigg)_{E} \bigg] dX = 0 $$
+
+Reexpressing the equation in terms of temperature,
+
+$$\bigg(\frac{1}{T}\bigg) f = \bigg( \frac{\pd S}{\pd X} \bigg) E $$
+
+In other words, this is a description of temperature derived from mechanical work of on a system.
+ 
+
+The entropy of an ideal gas contained in some volume $$V$$ is:
+
+$$ S = N k \ln{(V)} + f(E,N) $$
+
+Recall that (to contextualized this to arbitrary state variables, $$X$$ will be taking the place of $$V$$ for now): 
+
+$$ dS = \bigg( \frac{\pd S}{\pd E} \bigg)_{X} dE + \bigg( \frac{\pd S}{\pd E} \bigg)_{E} dX $$ 
 
 # A Review of Expectation Value
 
@@ -49,6 +200,47 @@ The canonical ensemble describes a set of fixed state variables. Namely,
 + Fixed $$T$$: Temperature (Note: This is not a statement about the system itself. The system is allowed to exchange energy with a heat bath with a large heat capacity such that the temperature *of the bath* stays fixed.)
 
 That being said, a system decribed by the canonical ensemble is allowed to have energy flucuations. 
+
+# Statistical Mechanics Applied to Ensembles
+
+## Ensemble Average of the Microcanonical (N,V,E) Ensemble 
+Since the complexity of calculating the equation of motion is proportional to the number of particles in a system, In the case of a condensed matter system, where one is dealing with something like $$N=10^{23}$$, this becomes unfeasable. Fortunately, this can be dealt with by introducing the **ensemble average**.
+
+For the micro-canonical ensemble, that is, an $$(N,V,E)$$ system, we can quantify the number of time the number of times a particular state is visited. If $$\Omega$$ represent the total number of microstates available. Naturally, selecting _one_ microstate is simply,
+
+$$ P_{v} = \frac{1}{\Omega} $$ 
+
+## Ensemble Average of the Canonical (N,V,T) Ensemble 
+
+Now suppose you have a system that can exchange energy with an **isolated** heat bath. The probability of find one particular state in this path is roughly:
+
+$$ P_{v} ~ \Omega(E - E_{v}) $$ 
+
+Applying the princple of equal weights, the probability is understood as:
+
+$$ P_{v} = e^{\ln(\Omega (E - E_{v}))} $$
+
+Applying a Taylor expansion for $$E_{V} \ll E$$
+
+$$ ln\Omega(E) + \frac{\pd \Omega}{\pd E} (-\Delta E) $$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$$ <E> = \frac{1}{L} \int E(v,r) dv dr $$ 
 
 # Principle of Maximum Entropy
 
