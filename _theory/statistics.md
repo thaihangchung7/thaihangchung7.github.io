@@ -79,6 +79,19 @@ $$ \sum_{i} (f(x_{i},\beta) - y_{i})^{2} $$
 
 where $$x_{i}$$ and $$y_{i}$$ are the data points.
 
-## $$\chi^{2}$$ Testing
+## $$\chi^{2}$$ "Goodness of Fit"
 
-$$ \chi^{2} = \frac{\sum_{i} (y - y)^{2}}{\sigma^{2}} $$
+$$\chi^{2} = \bigg( \frac{O_{i} - E_{i}}{\sigma_{i}} \bigg)^{2} $$
+
+Here, $$O_{i}$$ represents the observed data, $$E_{i}$$ is the expected value of $$i$$, and $$\sigma_i$$ is the y-axis standard deviation of $$O_{i}$$.
+
+We can modify the $$\chi^{2}$$ slightly to quantify the difference between two curves based on their known standard deviations. In this case, the standard deviation of the difference need to be taken into account, 
+
+$$ \sigma_{diff} = \sqrt{ (\sigma_{i}^{a})^{2} + (\sigma_{i}^{b})^{2}  }$$
+
+Subsequently,
+
+$$\chi_{diff}^{2} = \bigg( \frac{O_{i}^{a} - O_{i}^{b}}{\sigma_{i,diff}} \bigg)^{2} $$
+
+In words, the statistical significance between two curves.
+
