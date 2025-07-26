@@ -15,7 +15,39 @@ Table of Contents
       * [The Birthday problem](#the-birthday-problem)
 
 
-# Uncertainty Statistics
+# Statistical Treatment of Experimental Data
+
+## Cumulative Distribution
+
+Suppose we want to know the probability of finding $$x$$ between some interval $$x_{1}$$ and $$x_{2}$$, in other words:
+
+$$ P(x_{1}\leq x \leq x_{2})$$
+
+If $$P(x)$$ is assumed to be continuous, then,
+
+$$ P(x_{1}\leq x \leq x_{2})=\int_{x_{1}}^{x_{2}} P(x) dx$$
+
+If discrete, then:
+
+$$ P(x_{1}\leq x \leq x_{2})=\sum_{i = 1}^{2} P(x_{i})$$
+
+Of course, normalization applies to these distributions,
+
+$$\int P(x) dx = 1$$ (Continuous) 
+
+$$\sum_{i} P(x_{i}) = 1$$ (Discrete)
+
+# Distribution Moments: Mean and Variance
+
+A probability distribution can be characterized by it's mean ($$\mu$$) and variance ($$\sigma$$), also known as _moments_ of the distribution.
+
+Moments in a statistical distribution draws parallels to mass distributions in mechanics. For example, the mean represents the "center of mass" of the probability distribution. The variance, represents the width or spread of the distribtion, which gives an idea of how much a random variable $$x$$ fluctuates about the mean. Mathematically,
+
+$$ \mu = E[x] = \int x P(x) dx $$
+
+$$ \sigma^{2} = E [(x - \mu)^{2}] = \int (x-\mu)^{2} P(x) dx $$ 
+
+## Uncertainty in Statistics
 
 The measured value is given by: $$x_{m} = x_{avg} \pm \Delta x_{avg}$$
 
@@ -37,6 +69,20 @@ $$\Delta x_{avg} = \frac{\Delta x}{\sqrt{N}}$$
 For large data sets:
 
 $$\Delta x_{avg} = \frac{\sigma}{N}$$
+
+## Covariance
+
+Consider a multivariate distribution,  $$ P(x,y,z,...)$$, where the outcome depend on several random variables $$x,y,z,...$$. The random variables of the multivariate distribution can be indiviually defined by the mean and variance in addition to  the covariance. 
+The covariance measures the linear correlation of two variables using the correlation coefficient.
+
+$$ \rho = \frac{cov(x,y)}{\sigma_{x} \sigma_{y}} $$
+
+If $$\|\rho\|=1$$, then the variables are linearly correlated. Otherwise, if the coefficient varies between $$-1$$ and $$+1$$, this indicates a negative or positive correlation, respectively.
+
+
+
+
+# Common Probability Distributions
 
 ## Binomial Distribution
 For a binomial distribution with parameters $$n$$ and $$p$$ the discrete probability distribution of the number of occurences $$k$$ in an sequence of $$n$$ independent experiments is given by: 
