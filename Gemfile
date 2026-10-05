@@ -7,6 +7,7 @@ group :jekyll_plugins do
   gem 'jekyll-feed'
   gem 'jekyll-seo-tag'
   gem 'eventmachine'
+  gem 'jekyll-scholar'
 end
 
 gem "webrick", "~> 1.7"

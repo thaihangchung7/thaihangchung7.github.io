@@ -1,3 +1,22 @@
-.jekyll-cache
-_site
+# Jekyll
+_site/
+.jekyll-cache/
+.jekyll-metadata
 old_Gemfiles/
+
+# Bundler local files
+.bundle/
+vendor/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log

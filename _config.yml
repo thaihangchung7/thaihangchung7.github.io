@@ -11,6 +11,7 @@ kramdown:
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-scholar
     #  - jekyll-seo-tag
 
 
@@ -25,3 +26,15 @@ collections:
    output: true
   classes:
    output: true
+
+scholar:
+  style: ieee
+  locale: en
+
+  source: ./_bibliography
+  bibliography: references.bib
+
+  sort_by: year,author
+  order: descending
+
+  bibliography_template: "{{reference}}"
