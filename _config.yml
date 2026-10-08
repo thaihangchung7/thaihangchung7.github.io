@@ -38,3 +38,6 @@ scholar:
   order: descending
 
   bibliography_template: "{{reference}}"
+
+exclude:
+  - _archive/
