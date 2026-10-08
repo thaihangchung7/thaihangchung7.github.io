@@ -2,7 +2,5 @@
   link: /
 - name: About/Contact
   link: /about.html
-- name: CV/Resume
-  link: /cv.html
 - name: Notes 
   link: /notes.html
