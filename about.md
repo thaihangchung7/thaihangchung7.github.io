@@ -12,8 +12,10 @@ I usually go by ``` thaihangchung7 ```. You can find me at:
 
 + Gmail (primary/personal): ``` gmail.com ```
 
-+ LANL (Academic): ```lanl.gov```
++ LANL (Academic): ```lanl.gov``
 
-+ BGSU (I am ```chungt```): ```bgsu.edu```
++ ASU (I am tchung21): ```asu.edu```
+
++ ~~BGSU (I am ```chungt```): ```bgsu.edu```~~
 
 + [Github](https://github.com/thaihangchung7) 
